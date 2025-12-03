@@ -1,0 +1,1 @@
+Add data dictionary for EcoPackAI database schema
