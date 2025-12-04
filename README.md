@@ -1,7 +1,7 @@
 EcoPackAI – AI-Powered Sustainable Packaging Recommendation System
 📍 Project Overview
 
-EcoPackAI is an intelligent decision-support system designed to help businesses identify the most sustainable, cost-efficient, and durable packaging materials based on product characteristics and supply-chain constraints. The system uses machine learning to evaluate packaging alternatives and recommend optimal solutions that reduce environmental impact while maintaining product safety and performance.
+EcoPackAI is an intelligent decision-support system designed to help businesses identify the most sustainable, cost-efficient, and durable packaging materials based on product characteristics and supply-chain constraints.System uses machine learning to evaluate packaging alternatives and recommend optimal solutions that reduce environmental impact while maintaining product safety and performance.
 
 🎯 Key Objectives
 

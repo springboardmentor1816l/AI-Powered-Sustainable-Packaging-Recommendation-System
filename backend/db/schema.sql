@@ -1,3 +1,4 @@
+#SQL Schema for Material Recommendation System
 CREATE TABLE materials (
     material_id SERIAL PRIMARY KEY,
     material_type VARCHAR(100) NOT NULL,

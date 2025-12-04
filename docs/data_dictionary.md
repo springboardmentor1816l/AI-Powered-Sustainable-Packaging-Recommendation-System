@@ -1,9 +1,3 @@
-# Data Dictionary — EcoPackAI
-
-This document describes the database schema fields, their datatypes, and purpose for the EcoPackAI system.
-
----
-
 ## Table: materials
 
 | Column                   | Type        | Description |
