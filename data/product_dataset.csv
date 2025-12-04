@@ -1,0 +1,31 @@
+product_id,product_name,category,product_weight,fragility_index,shipping_type
+1,Smartphone,Electronics,0.25,8,Air
+2,Laptop Computer,Electronics,2.5,7,Air
+3,Glass Perfume Bottle,Cosmetics,0.15,9,Road
+4,LED Television,Electronics,15.0,6,Road
+5,Shampoo Bottle (Plastic),Cosmetics,0.5,3,Road
+6,Canned Soup,Food,0.4,2,Sea
+7,Chocolate Box,Food,0.3,4,Road
+8,Medicine Tablets,Pharmacy,0.1,5,Air
+9,Ceramic Mug,Cosmetics,0.35,8,Road
+10,Wireless Earbuds,Electronics,0.05,7,Air
+11,Face Cream Jar,Cosmetics,0.2,5,Road
+12,Fresh Vegetables,Food,2.0,6,Road
+13,Vitamin Supplements,Pharmacy,0.15,4,Air
+14,Gaming Console,Electronics,4.5,6,Air
+15,Organic Honey Jar,Food,0.6,7,Road
+16,Hand Sanitizer Bottle,Pharmacy,0.25,3,Road
+17,Coffee Beans Bag,Food,1.0,3,Sea
+18,Lipstick Set,Cosmetics,0.08,6,Road
+19,Tablet Device,Electronics,0.5,7,Air
+20,Essential Oil Bottle,Cosmetics,0.12,9,Road
+21,Prescription Glasses,Pharmacy,0.18,8,Air
+22,Bluetooth Speaker,Electronics,0.8,5,Road
+23,Protein Powder Container,Food,1.2,4,Sea
+24,Injectable Medicine,Pharmacy,0.05,10,Air
+25,Smartwatch,Electronics,0.15,7,Air
+26,Organic Tea Box,Food,0.25,4,Road
+27,Skincare Serum,Cosmetics,0.1,7,Road
+28,Computer Monitor,Electronics,6.0,6,Road
+29,Cough Syrup Bottle,Pharmacy,0.3,6,Road
+30,Frozen Food Package,Food,0.8,5,Sea
