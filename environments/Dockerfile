@@ -9,8 +9,11 @@ COPY environments/requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-# copy source code from project root src/
+# copy source code and scripts
 COPY src/ ./src
+COPY scripts/ ./scripts
+COPY data/ ./data/
+
 
 ENV PYTHONUNBUFFERED=1
 
