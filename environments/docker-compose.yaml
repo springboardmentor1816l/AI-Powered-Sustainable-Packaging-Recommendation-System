@@ -1,0 +1,42 @@
+
+
+services:
+  # 1. The Flask Backend Service
+  backend:
+    build:
+      context: ../  # Sets the build context to the project root (EcoPackAI/)
+      dockerfile: environments/Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ../backend:/app/backend # Syncs your code changes in real-time
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/ecopack_db
+    depends_on:
+      - db
+
+  # 2. The PostgreSQL Database Service
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ecopack_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # 3. pgAdmin (Database Viewer - Optional but recommended in doc)
+  #pgadmin:
+ #   image: dpage/pgadmin4
+ #     PGADMIN_DEFAULT_EMAIL: admin@admin.com
+    #  PGADMIN_DEFAULT_PASSWORD: admin
+   # ports:
+   #   - "5050:80"
+   # depends_on:
+  #    - db
+#
+volumes:
+  postgres_data:
