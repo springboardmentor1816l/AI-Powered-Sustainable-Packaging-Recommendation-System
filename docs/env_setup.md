@@ -25,12 +25,12 @@ source venv/bin/activate
 ---
 
 # Note:
-Create `.env` (local, do NOT commit)
-Copy template: `cp .env.example .env`
-Edit `.env` with secure values (your DB password, pgAdmin password, SECRET_KEY etc.)
+- Create `.env` (local, do NOT commit)
+- Copy template: `cp .env.example .env`
+- Edit `.env` with secure values (your DB password, pgAdmin password, SECRET_KEY etc.)
 
-Docker Compose reads `.env`
-It pulls variables into container envs so the backend can pick them up.
+- Docker Compose reads `.env`
+- It pulls variables into container envs so the backend can pick them up.
 
 
 ## 2. Docker Setup
@@ -66,7 +66,7 @@ It pulls variables into container envs so the backend can pick them up.
 
 ---
 
-## ✔ Validation Checklist
+## Validation Checklist
 
 - [x] Virtual environment successfully created  
 - [x] Dependencies installed & frozen  
