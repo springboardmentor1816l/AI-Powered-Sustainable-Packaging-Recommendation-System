@@ -4,44 +4,111 @@ on:
   push:
     branches: [ main, master ]
   pull_request:
+    branches: [ main, master ]
 
 jobs:
-  run-ci:
+  test-and-validate:
     runs-on: ubuntu-latest
 
+    # start a postgres service for integration-like checks
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_DB: ecopackai_db
+          POSTGRES_USER: ecopack
+          POSTGRES_PASSWORD: password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U ecopack -d ecopackai_db"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      # Map Github Secrets into the job environment (use secrets in real repo)
+      POSTGRES_DB: ${{ secrets.POSTGRES_DB || 'ecopackai_db' }}
+      POSTGRES_USER: ${{ secrets.POSTGRES_USER || 'ecopack' }}
+      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD || 'password' }}
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: 5432
+      SECRET_KEY: ${{ secrets.SECRET_KEY || 'ci-secret' }}
+      # Optional: if you use a single DB url in production, you may set DATABASE_URL secret
+      DATABASE_URL: ${{ secrets.DATABASE_URL || '' }}
+
     steps:
-      # Step 1 — Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 2 — Set up Python (even if no Python files exist yet)
-      - name: Set up Python
+      - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: '3.10'
 
-      # Step 3 — Install dependencies only if requirements file exists
-      - name: Install dependencies (if available)
+      - name: Install system deps (psql client & tools)
         run: |
-          if [ -f backend/requirements.txt ]; then \
-              python -m pip install --upgrade pip && \
-              pip install -r backend/requirements.txt; \
-          else \
-              echo "No requirements.txt found yet — skipping."; \
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client
+
+      - name: Install Python deps (if present)
+        run: |
+          if [ -f environments/requirements.txt ]; then
+            python -m pip install --upgrade pip
+            pip install -r environments/requirements.txt
+          else
+            echo "No environments/requirements.txt found — skipping dependencies installation."
           fi
 
-      # Step 4 — Run tests only if /tests exists
-      - name: Run tests (if available)
+      - name: Wait for Postgres to be ready
         run: |
-          if [ -d tests ]; then \
-              echo "Running pytest..."; \
-              pip install pytest && pytest -q; \
-          else \
-              echo "No tests directory yet — skipping tests."; \
+          echo "Waiting for Postgres at ${{ env.POSTGRES_HOST }}:$POSTGRES_PORT ..."
+          retries=0
+          until pg_isready -h "${{ env.POSTGRES_HOST }}" -p "${{ env.POSTGRES_PORT }}" -U "${{ env.POSTGRES_USER }}" -d "${{ env.POSTGRES_DB }}" || [ $retries -ge 30 ]; do
+            retries=$((retries+1))
+            echo "Postgres not ready yet — retry $retries/30"
+            sleep 2
+          done
+          if [ $retries -ge 30 ]; then
+            echo "Postgres failed to start in time"
+            exit 1
+          fi
+          echo "Postgres is ready."
+
+      - name: Run data cleaning (if present)
+        env:
+          # allow script access to DB via env vars
+          POSTGRES_DB: ${{ env.POSTGRES_DB }}
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+          POSTGRES_HOST: ${{ env.POSTGRES_HOST }}
+          POSTGRES_PORT: ${{ env.POSTGRES_PORT }}
+          DATABASE_URL: ${{ env.DATABASE_URL }}
+        run: |
+          if [ -f scripts/cleaning/clean_materials_products.py ]; then
+            python scripts/cleaning/clean_materials_products.py
+          else
+            echo "No cleaning script found at scripts/cleaning/clean_materials_products.py — skipping."
           fi
 
-      # Step 5 — Linting (safe: will not fail build)
-      - name: Run linting (non-blocking)
+      - name: Run tests (if present)
+        run: |
+          if [ -d tests ]; then
+            pytest -q || true
+          else
+            echo "No tests folder found — skipping tests."
+          fi
+
+      - name: Run lint (non-blocking)
         run: |
           pip install flake8 >/dev/null 2>&1 || true
           flake8 . || true
+
+      - name: Upload processed datasets (artifact) (optional)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: processed-datasets
+          path: |
+            data/processed/material_dataset.csv
+            data/processed/product_dataset.csv

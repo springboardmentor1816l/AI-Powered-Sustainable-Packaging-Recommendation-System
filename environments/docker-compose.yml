@@ -1,0 +1,55 @@
+version: '3.9'
+
+# This compose file uses an env file at repo root: .env
+
+env_file:
+  - ../.env
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: environments/Dockerfile
+    container_name: ecopack_backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      # The backend app should read DATABASE_URL or individual DB vars from env
+      - DATABASE_URL=${DATABASE_URL}
+      - DB_HOST=${POSTGRES_HOST}
+      - DB_PORT=${POSTGRES_PORT}
+      - DB_NAME=${POSTGRES_DB}
+      - DB_USER=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - ENVIRONMENT=${ENVIRONMENT:-development}
+    restart: on-failure
+
+  db:
+    image: postgres:15
+    container_name: ecopack_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - "${PGADMIN_PORT}:80"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
