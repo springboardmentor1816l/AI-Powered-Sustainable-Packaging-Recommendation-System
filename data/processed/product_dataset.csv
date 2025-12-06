@@ -1,0 +1,104 @@
+product_id,product_name,category,product_weight,fragility_index,shipping_type
+10,Laptop,electronics,0.014,4,sea
+15,Wine Glass,luxury,0.01,3,road
+87,Handcrafted Soap,cosmetics,0.136,9,air
+39,Protein Powder Box,food,1.319,4,road
+38,Bluetooth Speaker,household,0.147,4,road
+21,Phone Charger - Model V,cosmetics,0.394,1,road
+14,Shampoo Bottle - Model O,cosmetics,0.363,3,air
+49,Baby Lotion - Model X,cosmetics,0.297,8,road
+89,Desk Lamp,home_decor,1.208,4,road
+91,Travel Mug - Model N,home_decor,0.827,9,road
+25,Water Bottle,food,0.495,6,road
+99,Protein Powder Box,food,0.297,4,road
+93,Face Cream,cosmetics,0.255,5,road
+51,Phone Charger,household,1.031,6,road
+62,Wireless Earbuds,electronics,0.297,7,road
+41,T-Shirt,apparel,0.033,4,road
+50,VR Headset,electronics,0.573,8,road
+60,External SSD,electronics,0.064,7,road
+55,Water Bottle,food,0.193,6,air
+59,Desk Lamp,home_decor,1.967,5,road
+76,Chocolate Gift Box,food,0.797,4,road
+85,Water Bottle,food,1.196,8,road
+30,External SSD,electronics,0.014,8,sea
+27,Handcrafted Soap,cosmetics,0.247,4,air
+52,Action Camera,electronics,0.163,4,air
+32,Wireless Earbuds,electronics,0.355,6,air
+81,Phone Charger,food,0.653,4,road
+92,Wireless Earbuds,electronics,0.667,4,road
+95,LED Bulb,apparel,0.01,3,air
+97,Organic Juice Bottle,food,2.289,3,road
+54,Electric Toothbrush,pharma,0.098,3,road
+17,Supplements Bottle,pharma,0.035,4,air
+45,Wine Glass,luxury,0.305,4,sea
+67,Organic Juice Bottle,food,1.448,5,air
+24,Electric Toothbrush,household,1.442,7,air
+79,Baby Lotion,cosmetics,0.283,3,road
+58,Toy Car,apparel,0.406,4,road
+9,Protein Powder Box,food,1.649,4,sea
+63,Face Cream - Model L,cosmetics,0.156,3,road
+70,Laptop - Model S,electronics,1.023,8,road
+69,Protein Powder Box,food,0.614,4,road
+40,Laptop,electronics,0.156,2,road
+53,Scented Candle,pharma,0.179,3,road
+31,Travel Mug,home_decor,0.498,3,sea
+94,Glass Perfume Bottle,cosmetics,0.104,3,sea
+94,Glass Perfume Bottle,cosmetics,0.104,3,sea
+23,Scented Candle,food,0.043,3,air
+33,Face Cream,cosmetics,0.421,7,road
+64,Glass Perfume Bottle,cosmetics,0.223,5,air
+37,Organic Juice Bottle,food,0.043,5,road
+44,Shampoo Bottle,cosmetics,0.218,6,road
+3,Face Cream,cosmetics,0.44,1,road
+22,Action Camera,electronics,0.494,4,road
+72,Smartwatch,electronics,0.263,4,road
+78,Wooden Decor Item,home_decor,0.585,6,road
+86,Sneakers,apparel,0.297,7,road
+68,Bluetooth Speaker,pharma,0.089,5,sea
+73,Packaged Cookies,food,0.021,4,road
+43,Packaged Cookies,food,0.297,2,road
+20,VR Headset,electronics,0.35,4,road
+82,Action Camera,electronics,0.297,7,road
+6,Ceramic Plate,household,0.348,6,road
+90,External SSD,electronics,0.903,7,road
+46,Chocolate Gift Box,food,0.717,2,road
+57,Handcrafted Soap,cosmetics,0.282,4,air
+42,Smartwatch - Model Q,electronics,1.703,4,road
+11,T-Shirt,apparel,0.092,3,road
+77,Supplements Bottle - Model Z,pharma,0.122,4,air
+96,Ceramic Plate,pharma,0.297,10,road
+41,T-Shirt,apparel,0.033,4,road
+84,Electric Toothbrush - Model G,apparel,0.044,6,air
+28,Toy Car - Model C,luxury,1.148,8,road
+46,Chocolate Gift Box,food,0.717,2,road
+8,Bluetooth Speaker,home decor,0.277,7,air
+75,Wine Glass,luxury,0.187,4,road
+48,Wooden Decor Item,home_decor,0.526,3,air
+66,Ceramic Plate,home_decor,0.297,6,road
+47,Supplements Bottle,pharma,0.179,7,air
+7,Organic Juice Bottle - Model H,food,0.297,3,air
+71,T-Shirt,apparel,0.178,1,air
+56,Sneakers - Model E,apparel,0.268,1,air
+61,Travel Mug,pharma,0.109,4,road
+98,Bluetooth Speaker - Model U,pharma,0.297,6,air
+34,Glass Perfume Bottle,cosmetics,0.186,6,road
+13,Packaged Cookies,food,0.624,5,road
+1,Travel Mug,luxury,0.297,3,road
+29,Desk Lamp,home_decor,0.297,6,road
+36,Ceramic Plate,household,0.493,5,sea
+26,Sneakers,apparel,0.167,2,air
+19,Baby Lotion,cosmetics,0.473,4,road
+74,Shampoo Bottle,cosmetics,0.285,2,road
+16,Chocolate Gift Box,food,0.612,3,sea
+12,Smartwatch,electronics,0.916,8,air
+83,Scented Candle,household,0.869,4,road
+5,LED Bulb,pharma,0.18,4,road
+80,VR Headset,electronics,0.832,7,air
+2,Wireless Earbuds,electronics,0.498,7,air
+100,Laptop,electronics,0.739,2,road
+18,Wooden Decor Item,home_decor,0.297,7,air
+88,Toy Car,household,0.101,4,road
+65,LED Bulb,home_decor,0.453,4,road
+4,Glass Perfume Bottle,cosmetics,0.203,8,road
+35,LED Bulb - Model J,pharma,0.152,9,air
