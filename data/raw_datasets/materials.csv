@@ -1,0 +1,5 @@
+name,density,cost
+recycled_cardboard,0.7,12.5
+glass,2.5,30.0
+bioplastic,1.2,25.0
+aluminum,2.7,40.0
