@@ -1,0 +1,47 @@
+name: EcoPackAI CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  run-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1 — Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2 — Set up Python (even if no Python files exist yet)
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      # Step 3 — Install dependencies only if requirements file exists
+      - name: Install dependencies (if available)
+        run: |
+          if [ -f backend/requirements.txt ]; then \
+              python -m pip install --upgrade pip && \
+              pip install -r backend/requirements.txt; \
+          else \
+              echo "No requirements.txt found yet — skipping."; \
+          fi
+
+      # Step 4 — Run tests only if /tests exists
+      - name: Run tests (if available)
+        run: |
+          if [ -d tests ]; then \
+              echo "Running pytest..."; \
+              pip install pytest && pytest -q; \
+          else \
+              echo "No tests directory yet — skipping tests."; \
+          fi
+
+      # Step 5 — Linting (safe: will not fail build)
+      - name: Run linting (non-blocking)
+        run: |
+          pip install flake8 >/dev/null 2>&1 || true
+          flake8 . || true
