@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Data (ignore big and raw files)
+data/raw/
+data/intermediate/
+*.tmp
+
+# Large datasets (ignore generated CSVs)
+materials_raw.csv
+products_raw.csv
+material-dataset-*.csv
+product-dataset-*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# Docker
+environments_mysqldata/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
