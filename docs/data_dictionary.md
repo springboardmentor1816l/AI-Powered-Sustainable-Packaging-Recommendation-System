@@ -1,3 +1,4 @@
+
 # EcoPackAI – Data Dictionary
 
 This document describes the database tables and columns used in the EcoPackAI system for managing eco-friendly packaging materials, product attributes, and AI recommendations.
@@ -60,3 +61,5 @@ Stores AI model prediction results for recommended packaging materials.
 
 ## Project: EcoPackAI  
 AI-Powered Sustainable Packaging Recommendation System  
+
+
