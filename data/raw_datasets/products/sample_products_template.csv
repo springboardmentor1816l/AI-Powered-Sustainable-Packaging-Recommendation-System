@@ -1,0 +1,11 @@
+product_id,product_name,category,product_weight,fragility_index,shipping_type
+1,Smartphone X12,Electronics,0.18,8,Fragile
+2,Laptop Pro 15,Electronics,2.5,7,Standard
+3,Wireless Earbuds,Electronics,0.05,6,Standard
+4,4K Smart TV 55,Electronics,18.5,9,Fragile
+5,Organic Coffee Beans,Food,0.5,2,Standard
+6,Dark Chocolate Bar,Food,0.1,3,Standard
+7,Vitamin Supplements,Pharmacy,0.2,4,Standard
+8,Hand Sanitizer 500ml,Pharmacy,0.55,5,Standard
+9,Face Cream Luxury,Cosmetics,0.15,6,Fragile
+10,Perfume Eau de Parfum,Cosmetics,0.25,8,Fragile

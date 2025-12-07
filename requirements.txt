@@ -11,3 +11,4 @@ alembic
 pytest
 flake8
 black
+pyyaml

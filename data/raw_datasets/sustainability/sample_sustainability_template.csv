@@ -1,0 +1,11 @@
+material_name,recycling_rate_percent,lifecycle_co2_kg,water_usage_liters,energy_consumption_kwh,end_of_life_score,sustainability_rating
+Recycled Cardboard,95,12.5,45,8.2,9,A
+Bioplastic PLA,70,18.3,65,12.5,8,B
+Sugarcane Bagasse,80,10.2,38,6.8,9,A
+Mushroom Packaging,85,8.5,22,4.5,10,A+
+Recycled Paper,98,14.8,52,9.5,8,B+
+Cornstarch Foam,65,16.5,48,11.0,7,B
+Bamboo Fiber,75,11.8,35,7.2,8,B+
+Hemp Plastic,72,15.2,42,10.8,8,B
+Seaweed Packaging,90,6.2,18,3.8,10,A+
+Recycled HDPE,88,25.5,85,18.5,6,C
