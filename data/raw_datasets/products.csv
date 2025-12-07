@@ -1,0 +1,5 @@
+product_name,category,product_weight,fragility_index,shipping_type
+Ceramic Mug,Home,0.45,7,Air
+Chocolate Box,Food,0.2,5,Road
+Phone Case,Electronics,0.08,3,Air
+Glass Bottle,Food,0.5,8,Road
