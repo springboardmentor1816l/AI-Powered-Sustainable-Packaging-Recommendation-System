@@ -1,0 +1,4 @@
+material_id,material_name,density,cost_per_kg,recyclability_percent,biodegradability_percent,co2_factor,industry_use_case
+1,Cardboard,0.69,40.5,85,70,2.1,Packaging
+2,PLA,1.25,120.0,60,90,1.5,Food
+3,Recycled_Paper,0.8,30.0,90,80,1.8,Electronics
