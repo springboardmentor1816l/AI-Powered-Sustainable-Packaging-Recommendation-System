@@ -1,0 +1,405 @@
+product_id,product_name,category,product_weight,fragility_index,shipping_type
+1,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+2,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+3,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+4,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+5,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+6,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+7,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+8,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+9,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+10,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+11,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+12,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+13,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+14,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+15,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+16,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+17,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+18,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+19,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+20,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+21,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+22,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+23,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+24,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+25,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+26,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+27,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+28,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+29,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+30,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+31,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+32,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+33,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+34,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+35,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+36,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+37,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+38,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+39,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+40,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+41,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+42,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+43,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+44,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+45,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+46,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+47,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+48,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+49,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+50,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+51,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+52,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+53,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+54,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+55,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+56,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+57,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+58,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+59,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+60,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+61,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+62,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+63,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+64,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+65,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+66,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+67,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+68,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+69,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+70,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+71,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+72,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+73,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+74,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+75,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+76,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+77,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+78,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+79,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+80,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+81,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+82,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+83,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+84,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+85,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+86,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+87,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+88,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+89,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+90,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+91,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+92,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+93,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+94,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+95,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+96,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+97,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+98,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+99,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+100,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+101,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+102,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+103,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+104,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+105,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+106,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+107,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+108,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+109,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+110,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+111,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+112,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+113,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+114,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+115,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+116,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+117,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+118,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+119,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+120,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+121,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+122,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+123,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+124,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+125,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+126,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+127,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+128,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+129,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+130,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+131,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+132,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+133,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+134,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+135,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+136,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+137,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+138,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+139,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+140,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+141,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+142,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+143,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+144,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+145,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+146,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+147,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+148,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+149,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+150,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+151,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+152,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+153,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+154,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+155,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+156,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+157,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+158,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+159,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+160,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+161,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+162,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+163,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+164,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+165,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+166,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+167,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+168,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+169,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+170,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+171,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+172,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+173,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+174,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+175,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+176,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+177,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+178,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+179,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+180,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+181,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+182,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+183,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+184,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+185,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+186,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+187,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+188,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+189,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+190,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+191,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+192,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+193,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+194,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+195,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+196,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+197,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+198,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+199,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+200,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+201,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+202,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+203,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+204,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+205,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+206,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+207,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+208,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+209,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+210,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+211,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+212,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+213,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+214,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+215,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+216,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+217,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+218,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+219,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+220,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+221,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+222,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+223,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+224,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+225,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+226,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+227,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+228,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+229,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+230,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+231,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+232,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+233,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+234,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+235,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+236,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+237,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+238,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+239,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+240,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+241,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+242,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+243,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+244,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+245,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+246,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+247,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+248,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+249,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+250,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+251,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+252,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+253,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+254,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+255,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+256,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+257,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+258,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+259,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+260,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+261,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",0.5,2.0,Standard
+262,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+263,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+264,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+265,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.2,1.0,Standard
+266,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+267,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+268,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+269,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+270,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+271,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+272,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+273,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+274,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+275,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+276,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+277,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+278,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+279,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+280,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods",2.0,5.0,Heavy
+281,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+282,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+283,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+284,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+285,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+286,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+287,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+288,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+289,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+290,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+291,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+292,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+293,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+294,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+295,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+296,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+297,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+298,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+299,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+300,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+301,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+302,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+303,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+304,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+305,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+306,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+307,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",0.5,2.0,Standard
+308,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+309,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+310,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+311,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+312,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+313,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+314,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+315,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+316,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+317,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+318,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+319,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+320,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+321,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+322,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+323,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+324,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+325,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+326,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+327,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+328,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+329,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+330,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+331,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+332,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+333,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+334,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+335,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+336,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+337,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+338,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+339,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+340,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+341,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+342,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+343,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+344,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+345,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+346,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+347,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+348,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+349,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+350,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+351,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+352,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+353,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+354,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+355,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+356,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+357,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+358,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+359,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+360,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+361,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+362,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+363,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+364,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+365,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+366,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+367,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+368,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+369,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+370,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+371,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+372,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+373,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+374,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+375,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+376,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+377,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+378,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+379,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+380,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+381,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+382,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+383,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+384,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+385,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+386,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+387,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+388,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+389,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+390,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+391,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+392,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+393,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+394,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+395,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+396,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+397,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+398,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+399,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+400,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+401,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+402,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
+403,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",0.5,2.0,Standard
+404,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",0.3,3.0,Standard
