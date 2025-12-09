@@ -1,5 +1,0 @@
-product_id,product_name,weight,fragility,volume,category,shipping_type
-1,Wireless_Mouse,0.12,3,0.0008,Electronics,Air
-2,Glass_Bottle,0.45,8,0.0012,Food,Road
-3,Notebook,0.35,2,0.002,Stationery,Sea
-
