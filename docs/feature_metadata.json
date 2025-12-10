@@ -1,0 +1,61 @@
+{
+    "module": "Feature Engineering & Scaling",
+    "version": "v1.0",
+    "description": "Metadata for all features used in the EcoPackAI ML models, including engineered indices. Ranges reflect post-MinMaxScaler transformation.",
+    "features": {
+        "Recyclability (%)": {
+            "type": "Numeric",
+            "role": "Feature",
+            "range": "[0, 1]",
+            "meaning": "Recyclability potential of the material (scaled from original %)."
+        },
+        "Cost per Unit (USD)": {
+            "type": "Numeric",
+            "role": "Feature/Target Reference",
+            "range": "[0, 1]",
+            "meaning": "Material unit price (scaled)."
+        },
+        "Load Handling Score": {
+            "type": "Numeric",
+            "role": "Feature",
+            "range": "[0, 1]",
+            "meaning": "Mechanical strength/durability score (scaled)."
+        },
+        "Carbon Footprint (kg CO2/unit)": {
+            "type": "Numeric",
+            "role": "Feature/Target Reference",
+            "range": "[0, 1]",
+            "meaning": "Environmental impact metric (scaled)."
+        },
+        "CO2_Impact_Index": {
+            "type": "Numeric",
+            "role": "Feature/Target",
+            "range": "[0, 1]",
+            "meaning": "Composite score measuring overall environmental burden. **Lower value is better/greener.**"
+        },
+        "Cost_Efficiency_Index": {
+            "type": "Numeric",
+            "role": "Feature/Target",
+            "range": "[0, 1]",
+            "meaning": "Composite score measuring cost-effectiveness relative to performance. **Lower value is better.**"
+        },
+        "Material_Suitability_Score": {
+            "type": "Numeric",
+            "role": "Feature",
+            "range": "[0, 1]",
+            "meaning": "Composite score for overall material quality and performance (adjusted for weight penalty). **Higher value is better.**"
+        },
+        "Material Type_*": {
+            "type": "Categorical (OHE)",
+            "role": "Feature",
+            "range": "[0, 1]",
+            "meaning": "One-Hot Encoded features for different material categories (e.g., Cardboard, Plastic, etc.)."
+        },
+        "Supplier Region_*": {
+            "type": "Categorical (OHE)",
+            "role": "Feature",
+            "range": "[0, 1]",
+            "meaning": "One-Hot Encoded features for supplier geographical region."
+        }
+    }
+}
