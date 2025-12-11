@@ -1,0 +1,4 @@
+product_name,length,width,height,weight,fragility,fragility_enc
+Glass Bottle,0.0,0.0,0.9999999999999999,0.22222222222222227,high,0
+Cardboard Box,1.0,0.9999999999999998,0.4117647058823529,1.0,medium,2
+Plastic Container,0.25,0.28571428571428564,0.0,0.0,low,1
