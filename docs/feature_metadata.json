@@ -1,0 +1,41 @@
+{
+  "CO2_Impact_Index": {
+    "description": "0-100 score where 0 is best (low CO2 impact) and 100 is worst.",
+    "inputs": [
+      "CO2_per_kg",
+      "Biodegradation Time (days)",
+      "Recyclability Category",
+      "Material Type"
+    ],
+    "range": [
+      0,
+      100
+    ]
+  },
+  "Cost_Efficiency_Index": {
+    "description": "0-100 score where 100 is most cost efficient.",
+    "inputs": [
+      "Cost_per_kg",
+      "Weight_per_unit_g",
+      "Durability",
+      "Recyclability Category"
+    ],
+    "range": [
+      0,
+      100
+    ]
+  },
+  "Material_Suitability_Score": {
+    "description": "0-100 score where higher means more suitable for the target product.",
+    "inputs": [
+      "Load_handling",
+      "Moisture_resistance",
+      "Thermal_resistance",
+      "Durability"
+    ],
+    "range": [
+      0,
+      100
+    ]
+  }
+}
