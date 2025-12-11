@@ -1,44 +1,40 @@
-EcoPackAI – AI-Powered Sustainable Packaging Recommendation System
-📍 Project Overview
+EcoPackAI – Exploratory Data Analysis (EDA)
 
-EcoPackAI is an intelligent decision-support system designed to help businesses identify the most sustainable, cost-efficient, and durable packaging materials based on product characteristics and supply-chain constraints. The system uses machine learning to evaluate packaging alternatives and recommend optimal solutions that reduce environmental impact while maintaining product safety and performance.
+This repository contains the Exploratory Data Analysis performed on the EcoPackAI_dataset.csv file.
 
-🎯 Key Objectives
+### ✔ 1. EDA.ipynb  
+Contains:
+- Data loading  
+- Structure overview  
+- Summary statistics  
+- Missing value detection  
+- Duplicate check  
+- Outlier analysis  
+- Visualizations  
+- Findings summary  
 
-Reduce dependency on non-biodegradable packaging
+### ✔ 2. EcoPackAI_dataset.csv  
+Single combined dataset with 404 rows & 23 columns.
 
-Provide eco-friendly, cost-optimized material recommendations
+### ✔ 3. missing_value_table.csv  
+CSV generated during EDA containing missing count and % for each column.
 
-Enable data-driven packaging decisions
+### ✔ 4. data_quality_report.md  
+A detailed report covering:
+- Missing values  
+- Duplicates  
+- Outliers  
+- Invalid entries  
+- Cleaning recommendations  
 
-Support sustainability and ESG goals for enterprises
+##  Tools Used
+- Python  
+- Pandas  
+- NumPy  
+- Seaborn  
+- Matplotlib  
+- colab Notebook  
 
-✨ Features
-
-🧠 AI-based recommendation engine for packaging materials
-
-📦 Material property comparison (durability, biodegradability, cost, carbon footprint)
-
-🔍 Search & filter options based on business needs
-
-📊 Analytics dashboard for environmental impact insights
-
-📝 Auto-generated packaging recommendation report
-
-🌐 Full-stack web application
-
-🧱 System Architecture
-
-Modular pipeline design
-
-Input Module – Collects product type, weight, dimensions, shipping conditions & constraints
-
-Material Database – Contains eco-friendly packaging materials dataset
-
-ML Recommendation Engine – Model predicts optimal material combinations
-
-Optimization & Scoring Module – Evaluates cost, sustainability & performance score
-
-Reporting Module – Generates downloadable report
-
-Frontend Dashboard – Visualization & report interface
+## Summary
+The dataset was analyzed for completeness, consistency, and data quality.  
+Overall quality is excellent with only 3 missing values and no duplicates.
