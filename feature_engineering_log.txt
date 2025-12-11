@@ -1,0 +1,10 @@
+Loaded data\material_dataset.csv with 1000 rows.
+weight_required_kg not found — set default 0.1 kg for all rows.
+durability_score not provided; will use strength_mpa as proxy where needed.
+co2 range: min=0.29, max=15.0
+strength_mpa range: min=3, max=100
+weight_capacity_kg range: min=2, max=1500
+cost_unit range: min=1.8, max=30.0
+Wrote featured dataset -> data\materials_featured.csv
+Wrote metadata -> feature_metadata.json
+Feature engineering completed.

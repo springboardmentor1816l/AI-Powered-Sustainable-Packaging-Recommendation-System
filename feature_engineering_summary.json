@@ -1,0 +1,18 @@
+{
+  "co2_min_max": [
+    0.29,
+    15.0
+  ],
+  "cost_unit_min_max": [
+    1.8,
+    30.0
+  ],
+  "strength_min_max": [
+    3.0,
+    100.0
+  ],
+  "capacity_min_max": [
+    2.0,
+    1500.0
+  ]
+}

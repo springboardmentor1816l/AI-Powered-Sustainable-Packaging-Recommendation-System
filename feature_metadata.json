@@ -1,0 +1,63 @@
+{
+  "CII": {
+    "name": "CO2 Impact Index",
+    "description": "Higher value means worse environmental impact (high CO2, low biodegradability/recyclability).",
+    "range": [
+      0,
+      100
+    ],
+    "direction": "higher = worse",
+    "inputs": [
+      "co2_emission_kg_per_kg",
+      "biodegradability_percent",
+      "recyclability_percent"
+    ],
+    "formula_summary": "0.6*norm_co2 + 0.25*(1-biodeg) + 0.15*(1-recycl)"
+  },
+  "CEI": {
+    "name": "Cost Efficiency Index",
+    "description": "Higher value means more cost-efficient for packaging (low cost per unit, high durability).",
+    "range": [
+      0,
+      100
+    ],
+    "direction": "higher = better",
+    "inputs": [
+      "cost_per_kg",
+      "weight_required_kg",
+      "strength_mpa",
+      "recyclability_percent"
+    ],
+    "formula_summary": "0.70*(1-norm_cost_unit) + 0.20*norm_strength + 0.10*recycl"
+  },
+  "MSS": {
+    "name": "Material Suitability Score",
+    "description": "General suitability for packaging based on strength, capacity and recyclability.",
+    "range": [
+      0,
+      100
+    ],
+    "direction": "higher = better",
+    "inputs": [
+      "strength_mpa",
+      "weight_capacity_kg",
+      "recyclability_percent"
+    ],
+    "formula_summary": "0.60*norm_strength + 0.30*norm_capacity + 0.10*recycl"
+  },
+  "final_recommendation_score": {
+    "name": "Final Recommendation Score",
+    "description": "Weighted aggregate of environmental goodness, cost efficiency and suitability.",
+    "range": [
+      0,
+      100
+    ],
+    "direction": "higher = better",
+    "inputs": [
+      "CII",
+      "CEI",
+      "MSS"
+    ],
+    "formula_summary": "0.4*(100 - CII) + 0.3*CEI + 0.3*MSS"
+  }
+}
