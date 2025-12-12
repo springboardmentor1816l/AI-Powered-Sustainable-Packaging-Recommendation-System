@@ -1,0 +1,6 @@
+material_type,strength_mpa,weight_capacity,biodegradability_percent,co2_emission_score,recyclability_percent,cost_per_kg,industry_use_case
+Paper,50,30,95,1.2,80,0.5,Packaging
+Plastic,150,100,5,8.5,30,1.2,Food containers
+Biodegradable Plastic,120,80,70,3.0,60,2.5,Eco-friendly packaging
+Glass,200,200,0,2.1,95,3.5,Bottling
+Aluminum,300,300,0,1.1,98,4.0,Beverage cans

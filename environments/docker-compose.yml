@@ -1,46 +1,31 @@
-
-
- version: "3.9"
-
 services:
   backend:
     build:
       context: ..
-      dockerfile: environments/Dockerfile
-    container_name: ecopack_backend
+      dockerfile: ./environments/Dockerfile
+    container_name: ecopack-backend
     ports:
       - "8000:8000"
-    volumes:
-      - ../backend:/app
-    env_file:
-      - ../.env
     depends_on:
       - db
 
   db:
-    image: postgres:16
-    container_name: ecopack_postgres
+    image: postgres:15
+    container_name: ecopack-db
     restart: always
     environment:
-      POSTGRES_USER: ecoadmin
-      POSTGRES_PASSWORD: ecopass
+      POSTGRES_USER: ecopack
+      POSTGRES_PASSWORD: ecopack123
       POSTGRES_DB: ecopack_db
     ports:
       - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
 
   pgadmin:
     image: dpage/pgadmin4
-    container_name: pgadmin
+    container_name: ecopack-pgadmin
     restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@eco.com
-      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_DEFAULT_EMAIL: admin@ecopack.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
     ports:
       - "5050:80"
-    depends_on:
-      - db
-
-volumes:
-  postgres_data:

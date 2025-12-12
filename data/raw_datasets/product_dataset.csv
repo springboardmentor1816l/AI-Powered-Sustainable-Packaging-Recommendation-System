@@ -1,0 +1,6 @@
+product_name,category,product_weight,fragility_index,shipping_type
+Soap,Personal Care,120,2,Local
+Glass Bottle,Beverage,500,9,International
+Mobile Phone,Electronics,300,10,International
+Notebook,Stationery,200,1,Local
+Ceramic Cup,Home,350,7,Domestic
