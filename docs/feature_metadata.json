@@ -1,0 +1,17 @@
+{
+  "CO2 Impact Index": {
+    "range": "0-100",
+    "description": "Environmental footprint score combining CO₂ emissions, biodegradation, and recyclability.",
+    "input_fields": ["co2_emissions_per_kg", "biodegradation_time", "recyclability", "material_type"]
+  },
+  "Cost Efficiency Index": {
+    "range": "0-100",
+    "description": "Economic feasibility score calculated from cost, durability, and recyclability.",
+    "input_fields": ["cost_per_kg", "weight_required", "durability", "recyclability"]
+  },
+  "Material Suitability Score": {
+    "range": "0-100",
+    "description": "Indicates how suitable a material is for a specific product category.",
+    "input_fields": ["load_handling", "moisture_resistance", "thermal_resistance", "durability", "product_category"]
+  }
+}

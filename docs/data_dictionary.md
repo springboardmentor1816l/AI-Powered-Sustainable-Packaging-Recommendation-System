@@ -22,6 +22,7 @@ Stores information about eco-friendly packaging materials and their performance 
 
 ---
 
+
 ## 📦 **Table: products**
 
 Contains information about products that need packaging evaluation.
@@ -36,6 +37,16 @@ Contains information about products that need packaging evaluation.
 | shipping_type   | VARCHAR(50)   | Shipping method used                     | "Air"         | Air / Road / Sea |
 
 ---
+
+## Engineered Feature Columns
+
+| Column Name           | Data Type     | Description                                      | Example |
+|-----------------------|---------------|--------------------------------------------------|---------|
+| cii                   | NUMERIC(5,2)  | CO₂ Impact Index (0–100)                         | 74.25   |
+| cei                   | NUMERIC(5,2)  | Cost Efficiency Index (0–100)                    | 68.10   |
+| mss                   | NUMERIC(5,2)  | Material Suitability Score (0–100)               | 82.50   |
+| recommendation_score  | NUMERIC(5,2)  | Final weighted sustainability-performance score  | 78.30   |
+
 
 ## 📊 **Table: recommendation_logs**
 
@@ -61,11 +72,3 @@ Tracks ML-generated packaging recommendations for audits, training, and dashboar
 * Foreign keys maintain referential integrity between tables.
 
 ---
-
-## 📁 File Location
-
-This file should be saved at:
-
-```
-/docs/data_dictionary.md
-```
