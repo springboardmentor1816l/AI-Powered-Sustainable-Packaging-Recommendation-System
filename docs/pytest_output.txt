@@ -1,7 +1,3 @@
-# Data Quality Test Report
-
-Pytest output:
-
 F
 =================================== FAILURES ===================================
 ________________________ test_required_columns_present _________________________
@@ -20,9 +16,3 @@ ecopackai/tests/test_data_quality.py:14: AssertionError
 FAILED ecopackai/tests/test_data_quality.py::test_required_columns_present - ...
 !!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
 1 failed in 1.41s
-
-
-Tested file: /content/ecopackai/data/processed/cleaned_integrated_materials.csv
-
-Notes:
-- Fix any failing tests and re-run `pytest`.
