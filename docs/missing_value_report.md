@@ -1,3 +1,4 @@
+# Materials Dataset
 
 # Missing Value Report
 ---
@@ -24,3 +25,21 @@
 1. **Numeric (continuous) features** (Strength, Cost, CO2, etc.): Impute using the **Median** strategy to minimize the impact of potential outliers, as per the project plan[cite: 218].
 2. **Categorical features** (Material Type, Industry Use Case): Impute using the **Mode (most frequent)** strategy, although no missing values were detected in these columns in the current raw dataset.
 3. **No rows were removed** as the percentage of missing data (approx. 5%) was low and spread across columns.
+
+# Products Dataset
+
+
+
+# Products Dataset - Missing Value Report
+---
+## Summary of Missing Values
+
+| Column | Missing Count | Strategy |
+| :--- | :--- | :--- |
+| N/A | 0 | N/A |
+
+## Decisions
+1. **Numeric features** (Product Weight, Fragility Index): Impute using the **Median** strategy to ensure robust handling of missing values.
+2. **Categorical features** (Category, Shipping Type): Impute using the **Mode (most frequent)** strategy.
+3. **No rows were removed.**
+
