@@ -1,6 +1,0 @@
-material_type,strength_mpa,weight_capacity,biodegradability_percent,co2_emission_score,recyclability_percent,cost_per_kg,industry_use_case
-Paper,50,5,90,12,80,40,food
-PLA,60,6,85,10,70,120,cosmetics
-Bioplastic,45,4,70,18,60,100,electronics
-Sugarcane,55,7,95,8,85,110,pharmacy
-Cardboard,30,10,80,15,90,35,others
