@@ -1,0 +1,33 @@
+{
+  "CO2_Impact_Index": {
+    "description": "Measures environmental sustainability based on CO₂ emission, biodegradation, recyclability.",
+    "range": "0-100",
+    "inputs": [
+      "co2_emission",
+      "biodegradation_time",
+      "recyclability_rating",
+      "material_type"
+    ]
+  },
+  "Cost_Efficiency_Index": {
+    "description": "Measures economic performance based on cost, durability, recyclability and weight usage.",
+    "range": "0-100",
+    "inputs": [
+      "cost_per_kg",
+      "weight_required",
+      "recyclability_percent",
+      "durability_score"
+    ]
+  },
+  "Material_Suitability_Score": {
+    "description": "Measures suitability of a material for a product category.",
+    "range": "0-100",
+    "inputs": [
+      "load_score",
+      "moisture_resistance",
+      "thermal_resistance",
+      "category_requirements",
+      "fragility"
+    ]
+  }
+}
