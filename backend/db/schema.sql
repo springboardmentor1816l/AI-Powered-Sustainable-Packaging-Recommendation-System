@@ -27,4 +27,4 @@ CREATE TABLE recommendation_logs (
     co2_prediction FLOAT,
     material_rank INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+)

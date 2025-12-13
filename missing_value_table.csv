@@ -1,15 +1,30 @@
 ,Materials,Products
-material_id,0.0,
-material_name,0.0,
-density,0.0,
-cost_per_kg,0.0,
-recyclability_percent,0.0,
-biodegradability_percent,0.0,
-co2_factor,0.0,
-industry_use_case,0.0,
+Material ID,0.0,
+Packaging Type,0.0,
+Material Type,0.0,
+Suitable Product Categories,0.0,
+Recommended Packaging Use Cases,0.0,
+Supplier Region,0.0,
+Recyclability (%),0.0,
+Recyclability Category,0.0,
+Recycled Content (%),1.0,
+Reusability (%),1.0,
+Biodegradation Time (days),1.0,
+End-of-Life Disposal (%),1.0,
+Carbon Footprint (kg CO2/unit),1.0,
+CO2 Emission per kg (estimated),1.0,
+Waste Reduction Impact (%),1.0,
+Sustainability Target Progress (%),1.0,
+Load Handling Score,1.0,
+Moisture Resistance Score,1.0,
+Thermal Resistance Score,1.0,
+Cost per Unit (USD),1.0,
+Annual Usage (units),1.0,
+Total Material Weight (tons),1.0,
+Supplier Sustainability Compliance (%),1.0,
+product_id,,0.0
 product_name,,0.0
-length,,0.0
-width,,0.0
-height,,0.0
-weight,,0.0
-fragility,,0.0
+category,,0.0
+product_weight_kg,,0.0
+fragility_index,,0.0
+shipping_type,,0.0
