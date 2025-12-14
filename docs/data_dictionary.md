@@ -33,3 +33,12 @@
 | co2_prediction     | FLOAT   | Predicted CO₂ footprint |
 | material_rank      | INT     | Rank (1 = best) |
 | created_at         | TIMESTAMP | Record timestamp |
+
+## Newly Engineered Features
+
+| Feature | Description | Range |
+|------|------------|-------|
+| CO₂ Impact Index | Environmental impact of material | 0–100 |
+| Cost Efficiency Index | Economic efficiency score | 0–100 |
+| Material Suitability Score | Suitability for product category | 0–100 |
+| Final Recommendation Score | Overall ranking score | 0–100 |

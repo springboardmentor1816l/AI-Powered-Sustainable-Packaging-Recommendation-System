@@ -1,0 +1,52 @@
+{
+  "CO2_Impact_Index": {
+    "description": "Composite environmental impact score",
+    "range": "0-100",
+    "inputs": [
+      "Carbon Footprint",
+      "Biodegradation Time",
+      "Recyclability Category",
+      "Material Type"
+    ],
+    "weights": {
+      "carbon_footprint": 0.4,
+      "biodegradation_time": 0.3,
+      "recyclability": 0.2,
+      "material_type": 0.1
+    }
+  },
+  "Cost_Efficiency_Index": {
+    "description": "Economic efficiency of material usage",
+    "range": "0-100",
+    "inputs": [
+      "Cost per kg",
+      "Weight Capacity",
+      "Recyclability Category"
+    ],
+    "weights": {
+      "cost": 0.5,
+      "capacity": 0.3,
+      "recyclability": 0.2
+    }
+  },
+  "Material_Suitability_Score": {
+    "description": "Suitability of material for a specific product category",
+    "range": "0-100",
+    "scope": "material × product category",
+    "inputs": [
+      "Strength",
+      "Biodegradability",
+      "Recyclability",
+      "Product Category"
+    ]
+  },
+  "Final_Recommendation_Score": {
+    "description": "Overall material recommendation score",
+    "range": "0-100",
+    "derived_from": [
+      "CO2_Impact_Index",
+      "Cost_Efficiency_Index",
+      "Material_Suitability_Score"
+    ]
+  }
+}
