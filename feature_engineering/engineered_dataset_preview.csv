@@ -1,0 +1,5 @@
+Material,CO2_Emissions,Cost_per_kg,CO2_Impact_Index,Cost_Efficiency_Index,Material_Suitability_Score
+Paper,1.2,40,78,85,90
+Plastic,3.5,25,40,70,60
+Glass,2.8,55,65,60,75
+Bio-based,0.9,60,90,80,88
