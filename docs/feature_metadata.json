@@ -1,0 +1,59 @@
+{
+  "CO2_Impact_Index": {
+    "description": "Standardized sustainability score measuring environmental impact",
+    "range": "0–100",
+    "higher_is_better": true,
+    "inputs": [
+      "CO2_emission_per_kg",
+      "biodegradation_time_days",
+      "recyclability_category",
+      "material_type"
+    ],
+    "weights": {
+      "carbon_emissions": 0.4,
+      "biodegradation": 0.3,
+      "recyclability": 0.2,
+      "material_type": 0.1
+    }
+  },
+
+  "Cost_Efficiency_Index": {
+    "description": "Economic feasibility score incorporating cost, durability, and reuse benefits",
+    "range": "0–100",
+    "higher_is_better": true,
+    "inputs": [
+      "cost_per_kg",
+      "material_weight",
+      "recyclability_percent",
+      "reusability_percent",
+      "durability_score"
+    ],
+    "weights": {
+      "cost": 0.5,
+      "sustainability_bonus": 0.3,
+      "durability": 0.2
+    }
+  },
+
+  "Material_Suitability_Score": {
+    "description": "Score indicating how suitable a material is for a specific product category",
+    "range": "0–100",
+    "higher_is_better": true,
+    "inputs": [
+      "load_handling_score",
+      "moisture_resistance_score",
+      "thermal_resistance_score",
+      "product_category_requirements",
+      "durability_rating",
+      "material_type_safety"
+    ],
+    "weights": {
+      "performance_alignment": 0.6,
+      "category_compatibility": 0.25,
+      "durability": 0.15
+    },
+    "penalties": {
+      "critical_requirement_failure": -30
+    }
+  }
+}
