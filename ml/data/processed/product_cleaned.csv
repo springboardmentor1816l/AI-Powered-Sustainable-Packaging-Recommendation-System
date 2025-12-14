@@ -1,0 +1,90 @@
+product_id,product_name,category,product_weight,fragility_index,shipping_type
+1,Chocolate Box,Industrial,0.643,5,Air
+2,Handbag,Books,1.16,2,Air
+3,T-Shirt Pack,Books,1.809,1,Air
+4,Tea Canister,Toys,0.388,4,Air
+5,Glass Bottle,Toys,0.313,6,Road
+6,Perfume Bottle,Books,1.778,1,Road
+7,Mobile Phone,Electronics,1.158,8,Air
+8,Protein Powder Tub,Household,0.835,3,Road
+9,Glass Bottle,Pharmacy,0.237,7,Air
+10,Ceramic Mug,Books,1.354,2,Air
+11,Small Appliance,Apparel,1.056,1,Road
+12,Chocolate Box,Books,0.822,1,Road
+13,Ceramic Mug,Electronics,0.708,7,Air
+14,Ceramic Mug,Cosmetics,0.413,6,Sea
+15,Cereal Box,Pharmacy,0.467,6,Air
+16,Tea Canister,Books,1.301,3,Air
+17,Laptop,Cosmetics,0.038,7,Air
+18,Face Cream Jar,Toys,1.109,4,Air
+19,Surgical Kit,Apparel,1.075,2,Road
+20,Protein Powder Tub,Industrial,2.466,1,Road
+21,Tea Canister,Food,1.089,3,Air
+22,Insulin Vial,Cosmetics,0.927,5,Road
+23,Ceramic Mug,Cosmetics,0.462,8,Road
+24,Mobile Phone,Cosmetics,0.411,5,Road
+25,Soap Bar Pack,Industrial,0.314,6,Air
+26,Soap Bar Pack,Electronics,0.213,6,Road
+27,Smartwatch,Electronics,0.15,7,Air
+28,Organic Tea Box,Food,0.25,4,Road
+29,Skincare Serum,Cosmetics,0.1,7,Road
+30,Computer Monitor,Electronics,6.0,6,Road
+31,Cough Syrup Bottle,Pharmacy,0.3,6,Road
+32,Frozen Food Package,Food,0.8,5,Sea
+33,Cereal Box,Electronics,1.826,5,Air
+34,Camera,Electronics,2.891,7,Air
+35,Insulin Vial,Industrial,0.68,2,Air
+36,Ceramic Mug,Apparel,0.326,2,Sea
+37,Glass Bottle,Food,0.14,6,Air
+38,Shoe Box,Electronics,2.991,6,Road
+39,Shoe Box,Apparel,0.778,1,Air
+40,Smartphone,Electronics,0.25,8,Air
+41,Laptop Computer,Electronics,2.5,7,Air
+42,Glass Perfume Bottle,Cosmetics,0.15,9,Road
+43,LED Television,Electronics,15.0,6,Road
+44,Shampoo Bottle (Plastic),Cosmetics,0.5,3,Road
+45,Canned Soup,Food,0.4,2,Sea
+46,Chocolate Box,Food,0.3,4,Road
+47,Medicine Tablets,Pharmacy,0.1,5,Air
+48,Ceramic Mug,Cosmetics,0.35,8,Road
+49,Wireless Earbuds,Electronics,0.05,7,Air
+50,Face Cream Jar,Cosmetics,0.2,5,Road
+51,Fresh Vegetables,Food,2.0,6,Road
+52,Vitamin Supplements,Pharmacy,0.15,4,Air
+53,Gaming Console,Electronics,4.5,6,Air
+54,Chocolate Box,Electronics,1.134,8,Road
+55,Cosmetic Kit,Toys,1.105,1,Air
+56,LED Bulb,Pharmacy,0.353,7,Road
+57,Mobile Phone,Electronics,1.466,5,Road
+58,LED Bulb,Industrial,0.976,1,Road
+59,Snack Packet,Pharmacy,0.185,5,Road
+60,Books Bundle,Pharmacy,0.503,7,Air
+61,T-Shirt Pack,Apparel,0.575,1,Road
+62,Watch,Industrial,0.919,3,Air
+63,Glass Bottle,Electronics,0.637,6,Sea
+64,Board Game,Food,1.804,2,Road
+65,Glass Bottle,Industrial,0.356,1,Air
+66,Toy Car,Pharmacy,0.778,8,Road
+67,Insulin Vial,Apparel,0.689,1,Road
+68,Snack Packet,Cosmetics,0.413,3,Air
+69,Perfume Bottle,Apparel,0.314,2,Air
+70,Books Bundle,Food,2.161,2,Road
+71,Snack Packet,Food,0.713,3,Road
+72,Ceramic Mug,Toys,0.78,3,Road
+73,Organic Honey Jar,Food,0.6,7,Road
+74,Hand Sanitizer Bottle,Pharmacy,0.25,3,Road
+75,Shoe Box,Industrial,0.966,4,Air
+76,T-Shirt Pack,Cosmetics,0.246,5,Road
+77,Mobile Phone,Household,0.975,3,Air
+78,Cosmetic Kit,Electronics,2.028,6,Road
+79,Ceramic Mug,Toys,0.307,3,Sea
+80,Protein Powder Tub,Food,1.82,3,Sea
+81,Cosmetic Kit,Food,1.023,3,Sea
+82,Bluetooth Speaker,Electronics,0.8,5,Road
+83,Protein Powder Container,Food,1.2,4,Sea
+84,Coffee Beans Bag,Food,1.0,3,Sea
+85,Lipstick Set,Cosmetics,0.08,6,Road
+86,Tablet Device,Electronics,0.5,7,Air
+87,Essential Oil Bottle,Cosmetics,0.12,9,Road
+88,Prescription Glasses,Pharmacy,0.18,8,Air
+89,Injectable Medicine,Pharmacy,0.05,10,Air

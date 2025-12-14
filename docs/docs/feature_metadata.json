@@ -1,0 +1,43 @@
+{
+  "co2_impact_index": {
+    "description": "Environmental sustainability score based on CO2 emissions, biodegradability, and recyclability",
+    "input_columns": [
+      "co2_emission_score",
+      "biodegradability_percent",
+      "recyclability_percent"
+    ],
+    "range": "0-100",
+    "higher_value_indicates": "Better environmental performance",
+    "normalization": "Min-max normalization with inverse scaling for CO2 emissions",
+    "derived_feature": true,
+    "used_for_modeling": true
+  },
+
+  "cost_efficiency_index": {
+    "description": "Economic efficiency score representing cost effectiveness of material usage",
+    "input_columns": [
+      "cost_per_kg",
+      "weight_capacity",
+      "strength_mpa"
+    ],
+    "range": "0-100",
+    "higher_value_indicates": "Better cost efficiency",
+    "normalization": "Min-max normalization with inverse scaling for cost",
+    "derived_feature": true,
+    "used_for_modeling": true
+  },
+
+  "material_suitability_score": {
+    "description": "Overall suitability score of a material for industry-specific use cases",
+    "input_columns": [
+      "strength_mpa",
+      "weight_capacity",
+      "industry_use_case"
+    ],
+    "range": "0-100",
+    "higher_value_indicates": "Higher suitability for the target industry",
+    "normalization": "Numeric normalization with categorical adjustment",
+    "derived_feature": true,
+    "used_for_modeling": true
+  }
+}

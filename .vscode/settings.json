@@ -1,0 +1,16 @@
+{
+    "sqltools.connections": [
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Schema",
+            "database": "EcopackAI_db",
+            "username": "postgres",
+            "password": "Nikita",
+            "connectionTimeout": 30
+        }
+    ]
+}
