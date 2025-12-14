@@ -1,0 +1,72 @@
+{
+  "CII": {
+    "name": "CO2 Impact Index",
+    "description": "Measures environmental sustainability using carbon footprint, biodegradation time, and recyclability.",
+    "range": "0 to 1",
+    "data_type": "float",
+    "inputs_used": [
+      "Carbon Footprint (kg CO2/unit)",
+      "Biodegradation Time (days)",
+      "Recyclability Category"
+    ],
+    "transformation": {
+      "carbon_normalization": "(value - min) / (max - min)",
+      "biodegradation_score": "1 - normalized_biodegradation",
+      "recyclability_mapping": {
+        "A": 1.0,
+        "B": 0.75,
+        "C": 0.5,
+        "D": 0.25
+      },
+      "formula": "0.40 * (1 - carbon_norm) + 0.30 * bio_score + 0.30 * recyclability_score"
+    }
+  },
+
+  "CEI": {
+    "name": "Cost Efficiency Index",
+    "description": "Measures economic feasibility based on cost, durability, and recyclability.",
+    "range": "0 to 1",
+    "data_type": "float",
+    "inputs_used": [
+      "Cost per Unit (USD)",
+      "Total Material Weight (tons)",
+      "Durability Rating",
+      "Recyclability Category"
+    ],
+    "transformation": {
+      "cost_normalization": "1 - (value - min) / (max - min)",
+      "durability_scaling": "DurabilityRating / 10",
+      "recyclability_mapping": {
+        "A": 1.0,
+        "B": 0.75,
+        "C": 0.5,
+        "D": 0.25
+      },
+      "formula": "0.50 * cost_norm + 0.20 * recyclability_score + 0.30 * durability_score"
+    }
+  },
+
+  "MSS": {
+    "name": "Material Suitability Score",
+    "description": "Evaluates how suitable a material is for packaging based on load, resistance scores, durability, and category fit.",
+    "range": "0 to 1",
+    "data_type": "float",
+    "inputs_used": [
+      "Load Handling Score",
+      "Moisture Resistance Score",
+      "Thermal Resistance Score",
+      "Durability Rating",
+      "Suitable Product Categories"
+    ],
+    "transformation": {
+      "normalized_fields": {
+        "load_norm": "(value - min) / (max - min)",
+        "moisture_norm": "MoistureResistanceScore / 10",
+        "thermal_norm": "ThermalResistanceScore / 10",
+        "durability_norm": "DurabilityRating / 10"
+      },
+      "category_bonus": "min(number_of_categories * 0.02, 0.10)",
+      "formula": "0.25 * load_norm + 0.25 * moisture_norm + 0.20 * thermal_norm + 0.20 * durability_norm + 0.10 * category_bonus"
+    }
+  }
+}
