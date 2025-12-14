@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 # Data Dictionary — EcoPackAI
 
 This document describes the database schema fields, their datatypes, and purpose for the EcoPackAI system.
@@ -48,3 +49,5 @@ This document describes the database schema fields, their datatypes, and purpose
 
 
 
+=======
+>>>>>>> a34fb16f (Rename data_dictionary.md to docs/data_dictionary.md)
