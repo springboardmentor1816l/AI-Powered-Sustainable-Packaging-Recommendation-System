@@ -33,3 +33,26 @@
 | co2_prediction | FLOAT | Predicted CO₂ |
 | material_rank | INT | Ranking |
 | created_at | TIMESTAMP | When recommendation was created |
+
+
+## Features & Targets
+
+### Target Variables
+- recommended_material: Target label for material recommendation
+- sustainability_score: Numeric sustainability score (0–100)
+- cost_efficiency: Low / Medium / High cost category
+
+### Input Features
+- Density
+- Strength Score
+- Moisture Resistance
+- Thermal Resistance
+- CO2 Emission per kg
+- Biodegradation Time
+- Renewable Content %
+- Product Category
+- Fragility Score
+- Transportation Distance
+- Material Cost per kg
+- Manufacturing Cost
+- Supplier Region
