@@ -25,3 +25,36 @@
 - Add DB constraints post-ingestion
 
 These recommendations were implemented in subsequent cleaning steps.
+
+**Module:** Data Quality Checks & Unit Tests
+
+## Dataset Evaluated
+- `materials_final_encoded.csv`
+
+---
+
+## Test Summary
+
+| Category | Status |
+|--------|--------|
+| Structural checks | Passed |
+| Missing value checks | Passed |
+| Numeric range checks | Passed |
+| Encoded feature validation | Passed |
+| Uniqueness & integrity checks | Passed |
+
+---
+
+## Observations
+- All required columns are present
+- No missing values detected
+- Numeric and percentage values fall within valid ranges
+- Encoded categorical features contain valid binary values
+- Material IDs are unique
+- No duplicate records found
+
+---
+
+## Conclusion
+The dataset satisfies all defined data quality rules and is considered
+safe for downstream feature engineering, modeling, and deployment.
