@@ -38,3 +38,42 @@ A detailed report covering:
 ## Summary
 The dataset was analyzed for completeness, consistency, and data quality.  
 Overall quality is excellent with only 3 missing values and no duplicates.
+
+
+
+
+
+# Dataset Preparation – Define Targets & Features
+
+## Module
+Data Preparation – (Model Development)
+
+## Objective
+To identify the target variable and finalize model features, and
+prepare a clean dataset for the next stage of machine learning
+(encoding and feature engineering).
+
+## Dataset
+Source file used:
+- cleaned_integrated_materials.csv
+
+## Target Variable
+- material_type  
+Represents the recommended sustainable packaging material.
+
+## Features
+All remaining columns after excluding the target variable were
+used as model features. These include material properties,
+cost-related attributes, and sustainability indicators.
+
+## Files Generated
+- dataset_prep.ipynb – Dataset preparation notebook
+- X_raw.csv – Feature dataset
+- y_raw.csv – Target dataset
+
+## Notes
+Column names were standardized to ensure consistency and avoid
+errors during feature selection. The dataset is now ready for
+encoding and model development.
+
+
