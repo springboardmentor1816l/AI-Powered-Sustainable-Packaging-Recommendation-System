@@ -2,9 +2,6 @@ version: '3.9'
 
 # This compose file uses an env file at repo root: .env
 
-env_file:
-  - ../.env
-
 services:
   backend:
     build:
@@ -27,7 +24,7 @@ services:
     restart: on-failure
 
   db:
-    image: postgres:15
+    image: postgres:18
     container_name: ecopack_postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
@@ -36,7 +33,7 @@ services:
     ports:
       - "${POSTGRES_PORT}:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql
     restart: unless-stopped
 
   pgadmin:
