@@ -1,0 +1,37 @@
+# Encoding & Normalization Report
+
+## Dataset Scope
+- Materials Dataset
+- Products Dataset
+
+## Categorical Encoding Strategy
+
+### Materials Dataset
+- Nominal features (Packaging Type, Material Type, Supplier Region):
+  - One-Hot Encoding
+- Ordered feature (Recyclability Category):
+  - Label Encoding (Low < Medium < High)
+- Multi-label features:
+  - Suitable Product Categories
+  - Recommended Packaging Use Cases
+  - Process: Split → Explode → One-Hot Encode → Aggregate
+
+### Products Dataset
+- Category, Shipping Type:
+  - One-Hot Encoding
+- Fragility Index:
+  - Retained as ordinal numeric feature
+
+## Numeric Normalization
+- MinMaxScaler applied to numeric features
+- Chosen due to mixed units and non-normal distributions
+
+## Reusability
+- All encoders and scalers saved using joblib
+- Ensures consistent preprocessing during inference
+
+## Outputs
+- Materials encoded dataset:
+  `/data/model_ready/materials_final_encoded.csv`
+- Products encoded dataset:
+  `/data/model_ready/products_final_encoded.csv`
