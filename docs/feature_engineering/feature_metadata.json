@@ -1,0 +1,29 @@
+{
+  "CII": {
+    "description": "CO2 Impact Index measuring sustainability.",
+    "range": "0-100",
+    "inputs": ["co2_emission_score", "biodegradability_percent", "recyclability_percent"]
+  },
+  "CEI": {
+    "description": "Cost Efficiency Index representing economic viability.",
+    "range": "0-100",
+    "inputs": ["cost_per_kg", "strength_mpa"]
+  },
+  "MSS": {
+    "description": "Material Suitability Score indicating overall packaging suitability.",
+    "range": "0-100",
+    "inputs": ["strength_mpa", "weight_capacity", "recyclability_percent"]
+  },
+  "required_load": {
+    "description": "Minimum load handling requirement for product.",
+    "range": "1-10"
+  },
+  "required_moisture": {
+    "description": "Moisture resistance requirement.",
+    "range": "1-10"
+  },
+  "required_thermal": {
+    "description": "Thermal resistance requirement.",
+    "range": "1-10"
+  }
+}
