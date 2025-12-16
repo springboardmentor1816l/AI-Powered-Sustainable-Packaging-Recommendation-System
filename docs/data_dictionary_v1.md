@@ -64,11 +64,17 @@ Tracks ML-generated packaging recommendations for audits, training, and dashboar
 
 ---
 
-## ✔ Notes
+##  Features & Targets
 
-* Numeric fields use NUMERIC instead of FLOAT for stability in ML and analytics.
-* `SERIAL` primary keys auto-increment.
-* `created_at` defaults to the current timestamp.
-* Foreign keys maintain referential integrity between tables.
+### Target Variable
+| Column | Type | Description |
+|------|----|-------------|
+| recommended_material | Categorical | Predicted sustainable packaging material |
 
----
+### Feature Groups
+- Material Performance Metrics
+- Cost & Usage Indicators
+- Supply Chain & Compliance
+- Packaging Context Attributes
+
+(Defined in `01_dataset_prep.ipynb`)
