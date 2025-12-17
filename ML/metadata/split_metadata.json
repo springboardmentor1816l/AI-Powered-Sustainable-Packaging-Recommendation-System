@@ -1,0 +1,20 @@
+{
+  "dataset_version": "engineered_features_v1",
+  "source_file": "data/processed/engineered_features.csv",
+  "train_test_split": {
+    "train_ratio": 0.8,
+    "test_ratio": 0.2,
+    "random_seed": 42,
+    "stratified_by": ["Material Type"]
+  },
+  "cross_validation": {
+    "method": "StratifiedKFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_seed": 42
+  },
+  "features_used": "All engineered numerical and categorical features",
+  "target_variables": [
+    "recommended_material"
+  ]
+}
