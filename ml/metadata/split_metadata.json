@@ -1,0 +1,17 @@
+{
+  "dataset": "X_raw.csv and y_raw.csv",
+  "train_test_split": {
+    "train_size": 0.8,
+    "test_size": 0.2,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "cross_validation": {
+    "method": "KFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "features_source": "data/model_ready(2)/X_raw.csv",
+  "targets_source": "data/model_ready(2)/y_raw.csv"
+}
