@@ -1,0 +1,17 @@
+{
+  "CO2_Impact_Index": {
+    "description": "Environmental sustainability score based on emissions, biodegradability, and recyclability",
+    "range": "0-100",
+    "higher_is_better": true
+  },
+  "Cost_Efficiency_Index": {
+    "description": "Economic feasibility score considering cost, durability, and reuse potential",
+    "range": "0-100",
+    "higher_is_better": true
+  },
+  "Material_Suitability_Score": {
+    "description": "Compatibility score between material properties and product requirements",
+    "range": "0-100",
+    "higher_is_better": true
+  }
+}

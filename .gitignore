@@ -1,0 +1,14 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Notebooks
+.ipynb_checkpoints/
+
+# ML artifacts (generated)
+models/encoders/*.pkl
+models/scalers/*.pkl
+models/trained/

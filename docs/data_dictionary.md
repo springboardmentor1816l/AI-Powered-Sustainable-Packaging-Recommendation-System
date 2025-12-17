@@ -58,6 +58,10 @@ Stores AI model prediction results for recommended packaging materials.
 - Used for technical documentation and reports  
 
 ---
+Feature Name	Type	Range	Description
+CO₂ Impact Index	Float	0–100	Environmental sustainability score
+Cost Efficiency Index	Float	0–100	Economic feasibility score
+Material Suitability Score	Float	0–100	Packaging-product compatibility
 
 ## Project: EcoPackAI  
 AI-Powered Sustainable Packaging Recommendation System  
