@@ -14,7 +14,7 @@
     "n_folds": 5,
     "shuffle": false
   },
-  "target_variable": "Final_Recommendation_Score",
+  "target_variable":"Cost per Unit (USD)", "CO2 Emission per kg (estimated)",
   "id_columns_excluded_from_features": [
     "product_id",
     "material_id"
@@ -22,3 +22,4 @@
   "feature_count_after_id_drop": 70,
   "leakage_prevented_by": "splitting data by product_id groups so same product never appears in both sets"
 }
+
