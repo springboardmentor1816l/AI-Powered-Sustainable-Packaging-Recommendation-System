@@ -49,3 +49,20 @@
 - Range: 1–10
 - Derived: No
 - Used in ML: Yes
+
+## Features & Targets – Model Development
+
+### Targets
+- recommended_material (categorical, classification)
+- cost_efficiency_category (categorical: Low / Medium / High)
+
+### Feature Summary
+- Total features: 16
+- Numeric features: 13
+- Categorical features: 3
+
+### Usage
+These datasets are the final inputs for:
+- Encoding
+- Scaling
+- Model training

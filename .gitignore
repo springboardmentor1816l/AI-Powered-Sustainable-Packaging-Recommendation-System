@@ -12,3 +12,6 @@ __pycache__/
 models/encoders/*.pkl
 models/scalers/*.pkl
 models/trained/
+# OS files
+.DS_Store
+Thumbs.db
