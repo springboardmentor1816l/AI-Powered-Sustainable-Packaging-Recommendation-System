@@ -1,0 +1,29 @@
+{
+    "dataset": "integrated_ecopack_dataset.csv",
+    "dataset_shape": [
+        1500000,
+        22
+    ],
+    "train_size": [
+        1200000,
+        22
+    ],
+    "test_size": [
+        300000,
+        22
+    ],
+    "test_ratio": 0.2,
+    "stratified_on": "product_category",
+    "cross_validation": {
+        "method": "StratifiedKFold",
+        "n_splits": 5,
+        "shuffle": true,
+        "random_seed": 42
+    },
+    "target_variables": [
+        "sustainability_score",
+        "cost_efficiency_category",
+        "recommended_material"
+    ],
+    "random_seed": 42
+}
