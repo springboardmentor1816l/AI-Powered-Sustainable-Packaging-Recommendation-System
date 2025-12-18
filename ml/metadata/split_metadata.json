@@ -1,1 +1,24 @@
-
+{
+  "dataset_name": "integrated_product_material_dataset",
+  "dataset_version": "v1.0",
+  "total_rows": 123607,
+  "train_rows": 98885,
+  "test_rows": 24722,
+  "train_test_ratio": "80/20",
+  "split_method": "GroupShuffleSplit",
+  "group_column": "product_id",
+  "n_splits": 1,
+  "random_seed": 42,
+  "cross_validation": {
+    "method": "GroupKFold",
+    "n_folds": 5,
+    "shuffle": false
+  },
+  "target_variable":"Cost per Unit (USD)", "CO2 Emission per kg (estimated)",
+  "id_columns_excluded_from_features": [
+    "product_id",
+    "material_id"
+  ],
+  "feature_count_after_id_drop": 70,
+  "leakage_prevented_by": "splitting data by product_id groups so same product never appears in both sets"
+}
