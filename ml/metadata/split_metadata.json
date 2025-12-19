@@ -1,0 +1,33 @@
+{
+    "dataset": "Integrated EcoPackAI Product-Material Dataset",
+    "train_size": 0.8,
+    "test_size": 0.2,
+    "stratification_column": "Product_Category",
+    "cross_validation": {
+        "method": "StratifiedKFold",
+        "n_splits": 5,
+        "shuffle": true,
+        "random_seed": 42
+    },
+    "features_used": [
+        "Product_Weight",
+        "Fragility_Score",
+        "Moisture_Sensitivity",
+        "Thermal_Sensitivity",
+        "CO2_Emission_per_kg",
+        "Cost_per_Unit",
+        "Load_Handling_Score",
+        "CO2_Impact_Index",
+        "Cost_Efficiency_Index",
+        "Product_Category",
+        "Material_Type",
+        "Packaging_Type",
+        "Recyclability_Category",
+        "Supplier_Region",
+        "Hazardous_Material_Flag"
+    ],
+    "target_variables": [
+        "Cost_per_Unit",
+        "CO2_Emission_per_kg"
+    ]
+}
