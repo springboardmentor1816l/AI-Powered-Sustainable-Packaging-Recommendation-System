@@ -71,9 +71,21 @@ cost-related attributes, and sustainability indicators.
 - X_raw.csv – Feature dataset
 - y_raw.csv – Target dataset
 
-## Notes
-Column names were standardized to ensure consistency and avoid
-errors during feature selection. The dataset is now ready for
-encoding and model development.
+
+## Workflow
+1. Separate preprocessing of product and material datasets
+2. Dataset integration
+3. Baseline ML model training
+4. Evaluation using standard metrics
+
+## Folder Structure
+- data/: raw and processed datasets
+- ml/: baseline models and metrics
+- docs/: reports and summaries
+
+## Status
+Baseline preprocessing and model evaluation completed.
+
+
 
 
