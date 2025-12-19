@@ -1,52 +1,40 @@
 
 <<<<<<< HEAD
-# Data Dictionary — EcoPackAI
+# Data Dictionary v2
 
-This document describes the database schema fields, their datatypes, and purpose for the EcoPackAI system.
-
----
-
-## Table: materials
-
-| Column                   | Type        | Description |
-|--------------------------|-------------|-------------|
-| material_id              | INT (PK)    | Unique identifier for each material |
-| material_type            | VARCHAR     | Type of material (Paper, PLA, Bioplastic, Cardboard, Sugarcane, etc.) |
-| strength_mpa             | FLOAT       | Mechanical strength measured in MPa |
-| weight_capacity          | FLOAT       | Maximum weight the material can safely carry (in kg) |
-| biodegradability_percent | FLOAT       | % breakdown in natural environment |
-| co2_emission_score       | FLOAT       | Carbon footprint or emission index |
-| recyclability_percent    | FLOAT       | % potential of material to be reused |
-| cost_per_kg              | FLOAT       | Cost of the material per kilogram |
-| industry_use_case        | VARCHAR     | Industries best suited for the material (Electronics, Food, Cosmetics, Pharma, etc.) |
+This document describes all fields in the updated materials and products datasets.
 
 ---
 
-## Table: products
+# MATERIALS DATASET
 
-| Column         | Type        | Description |
-|----------------|-------------|-------------|
-| product_id     | INT (PK)    | Unique identifier for each product |
-| product_name   | VARCHAR     | Name or classification of the product |
-| category       | VARCHAR     | Product category type |
-| product_weight | FLOAT       | Net weight of the product in kg |
-| fragility_index| INT         | Durability/fragility requirement (higher = more fragile) |
-| shipping_type  | VARCHAR     | Shipping mode (Air / Road / Sea) |
+| Column | Type | Description | Range | Nullable | Derived | ML Use |
+|--------|------|-------------|--------|----------|---------|--------|
+| material_id | string | Unique material identifier | — | No | No | Yes |
+| strength_mpa | float | Material strength score | 0–1 | No | No | Yes |
+| weight_capacity | float | Normalized weight handling | 0–1 | No | No | Yes |
+| biodegradability_percent | float | Biodegradability (normalized) | 0–1 | No | No | Yes |
+| co2_emission_score | float | CO₂ emission score | 0–1 | No | No | Yes |
+| recyclability_percent | float | Recyclability | 0–1 | No | No | Yes |
+| cost_per_kg | float | Material cost | >0 | No | No | Yes |
+| CII | float | CO₂ Impact Index | 0–100 | No | Yes | Yes |
+| CEI | float | Cost Efficiency Index | 0–100 | No | Yes | Yes |
+| MSS | float | Material Suitability Score | 0–100 | No | Yes | Yes |
 
 ---
 
-## Table: recommendation_logs
+# PRODUCTS DATASET
 
-| Column                  | Type        | Description |
-|-------------------------|-------------|-------------|
-| rec_id                  | INT (PK)    | Unique recommendation log identifier |
-| product_id              | INT (FK)    | Product used for the recommendation |
-| recommended_material_id | INT (FK)    | Material recommended by the model |
-| cost_prediction         | FLOAT       | Predicted packaging cost |
-| co2_prediction          | FLOAT       | Predicted CO₂ emission score |
-| material_rank           | INT         | Rank of the recommended material |
-| created_at              | TIMESTAMP   | Timestamp of the recommendation generation |
-
+| Column | Type | Description | Range | Nullable | Derived | ML Use |
+|--------|------|-------------|--------|----------|---------|--------|
+| product_id | string | Unique product identifier | — | No | No | Yes |
+| product_weight | float | Weight of product | ≥0 | No | No | Yes |
+| fragility_index | float | Fragility score | ≥0 | No | No | Yes |
+| required_load | int | Required load handling | 1–10 | No | Yes | Yes |
+| required_moisture | int | Required moisture resistance | 1–10 | No | Yes | Yes |
+| required_thermal | int | Required thermal resistance | 1–10 | No | Yes | Yes |
+| category_* | int | One-hot categories | 0/1 | No | No | Yes |
+| shipping_type_* | int | One-hot category | 0/1 | No | No | Yes |
 
 
 =======

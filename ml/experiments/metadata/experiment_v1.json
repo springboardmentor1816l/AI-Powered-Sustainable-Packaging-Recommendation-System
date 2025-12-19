@@ -1,0 +1,11 @@
+{
+  "experiment_id": "baseline_v1",
+  "date": "2025-01-17",
+  "dataset": "combined_model_ready.parquet",
+  "models": [
+    "LinearRegression (cost)",
+    "DecisionTreeRegressor (co2)"
+  ],
+  "metrics_file": "ml/metrics/baseline_metrics.csv",
+  "notes": "Baseline models with default parameters"
+}
