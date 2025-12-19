@@ -1,3 +1,15 @@
-# Python cache files
+# Python
 __pycache__/
 *.pyc
+*.pyo
+
+# Data
+data/
+*.parquet
+
+# Environment
+.env
+venv/
+
+# OS
+.DS_Store
