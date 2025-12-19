@@ -1,0 +1,29 @@
+{
+  "dataset": {
+    "features": "data/model_input/X_raw.csv",
+    "targets": "data/model_input/Y_raw.csv",
+    "integration_reference": "data/integrated/integrated_dataset.csv"
+  },
+  "split": {
+    "method": "GroupShuffleSplit",
+    "group_by": "product_product_id",
+    "train_ratio": 0.8,
+    "test_ratio": 0.2,
+    "random_seed": 42
+  },
+  "cross_validation": {
+    "method": "GroupKFold",
+    "n_splits": 5,
+    "group_by": "product_product_id"
+  },
+  "sizes": {
+    "total_rows": 559498,
+    "train_rows": 447896,
+    "test_rows": 111602
+  },
+  "design_notes": [
+    "Identifiers excluded from model inputs",
+    "Grouping applied via metadata only",
+    "Leakage prevented at product level"
+  ]
+}
