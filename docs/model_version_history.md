@@ -1,11 +1,10 @@
-
 # Model Version History
 
-| Version | Date | Model Type | Status |
-| :--- | :--- | :--- | :--- |
-| v1.0 | 2025-12-20 | Random Forest Baseline | Completed |
+| Version | Date | Model Type | Status | Metrics |
+| :--- | :--- | :--- | :--- | :--- |
+| v1.0 | 2025-12-20 | Random Forest | Baseline | Accuracy Only |
+| v1.1 | 2025-12-20 | Random Forest | Advanced | Acc, Prec, Rec, F1 |
 
-### Deliverables
-- **Artifact:** `ml/models/training/packaging_model_v1.0.pkl`
-- **Metadata:** `ml/experiments/metadata/v1.0_meta.json`
-
+### Experiment Details
+- **Metadata Folder:** ml/experiments/metadata/
+- **Models Folder:** ml/models/training/
