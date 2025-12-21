@@ -1,0 +1,19 @@
+{
+    "dataset": "data/integrated/product_material_integrated.csv",
+    "rows": 606000,
+    "features_count": 24,
+    "targets": [
+        "Cost per Unit (USD)",
+        "CO2 Emission per kg (estimated)"
+    ],
+    "test_size": 0.2,
+    "train_size": 0.8,
+    "random_seed": 42,
+    "stratify_column": "category",
+    "cross_validation": {
+        "type": "StratifiedKFold",
+        "n_splits": 5,
+        "shuffle": true,
+        "random_seed": 42
+    }
+}
