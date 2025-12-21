@@ -1,0 +1,23 @@
+{
+    "experiment_id": "EXP_LR_CO2_001",
+    "date_time": "2025-12-21 14:50:56.092728",
+    "dataset_version": "integrated_dataset_v1",
+    "features_used": [
+        "category",
+        "weight",
+        "fragility",
+        "shipping_type",
+        "material_id",
+        "material_type",
+        "strength",
+        "recyclability",
+        "supplier_region"
+    ],
+    "target_variable": "co2_score",
+    "model_type": "Linear Regression",
+    "model_version": "v1",
+    "evaluation_metrics": [
+        "MSE",
+        "R2"
+    ]
+}
