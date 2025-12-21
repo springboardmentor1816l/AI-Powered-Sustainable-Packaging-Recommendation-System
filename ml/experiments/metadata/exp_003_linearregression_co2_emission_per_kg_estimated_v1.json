@@ -1,0 +1,24 @@
+{
+    "experiment_id": "exp_003_linearregression_co2_emission_per_kg_estimated_v1",
+    "timestamp": "2025-12-21 23:13:12",
+    "dataset_version": "integrated_v1",
+    "feature_set_version": "regression_features_v1",
+    "model": {
+        "type": "LinearRegression",
+        "hyperparameters": {
+            "copy_X": true,
+            "fit_intercept": true,
+            "n_jobs": null,
+            "positive": false,
+            "tol": 1e-06
+        }
+    },
+    "target": "co2_emission_per_kg_estimated",
+    "metrics": {
+        "mae": 0.04082613516404252,
+        "rmse": 0.05886557621935436,
+        "r2": 0.9931654520124891,
+        "cv_mae": 0.04104104585343306
+    },
+    "model_path": "ml/models/co2\\model_v1.pkl"
+}

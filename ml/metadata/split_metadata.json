@@ -1,0 +1,20 @@
+{
+  "project": "EcoPackAI",
+  "dataset": "product_material_integrated.csv",
+  "dataset_version": "v1.0",
+  "split_strategy": {
+    "train_ratio": 0.8,
+    "test_ratio": 0.2,
+    "stratify_on": "Material Type",
+    "random_seed": 42
+  },
+  "cross_validation": {
+    "method": "StratifiedKFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_seed": 42
+  },
+  "features_reference": "docs/preprocessing_columns.md",
+  "target_variable": "Material Type",
+  "notes": "Split performed after product–material integration to prevent leakage."
+}

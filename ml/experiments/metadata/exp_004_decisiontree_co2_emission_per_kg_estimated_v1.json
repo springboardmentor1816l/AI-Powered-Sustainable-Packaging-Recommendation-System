@@ -1,0 +1,31 @@
+{
+    "experiment_id": "exp_004_decisiontree_co2_emission_per_kg_estimated_v1",
+    "timestamp": "2025-12-21 23:13:22",
+    "dataset_version": "integrated_v1",
+    "feature_set_version": "regression_features_v1",
+    "model": {
+        "type": "DecisionTree",
+        "hyperparameters": {
+            "ccp_alpha": 0.0,
+            "criterion": "squared_error",
+            "max_depth": null,
+            "max_features": null,
+            "max_leaf_nodes": null,
+            "min_impurity_decrease": 0.0,
+            "min_samples_leaf": 1,
+            "min_samples_split": 2,
+            "min_weight_fraction_leaf": 0.0,
+            "monotonic_cst": null,
+            "random_state": 42,
+            "splitter": "best"
+        }
+    },
+    "target": "co2_emission_per_kg_estimated",
+    "metrics": {
+        "mae": 0.0055838929703321185,
+        "rmse": 0.01668609595711696,
+        "r2": 0.9994508430661049,
+        "cv_mae": 0.005546972997163074
+    },
+    "model_path": "ml/models/co2\\model_v1.pkl"
+}

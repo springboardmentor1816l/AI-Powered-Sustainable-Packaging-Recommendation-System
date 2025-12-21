@@ -1,0 +1,24 @@
+{
+    "experiment_id": "exp_001_linearregression_cost_per_unit_usd_v1",
+    "timestamp": "2025-12-21 23:13:01",
+    "dataset_version": "integrated_v1",
+    "feature_set_version": "regression_features_v1",
+    "model": {
+        "type": "LinearRegression",
+        "hyperparameters": {
+            "copy_X": true,
+            "fit_intercept": true,
+            "n_jobs": null,
+            "positive": false,
+            "tol": 1e-06
+        }
+    },
+    "target": "cost_per_unit_usd",
+    "metrics": {
+        "mae": 0.36347767794354546,
+        "rmse": 0.7101977106913384,
+        "r2": 0.9899978786247552,
+        "cv_mae": 0.36018632525933436
+    },
+    "model_path": "ml/models/cost\\model_v1.pkl"
+}
