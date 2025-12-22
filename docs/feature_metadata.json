@@ -1,0 +1,7 @@
+{
+  "material_type": "Encoded categorical feature",
+  "strength_mpa": "Normalized numerical feature",
+  "cost_per_kg": "Normalized numerical feature",
+  "co2_emission_score": "Environmental impact indicator",
+  "recyclability_percent": "Sustainability indicator"
+}
