@@ -8,10 +8,15 @@ __pycache__/
 # Notebooks
 .ipynb_checkpoints/
 
-# ML artifacts (generated)
+# Model artifacts
 models/encoders/*.pkl
 models/scalers/*.pkl
-models/trained/
-# OS files
-.DS_Store
-Thumbs.db
+models/baseline/
+models/preprocessing/*.pkl
+ml/models/*.joblib
+
+# Generated datasets
+data/interim/
+data/final/X_encoded_scaled.csv
+data/final/X_regression_encoded_scaled.csv
+data/final/material_recommendations.csv
