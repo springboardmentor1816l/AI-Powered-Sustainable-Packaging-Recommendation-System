@@ -1,0 +1,22 @@
+{
+  "experiment_id": "cost_linear_v1_run1",
+  "target": "cost",
+  "model": "LinearRegression",
+  "dataset_version": "v1",
+  "feature_set_version": "v1",
+  "run_version": "run1",
+  "created_at": "2025-12-22T07:20:04.417463",
+  "random_seed": 42,
+  "preprocessing_pipeline": "models/preprocessing/preprocessing_pipeline.pkl",
+  "evaluation": {
+    "strategy": "GroupKFold",
+    "n_splits": 5,
+    "group_by": "product_product_id",
+    "metrics": [
+      "MAE",
+      "RMSE",
+      "R2"
+    ]
+  },
+  "notes": "Baseline experiment registered post-training"
+}

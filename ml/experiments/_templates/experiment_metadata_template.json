@@ -1,0 +1,23 @@
+{
+  "experiment_id": "",
+  "target": "",
+  "model": "",
+  "dataset_version": "v1",
+  "feature_set_version": "v1",
+  "run_version": "run1",
+  "created_at": "",
+  "random_seed": 42,
+  "preprocessing_pipeline": "models/preprocessing/preprocessing_pipeline.pkl",
+  "data_inputs": {
+    "X": "data/model_input/X_raw.csv",
+    "Y": "data/model_input/Y_raw.csv",
+    "integration_ref": "data/integrated/integrated_dataset.csv"
+  },
+  "evaluation": {
+    "strategy": "GroupKFold",
+    "n_splits": 5,
+    "group_by": "product_product_id",
+    "metrics": ["MAE", "RMSE", "R2"]
+  },
+  "notes": ""
+}
