@@ -1,0 +1,25 @@
+{
+  "dataset_version": "integrated_product_material_v1",
+  "split_strategy": {
+    "train_ratio": 0.8,
+    "test_ratio": 0.2,
+    "stratification_columns": [
+      "category",
+      "Material Type",
+      "shipping_type"
+    ],
+    "leakage_prevention": "product_material_pair_isolation"
+  },
+  "cross_validation": {
+    "method": "StratifiedKFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_seed": 42
+  },
+  "random_seed": 42,
+  "target_variables": [
+    "Cost per Unit (USD)",
+    "Carbon Footprint (kg CO2/unit)"
+  ],
+  "feature_definition_reference": "docs/preprocessing_columns.md"
+}

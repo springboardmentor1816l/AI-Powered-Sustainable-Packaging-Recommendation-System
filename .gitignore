@@ -11,3 +11,6 @@ venv/
 .vscode/
 
 .github/workflows/ci.yml
+# Large datasets
+data/processed/
+data/model_ready/
