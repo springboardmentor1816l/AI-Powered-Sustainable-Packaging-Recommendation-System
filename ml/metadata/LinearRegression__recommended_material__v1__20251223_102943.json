@@ -1,0 +1,19 @@
+{
+  "experiment_id": "LinearRegression__recommended_material__v1__20251223_102943",
+  "timestamp": "2025-12-23T10:29:43.939435",
+  "dataset_version": "v1",
+  "feature_set_version": "v1",
+  "model_name": "LinearRegression",
+  "model_parameters": {
+    "copy_X": true,
+    "fit_intercept": true,
+    "n_jobs": null,
+    "positive": false
+  },
+  "target_variable": "recommended_material",
+  "evaluation_metrics": {
+    "MAE": 0.0,
+    "RMSE": 0.0,
+    "R2": 1.0
+  }
+}
