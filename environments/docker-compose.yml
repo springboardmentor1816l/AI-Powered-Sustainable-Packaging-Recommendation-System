@@ -5,30 +5,41 @@ services:
     build:
       context: ..
       dockerfile: environments/Dockerfile
+    container_name: ecopack_backend
+    restart: always
     ports:
       - "8000:8000"
     depends_on:
       - db
-
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/ecopackai_db
+    volumes:
+      - ../backend:/app/backend
 
   db:
     image: postgres:15
-    container_name: ecopackai_db
+    container_name: ecopack_db
+    restart: always
     environment:
-      POSTGRES_DB: ecopackai_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ecopackai_db
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   pgadmin:
     image: dpage/pgadmin4
-    container_name: ecopackai_pgadmin
+    container_name: ecopack_pgadmin
+    restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_DEFAULT_EMAIL: admin@ecopackai.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
     ports:
       - "5050:80"
     depends_on:
       - db
 
+volumes:
+  postgres_data:

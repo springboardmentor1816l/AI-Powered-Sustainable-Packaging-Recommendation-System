@@ -1,0 +1,57 @@
+{
+  "CO2_Impact_Index": {
+    "name": "CO2 Impact Index",
+    "type": "engineered_feature",
+    "description": "Standardized sustainability score representing environmental impact of packaging material",
+    "input_features": [
+      "co2_emission_per_kg",
+      "biodegradation_time_days",
+      "recyclability_category",
+      "material_type"
+    ],
+    "range": "0-100",
+    "interpretation": "Higher value indicates lower environmental impact and better sustainability",
+    "usage": [
+      "recommendation_engine",
+      "sustainability_dashboard",
+      "ml_model_input"
+    ]
+  },
+  "Cost_Efficiency_Index": {
+    "name": "Cost Efficiency Index",
+    "type": "engineered_feature",
+    "description": "Economic feasibility score considering material cost, weight, recyclability, and durability",
+    "input_features": [
+      "cost_per_kg",
+      "packaging_weight",
+      "recyclability_percent",
+      "durability_score"
+    ],
+    "range": "0-100",
+    "interpretation": "Higher value indicates more cost-effective packaging material",
+    "usage": [
+      "cost_optimization",
+      "material_ranking",
+      "ml_model_input"
+    ]
+  },
+  "Material_Suitability_Score": {
+    "name": "Material Suitability Score",
+    "type": "engineered_feature",
+    "description": "Compatibility score measuring how suitable a material is for a specific product category",
+    "input_features": [
+      "strength_score",
+      "moisture_resistance_score",
+      "thermal_resistance_score",
+      "product_category",
+      "material_safety_rating"
+    ],
+    "range": "0-100",
+    "interpretation": "Higher value indicates better suitability for target product",
+    "usage": [
+      "product_specific_recommendations",
+      "risk_assessment",
+      "ml_model_input"
+    ]
+  }
+}
