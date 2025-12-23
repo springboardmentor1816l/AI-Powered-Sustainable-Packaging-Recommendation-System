@@ -1,6 +1,0 @@
-product_name,category,product_weight,fragility_index,shipping_type
-Smartphone,electronics,0.25,9,air
-Face Cream,cosmetics,0.15,3,road
-Chocolate Box,food,0.5,2,road
-Syrup Bottle,pharmacy,0.4,7,sea
-Toy Car,toys,0.3,4,road

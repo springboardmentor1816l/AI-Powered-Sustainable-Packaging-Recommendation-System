@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 # Data Dictionary v2
 
 This document describes all fields in the updated materials and products datasets.
@@ -35,7 +34,3 @@ This document describes all fields in the updated materials and products dataset
 | required_thermal | int | Required thermal resistance | 1–10 | No | Yes | Yes |
 | category_* | int | One-hot categories | 0/1 | No | No | Yes |
 | shipping_type_* | int | One-hot category | 0/1 | No | No | Yes |
-
-
-=======
->>>>>>> a34fb16f (Rename data_dictionary.md to docs/data_dictionary.md)

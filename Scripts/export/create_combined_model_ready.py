@@ -2,8 +2,8 @@ import pandas as pd
 import os
 
 # Load feature matrix and targets
-X = pd.read_csv("data/model_ready(2)/X_raw.csv")
-y = pd.read_csv("data/model_ready(2)/y_raw.csv")
+X = pd.read_csv("data/model_ready/X_raw.csv")
+y = pd.read_csv("data/model_ready/y_raw.csv")
 
 # Combine horizontally
 combined = pd.concat([X, y], axis=1)

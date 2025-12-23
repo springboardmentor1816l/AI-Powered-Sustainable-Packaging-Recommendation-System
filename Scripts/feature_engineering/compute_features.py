@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("data/model_ready(2)/materials_final_encoded.csv")
+df = pd.read_csv("data/model_ready/materials_final_encoded.csv")
 
 df["CII"] = (
     (1 - df["co2_emission_score"]) * 0.5 +
@@ -19,5 +19,5 @@ df["MSS"] = (
     df["recyclability_percent"] * 0.3
 ) * 100
 
-df.to_csv("data/model_ready(2)/materials_engineered.csv", index=False)
+df.to_csv("data/model_ready/materials_engineered.csv", index=False)
 print("Features engineered")
