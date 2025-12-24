@@ -1,18 +1,16 @@
 
-# Random Forest Cost Model Training Summary
-Generated on 2025-12-23
+# Random Forest Cost Model Training Summary (with K-Fold CV)
+Generated on 2025-12-24
 
-## Model Configuration
-* **Algorithm:** Random Forest Regressor
-* **Trees:** 100
-* **Max Depth:** 12
-* **Random Seed:** 42
+## Cross-Validation Strategy (K=5)
+* **Mean CV R2 Score:** 0.9999
+* **Mean CV RMSE:** 0.0025
 
-## Performance Evaluation
+## Final Performance (Unseen Test Data)
 | Metric | Value |
 | :--- | :--- |
 | **MAE** | 0.0007 |
 | **RMSE** | 0.0026 |
 | **R2 Score** | 0.9999 |
 
-**Findings:** The Random Forest model captures non-linear relationships in the cost data better than the previous baseline.
+**Conclusion:** The consistency between CV scores and Test scores indicates the model is robust and not overfitting.
