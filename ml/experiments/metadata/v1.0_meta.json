@@ -1,9 +1,0 @@
-{
-    "experiment_id": "v1.0",
-    "date": "2025-12-20",
-    "model_type": "Random Forest Baseline",
-    "metrics": {
-        "accuracy": 1.0
-    },
-    "description": "Baseline for EcoPackAI"
-}
