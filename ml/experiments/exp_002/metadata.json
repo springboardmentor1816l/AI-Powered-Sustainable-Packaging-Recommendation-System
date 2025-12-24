@@ -1,0 +1,10 @@
+{
+  "experiment_id": "exp_002",
+  "model": "XGBoost Regressor",
+  "target": "CO2 Emission",
+  "dataset_rows": 561832,
+  "target_source": "material_cleaned.csv (aggregated by material_type)",
+  "metrics_file": "ml/metrics/xgb_co2_metrics.csv",
+  "model_path": "ml/models/xgb_co2_model_v1.joblib",
+  "status": "completed"
+}
