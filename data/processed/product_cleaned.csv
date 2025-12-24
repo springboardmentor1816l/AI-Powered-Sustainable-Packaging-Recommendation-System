@@ -1,4 +1,4 @@
-product_id,product_name,category,product_weight_kg,fragility_index,shipping_type
+product_id,product_name,category,product_weight,fragility_index,shipping_type
 1,Chocolate Box,Food,0.5,2,Air
 2,Smartphone,Electronics,0.3,5,Air
 3,Perfume Bottle,Cosmetics,0.2,4,Road

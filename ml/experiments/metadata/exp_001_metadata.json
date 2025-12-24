@@ -1,0 +1,13 @@
+{
+  "experiment_id": "exp_001",
+  "created_on": "2025-12-18",
+  "owner": "EcoPackAI",
+  "description": "Baseline experiment metadata for tracking and versioning",
+  "linked_files": {
+    "params": "ml/experiments/exp_001/params.json",
+    "metrics": "ml/experiments/exp_001/metrics.json",
+    "notes": "ml/experiments/exp_001/notes.md"
+  },
+  "status": "model_versioned"
+
+}

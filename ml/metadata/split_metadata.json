@@ -1,0 +1,19 @@
+{
+  "dataset_name": "materials_preprocessed_pipeline.csv",
+  "split_type": "train_test",
+  "train_ratio": 0.8,
+  "test_ratio": 0.2,
+  "stratification": "recommended_material",
+  "random_state": 42,
+  "cross_validation": {
+    "method": "StratifiedKFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "data_leakage_prevention": [
+    "Preprocessing applied before split",
+    "Target column excluded from features",
+    "Test set kept completely unseen"
+  ]
+}

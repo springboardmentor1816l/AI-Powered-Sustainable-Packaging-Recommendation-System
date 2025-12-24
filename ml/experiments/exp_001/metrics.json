@@ -1,0 +1,7 @@
+{
+  "status": "trained",
+  "mae": 0.019767990712795943,
+  "rmse": 0.026809420001999176,
+  "r2_score": 0.9847507518794258,
+  "model_path": "ml/models\\rf_cost_model_v1.pkl"
+}
