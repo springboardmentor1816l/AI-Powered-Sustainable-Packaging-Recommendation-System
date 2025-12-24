@@ -1,0 +1,39 @@
+{
+    "experiment": "baseline_v1",
+    "date": "2025-12-24T16:47:06.732032",
+    "models": [
+        "LinearRegression",
+        "DecisionTree"
+    ],
+    "dataset": "integrated_dataset_v1",
+    "features": [
+        "category",
+        "product_weight_kg",
+        "fragility_index",
+        "shipping_type",
+        "Packaging Type",
+        "Material Type",
+        "Suitable Product Categories",
+        "Recommended Packaging Use Cases",
+        "Supplier Region",
+        "Recyclability (%)",
+        "Recyclability Category",
+        "Recycled Content (%)",
+        "Reusability (%)",
+        "Biodegradation Time (days)",
+        "End-of-Life Disposal (%)",
+        "Carbon Footprint (kg CO2/unit)",
+        "Waste Reduction Impact (%)",
+        "Sustainability Target Progress (%)",
+        "Load Handling Score",
+        "Moisture Resistance Score",
+        "Thermal Resistance Score",
+        "Annual Usage (units)",
+        "Total Material Weight (tons)",
+        "Supplier Sustainability Compliance (%)"
+    ],
+    "targets": [
+        "Cost per Unit (USD)",
+        "CO2 Emission per kg (estimated)"
+    ]
+}
