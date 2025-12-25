@@ -1,0 +1,2 @@
+model,target,cv_mae,cv_rmse,test_mae,test_rmse,test_r2
+Random Forest Regressor,Cost per Unit (USD),5.649954337918133e-15,9.952631572165962e-15,5.9327176618056375e-15,9.547801955233779e-15,1.0
