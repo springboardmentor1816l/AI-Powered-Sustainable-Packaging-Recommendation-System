@@ -12,5 +12,8 @@ venv/
 
 .github/workflows/ci.yml
 # Large datasets
-data/processed/
+data/processed/# Large datasets
+data/processed/X_raw.csv
+data/processed/*.csv
+data/model_ready/*.csv
 data/model_ready/
