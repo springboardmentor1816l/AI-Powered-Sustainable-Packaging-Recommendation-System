@@ -1,0 +1,25 @@
+feature,importance
+cat__packaging_type_Steel Racks & Containers,0.87694544
+num__load_handling_score,0.05002865
+num__moisture_resistance_score,0.03660951
+cat__packaging_type_Cardboard Boxes,0.015331028
+num__thermal_resistance_score,0.010163275
+cat__packaging_type_Foldable & Stackable Containers,0.008571157
+cat__packaging_type_Protective Fillers (Paper/Biodegradable),0.000829492
+num__sustainability_target_progress_pct,0.0006593439
+num__supplier_sustainability_compliance_pct,0.0004795029
+num__recyclability_pct,0.0002184905
+cat__packaging_type_Plastic Totes & Pallets,0.00016014892
+cat__packaging_type_Bubble Wrap (Minimal Use),1.7726104e-06
+num__product_weight_kg,2.2572809e-07
+cat__category_Paper Product,1.9949422e-07
+cat__category_Cosmetics,1.9938504e-07
+cat__shipping_type_Air,1.9599968e-07
+num__fragility_index,1.8449425e-07
+cat__category_Food,1.8431159e-07
+cat__category_Pharmacy,1.822016e-07
+cat__category_Electronics,1.8050594e-07
+cat__category_Drinkware,1.7807702e-07
+cat__category_ Cosmetics,1.6582115e-07
+cat__shipping_type_Road,1.4537808e-07
+cat__shipping_type_Sea,1.337212e-07

@@ -1,0 +1,2 @@
+model,target,mae,rmse,r2
+XGBoostRegressor,co2_emission_per_kg_estimated,0.004978813275979761,0.01280679157408628,0.9996765049190245
