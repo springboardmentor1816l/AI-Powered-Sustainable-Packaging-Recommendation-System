@@ -25,3 +25,11 @@
 - Features: v1
 - Evaluation: 5-fold GroupKFold
 - Notes: Non-linear ensemble baseline for cost prediction
+
+### co2_xgboost_v1_run1
+- Target: CO₂ emission per kg (estimated)
+- Model: XGBoost Regressor
+- Dataset: v1
+- Features: v1
+- Evaluation: 80/20 Train–Test split
+- Notes: Used for feature importance and downstream explainability
