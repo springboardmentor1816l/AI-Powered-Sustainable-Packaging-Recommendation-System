@@ -1,53 +1,22 @@
-
-<<<<<<< HEAD
-# Data Dictionary — EcoPackAI
-
-This document describes the database schema fields, their datatypes, and purpose for the EcoPackAI system.
-
----
-
-## Table: materials
-
-| Column                   | Type        | Description |
-|--------------------------|-------------|-------------|
-| material_id              | INT (PK)    | Unique identifier for each material |
-| material_type            | VARCHAR     | Type of material (Paper, PLA, Bioplastic, Cardboard, Sugarcane, etc.) |
-| strength_mpa             | FLOAT       | Mechanical strength measured in MPa |
-| weight_capacity          | FLOAT       | Maximum weight the material can safely carry (in kg) |
-| biodegradability_percent | FLOAT       | % breakdown in natural environment |
-| co2_emission_score       | FLOAT       | Carbon footprint or emission index |
-| recyclability_percent    | FLOAT       | % potential of material to be reused |
-| cost_per_kg              | FLOAT       | Cost of the material per kilogram |
-| industry_use_case        | VARCHAR     | Industries best suited for the material (Electronics, Food, Cosmetics, Pharma, etc.) |
-
----
-
-## Table: products
-
-| Column         | Type        | Description |
-|----------------|-------------|-------------|
-| product_id     | INT (PK)    | Unique identifier for each product |
-| product_name   | VARCHAR     | Name or classification of the product |
-| category       | VARCHAR     | Product category type |
-| product_weight | FLOAT       | Net weight of the product in kg |
-| fragility_index| INT         | Durability/fragility requirement (higher = more fragile) |
-| shipping_type  | VARCHAR     | Shipping mode (Air / Road / Sea) |
-
----
-
-## Table: recommendation_logs
-
-| Column                  | Type        | Description |
-|-------------------------|-------------|-------------|
-| rec_id                  | INT (PK)    | Unique recommendation log identifier |
-| product_id              | INT (FK)    | Product used for the recommendation |
-| recommended_material_id | INT (FK)    | Material recommended by the model |
-| cost_prediction         | FLOAT       | Predicted packaging cost |
-| co2_prediction          | FLOAT       | Predicted CO₂ emission score |
-| material_rank           | INT         | Rank of the recommended material |
-| created_at              | TIMESTAMP   | Timestamp of the recommendation generation |
-
-
-
-=======
->>>>>>> a34fb16f (Rename data_dictionary.md to docs/data_dictionary.md)
+| Column                      | Table                | Type      | Description                       |
+|-----------------------------|----------------------|-----------|-----------------------------------|
+| material_id                 | materials            | INT       | Unique identifier                 |
+| material_type               | materials            | VARCHAR   | Material type                     |
+| strength_mpa                | materials            | FLOAT     | Strength property                 |
+| biodegradability_percent    | materials            | FLOAT     | Eco-friendly score                |
+| co2_emission_score          | materials            | FLOAT     | Carbon footprint index            |
+| recyclability_percent       | materials            | FLOAT     | Reuse potential                   |
+| cost_per_kg                 | materials            | FLOAT     | Pricing                           |
+| industry_use_case           | materials            | VARCHAR   | Industry where used               |
+| product_id                  | products             | INT       | Product unique ID                 |
+| product_name                | products             | VARCHAR   | Name of product                   |
+| category                    | products             | VARCHAR   | Product category                  |
+| product_weight              | products             | FLOAT     | Net item weight                   |
+| fragility_index             | products             | INT       | Handling care requirement         |
+| shipping_type               | products             | VARCHAR   | Shipping mode (Air/Road/Sea)      |
+| rec_id                      | recommendation_logs  | INT       | Prediction record ID              |
+| recommended_material_id     | recommendation_logs  | INT       | Suggested packaging material ID   |
+| cost_prediction             | recommendation_logs  | FLOAT     | Predicted cost outcome            |
+| co2_prediction              | recommendation_logs  | FLOAT     | Predicted CO2 value               |
+| material_rank               | recommendation_logs  | INT       | Rank of recommended material      |
+| created_at                  | recommendation_logs  | TIMESTAMP | Timestamp of prediction event     |

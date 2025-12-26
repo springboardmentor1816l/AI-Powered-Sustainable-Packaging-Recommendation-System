@@ -1,11 +1,11 @@
-# Environment & Tooling Setup Guide — EcoPackAI
+# EcoPackAI Environment Setup
 
-This document explains how to set up the local development environment using Python virtual environments and Docker.
-
----
-
-##  1. Virtual Environment Setup (Python)
-
-### Step 1: Create Virtual Environment
-```bash
+## Python Virtual Environment
 python -m venv venv
+venv\Scripts\activate
+
+## Install Dependencies
+pip install -r environments/requirements.txt
+
+## Docker (Later)
+Docker will be used for deployment and database setup.
