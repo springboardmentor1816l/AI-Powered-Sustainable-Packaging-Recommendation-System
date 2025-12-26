@@ -15,3 +15,6 @@ Thumbs.db
 
 # Large binaries
 *.dll
+
+# Saved ML models
+ml/models/
