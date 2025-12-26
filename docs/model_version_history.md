@@ -17,3 +17,11 @@
 - Features: v1
 - Evaluation: 5-fold GroupKFold
 - Notes: Baseline reference model
+
+### cost_random_forest_v1_run1
+- Target: Cost per unit (USD)
+- Model: RandomForestRegressor
+- Dataset: v1
+- Features: v1
+- Evaluation: 5-fold GroupKFold
+- Notes: Non-linear ensemble baseline for cost prediction
