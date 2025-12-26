@@ -1,0 +1,12 @@
+## Evaluation Analysis
+
+The Random Forest model achieved extremely high performance
+(MAE ≈ 0.00002, R² ≈ 0.99999).
+
+This indicates a strong predictive relationship between selected
+features and cost. However, such near-perfect performance may
+suggest the presence of highly correlated proxy variables or
+deterministic cost drivers in the dataset.
+
+Further validation on unseen real-world data is required to
+confirm generalization performance.
