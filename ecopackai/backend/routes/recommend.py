@@ -5,5 +5,6 @@ recommend_bp = Blueprint("recommend", __name__)
 
 @recommend_bp.route("/", methods=["POST"])
 def recommend():
-    ranked = recommend_materials(request.json)
-    return jsonify({"recommendations": ranked})
+    return jsonify({
+        "recommendations": recommend_materials(request.json)
+    })
