@@ -1,0 +1,24 @@
+mode: balanced
+
+weights:
+  balanced:
+    cost: 0.3
+    co2: 0.3
+    suitability: 0.3
+    compliance: 0.1
+
+  sustainability_first:
+    cost: 0.0
+    co2: 0.45
+    suitability: 0.35
+    compliance: 0.2
+
+  cost_first:
+    cost: 0.5
+    co2: 0.2
+    suitability: 0.2
+    compliance: 0.1
+
+constraints:
+  min_recyclability_pct: 30
+  min_load_handling_score: 3
