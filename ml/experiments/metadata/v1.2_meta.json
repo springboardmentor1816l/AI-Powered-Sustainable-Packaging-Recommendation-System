@@ -1,0 +1,8 @@
+{
+    "experiment_id": "v1.2",
+    "date": "2025-12-20",
+    "target": "recommended_material",
+    "metrics": {
+        "accuracy": 0.0
+    }
+}
