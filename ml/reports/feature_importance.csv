@@ -1,0 +1,69 @@
+feature,importance
+num__category_Electronics,0.9594142
+num__category_Cosmetics,0.02006588
+num__Recycled Content (%),0.018561993
+num__Reusability (%),0.0003844899
+num__Supplier Sustainability Compliance (%),0.00019407614
+num__Load Handling Score,0.0001770855
+num__Carbon Footprint (kg CO2/unit),0.0001402547
+num__Sustainability Target Progress (%),0.00013208957
+num__Supplier Region_EMEA,0.00011995383
+num__Total Material Weight (tons),0.000110507564
+num__Annual Usage (units),9.891079e-05
+num__Supplier Region_ROW,6.857798e-05
+num__CII,6.440903e-05
+num__CEI,6.370686e-05
+num__Supplier Region_LATAM,6.05373e-05
+num__MSS,5.864077e-05
+num__Biodegradation Time (days),5.405751e-05
+num__Thermal Resistance Score,4.6544996e-05
+num__Supplier Region_AMERICAS,4.3711345e-05
+num__Waste Reduction Impact (%),3.2399472e-05
+num__Supplier Region_APAC,2.5284964e-05
+num__End-of-Life Disposal (%),2.505887e-05
+num__Recyclability (%),2.405572e-05
+num__Moisture Resistance Score,2.2817152e-05
+num__Supplier Region_EU,1.0054015e-05
+num__shipping_type_Air,1.8164593e-07
+num__product_weight_kg,1.1930024e-07
+num__fragility_weight_score,1.13750644e-07
+num__category_Food,1.10172564e-07
+num__fragility_index,0.0
+num__category_Drinkware,0.0
+num__product_weight_norm,0.0
+num__category_Pharmacy,0.0
+num__shipping_type_Road,0.0
+num__shipping_type_Sea,0.0
+num__category_Paper Product,0.0
+num__Packaging Type_Protective Fillers (Paper/Biodegradable),0.0
+num__Packaging Type_Plastic Totes & Pallets,0.0
+num__Packaging Type_Foldable & Stackable Containers,0.0
+num__Packaging Type_Cardboard Boxes,0.0
+num__Packaging Type_Bubble Wrap (Minimal Use),0.0
+num__Recyclability_Category_Encoded,0.0
+num__WHR,0.0
+num__shipping_risk_score,0.0
+num__FSS,0.0
+num__Material Type_Steel,0.0
+num__Material Type_Paper/Bio-Based,0.0
+num__Suitable Product Categories_Apparel,0.0
+num__Suitable Product Categories_Automotive Parts,0.0
+num__Material Type_Cardboard,0.0
+num__Material Type_Plastic,0.0
+num__Packaging Type_Steel Racks & Containers,0.0
+num__Suitable Product Categories_E-commerce,0.0
+num__Suitable Product Categories_Cosmetics,0.0
+num__Suitable Product Categories_Consumer Goods,0.0
+num__Suitable Product Categories_Electronics,0.0
+num__Suitable Product Categories_Heavy Machinery,0.0
+num__Suitable Product Categories_Food & Beverage,0.0
+num__Suitable Product Categories_Fragile Items,0.0
+num__Suitable Product Categories_Heavy Industrial Components,0.0
+num__Suitable Product Categories_Internal Component Protection,0.0
+num__Suitable Product Categories_Industrial Components,0.0
+num__Suitable Product Categories_High-Security Goods,0.0
+num__Suitable Product Categories_Low-Value Goods,0.0
+num__Suitable Product Categories_Retail Logistics,0.0
+num__Suitable Product Categories_Pharmaceuticals,0.0
+num__Suitable Product Categories_Medium-Value Goods,0.0
+num__Suitable Product Categories_Secondary Protection for Non-Fragile Items,0.0
