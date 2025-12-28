@@ -1,0 +1,29 @@
+ranking_modes:
+  sustainability_first:
+    weights:
+      co2: 0.5
+      cost: 0.2
+      suitability: 0.3
+
+  cost_first:
+    weights:
+      co2: 0.2
+      cost: 0.5
+      suitability: 0.3
+
+  balanced:
+    weights:
+      co2: 0.4
+      cost: 0.3
+      suitability: 0.3
+
+constraints:
+  constraints:
+  min_recyclability_percent: 0.7
+  min_load_handling_score: 0.4
+  min_moisture_resistance_score: 0.3
+  min_thermal_resistance_score: 0.25
+
+
+output:
+  top_n: 3
