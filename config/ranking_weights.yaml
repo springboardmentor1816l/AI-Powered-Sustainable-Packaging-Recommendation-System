@@ -1,0 +1,7 @@
+thresholds:
+  min_protection_score: 0.6
+  min_recyclability: 0.5
+weights:
+  co2_impact: 0.4
+  cost_efficiency: 0.3
+  material_suitability: 0.3
