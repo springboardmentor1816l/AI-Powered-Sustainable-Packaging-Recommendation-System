@@ -1,0 +1,32 @@
+{
+    "experiment_id": "rf_cost_v1",
+    "date": "2025-12-28T13:04:31.152337",
+    "model": "RandomForestRegressor",
+    "hyperparameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": 12,
+        "max_features": 1.0,
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 2,
+        "min_samples_split": 5,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": -1,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+    },
+    "dataset_version": "integrated_v1",
+    "target": "Cost per Unit (USD)",
+    "metrics": {
+        "MAE": 0.0069860221966011595,
+        "RMSE": 0.025877600756361863,
+        "R2": 0.9999865842043798
+    }
+}

@@ -1,0 +1,19 @@
+modes:
+  sustainability:
+    cost_weight: 0.2
+    co2_weight: 0.5
+    suitability_weight: 0.3
+
+  cost:
+    cost_weight: 0.5
+    co2_weight: 0.2
+    suitability_weight: 0.3
+
+  balanced:
+    cost_weight: 0.33
+    co2_weight: 0.33
+    suitability_weight: 0.34
+
+constraints:
+  min_recyclability: 50
+  min_load_score: 5
