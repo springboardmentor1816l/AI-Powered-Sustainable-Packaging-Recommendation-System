@@ -1,0 +1,26 @@
+modes:
+  sustainability_first:
+    weights:
+      cost: 0.2
+      co2: 0.5
+      suitability: 0.2
+      compliance: 0.1
+
+  cost_first:
+    weights:
+      cost: 0.5
+      co2: 0.2
+      suitability: 0.2
+      compliance: 0.1
+
+  balanced:
+    weights:
+      cost: 0.25
+      co2: 0.25
+      suitability: 0.25
+      compliance: 0.25
+
+constraints:
+  min_recyclability_percent: 30
+  min_supplier_compliance_percent: 50
+  max_cost_percentile: 95
