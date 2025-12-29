@@ -1,0 +1,9 @@
+constraints:
+  max_cost: 40
+  min_recyclability: B
+  min_suitability: 50
+top_n: 3
+weights:
+  co2: 0.4
+  cost: 0.3
+  suitability: 0.3
