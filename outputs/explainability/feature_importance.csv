@@ -1,0 +1,25 @@
+feature,mean_abs_shap
+num__load_handling_score,0.34656434286126314
+num__moisture_resistance_score,0.17929181028236124
+cat__packaging_type_Steel Racks & Containers,0.12026009169092858
+num__thermal_resistance_score,0.027831861547921073
+num__sustainability_target_progress_pct,0.016195873435105725
+cat__packaging_type_Cardboard Boxes,0.016177411508845635
+num__recyclability_pct,0.014627049584508375
+num__supplier_sustainability_compliance_pct,0.011017034151186466
+cat__packaging_type_Foldable & Stackable Containers,0.00774180929656121
+cat__packaging_type_Plastic Totes & Pallets,0.005236662689295724
+cat__packaging_type_Protective Fillers (Paper/Biodegradable),0.00019708271270966416
+num__product_weight_kg,5.161313108251061e-05
+num__fragility_index,2.38450089072388e-05
+cat__shipping_type_Air,1.4116792467322761e-05
+cat__shipping_type_Road,1.1743197200286564e-05
+cat__category_Food,1.0119607131493701e-05
+cat__packaging_type_Bubble Wrap (Minimal Use),8.374464615286377e-06
+cat__category_Pharmacy,8.151179432305675e-06
+cat__category_Drinkware,7.909759628329497e-06
+cat__category_Cosmetics,7.679877929743598e-06
+cat__category_Paper Product,7.456367354069739e-06
+cat__category_Electronics,7.244403738572715e-06
+cat__shipping_type_Sea,3.1766083841713837e-06
+cat__category_ Cosmetics,2.823669209028878e-07

@@ -1,0 +1,66 @@
+{
+  "project_name": "EcoPackAI – AI-Powered Sustainable Packaging Recommendation System",
+  "model_version": "v1.0.0",
+  "training_date": "2025-01-19",
+
+  "models": {
+    "cost_prediction": {
+      "model_name": "RandomForestRegressor",
+      "artifact_path": "ml/models/rf_cost.joblib",
+      "target_variable": "cost_per_unit_usd",
+      "metrics": {
+        "mae": 0.002904,
+        "rmse": 0.028712,
+        "r2": 0.999984,
+        "cv_mae": 0.002792
+      }
+    },
+    "co2_prediction": {
+      "model_name": "XGBoostRegressor",
+      "artifact_path": "ml/models/xgb_co2.joblib",
+      "target_variable": "co2_emission_per_kg_estimated",
+      "metrics": {
+        "mae": 0.004979,
+        "rmse": 0.012807,
+        "r2": 0.999677
+      }
+    }
+  },
+
+  "preprocessing": {
+    "pipeline_path": "models/preprocessing/co2_preprocessing_pipeline.pkl",
+    "description": "ColumnTransformer pipeline handling numeric scaling and categorical encoding for integrated product-material features."
+  },
+
+  "features": [
+    "product_weight_kg",
+    "fragility_index",
+    "shipping_type",
+    "category",
+    "packaging_type",
+    "recyclability_pct",
+    "load_handling_score",
+    "moisture_resistance_score",
+    "thermal_resistance_score",
+    "supplier_sustainability_compliance_pct",
+    "sustainability_target_progress_pct"
+  ],
+
+  "dataset": {
+    "source": "Integrated Product–Material Dataset",
+    "rows": 547874,
+    "data_version": "integrated_v1"
+  },
+
+  "recommendation_logic": {
+    "ranking_strategy": "weighted_composite_score",
+    "ranking_modes": [
+      "sustainability_first",
+      "cost_first",
+      "balanced"
+    ]
+  },
+
+  "deployment_ready": true,
+  "notes": "Models validated, explainable, versioned, and ready for inference and recommendation pipeline integration."
+}
