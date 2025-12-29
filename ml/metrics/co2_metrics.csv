@@ -1,0 +1,2 @@
+model,target,RMSE,MAE,R2
+XGBoostRegressor,CO2_emissions_per_unit,1.76,0.997,0.991
