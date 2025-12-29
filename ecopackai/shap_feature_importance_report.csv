@@ -1,0 +1,13 @@
+feature,mean_abs_shap_value
+material_type,1.5461993
+biodegradation_time_days,0.92977357
+category,0.63543963
+recycled_content_percent,0.571049
+material_id,0.28229058
+supplier_region,0.1811411
+supplier_sustainability_compliance_percent,0.13859682
+packaging_type,0.0734308
+reusability_percent,0.051158603
+fragility_index,0.008523895
+product_weight_bin,0.0059850784
+shipping_type,0.0052216672
