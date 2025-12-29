@@ -191,3 +191,110 @@ erDiagram
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-12-04 | EcoPackAI Team | Initial schema design |
+| 1.1 | 2025-12-16 | Data Science Team | Added ML features and targets definition |
+
+---
+
+## Features & Targets (ML Model)
+
+### Target Variable
+
+**Primary Target**: `material_type`
+- **Type**: Categorical (Multi-class Classification)
+- **Description**: The recommended sustainable packaging material
+- **Classes**: Cardboard, Paper/Bio-Based, Plastic, Steel
+- **Purpose**: Model predicts the most suitable packaging material based on product requirements
+
+**Optional Targets** (Future Enhancement):
+- `sustainability_score` (Regression: 0-100)
+- `cost_efficiency_category` (Classification: Low/Medium/High)
+
+---
+
+### Feature Groups
+
+#### 1. Material Properties (9 features)
+
+| Feature | Type | Description | Unit | Range |
+|---------|------|-------------|------|-------|
+| `recyclability_percent` | Float | Percentage of material that can be recycled | % | 0-100 |
+| `recycled_content_percent` | Float | Percentage of recycled content in material | % | 0-100 |
+| `reusability_percent` | Float | Percentage indicating reuse potential | % | 0-100 |
+| `biodegradation_time_days` | Integer | Time for material to biodegrade | days | 0-180000 |
+| `end_of_life_disposal_percent` | Float | Disposal efficiency percentage | % | 0-100 |
+| `carbon_footprint_kg_co2_unit` | Float | CO₂ emissions per unit | kg CO₂ | 0-5 |
+| `co2_emission_per_kg_estimated` | Float | Estimated CO₂ per kg of material | kg CO₂/kg | 0-5 |
+| `waste_reduction_impact_percent` | Float | Impact on waste reduction | % | 0-100 |
+| `sustainability_target_progress_percent` | Float | Progress toward sustainability goals | % | 0-100 |
+
+#### 2. Packaging Requirements (3 features)
+
+| Feature | Type | Description | Unit | Range |
+|---------|------|-------------|------|-------|
+| `load_handling_score` | Integer | Material strength for load bearing | score | 1-10 |
+| `moisture_resistance_score` | Integer | Resistance to moisture damage | score | 1-10 |
+| `thermal_resistance_score` | Integer | Resistance to temperature variations | score | 1-10 |
+
+#### 3. Cost & Operations (4 features)
+
+| Feature | Type | Description | Unit | Range |
+|---------|------|-------------|------|-------|
+| `cost_per_unit_usd` | Float | Cost per packaging unit | USD | 0.21-25.68 |
+| `annual_usage_units` | Integer | Annual usage volume | units | 14649-104546 |
+| `total_material_weight_tons` | Float | Total material weight | tons | 145-5092 |
+| `supplier_sustainability_compliance_percent` | Float | Supplier compliance with standards | % | 63-100 |
+
+#### 4. Engineered Indices (4 features)
+
+| Feature | Type | Description | Calculation | Range |
+|---------|------|-------------|-------------|-------|
+| `co2_impact_index` | Float | CO₂ Impact Index (CII) | Composite CO₂ metric | 26-98 |
+| `cost_efficiency_index` | Float | Cost Efficiency Index (CEI) | Cost vs. benefit ratio | 44-88 |
+| `material_suitability_score` | Float | Material Suitability Score (MSS) | Load + resistance composite | 7-96 |
+| `overall_sustainability_score` | Float | Overall Sustainability Score | Weighted sustainability metric | 43-88 |
+
+#### 5. Categorical Features (5 features)
+
+| Feature | Type | Description | Example Values |
+|---------|------|-------------|----------------|
+| `packaging_type` | String | Type of packaging | Cardboard Boxes, Protective Fillers, Steel Racks |
+| `suitable_product_categories` | String | Product categories suited for | Electronics, Food & Beverage, Pharmaceuticals |
+| `recommended_packaging_use_cases` | String | Recommended use cases | Last-mile delivery, Void-fill, Secure shipping |
+| `supplier_region` | String | Geographic supplier region | APAC, EMEA, AMERICAS, EU, LATAM, ROW |
+| `recyclability_category` | String | Recyclability classification | High, Medium, Low |
+
+---
+
+### Feature Summary
+
+| Category | Count | Type |
+|----------|-------|------|
+| Material Properties | 9 | Numeric |
+| Packaging Requirements | 3 | Numeric |
+| Cost & Operations | 4 | Numeric |
+| Engineered Indices | 4 | Numeric |
+| Categorical Features | 5 | Categorical |
+| **Total Features** | **25** | **20 Numeric + 5 Categorical** |
+
+---
+
+### Data Files
+
+#### ML-Ready Data
+- **X_raw.csv**: Raw feature matrix (404 rows × 25 features)
+- **y_raw.csv**: Target variable (404 rows × 1 column)
+- **feature_metadata.json**: Feature definitions and metadata
+
+**Location**: `data/ml_ready/`
+
+---
+
+### Business Rules Applied
+
+1. **No Data Leakage**: Target variable excluded from features
+2. **No Redundant Fields**: IDs and duplicate columns removed
+3. **Consistent Naming**: Standardized feature names
+4. **Standardized Units**: kg, days, USD, percentages
+5. **Categorical Consistency**: Controlled vocabulary for categorical fields
+
+---

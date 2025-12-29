@@ -1,0 +1,89 @@
+{
+  "dataset_shape": {
+    "rows": 403,
+    "columns": 23
+  },
+  "column_groups": {
+    "numeric": [
+      "recyclability_percent",
+      "recycled_content_percent",
+      "reusability_percent",
+      "biodegradation_time_days",
+      "end_of_life_disposal_percent",
+      "carbon_footprint_kg_co2_unit",
+      "co2_emission_per_kg_estimated",
+      "waste_reduction_impact_percent",
+      "sustainability_target_progress_percent",
+      "load_handling_score",
+      "moisture_resistance_score",
+      "thermal_resistance_score",
+      "cost_per_unit_usd",
+      "annual_usage_units",
+      "total_material_weight_tons",
+      "supplier_sustainability_compliance_percent"
+    ],
+    "categorical": [
+      "packaging_type",
+      "material_type",
+      "supplier_region",
+      "recyclability_category"
+    ],
+    "excluded": [
+      "material_id",
+      "suitable_product_categories",
+      "recommended_packaging_use_cases"
+    ]
+  },
+  "transformation_summary": {
+    "input_features": 20,
+    "output_features": 34,
+    "numeric_features": 16,
+    "categorical_features": 4
+  },
+  "transformations": {
+    "numeric": {
+      "imputation": "median",
+      "scaling": "StandardScaler (zero mean, unit variance)"
+    },
+    "categorical": {
+      "imputation": "constant (Unknown)",
+      "encoding": "OneHotEncoder (handle_unknown=ignore)"
+    }
+  },
+  "output_features": [
+    "num__recyclability_percent",
+    "num__recycled_content_percent",
+    "num__reusability_percent",
+    "num__biodegradation_time_days",
+    "num__end_of_life_disposal_percent",
+    "num__carbon_footprint_kg_co2_unit",
+    "num__co2_emission_per_kg_estimated",
+    "num__waste_reduction_impact_percent",
+    "num__sustainability_target_progress_percent",
+    "num__load_handling_score",
+    "num__moisture_resistance_score",
+    "num__thermal_resistance_score",
+    "num__cost_per_unit_usd",
+    "num__annual_usage_units",
+    "num__total_material_weight_tons",
+    "num__supplier_sustainability_compliance_percent",
+    "cat__packaging_type_Bubble Wrap (Minimal Use)",
+    "cat__packaging_type_Cardboard Boxes",
+    "cat__packaging_type_Foldable & Stackable Containers",
+    "cat__packaging_type_Plastic Totes & Pallets",
+    "cat__packaging_type_Protective Fillers (Paper/Biodegradable)",
+    "cat__packaging_type_Steel Racks & Containers",
+    "cat__material_type_Cardboard",
+    "cat__material_type_Paper/Bio-Based",
+    "cat__material_type_Plastic",
+    "cat__material_type_Steel",
+    "cat__supplier_region_AMERICAS",
+    "cat__supplier_region_APAC",
+    "cat__supplier_region_EMEA",
+    "cat__supplier_region_EU",
+    "cat__supplier_region_LATAM",
+    "cat__supplier_region_ROW",
+    "cat__recyclability_category_High",
+    "cat__recyclability_category_Medium"
+  ]
+}

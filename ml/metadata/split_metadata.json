@@ -1,0 +1,135 @@
+{
+  "metadata_version": "1.0",
+  "created_at": "2025-12-26T19:55:30.475479",
+  "dataset_info": {
+    "source": "data/processed/cleaned_integrated_materials.csv",
+    "total_samples": 403,
+    "features": 20,
+    "target_variables": [
+      "cost_per_unit_usd",
+      "co2_emission_per_kg_estimated"
+    ]
+  },
+  "train_test_split": {
+    "strategy": "Stratified Train/Test Split",
+    "train_size": 322,
+    "test_size": 81,
+    "train_percentage": 79.90074441687345,
+    "test_percentage": 20.099255583126553,
+    "stratify_column": "material_type",
+    "random_seed": 42,
+    "shuffle": true
+  },
+  "cross_validation": {
+    "strategy": "StratifiedKFold",
+    "n_folds": 5,
+    "shuffle": true,
+    "random_seed": 42,
+    "stratify_column": "material_type",
+    "description": "Stratified K-Fold cross-validation to maintain class distribution across folds"
+  },
+  "fold_statistics": [
+    {
+      "fold": 1,
+      "train_size": 257,
+      "val_size": 65,
+      "train_percentage": 79.8136645962733,
+      "val_percentage": 20.18633540372671
+    },
+    {
+      "fold": 2,
+      "train_size": 257,
+      "val_size": 65,
+      "train_percentage": 79.8136645962733,
+      "val_percentage": 20.18633540372671
+    },
+    {
+      "fold": 3,
+      "train_size": 258,
+      "val_size": 64,
+      "train_percentage": 80.12422360248446,
+      "val_percentage": 19.875776397515526
+    },
+    {
+      "fold": 4,
+      "train_size": 258,
+      "val_size": 64,
+      "train_percentage": 80.12422360248446,
+      "val_percentage": 19.875776397515526
+    },
+    {
+      "fold": 5,
+      "train_size": 258,
+      "val_size": 64,
+      "train_percentage": 80.12422360248446,
+      "val_percentage": 19.875776397515526
+    }
+  ],
+  "dataset_distribution": {
+    "packaging_type": {
+      "unique_values": 6,
+      "distribution": {
+        "Cardboard Boxes": 139,
+        "Plastic Totes & Pallets": 111,
+        "Foldable & Stackable Containers": 57,
+        "Protective Fillers (Paper/Biodegradable)": 37,
+        "Bubble Wrap (Minimal Use)": 30,
+        "Steel Racks & Containers": 29
+      }
+    },
+    "material_type": {
+      "unique_values": 4,
+      "distribution": {
+        "Plastic": 198,
+        "Cardboard": 139,
+        "Paper/Bio-Based": 37,
+        "Steel": 29
+      }
+    },
+    "supplier_region": {
+      "unique_values": 6,
+      "distribution": {
+        "AMERICAS": 80,
+        "EU": 72,
+        "ROW": 70,
+        "APAC": 66,
+        "LATAM": 64,
+        "EMEA": 51
+      }
+    },
+    "recyclability_category": {
+      "unique_values": 2,
+      "distribution": {
+        "High": 205,
+        "Medium": 198
+      }
+    },
+    "recyclability_percent": {
+      "mean": 91.60545905707195,
+      "median": 94.0,
+      "std": 8.593973937301127,
+      "min": 55.0,
+      "max": 100.0
+    },
+    "cost_per_unit_usd": {
+      "mean": 8.935930521091812,
+      "median": 3.87,
+      "std": 7.092943716280628,
+      "min": 0.21,
+      "max": 25.95
+    },
+    "co2_emission_per_kg_estimated": {
+      "mean": 1.1483870967741936,
+      "median": 1.4,
+      "std": 0.7205899524931552,
+      "min": 0.28,
+      "max": 3.25
+    }
+  },
+  "reproducibility": {
+    "random_seed": 42,
+    "sklearn_version": "scikit-learn>=1.0.0",
+    "python_version": "3.8+",
+    "notes": "Use the specified random seed to reproduce exact splits"
+  }
+}
