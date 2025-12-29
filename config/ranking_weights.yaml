@@ -1,0 +1,11 @@
+ranking_mode: balanced
+
+weights:
+  cost: 0.35
+  co2: 0.35
+  suitability: 0.20
+  recyclability: 0.10
+
+constraints:
+  min_recyclability_percent: 50
+  max_cost_per_kg: 1.5
