@@ -1,0 +1,48 @@
+feature,importance
+CO2 Emission per kg (estimated),0.46968046
+Annual Usage (units),0.23931675
+Reusability (%),0.15901609
+End-of-Life Disposal (%),0.063844234
+Recycled Content (%),0.024967171
+Waste Reduction Impact (%),0.014266278
+"Suitable Product Categories_Heavy Industrial Components, High-Security Goods",0.011002837
+Total Material Weight (tons),0.008599096
+Biodegradation Time (days),0.0028411006
+Supplier Region_EMEA,0.0010775509
+Sustainability Target Progress (%),0.0008628477
+Load Handling Score,0.0006184677
+Supplier Sustainability Compliance (%),0.0005991595
+Supplier Region_EU,0.00059636607
+Thermal Resistance Score,0.0004449466
+Recyclability (%),0.00040543382
+Supplier Region_AMERICAS,0.00037376786
+Supplier Region_APAC,0.0003587043
+Supplier Region_LATAM,0.00035404484
+Supplier Region_ROW,0.00031782646
+Moisture Resistance Score,0.00027546292
+Packaging Type_Plastic Totes & Pallets,6.5060645e-05
+"Suitable Product Categories_Industrial Components, Heavy Machinery, Automotive Parts",6.44924e-05
+fragility_index,2.8073458e-05
+Packaging Type_Foldable & Stackable Containers,2.3659617e-05
+product_weight_kg,0.0
+product_id,0.0
+Packaging Type_Steel Racks & Containers,0.0
+Packaging Type_Protective Fillers (Paper/Biodegradable),0.0
+Packaging Type_Cardboard Boxes,0.0
+Packaging Type_Bubble Wrap (Minimal Use),0.0
+Recyclability Category_High,0.0
+Recyclability Category_Medium,0.0
+Material Type_Plastic,0.0
+Material Type_Steel,0.0
+Material Type_Paper/Bio-Based,0.0
+Material Type_Cardboard,0.0
+"Suitable Product Categories_Electronics, Medium-Value Goods, Retail Logistics",0.0
+"Suitable Product Categories_E-commerce, Food & Beverage, Consumer Goods, Apparel",0.0
+"Suitable Product Categories_Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",0.0
+"Suitable Product Categories_Low-Value Goods, Secondary Protection for Non-Fragile Items",0.0
+Recommended Packaging Use Cases_Closed-loop logistics and bulk material handling,0.0
+Recommended Packaging Use Cases_Cross-docking and returnable packaging programs,0.0
+Recommended Packaging Use Cases_Last-mile delivery and primary e-commerce packaging,0.0
+"Recommended Packaging Use Cases_Secure, high-load international shipping and long-term storage",0.0
+Recommended Packaging Use Cases_Surface protection during transit; minimal void-fill,0.0
+Recommended Packaging Use Cases_Void-fill and cushioning for fragile products,0.0

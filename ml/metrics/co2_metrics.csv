@@ -1,0 +1,2 @@
+model,target,mae,rmse,r2
+XGBoost Regressor,Carbon Footprint (kg CO2/unit),0.0010273705820197196,0.0014809440749848802,0.9999598350556335
