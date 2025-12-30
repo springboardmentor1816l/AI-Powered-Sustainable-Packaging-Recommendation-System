@@ -17,3 +17,4 @@ data/processed/X_raw.csv
 data/processed/*.csv
 data/model_ready/*.csv
 data/model_ready/
+data/prediciton/

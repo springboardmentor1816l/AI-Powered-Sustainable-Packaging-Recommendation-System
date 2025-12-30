@@ -1,0 +1,16 @@
+mode: balanced
+
+weights:
+  cost: 0.30
+  co2: 0.40
+  suitability: 0.20
+  sustainability: 0.10
+
+constraints:
+  min_recyclability: 0
+  min_load_handling: 0
+  min_moisture_resistance: 0
+  min_thermal_resistance: 0
+
+
+top_n: 5

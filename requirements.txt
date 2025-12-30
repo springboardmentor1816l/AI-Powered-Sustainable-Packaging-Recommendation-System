@@ -6,4 +6,4 @@ scikit-learn
 pytest
 pyarrow
 openpyxl
-xgboost
+pyyaml
