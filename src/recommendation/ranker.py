@@ -1,50 +1,70 @@
 import pandas as pd
 import yaml
-import os
+from pathlib import Path
+from sklearn.preprocessing import MinMaxScaler
 
-# ================= LOAD CONFIG =================
-with open("config/ranking_weights.yaml", "r") as f:
-    config = yaml.safe_load(f)
 
-W = config["weights"]
-C = config["constraints"]
+class MaterialRanker:
+    def __init__(self, config_path="config/ranking_weights.yaml"):
+        with open(config_path, "r") as f:
+            self.config = yaml.safe_load(f)
 
-# ================= NORMALIZATION =================
-def min_max(series, reverse=False):
-    norm = (series - series.min()) / (series.max() - series.min() + 1e-9)
-    return 1 - norm if reverse else norm
+        self.weights = self.config["weights"]
+        self.constraints = self.config["constraints"]
+        self.mode = self.config.get("mode", "balanced")
 
-# ================= RANKING FUNCTION =================
-def rank_materials(df):
-    # ---------- Apply Constraints ----------
-    df = df[
-        (df["predicted_cost"] <= C["max_cost"]) &
-        (df["recyclability"] >= C["min_recyclability"]) &
-        (df["suitability_score"] >= C["min_suitability"])
-    ].copy()
+    def apply_constraints(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Filter out materials violating business constraints"""
 
-    if df.empty:
+        if "predicted_cost" in df.columns:
+            df = df[df["predicted_cost"] <= self.constraints["max_cost"]]
+
+        if "recyclability" in df.columns:
+            df = df[df["recyclability"] >= self.constraints["min_recyclability"]]
+
+        if "suitability_score" in df.columns:
+            df = df[df["suitability_score"] >= self.constraints["min_suitability"]]
+
         return df
 
-    # ---------- Normalize ----------
-    df["cost_norm"] = min_max(df["predicted_cost"], reverse=True)
-    df["co2_norm"] = min_max(df["predicted_co2"], reverse=True)
-    df["suitability_norm"] = min_max(df["suitability_score"])
-    df["sustainability_norm"] = min_max(df["sustainability_score"])
+    def normalize_metrics(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Normalize metrics to 0–1 scale"""
 
-    # ---------- Composite Score ----------
-    df["final_score"] = (
-        W["cost"] * df["cost_norm"] +
-        W["co2"] * df["co2_norm"] +
-        W["suitability"] * df["suitability_norm"] +
-        W["sustainability"] * df["sustainability_norm"]
-    )
+        scaler = MinMaxScaler()
 
-    # ---------- Rank ----------
-    df = df.sort_values(
-        ["product_id", "final_score"],
-        ascending=[True, False]
-    )
+        df[["cost_norm", "co2_norm"]] = scaler.fit_transform(
+            df[["predicted_cost", "predicted_co2"]]
+        )
 
-    df["rank"] = df.groupby("product_id").cumcount() + 1
-    return df
+        # Invert cost & CO2 (lower is better)
+        df["cost_norm"] = 1 - df["cost_norm"]
+        df["co2_norm"] = 1 - df["co2_norm"]
+
+        return df
+
+    def compute_score(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Compute final composite ranking score"""
+
+        df["final_score"] = (
+            self.weights["cost"] * df["cost_norm"]
+            + self.weights["co2"] * df["co2_norm"]
+            + self.weights["suitability"] * df["suitability_score"]
+            + self.weights["sustainability"] * df["sustainability_score"]
+        )
+
+        return df
+
+    def rank(self, df: pd.DataFrame, top_n=3) -> pd.DataFrame:
+        """Rank materials per product"""
+
+        df = self.apply_constraints(df)
+        df = self.normalize_metrics(df)
+        df = self.compute_score(df)
+
+        df = df.sort_values(
+            ["product_id", "final_score"], ascending=[True, False]
+        )
+
+        df["rank"] = df.groupby("product_id").cumcount() + 1
+
+        return df[df["rank"] <= top_n]
