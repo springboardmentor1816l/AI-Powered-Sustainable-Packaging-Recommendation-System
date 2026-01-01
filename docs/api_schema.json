@@ -1,0 +1,20 @@
+{
+  "input": {
+    "product_weight_kg": "float",
+    "fragility_index": "int",
+    "shipping_type": "string",
+    "category": "string",
+    "packaging_type": "string",
+    "recyclability_pct": "float",
+    "load_handling_score": "float",
+    "moisture_resistance_score": "float",
+    "thermal_resistance_score": "float",
+    "supplier_sustainability_compliance_pct": "float",
+    "sustainability_target_progress_pct": "float"
+  },
+  "output": {
+    "predicted_cost_per_unit": "float",
+    "predicted_co2_emission": "float",
+    "model_metadata": "object"
+  }
+}
