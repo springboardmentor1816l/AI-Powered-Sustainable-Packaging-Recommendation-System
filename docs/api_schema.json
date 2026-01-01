@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "base_url": "http://127.0.0.1:5000",
+  "endpoints": {
+    "/health": { "method": "GET", "description": "Check service status" },
+    "/predict": {
+      "method": "POST",
+      "required_fields": ["product_weight_kg", "fragility_index", "category"],
+      "response": ["predicted_cost_index", "predicted_co2_impact"]
+    }
+  }
+}
