@@ -1,0 +1,63 @@
+{
+  "project_name": "EcoPackAI – Sustainable Packaging Recommendation System",
+  "module": "Model Evaluation, Explainability & Deployment Readiness",
+
+  "model_package_version": "v1.0.0",
+  "created_on": "2026-01-01",
+
+  "models": {
+    "cost_prediction": {
+      "model_type": "RandomForestRegressor",
+      "artifact_path": "ml/models/rf_cost.joblib",
+      "expected_features": 67,
+      "target_variable": "predicted_cost"
+    },
+    "co2_prediction": {
+      "model_type": "XGBoostRegressor",
+      "artifact_path": "ml/models/xgb_co2.joblib",
+      "expected_features": 68,
+      "target_variable": "predicted_co2"
+    }
+  },
+
+  "preprocessing": {
+    "pipeline_artifact": "preprocessing_pipeline.pkl",
+    "description": "Serialized preprocessing pipeline including scaling and one-hot encoding applied to integrated product–material features.",
+    "note": "Preprocessing pipeline outputs 68 features. Feature alignment is handled at inference time for compatibility with individual models."
+  },
+
+  "input_schema": {
+    "type": "tabular",
+    "format": "pandas DataFrame / JSON",
+    "requirements": [
+      "No target variables present",
+      "No identifier columns (e.g., Unnamed: 0, product_id, material_id)",
+      "Feature names must match training schema"
+    ]
+  },
+
+  "outputs": {
+    "predicted_cost": "Estimated packaging cost per unit",
+    "predicted_co2": "Estimated CO2 emission impact"
+  },
+
+  "evaluation_metrics": {
+    "cost_model": {
+      "MAE": "refer final_model_evaluation.md",
+      "RMSE": "refer final_model_evaluation.md",
+      "R2": "refer final_model_evaluation.md"
+    },
+    "co2_model": {
+      "MAE": "refer final_model_evaluation.md",
+      "RMSE": "refer final_model_evaluation.md",
+      "R2": "refer final_model_evaluation.md"
+    }
+  },
+
+  "deployment_notes": [
+    "Models are loaded without retraining.",
+    "Inference supports both single-row and batch predictions.",
+    "Feature dimension mismatch between models is handled explicitly at inference.",
+    "XGBoost feature validation is disabled to preserve trained behavior."
+  ]
+}
