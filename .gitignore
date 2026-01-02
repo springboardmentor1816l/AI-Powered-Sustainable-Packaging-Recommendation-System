@@ -1,13 +1,19 @@
 .env
-# Data & artifacts
+# Data & reports
 data/
+data_quality/
+
+# ML artifacts
 ml/
 models/
 
-# Large ML files
+# Large files
 *.csv
 *.parquet
 *.pkl
+
+# Notebooks
+*.ipynb
 
 # Python cache
 __pycache__/
