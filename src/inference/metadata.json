@@ -1,0 +1,19 @@
+{
+  "project": "EcoPackAI",
+  "packaged_on": "2025-12-29",
+  "models": {
+    "cost_prediction": {
+      "algorithm": "RandomForestRegressor",
+      "model_path": "ml/models/rf_cost_model_v1.pkl"
+    },
+    "co2_prediction": {
+      "algorithm": "XGBoost Regressor",
+      "model_path": "ml/models/xgb_co2_model_v1.joblib"
+    }
+  },
+  "input_format": "tabular CSV or DataFrame",
+  "output_fields": [
+    "predicted_cost",
+    "predicted_co2"
+  ]
+}
