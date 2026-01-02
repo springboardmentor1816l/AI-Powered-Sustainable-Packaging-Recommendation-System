@@ -1,0 +1,14 @@
+{
+  "models": {
+    "cost": "RandomForestRegressor",
+    "co2": "XGBoostRegressor"
+  },
+  "dataset_version": "v1",
+  "feature_set_version": "v1",
+  "preprocessing": "ColumnTransformer",
+  "targets": {
+    "cost": "material_cost_per_unit_usd",
+    "co2": "co2_emission_per_kg_estimated"
+  },
+  "supports": ["single_prediction", "batch_prediction"]
+}
