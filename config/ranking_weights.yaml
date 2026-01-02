@@ -1,0 +1,127 @@
+# Material Ranking Configuration
+# ================================
+# This configuration file defines the weights and thresholds for ranking sustainable packaging materials
+
+# Ranking Modes
+# -------------
+# Available modes: sustainability_first, cost_first, balanced
+ranking_mode: "balanced"
+
+# Ranking Criteria Weights
+# -------------------------
+# All weights should sum to 1.0 for each mode
+# Higher weight = more importance in final ranking score
+
+weights:
+  sustainability_first:
+    co2_emission: 0.40        # Environmental impact (lower is better)
+    cost: 0.20                # Cost efficiency (lower is better)
+    material_suitability: 0.25 # Material suitability score (higher is better)
+    recyclability: 0.10       # Recyclability percentage (higher is better)
+    sustainability_compliance: 0.05  # Supplier sustainability compliance (higher is better)
+  
+  cost_first:
+    co2_emission: 0.15        # Environmental impact (lower is better)
+    cost: 0.50                # Cost efficiency (lower is better)
+    material_suitability: 0.20 # Material suitability score (higher is better)
+    recyclability: 0.10       # Recyclability percentage (higher is better)
+    sustainability_compliance: 0.05  # Supplier sustainability compliance (higher is better)
+  
+  balanced:
+    co2_emission: 0.30        # Environmental impact (lower is better)
+    cost: 0.30                # Cost efficiency (lower is better)
+    material_suitability: 0.25 # Material suitability score (higher is better)
+    recyclability: 0.10       # Recyclability percentage (higher is better)
+    sustainability_compliance: 0.05  # Supplier sustainability compliance (higher is better)
+
+# Business Constraints & Filters
+# -------------------------------
+# Materials failing these constraints will be filtered out before ranking
+
+constraints:
+  # Minimum recyclability percentage required
+  min_recyclability_percent: 20.0
+  
+  # Maximum cost per unit allowed (USD)
+  max_cost_per_unit: 200.0
+  
+  # Minimum scores for packaging requirements (1-10 scale)
+  min_load_handling_score: 3.0
+  min_moisture_resistance_score: 3.0
+  min_thermal_resistance_score: 3.0
+  
+  # Minimum material suitability score (0-100 scale)
+  min_material_suitability_score: 10.0
+  
+  # Minimum supplier sustainability compliance percentage
+  min_sustainability_compliance_percent: 60.0
+
+# Normalization Settings
+# ----------------------
+# Method for normalizing features to comparable scales
+normalization:
+  method: "min_max"  # Options: min_max, z_score, robust
+  
+  # Define expected ranges for better normalization
+  # If actual data exceeds these, they will be clipped
+  expected_ranges:
+    co2_emission_per_kg_estimated:
+      min: 0.0
+      max: 50.0
+    cost_per_unit_usd:
+      min: 0.0
+      max: 100.0
+    material_suitability_score:
+      min: 0.0
+      max: 100.0
+    recyclability_percent:
+      min: 0.0
+      max: 100.0
+    supplier_sustainability_compliance_percent:
+      min: 0.0
+      max: 100.0
+
+# Output Settings
+# ---------------
+output:
+  # Number of top materials to recommend per product
+  top_n_recommendations: 5
+  
+  # Include detailed explanation of ranking
+  include_explanations: true
+  
+  # Export format options
+  export_formats:
+    - "csv"
+    - "json"
+  
+  # Columns to include in output
+  output_columns:
+    - "rank"
+    - "material_type"
+    - "final_score"
+    - "predicted_cost"
+    - "predicted_co2"
+    - "material_suitability_score"
+    - "recyclability_percent"
+    - "sustainability_compliance_percent"
+    - "packaging_type"
+    - "supplier_region"
+
+# Advanced Features
+# -----------------
+advanced:
+  # Enable multi-objective optimization
+  enable_pareto_ranking: false
+  
+  # Enable sensitivity analysis
+  enable_sensitivity_analysis: false
+  
+  # Penalty for materials with missing data
+  missing_data_penalty: 0.2
+  
+  # Boost for materials exceeding sustainability thresholds
+  sustainability_bonus:
+    enabled: true
+    recyclability_threshold: 80.0  # If recyclability > 80%, apply bonus
+    bonus_multiplier: 1.1         # 10% bonus to final score

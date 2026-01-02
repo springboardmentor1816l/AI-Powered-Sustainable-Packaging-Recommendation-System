@@ -1,0 +1,20 @@
+{
+    "recyclability_percent": 95.0,
+    "recycled_content_percent": 70.0,
+    "reusability_percent": 50.0,
+    "biodegradation_time_days": 120,
+    "end_of_life_disposal_percent": 95.0,
+    "carbon_footprint_kg_co2_unit": 1.8,
+    "waste_reduction_impact_percent": 80.0,
+    "sustainability_target_progress_percent": 85.0,
+    "load_handling_score": 8.0,
+    "moisture_resistance_score": 7.0,
+    "thermal_resistance_score": 7.0,
+    "annual_usage_units": 15000,
+    "total_material_weight_tons": 7.5,
+    "supplier_sustainability_compliance_percent": 90.0,
+    "co2_impact_index": 0.25,
+    "cost_efficiency_index": 0.75,
+    "material_suitability_score": 70.0,
+    "overall_sustainability_score": 0.85
+}

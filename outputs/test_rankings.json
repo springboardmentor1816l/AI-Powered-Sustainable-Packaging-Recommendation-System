@@ -1,0 +1,82 @@
+[
+  {
+    "rank":1,
+    "material_suitability_score":48.1481481481,
+    "recyclability_percent":100,
+    "packaging_type":"Cardboard Boxes",
+    "supplier_region":"EMEA",
+    "explanation":"Rank #1 with score 0.878 | Breakdown: co2_emission: 0.277 (30%), cost: 0.270 (30%), material_suitability: 0.115 (25%), recyclability: 0.100 (10%), sustainability_compliance: 0.036 (5%) | Metrics: Suitability: 48.1, Recyclability: 100.0% | \u2713 Sustainability bonus applied"
+  },
+  {
+    "rank":2,
+    "material_suitability_score":44.4444444444,
+    "recyclability_percent":98,
+    "packaging_type":"Cardboard Boxes",
+    "supplier_region":"LATAM",
+    "explanation":"Rank #2 with score 0.862 | Breakdown: co2_emission: 0.278 (30%), cost: 0.270 (30%), material_suitability: 0.104 (25%), recyclability: 0.096 (10%), sustainability_compliance: 0.036 (5%) | Metrics: Suitability: 44.4, Recyclability: 98.0% | \u2713 Sustainability bonus applied"
+  },
+  {
+    "rank":3,
+    "material_suitability_score":44.4444444444,
+    "recyclability_percent":98,
+    "packaging_type":"Cardboard Boxes",
+    "supplier_region":"EMEA",
+    "explanation":"Rank #3 with score 0.857 | Breakdown: co2_emission: 0.274 (30%), cost: 0.276 (30%), material_suitability: 0.104 (25%), recyclability: 0.096 (10%), sustainability_compliance: 0.030 (5%) | Metrics: Suitability: 44.4, Recyclability: 98.0% | \u2713 Sustainability bonus applied"
+  },
+  {
+    "rank":4,
+    "material_suitability_score":48.1481481481,
+    "recyclability_percent":97,
+    "packaging_type":"Cardboard Boxes",
+    "supplier_region":"EMEA",
+    "explanation":"Rank #4 with score 0.857 | Breakdown: co2_emission: 0.280 (30%), cost: 0.271 (30%), material_suitability: 0.115 (25%), recyclability: 0.093 (10%), sustainability_compliance: 0.020 (5%) | Metrics: Suitability: 48.1, Recyclability: 97.0% | \u2713 Sustainability bonus applied"
+  },
+  {
+    "rank":5,
+    "material_suitability_score":44.4444444444,
+    "recyclability_percent":100,
+    "packaging_type":"Cardboard Boxes",
+    "supplier_region":"ROW",
+    "explanation":"Rank #5 with score 0.854 | Breakdown: co2_emission: 0.276 (30%), cost: 0.270 (30%), material_suitability: 0.104 (25%), recyclability: 0.100 (10%), sustainability_compliance: 0.027 (5%) | Metrics: Suitability: 44.4, Recyclability: 100.0% | \u2713 Sustainability bonus applied"
+  },
+  {
+    "rank":6,
+    "material_suitability_score":44.4444444444,
+    "recyclability_percent":93,
+    "packaging_type":"Cardboard Boxes",
+    "supplier_region":"AMERICAS",
+    "explanation":"Rank #6 with score 0.853 | Breakdown: co2_emission: 0.278 (30%), cost: 0.269 (30%), material_suitability: 0.104 (25%), recyclability: 0.084 (10%), sustainability_compliance: 0.039 (5%) | Metrics: Suitability: 44.4, Recyclability: 93.0% | \u2713 Sustainability bonus applied"
+  },
+  {
+    "rank":7,
+    "material_suitability_score":44.4444444444,
+    "recyclability_percent":95,
+    "packaging_type":"Cardboard Boxes",
+    "supplier_region":"EMEA",
+    "explanation":"Rank #7 with score 0.851 | Breakdown: co2_emission: 0.276 (30%), cost: 0.265 (30%), material_suitability: 0.104 (25%), recyclability: 0.089 (10%), sustainability_compliance: 0.039 (5%) | Metrics: Suitability: 44.4, Recyclability: 95.0% | \u2713 Sustainability bonus applied"
+  },
+  {
+    "rank":8,
+    "material_suitability_score":44.4444444444,
+    "recyclability_percent":97,
+    "packaging_type":"Cardboard Boxes",
+    "supplier_region":"EMEA",
+    "explanation":"Rank #8 with score 0.849 | Breakdown: co2_emission: 0.278 (30%), cost: 0.268 (30%), material_suitability: 0.104 (25%), recyclability: 0.093 (10%), sustainability_compliance: 0.028 (5%) | Metrics: Suitability: 44.4, Recyclability: 97.0% | \u2713 Sustainability bonus applied"
+  },
+  {
+    "rank":9,
+    "material_suitability_score":37.037037037,
+    "recyclability_percent":99,
+    "packaging_type":"Cardboard Boxes",
+    "supplier_region":"EMEA",
+    "explanation":"Rank #9 with score 0.847 | Breakdown: co2_emission: 0.279 (30%), cost: 0.270 (30%), material_suitability: 0.083 (25%), recyclability: 0.098 (10%), sustainability_compliance: 0.041 (5%) | Metrics: Suitability: 37.0, Recyclability: 99.0% | \u2713 Sustainability bonus applied"
+  },
+  {
+    "rank":10,
+    "material_suitability_score":40.7407407407,
+    "recyclability_percent":98,
+    "packaging_type":"Cardboard Boxes",
+    "supplier_region":"ROW",
+    "explanation":"Rank #10 with score 0.847 | Breakdown: co2_emission: 0.275 (30%), cost: 0.270 (30%), material_suitability: 0.094 (25%), recyclability: 0.096 (10%), sustainability_compliance: 0.036 (5%) | Metrics: Suitability: 40.7, Recyclability: 98.0% | \u2713 Sustainability bonus applied"
+  }
+]

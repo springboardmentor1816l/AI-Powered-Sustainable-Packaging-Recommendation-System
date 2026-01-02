@@ -1,0 +1,525 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "EcoPackAI Prediction API",
+        "version": "1.0.0",
+        "description": "API for sustainable packaging material cost and CO₂ predictions",
+        "contact": {
+            "name": "EcoPackAI Team",
+            "email": "support@ecopackai.example.com"
+        }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:5000",
+            "description": "Development server"
+        },
+        {
+            "url": "https://api.ecopackai.example.com",
+            "description": "Production server"
+        }
+    ],
+    "paths": {
+        "/health": {
+            "get": {
+                "summary": "Health check",
+                "description": "Basic health check endpoint without model loading",
+                "responses": {
+                    "200": {
+                        "description": "Service is healthy",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HealthResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/health/ready": {
+            "get": {
+                "summary": "Readiness check",
+                "description": "Verifies models are loaded and service is ready",
+                "responses": {
+                    "200": {
+                        "description": "Service is ready"
+                    },
+                    "503": {
+                        "description": "Service is not ready"
+                    }
+                }
+            }
+        },
+        "/api/v1/predict/cost": {
+            "post": {
+                "summary": "Predict cost",
+                "description": "Predict packaging material cost per unit",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MaterialFeatures"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful prediction",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CostPredictionResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Prediction error"
+                    }
+                }
+            }
+        },
+        "/api/v1/predict/co2": {
+            "post": {
+                "summary": "Predict CO₂",
+                "description": "Predict packaging material CO₂ emissions per kg",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MaterialFeatures"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful prediction",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CO2PredictionResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "500": {
+                        "description": "Prediction error"
+                    }
+                }
+            }
+        },
+        "/api/v1/predict/all": {
+            "post": {
+                "summary": "Predict cost and CO₂",
+                "description": "Predict both cost and CO₂ emissions",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MaterialFeatures"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful prediction",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CombinedPredictionResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "500": {
+                        "description": "Prediction error"
+                    }
+                }
+            }
+        },
+        "/api/v1/predict/batch": {
+            "post": {
+                "summary": "Batch prediction",
+                "description": "Predict for multiple materials at once",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BatchPredictionRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful batch prediction",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BatchPredictionResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "500": {
+                        "description": "Prediction error"
+                    }
+                }
+            }
+        },
+        "/api/v1/models/info": {
+            "get": {
+                "summary": "Model information",
+                "description": "Get information about loaded models",
+                "responses": {
+                    "200": {
+                        "description": "Model information retrieved",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ModelInfoResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "MaterialFeatures": {
+                "type": "object",
+                "required": [
+                    "recyclability_percent",
+                    "recycled_content_percent",
+                    "reusability_percent",
+                    "biodegradation_time_days",
+                    "end_of_life_disposal_percent",
+                    "carbon_footprint_kg_co2_unit",
+                    "waste_reduction_impact_percent",
+                    "sustainability_target_progress_percent",
+                    "load_handling_score",
+                    "moisture_resistance_score",
+                    "thermal_resistance_score",
+                    "annual_usage_units",
+                    "total_material_weight_tons",
+                    "supplier_sustainability_compliance_percent",
+                    "co2_impact_index",
+                    "cost_efficiency_index",
+                    "material_suitability_score",
+                    "overall_sustainability_score"
+                ],
+                "properties": {
+                    "recyclability_percent": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100,
+                        "description": "Material recyclability percentage"
+                    },
+                    "recycled_content_percent": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100,
+                        "description": "Recycled content percentage"
+                    },
+                    "reusability_percent": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                    },
+                    "biodegradation_time_days": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 3650
+                    },
+                    "end_of_life_disposal_percent": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                    },
+                    "carbon_footprint_kg_co2_unit": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 50
+                    },
+                    "waste_reduction_impact_percent": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                    },
+                    "sustainability_target_progress_percent": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                    },
+                    "load_handling_score": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 10
+                    },
+                    "moisture_resistance_score": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 10
+                    },
+                    "thermal_resistance_score": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 10
+                    },
+                    "annual_usage_units": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "total_material_weight_tons": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "supplier_sustainability_compliance_percent": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                    },
+                    "co2_impact_index": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                    },
+                    "cost_efficiency_index": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                    },
+                    "material_suitability_score": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100
+                    },
+                    "overall_sustainability_score": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                    }
+                }
+            },
+            "HealthResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "healthy"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "service": {
+                        "type": "string",
+                        "example": "EcoPackAI API"
+                    },
+                    "version": {
+                        "type": "string",
+                        "example": "1.0.0"
+                    }
+                }
+            },
+            "CostPredictionResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "success"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "prediction_type": {
+                        "type": "string",
+                        "example": "cost"
+                    },
+                    "results": {
+                        "type": "object",
+                        "properties": {
+                            "predicted_cost": {
+                                "type": "number",
+                                "description": "Predicted cost in USD"
+                            },
+                            "cost_confidence": {
+                                "type": "number",
+                                "description": "Prediction confidence interval"
+                            }
+                        }
+                    }
+                }
+            },
+            "CO2PredictionResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "success"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "prediction_type": {
+                        "type": "string",
+                        "example": "co2"
+                    },
+                    "results": {
+                        "type": "object",
+                        "properties": {
+                            "predicted_co2": {
+                                "type": "number",
+                                "description": "Predicted CO₂ emissions in kg"
+                            }
+                        }
+                    }
+                }
+            },
+            "CombinedPredictionResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "success"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "prediction_type": {
+                        "type": "string",
+                        "example": "all"
+                    },
+                    "results": {
+                        "type": "object",
+                        "properties": {
+                            "predicted_cost": {
+                                "type": "number"
+                            },
+                            "cost_confidence": {
+                                "type": "number"
+                            },
+                            "predicted_co2": {
+                                "type": "number"
+                            }
+                        }
+                    },
+                    "metadata": {
+                        "type": "object",
+                        "properties": {
+                            "cost_model": {
+                                "type": "string"
+                            },
+                            "co2_model": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "BatchPredictionRequest": {
+                "type": "object",
+                "required": [
+                    "materials"
+                ],
+                "properties": {
+                    "materials": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/MaterialFeatures"
+                        }
+                    }
+                }
+            },
+            "BatchPredictionResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string"
+                    },
+                    "timestamp": {
+                        "type": "string"
+                    },
+                    "prediction_type": {
+                        "type": "string",
+                        "example": "batch"
+                    },
+                    "count": {
+                        "type": "integer"
+                    },
+                    "results": {
+                        "type": "array",
+                        "items": {
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "ModelInfoResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string"
+                    },
+                    "timestamp": {
+                        "type": "string"
+                    },
+                    "models": {
+                        "type": "object"
+                    }
+                }
+            },
+            "ErrorResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "error"
+                    },
+                    "timestamp": {
+                        "type": "string"
+                    },
+                    "error": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
