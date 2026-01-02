@@ -1,0 +1,30 @@
+{
+  "endpoint": "/api/predict",
+  "method": "POST",
+  "input_type": "array",
+  "required_fields": [
+    "packaging_type",
+    "material_type",
+    "supplier_region",
+    "recyclability_percent",
+    "recycled_content_percent",
+    "reusability_percent",
+    "biodegradation_time_days",
+    "endoflife_disposal_percent",
+    "carbon_footprint_kg_co2unit",
+    "co2_emission_per_kg_estimated",
+    "waste_reduction_impact_percent",
+    "sustainability_target_progress_percent",
+    "load_handling_score",
+    "moisture_resistance_score",
+    "thermal_resistance_score",
+    "cost_per_unit_usd",
+    "annual_usage_units",
+    "total_material_weight_tons",
+    "supplier_sustainability_compliance_percent"
+  ],
+  "response_fields": [
+    "predicted_cost",
+    "predicted_co2"
+  ]
+}

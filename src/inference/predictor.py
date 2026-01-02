@@ -1,18 +1,20 @@
+from pathlib import Path
 import joblib
 import pandas as pd
-from pathlib import Path
-from typing import Dict, Union
+from typing import Dict
+
+BASE_DIR = Path(__file__).resolve().parents[2]  # project root
 
 class EcoPackPredictor:
     def __init__(self):
         self.preprocessor = joblib.load(
-            Path("../../models/preprocessing/preprocessing_pipeline.pkl")
+            BASE_DIR / "models" / "preprocessing" / "preprocessing_pipeline.pkl"
         )
         self.cost_model = joblib.load(
-            Path("../../ml/models/rf_cost.joblib")
+            BASE_DIR / "ml" / "models" / "rf_cost.joblib"
         )
         self.co2_model = joblib.load(
-            Path("../../ml/models/xgb_co2.joblib")
+            BASE_DIR / "ml" / "models" / "xgb_co2.joblib"
         )
 
     def predict_batch(self, X_raw: pd.DataFrame) -> pd.DataFrame:
