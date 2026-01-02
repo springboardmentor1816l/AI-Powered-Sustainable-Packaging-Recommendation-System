@@ -42,3 +42,12 @@ Optimization & Scoring Module – Evaluates cost, sustainability & performance s
 Reporting Module – Generates downloadable report
 
 Frontend Dashboard – Visualization & report interface
+## 🧪 Experiment Tracking & Model Versioning (Dec 18 Task)
+
+### 🔹 Model Training
+A `RandomForestRegressor` is trained using preprocessed feature data.
+The preprocessing pipeline is reused to ensure consistent feature transformation.
+
+### 🔹 Model Versioning
+Each trained model is saved with explicit versioning:
+
