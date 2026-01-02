@@ -1,0 +1,16 @@
+{
+  "model_name": "EcoPackAI Recommender",
+  "version": "v1.0",
+  "training_date": "2026-01-02",
+  "models": {
+    "cost": "RandomForestRegressor",
+    "co2": "XGBoostRegressor"
+  },
+  "features": "X_raw.csv (after preprocessing)",
+  "targets": [
+    "cost_per_unit",
+    "co2_emissions"
+  ],
+  "metrics": "Refer docs/final_model_evaluation.md",
+  "data_version": "integrated_dataset_v1"
+}
