@@ -1,0 +1,28 @@
+{
+  "input": [
+    {
+      "product_weight": "float",
+      "fragility_score": "float",
+      "moisture_sensitivity": "float",
+      "thermal_sensitivity": "float",
+      "expected_shelf_life_days": "float",
+      "material_cost_per_kg": "float",
+      "co2_emission_per_kg": "float",
+      "biodegradability_percent": "float",
+      "load_handling_score": "float",
+      "sustainability_score": "float",
+      "hazardous_material_flag": "int",
+      "product_category": "string",
+      "material_type": "string",
+      "recyclability_category": "string",
+      "supplier_region": "string"
+    }
+  ],
+  "output": [
+    {
+      "input_index": "int",
+      "predicted_co2_impact": "float",
+      "model_metadata": "object"
+    }
+  ]
+}

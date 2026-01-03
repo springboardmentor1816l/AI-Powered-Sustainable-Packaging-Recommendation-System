@@ -1,0 +1,31 @@
+{
+  "model_name": "xgb_co2",
+  "version": "1.0.0",
+  "training_date": "2026-01-02",
+  "feature_list": [
+    "product_weight",
+    "fragility_score",
+    "moisture_sensitivity",
+    "thermal_sensitivity",
+    "expected_shelf_life_days",
+    "material_cost_per_kg",
+    "co2_emission_per_kg",
+    "biodegradability_percent",
+    "load_handling_score",
+    "sustainability_score",
+    "hazardous_material_flag",
+    "product_category",
+    "material_type",
+    "recyclability_category",
+    "supplier_region"
+  ],
+  "target_variable": "co2_emission_per_kg",
+  "preprocessing": "Object columns converted to category codes; float dtype enforced",
+  "evaluation_metrics": {
+    "MAE": 0.87,
+    "RMSE": 1.15,
+    "R2": 0.92
+  },
+  "data_version": "integrated_ecopack_dataset_v1.csv",
+  "notes": "Model trained on 1000 samples for explainability demo. SHAP values available in outputs/explainability."
+}
