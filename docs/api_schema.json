@@ -1,0 +1,14 @@
+{
+  "input": {
+    "product_weight_kg": "float",
+    "fragility_index": "int",
+    "shipping_type": "string",
+    "Material Type": "string",
+    "Recyclability Category": "string",
+    "Load Handling Score": "int"
+  },
+  "output": {
+    "predicted_cost": "float",
+    "predicted_co2": "float"
+  }
+}
