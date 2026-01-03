@@ -1,0 +1,18 @@
+{
+  "model_name": "EcoPackAI Recommendation Models",
+  "version": "v1.0",
+  "training_date": "2025-01-10",
+  "dataset": "integrated_engineered_dataset.csv",
+  "targets": [
+    "Cost per Unit (USD)",
+    "CO2 Emission per kg (estimated)"
+  ],
+  "models": {
+    "cost_model": "Random Forest Regressor",
+    "co2_model": "XGBoost Regressor"
+  },
+  "metrics": {
+    "cost_rmse": "recorded in ml/metrics/",
+    "co2_rmse": "recorded in ml/metrics/"
+  }
+}
