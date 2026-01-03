@@ -1,0 +1,81 @@
+{
+  "name": "EcoPackAI Prediction API",
+  "version": "1.0",
+  "base_url": "http://127.0.0.1:5000",
+  "endpoints": {
+    "/health": {
+      "method": "GET",
+      "description": "Service health check",
+      "response": {
+        "status": "string",
+        "service": "string"
+      }
+    },
+    "/api/predict": {
+      "method": "POST",
+      "description": "Predict packaging cost and CO₂ impact",
+      "request": {
+        "type": "object",
+        "required": [
+          "product_weight_kg",
+          "fragility_index",
+          "category",
+          "material_type",
+          "recyclability_percent",
+          "co2_per_kg"
+        ],
+        "properties": {
+          "product_weight_kg": {
+            "type": "number",
+            "description": "Weight of the product in kilograms"
+          },
+          "fragility_index": {
+            "type": "number",
+            "description": "Fragility score between 0 and 1"
+          },
+          "category": {
+            "type": "string",
+            "description": "Product category"
+          },
+          "material_type": {
+            "type": "string",
+            "description": "Packaging material type"
+          },
+          "recyclability_percent": {
+            "type": "number",
+            "description": "Recyclability percentage"
+          },
+          "co2_per_kg": {
+            "type": "number",
+            "description": "CO₂ emission per kg of material"
+          }
+        }
+      },
+      "response": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "success"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "predicted_cost": {
+                  "type": "number",
+                  "description": "Predicted cost impact per unit"
+                },
+                "predicted_co2": {
+                  "type": "number",
+                  "description": "Predicted CO₂ emissions per unit"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
