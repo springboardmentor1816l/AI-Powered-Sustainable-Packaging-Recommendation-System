@@ -1,88 +1,53 @@
-# EcoPackAI/src/app.py
-
 from flask import Flask, request, jsonify
+from models import db
+from cache.cache import cache
+from middleware.auth import require_api_key
 from inference.predictor import predict, FEATURES
-from pathlib import Path
+from logging_config import logger
+import os
 import pandas as pd
-import json
+from dotenv import load_dotenv
 
-# =====================
-# PATHS
-# =====================
-BASE_DIR = Path(__file__).resolve().parents[2]
-METADATA_PATH = BASE_DIR / "EcoPackAI/src/inference/metadata.json"
+load_dotenv()
 
-# =====================
-# LOAD METADATA
-# =====================
-with open(METADATA_PATH, "r") as f:
-    MODEL_METADATA = json.load(f)
-
-# =====================
-# FLASK APP
-# =====================
 app = Flask(__name__)
 
-# ---------------------
-# HEALTH CHECK
-# ---------------------
+# ---------------- CONFIG ----------------
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+db.init_app(app)
+cache.init_app(app)
+
+# ---------------- HEALTH ----------------
 @app.route("/health", methods=["GET"])
 def health():
-    return jsonify({
-        "status": "UP",
-        "message": "EcoPackAI Service is running"
-    }), 200
+    return jsonify({"status": "UP", "message": "EcoPackAI Service is running"})
 
-# ---------------------
-# PREDICTION ENDPOINT
-# ---------------------
+# ---------------- PREDICT ----------------
 @app.route("/predict", methods=["POST"])
+@require_api_key
+@cache.cached(timeout=300, query_string=True)
 def predict_endpoint():
-
     if not request.is_json:
-        return jsonify({"error": "Request must be JSON"}), 400
+        return jsonify({"error": "JSON required"}), 400
 
-    payload = request.get_json()
+    data = request.get_json()
+    if isinstance(data, dict):
+        data = [data]
 
-    # Normalize input
-    if isinstance(payload, dict):
-        payload = [payload]
-    elif not isinstance(payload, list):
-        return jsonify({"error": "Input must be dict or list of dicts"}), 400
-
-    try:
-        X = pd.DataFrame(payload)
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
-
-    # Validate required features
+    X = pd.DataFrame(data)
     missing = [f for f in FEATURES if f not in X.columns]
     if missing:
-        return jsonify({
-            "error": "Missing required fields",
-            "missing_fields": missing
-        }), 400
+        return jsonify({"error": "Missing required fields", "missing_fields": missing}), 400
 
-    # Predict
-    try:
-        preds = predict(X)
-    except Exception as e:
-        return jsonify({"error": f"Inference failed: {str(e)}"}), 500
+    preds = predict(X)
+    logger.info("Prediction request processed")
 
-    # Response
-    response = [
-        {
-            "input_index": i,
-            "predicted_co2_impact": float(value),
-            "model_metadata": MODEL_METADATA
-        }
-        for i, value in enumerate(preds)
-    ]
+    return jsonify([
+        {"input_index": i, "predicted_co2_impact": float(p)}
+        for i, p in enumerate(preds)
+    ])
 
-    return jsonify(response), 200
-
-# =====================
-# RUN SERVER
-# =====================
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(debug=True)
