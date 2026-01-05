@@ -1,0 +1,10 @@
+mode: balanced
+
+weights:
+  cost: 0.3
+  co2: 0.4
+  suitability: 0.3
+
+constraints:
+  min_recyclability: 0.5
+  max_cost: 9999

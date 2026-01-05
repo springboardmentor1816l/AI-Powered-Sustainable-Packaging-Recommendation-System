@@ -1,0 +1,59 @@
+:root {
+    --eco-green: #2d6a4f;
+    --eco-light: #d8f3dc;
+    --eco-accent: #74c69d;
+    --bg: #f0f4f1;
+}
+
+body {
+    background: var(--bg);
+    font-family: Inter;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #2d6a4f, #1b4332);
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.card-header-accent {
+    height: 8px;
+    background: linear-gradient(to right, var(--eco-accent), var(--eco-green));
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--eco-green);
+}
+
+.btn-primary {
+    background: var(--eco-green);
+    border: none;
+}
+
+.error-message {
+    display: none;
+    color: #d63031;
+    font-size: .8rem;
+}
+
+.is-invalid+.error-message {
+    display: block;
+}
+
+#result-container {
+    display: none;
+    background: var(--eco-light);
+    border: 1px solid var(--eco-accent);
+    border-radius: 12px;
+    color: var(--eco-green);
+}
+
+.footer-text {
+    text-align: center;
+    color: #636e72;
+    font-size: .8rem;
+}

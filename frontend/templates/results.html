@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <h2>Recommendation Results</h2>
+
+    <div id="resultsBox">
+        <p><strong>Predicted Cost:</strong> <span id="cost"></span></p>
+        <p><strong>CO₂ Impact:</strong> <span id="co2"></span></p>
+        <p><strong>Recommended Material:</strong> <span id="material"></span></p>
+    </div>
+
+    <a href="product.html">Try Another Product</a>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const weight = parseFloat(params.get("weight"));
+        const fragility = parseInt(params.get("fragility"));
+
+        document.getElementById("cost").innerText = "₹ " + (weight * 120).toFixed(2);
+        document.getElementById("co2").innerText = (weight * 0.75).toFixed(2) + " kg";
+
+        let material = "";
+
+        if (fragility >= 4) {
+            material = "Molded Pulp";
+        } else if (weight > 1) {
+            material = "Corrugated Cardboard";
+        } else {
+            material = "Recycled Paper";
+        }
+
+        document.getElementById("material").innerText = material;
+    </script>
+
+
+</body>
+
+</html>

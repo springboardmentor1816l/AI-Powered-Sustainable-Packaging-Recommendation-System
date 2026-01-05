@@ -106,3 +106,4 @@ This model predicts CO₂ emission impact of packaging choices to support sustai
 """)
 
 print("✅ XGBoost CO₂ model training complete (Day-15 compliant)")
+

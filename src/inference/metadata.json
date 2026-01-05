@@ -1,0 +1,11 @@
+{
+  "model_name": "RandomForest_Cost",
+  "version": "1.0",
+  "target": "cost_per_kg",
+  "features": ["product_weight", "fragility_index", "recyclability_percent"],
+  "metrics": {
+    "MAE": 0.0156,
+    "RMSE": 0.0321,
+    "R2": 0.98
+  }
+}

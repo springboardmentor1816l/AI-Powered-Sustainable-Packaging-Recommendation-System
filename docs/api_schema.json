@@ -1,0 +1,12 @@
+{
+  "input": {
+    "product_weight": "number",
+    "fragility_index": "number",
+    "category": "string",
+    "shipping_type": "string"
+  },
+  "output": {
+    "predicted_cost": "number",
+    "predicted_co2": "number"
+  }
+}

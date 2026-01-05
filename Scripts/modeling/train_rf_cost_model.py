@@ -18,6 +18,8 @@ X_train = pd.read_parquet(f"{DATA_DIR}/X_train.parquet")
 X_test  = pd.read_parquet(f"{DATA_DIR}/X_test.parquet")
 y_train = pd.read_parquet(f"{DATA_DIR}/y_train.parquet")
 y_test  = pd.read_parquet(f"{DATA_DIR}/y_test.parquet")
+joblib.dump(X_train.columns.tolist(), "ml/models/feature_columns.joblib")
+
 
 # Target column (as per PDF)
 y_train_cost = y_train["cost_per_kg"]
