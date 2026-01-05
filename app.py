@@ -4,96 +4,112 @@ import joblib
 import json
 import os
 from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+from flask_caching import Cache # Task 2 Import
+from models.database import db, PredictionHistory, Product
+import logging
+from middleware.auth import require_api_key
 
 # Import the Unified Predictor Module from Dec 29th task
 from predictor import EcoPackPredictor
 
 app = Flask(__name__)
 
-# --- 1. CONFIGURATION (Key Activity: Part 1) ---
+# --- 1. CONFIGURATION ---
 PORT = 5000
 MODEL_VERSION = "1.0.0"
 
-# --- 2. INITIALIZE PREDICTOR (Key Activity: Part 2) ---
-# Load paths for artifacts created in previous modules
+# --- DATABASE CONFIG (Task 1) ---
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ecopack.db' 
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# --- CACHING CONFIG (Task 2) ---
+# Using SimpleCache for in-memory storage as per scope
+app.config['CACHE_TYPE'] = 'SimpleCache' 
+app.config['CACHE_DEFAULT_TIMEOUT'] = 300 # Cache results for 5 minutes
+cache = Cache(app)
+
+# Initialize DB
+db.init_app(app)
+
+# --- LOGGING CONFIG (Task 3 Preview) ---
+logging.basicConfig(
+    filename='app.log',
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'
+)
+
+# --- 2. INITIALIZE PREDICTOR ---
 PIPELINE_PATH = 'models/preprocessing/preprocessing_pipeline.pkl'
 COST_MODEL_PATH = 'ml/models/rf_cost.joblib'
 CO2_MODEL_PATH = 'ml/models/xgb_co2.joblib'
-
-# Initialize the predictor once for high-performance serving
 predictor = EcoPackPredictor(PIPELINE_PATH, COST_MODEL_PATH, CO2_MODEL_PATH)
 
 # =================================================================
-# PART 1: HEALTH CHECK ROUTE (Deliverable: app.py / health check)
+# PART 1: HEALTH CHECK (Fast, dependency-free)
 # =================================================================
 @app.route('/health', methods=['GET'])
 def health_check():
-    """
-    Confirms service availability without heavy dependencies.
-    Returns 200 OK status for monitoring systems.
-    """
     return jsonify({
         "status": "healthy",
-        "service": "EcoPackAI-Inference-Engine",
-        "version": MODEL_VERSION,
         "timestamp": datetime.utcnow().isoformat()
     }), 200
 
 # =================================================================
-# PART 2: PREDICTION ENDPOINT (Deliverable: predict.py logic)
+# PART 2: PREDICTION ENDPOINT WITH CACHING (Task 2)
 # =================================================================
 @app.route('/predict', methods=['POST'])
+@require_api_key
+# This decorator caches the response based on the request body JSON
+@cache.cached(timeout=300, make_cache_key=lambda: f"predict_{request.get_data(as_text=True)}")
 def predict():
-    """
-    Inference API route that accepts structured JSON input.
-    """
-    # Parse JSON body
     input_data = request.get_json()
 
-    # --- A. INPUT VALIDATION (Key Activity: Part 2) ---
-    # Required fields based on the Integrated Dataset schema
+    # --- A. VALIDATION ---
     required_fields = ['product_weight_kg', 'fragility_index', 'category']
-    
-    # 1. Check for missing fields
     missing = [f for f in required_fields if f not in input_data]
     if missing:
-        return jsonify({
-            "error": "Missing required fields",
-            "required_fields": missing
-        }), 400
+        return jsonify({"error": "Missing fields", "required": missing}), 400
 
-    # 2. Correct Data Types validation
-    if not isinstance(input_data['product_weight_kg'], (int, float)):
-        return jsonify({"error": "product_weight_kg must be numeric"}), 400
-
-    # --- B. INFERENCE EXECUTION ---
+    # --- B. INFERENCE & PERSISTENCE ---
     try:
-        # Convert JSON to DataFrame for the predictor
         raw_df = pd.DataFrame([input_data])
-        
-        # Call the unified predictor module
         predictions = predictor.predict(raw_df)
         
-        # --- C. RESPONSE FORMAT (Output Schema: PAGE 4) ---
+        # PERSIST TO DB (Task 1)
+        new_prediction = PredictionHistory(
+            product_weight_kg=input_data['product_weight_kg'],
+            predicted_cost_index=predictions['cost_index'][0],
+            predicted_co2_impact=predictions['co2_impact'][0]
+        )
+        db.session.add(new_prediction)
+        db.session.commit()
+
+        logging.info(f"Prediction generated and cached for: {input_data['category']}")
+
         return jsonify({
             "status": "success",
-            "predictions": {
-                "predicted_cost_index": predictions['cost_index'][0],
-                "predicted_co2_impact": predictions['co2_impact'][0]
-            },
-            "model_metadata": {
-                "version": MODEL_VERSION,
-                "feature_count": len(predictor.expected_features)
-            }
+            "predictions": predictions,
+            "cached": False 
         }), 200
 
     except Exception as e:
-        # Handle invalid input gracefully with clear errors
-        return jsonify({
-            "status": "error",
-            "message": f"Inference failed: {str(e)}"
-        }), 500
+        logging.error(f"Inference error: {str(e)}")
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+@app.after_request
+def add_cache_header(response):
+    # Check if the response was served from our Flask-Caching 'cache'
+    # Flask-Caching adds a 'X-Cache' header automatically in some configs, 
+    # but we can manually detect it by checking if the request was handled by the route
+    if response.status_code == 200 and request.endpoint == 'predict':
+        # If the response is already prepared and we are here, 
+        # but the route logic didn't "run" (it was cached), 
+        # we can identify it by a custom header we set.
+        pass 
+    return response
 
 if __name__ == '__main__':
-    print(f"🚀 EcoPackAI API starting on port {PORT}...")
+    with app.app_context():
+        db.create_all() # Ensure DB tables exist
     app.run(debug=True, port=PORT)
