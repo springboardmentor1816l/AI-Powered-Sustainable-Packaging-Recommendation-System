@@ -1,29 +1,33 @@
 import joblib
 import pandas as pd
 
+
 class EcoPackPredictor:
     def __init__(self):
         self.cost_model = joblib.load("ml/models/rf_cost_model_v1.pkl")
         self.co2_model = joblib.load("ml/models/xgb_co2_model_v1.joblib")
 
-    def preprocess(self, df):
-        # Simple encoding (same logic as training)
-        return pd.get_dummies(df, drop_first=True)
+        self.cost_features = joblib.load("ml/models/rf_cost_features.joblib")
+        self.co2_features = joblib.load("ml/models/xgb_co2_features.joblib")
 
-    def predict_cost(self, df):
-        X = self.preprocess(df)
-        return self.cost_model.predict(X)
+    # 👇 THIS IS A CLASS METHOD (NOT inside __init__)
+    def _prepare(self, df, features):
+        X = pd.get_dummies(df, drop_first=True)
 
-    def predict_co2(self, df):
-        X = self.preprocess(df.drop(columns=["material_type"]))
-        return self.co2_model.predict(X)
+        # force exact training feature space
+        X = X.reindex(columns=features, fill_value=0)
+
+        return X
 
     def predict(self, df):
-        cost_preds = self.predict_cost(df)
-        co2_preds = self.predict_co2(df)
+        X_cost = self._prepare(df, self.cost_features)
+        X_co2 = self._prepare(
+            df.drop(columns=["material_type"], errors="ignore"),
+            self.co2_features
+        )
 
-        output = df.copy()
-        output["predicted_cost"] = cost_preds
-        output["predicted_co2"] = co2_preds
+        df_out = df.copy()
+        df_out["predicted_cost"] = self.cost_model.predict(X_cost)
+        df_out["predicted_co2"] = self.co2_model.predict(X_co2)
 
-        return output
+        return df_out
