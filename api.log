@@ -1,0 +1,88 @@
+2026-01-04 00:26:23,005 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-04 00:26:23,005 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-04 00:26:23,010 - INFO -  * Restarting with stat
+2026-01-04 00:26:28,925 - WARNING -  * Debugger is active!
+2026-01-04 00:26:28,933 - INFO -  * Debugger PIN: 930-122-614
+2026-01-04 00:28:10,544 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-04 00:28:10,558 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-04 00:28:10,561 - INFO -  * Restarting with stat
+2026-01-04 00:28:15,987 - WARNING -  * Debugger is active!
+2026-01-04 00:28:15,993 - INFO -  * Debugger PIN: 930-122-614
+2026-01-04 00:29:18,752 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\AI-Powered-Sustainable-Packaging-Recommendation-System\\logging_config.py', reloading
+2026-01-04 00:29:19,307 - INFO -  * Restarting with stat
+2026-01-04 00:29:25,248 - WARNING -  * Debugger is active!
+2026-01-04 00:29:25,255 - INFO -  * Debugger PIN: 930-122-614
+2026-01-04 00:30:02,684 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-04 00:30:02,685 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-04 00:30:02,689 - INFO -  * Restarting with stat
+2026-01-04 00:30:08,083 - WARNING -  * Debugger is active!
+2026-01-04 00:30:08,090 - INFO -  * Debugger PIN: 930-122-614
+2026-01-04 00:33:53,292 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\AI-Powered-Sustainable-Packaging-Recommendation-System\\logging_config.py', reloading
+2026-01-04 00:33:53,874 - INFO -  * Restarting with stat
+2026-01-04 00:34:18,814 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-04 00:34:18,814 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-04 00:34:18,817 - INFO -  * Restarting with stat
+2026-01-04 00:34:24,674 - WARNING -  * Debugger is active!
+2026-01-04 00:34:24,683 - INFO -  * Debugger PIN: 930-122-614
+2026-01-04 00:38:13,210 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-04 00:38:13,210 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-04 00:38:13,213 - INFO -  * Restarting with stat
+2026-01-04 00:38:18,994 - WARNING -  * Debugger is active!
+2026-01-04 00:38:19,001 - INFO -  * Debugger PIN: 930-122-614
+2026-01-04 00:41:32,713 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\AI-Powered-Sustainable-Packaging-Recommendation-System\\tests\\test_health.py', reloading
+2026-01-04 00:41:33,498 - INFO -  * Restarting with stat
+2026-01-04 00:41:39,379 - WARNING -  * Debugger is active!
+2026-01-04 00:41:39,389 - INFO -  * Debugger PIN: 930-122-614
+2026-01-04 00:42:03,220 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\AI-Powered-Sustainable-Packaging-Recommendation-System\\tests\\test_predict_api.py', reloading
+2026-01-04 00:42:03,800 - INFO -  * Restarting with stat
+2026-01-04 00:42:09,843 - WARNING -  * Debugger is active!
+2026-01-04 00:42:09,856 - INFO -  * Debugger PIN: 930-122-614
+2026-01-05 16:58:54,879 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-05 16:58:54,881 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-05 16:58:54,890 - INFO -  * Restarting with stat
+2026-01-05 16:59:00,600 - WARNING -  * Debugger is active!
+2026-01-05 16:59:00,621 - INFO -  * Debugger PIN: 930-122-614
+2026-01-05 17:10:31,595 - WARNING - Unauthorized access attempt
+2026-01-05 17:10:31,596 - INFO - 127.0.0.1 - - [05/Jan/2026 17:10:31] "[31m[1mPOST /predict HTTP/1.1[0m" 401 -
+2026-01-05 17:11:19,670 - INFO - Cache used for key: 0968096907c43af1c127c33e713cd200
+2026-01-05 17:11:19,671 - INFO - 127.0.0.1 - - [05/Jan/2026 17:11:19] "[31m[1mPOST /predict HTTP/1.1[0m" 401 -
+2026-01-05 17:15:21,334 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-05 17:15:21,335 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-05 17:15:21,338 - INFO -  * Restarting with stat
+2026-01-05 17:15:30,995 - WARNING -  * Debugger is active!
+2026-01-05 17:15:31,005 - INFO -  * Debugger PIN: 930-122-614
+2026-01-05 17:15:34,250 - INFO - Prediction request received: {'material_type': 'plastic', 'industry_use_case': 'food', 'source_type': 'recycled', 'weight_capacity_kg': 2.0, 'strength_mpa': 30, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'recyclability_category': 'high'}
+2026-01-05 17:15:34,277 - ERROR - Prediction failed: columns are missing: {'cost_per_kg'}
+2026-01-05 17:15:34,278 - INFO - 127.0.0.1 - - [05/Jan/2026 17:15:34] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-05 17:17:13,189 - INFO - Prediction request received: {'material_type': 'plastic', 'industry_use_case': 'food', 'source_type': 'recycled', 'weight_capacity_kg': 2.0, 'strength_mpa': 30, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-05 17:17:13,248 - INFO - Prediction successful: 30.540307297920876
+2026-01-05 17:17:13,249 - INFO - 127.0.0.1 - - [05/Jan/2026 17:17:13] "POST /predict HTTP/1.1" 200 -
+2026-01-05 17:21:17,391 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\AI-Powered-Sustainable-Packaging-Recommendation-System\\security.py', reloading
+2026-01-05 17:21:17,971 - INFO -  * Restarting with stat
+2026-01-05 17:21:23,521 - WARNING -  * Debugger is active!
+2026-01-05 17:21:23,529 - INFO -  * Debugger PIN: 930-122-614
+2026-01-05 17:24:51,759 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\AI-Powered-Sustainable-Packaging-Recommendation-System\\app\\routes\\predict.py', reloading
+2026-01-05 17:24:52,297 - INFO -  * Restarting with stat
+2026-01-05 17:24:57,739 - WARNING -  * Debugger is active!
+2026-01-05 17:24:57,747 - INFO -  * Debugger PIN: 930-122-614

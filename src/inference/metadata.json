@@ -1,0 +1,46 @@
+{
+  "model_name": "material_suitability_model",
+  "model_type": "RandomForest-based regression model",
+  "version": "1.0",
+  "training_date": "2025-12-26",
+  "description": "Final trained model used for material suitability prediction in the AI-Powered Sustainable Packaging Recommendation System.",
+
+  "input_features": [
+    "material_type",
+    "industry_use_case",
+    "source_type",
+    "weight_capacity_kg",
+    "strength_mpa",
+    "recyclability_percent",
+    "biodegradability_percent",
+    "recyclability_category",
+    "co2_emission_kg_per_kg",
+    "co2_impact_index",
+    "cost_efficiency_index"
+  ],
+
+  "target_variables": [
+    "material_suitability_score"
+  ],
+
+  "evaluation_metrics": {
+    "MAE": "0.3736",
+    "RMSE": "0.8587",
+    "R2": "0.9844"
+  },
+
+  "preprocessing_pipeline": {
+    "type": "ColumnTransformer",
+    "scaling": "Applied where required",
+    "encoding": "Categorical features encoded",
+    "missing_value_handling": "Handled during preprocessing"
+  },
+
+  "data_reference": {
+    "dataset": "Processed material dataset",
+    "data_version": "v1.0",
+    "split": "Train/Test split with held-out test data"
+  },
+
+  "deployment_ready": true
+}
