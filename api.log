@@ -86,3 +86,299 @@
 2026-01-05 17:24:52,297 - INFO -  * Restarting with stat
 2026-01-05 17:24:57,739 - WARNING -  * Debugger is active!
 2026-01-05 17:24:57,747 - INFO -  * Debugger PIN: 930-122-614
+2026-01-05 20:14:56,628 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-05 20:14:56,629 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-05 20:14:56,635 - INFO -  * Restarting with stat
+2026-01-05 20:15:02,586 - WARNING -  * Debugger is active!
+2026-01-05 20:15:02,608 - INFO -  * Debugger PIN: 930-122-614
+2026-01-05 20:17:40,114 - INFO - 127.0.0.1 - - [05/Jan/2026 20:17:40] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-05 20:17:53,585 - INFO - 127.0.0.1 - - [05/Jan/2026 20:17:53] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-05 20:23:50,964 - INFO - 127.0.0.1 - - [05/Jan/2026 20:23:50] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-05 20:23:51,133 - INFO - 127.0.0.1 - - [05/Jan/2026 20:23:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-05 20:25:23,301 - INFO - 127.0.0.1 - - [05/Jan/2026 20:25:23] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-05 20:31:04,013 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\packaging full stack\\AI-Powered-Sustainable-Packaging-Recommendation-System\\app\\app.py', reloading
+2026-01-05 20:31:04,636 - INFO -  * Restarting with stat
+2026-01-05 20:31:26,459 - WARNING -  * Debugger is active!
+2026-01-05 20:31:26,464 - INFO -  * Debugger PIN: 930-122-614
+2026-01-05 20:31:46,891 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-05 20:31:46,891 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-05 20:31:46,895 - INFO -  * Restarting with stat
+2026-01-05 20:31:52,758 - WARNING -  * Debugger is active!
+2026-01-05 20:31:52,765 - INFO -  * Debugger PIN: 930-122-614
+2026-01-05 20:37:03,647 - INFO - 127.0.0.1 - - [05/Jan/2026 20:37:03] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-05 20:37:08,629 - INFO - 127.0.0.1 - - [05/Jan/2026 20:37:08] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-05 20:37:09,228 - INFO - 127.0.0.1 - - [05/Jan/2026 20:37:09] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-05 20:37:09,465 - INFO - 127.0.0.1 - - [05/Jan/2026 20:37:09] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-05 20:37:09,644 - INFO - 127.0.0.1 - - [05/Jan/2026 20:37:09] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-05 20:37:17,166 - INFO - 127.0.0.1 - - [05/Jan/2026 20:37:17] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-06 07:49:00,411 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-06 07:49:00,411 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-06 07:49:00,416 - INFO -  * Restarting with stat
+2026-01-06 07:49:07,190 - WARNING -  * Debugger is active!
+2026-01-06 07:49:07,199 - INFO -  * Debugger PIN: 930-122-614
+2026-01-06 07:52:08,410 - INFO - 127.0.0.1 - - [06/Jan/2026 07:52:08] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 07:56:58,201 - INFO - 127.0.0.1 - - [06/Jan/2026 07:56:58] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:00:08,925 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-06 08:00:08,926 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-06 08:00:08,930 - INFO -  * Restarting with stat
+2026-01-06 08:00:15,572 - WARNING -  * Debugger is active!
+2026-01-06 08:00:15,583 - INFO -  * Debugger PIN: 930-122-614
+2026-01-06 08:00:27,977 - INFO - 127.0.0.1 - - [06/Jan/2026 08:00:27] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:00:27,986 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 20, 'strength_mpa': 34, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:00:28,061 - INFO - Prediction successful: 30.77064068498487
+2026-01-06 08:00:28,062 - INFO - 127.0.0.1 - - [06/Jan/2026 08:00:28] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:00:54,036 - INFO - 127.0.0.1 - - [06/Jan/2026 08:00:54] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:00:54,043 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 20, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:00:54,075 - INFO - Prediction successful: 30.77064068498487
+2026-01-06 08:00:54,077 - INFO - 127.0.0.1 - - [06/Jan/2026 08:00:54] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:00:55,815 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:00:55,816 - INFO - 127.0.0.1 - - [06/Jan/2026 08:00:55] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:01:39,662 - INFO - 127.0.0.1 - - [06/Jan/2026 08:01:39] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:01:39,674 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 0.25, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:01:39,712 - INFO - Prediction successful: 30.540307297920876
+2026-01-06 08:01:39,713 - INFO - 127.0.0.1 - - [06/Jan/2026 08:01:39] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:11:26,031 - INFO - 127.0.0.1 - - [06/Jan/2026 08:11:26] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:11:26,038 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 0.5, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:11:26,075 - INFO - Prediction successful: 30.540307297920876
+2026-01-06 08:11:26,076 - INFO - 127.0.0.1 - - [06/Jan/2026 08:11:26] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:11:27,404 - INFO - Cache used for key: 924aaa017ef59129212c4f4b2722afaa
+2026-01-06 08:11:27,405 - INFO - 127.0.0.1 - - [06/Jan/2026 08:11:27] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:11:27,723 - INFO - Cache used for key: 924aaa017ef59129212c4f4b2722afaa
+2026-01-06 08:11:27,723 - INFO - 127.0.0.1 - - [06/Jan/2026 08:11:27] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:11:27,901 - INFO - Cache used for key: 924aaa017ef59129212c4f4b2722afaa
+2026-01-06 08:11:27,902 - INFO - 127.0.0.1 - - [06/Jan/2026 08:11:27] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:11:28,094 - INFO - Cache used for key: 924aaa017ef59129212c4f4b2722afaa
+2026-01-06 08:11:28,095 - INFO - 127.0.0.1 - - [06/Jan/2026 08:11:28] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:12:22,757 - INFO - 127.0.0.1 - - [06/Jan/2026 08:12:22] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:12:22,765 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 10, 'strength_mpa': 32, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:12:22,798 - INFO - Prediction successful: 30.540307297920876
+2026-01-06 08:12:22,799 - INFO - 127.0.0.1 - - [06/Jan/2026 08:12:22] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:00,917 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:00] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:13:00,933 - INFO - Cache used for key: 910f6f4c88bf45212602ff0e08c1c622
+2026-01-06 08:13:00,935 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:00] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:01,581 - INFO - Cache used for key: 910f6f4c88bf45212602ff0e08c1c622
+2026-01-06 08:13:01,581 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:01] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:01,767 - INFO - Cache used for key: 910f6f4c88bf45212602ff0e08c1c622
+2026-01-06 08:13:01,768 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:01] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:01,933 - INFO - Cache used for key: 910f6f4c88bf45212602ff0e08c1c622
+2026-01-06 08:13:01,934 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:01] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:16,922 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:16] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:13:16,932 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 20, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:13:16,973 - INFO - Prediction successful: 30.77064068498487
+2026-01-06 08:13:16,975 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:16] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:21,577 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:21,579 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:21] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:22,125 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:22] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:13:22,134 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:22,135 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:22] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:22,302 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:22,302 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:22] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:22,475 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:22,477 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:22] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:22,637 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:22,637 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:22] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:22,868 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:22,869 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:22] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:29,528 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:29] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:13:29,537 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:29,538 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:29] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:30,473 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:30,473 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:30] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:30,690 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:30,691 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:30] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:30,854 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:30,855 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:30] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:31,023 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:31,024 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:31] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:31,254 - INFO - Cache used for key: 8060ae510c8a5fe1d0a4ba1051621012
+2026-01-06 08:13:31,255 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:31] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:36,044 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:36] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:13:36,054 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 20, 'strength_mpa': 34, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:13:36,091 - INFO - Prediction successful: 30.77064068498487
+2026-01-06 08:13:36,091 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:36] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:36,609 - INFO - Cache used for key: 3366a5bc1c257b907c369314de8105c6
+2026-01-06 08:13:36,610 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:36] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:36,814 - INFO - Cache used for key: 3366a5bc1c257b907c369314de8105c6
+2026-01-06 08:13:36,814 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:36] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:37,017 - INFO - Cache used for key: 3366a5bc1c257b907c369314de8105c6
+2026-01-06 08:13:37,018 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:37] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:38,273 - INFO - Cache used for key: 3366a5bc1c257b907c369314de8105c6
+2026-01-06 08:13:38,274 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:38] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:38,478 - INFO - Cache used for key: 3366a5bc1c257b907c369314de8105c6
+2026-01-06 08:13:38,479 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:38] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:38,672 - INFO - Cache used for key: 3366a5bc1c257b907c369314de8105c6
+2026-01-06 08:13:38,673 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:38] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:13:52,494 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:52] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:13:52,504 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 12, 'strength_mpa': 36, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:13:52,557 - INFO - Prediction successful: 30.71980388836009
+2026-01-06 08:13:52,559 - INFO - 127.0.0.1 - - [06/Jan/2026 08:13:52] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:15:01,482 - INFO - 127.0.0.1 - - [06/Jan/2026 08:15:01] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:15:01,489 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 1, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:15:01,528 - INFO - Prediction successful: 30.540307297920876
+2026-01-06 08:15:01,529 - INFO - 127.0.0.1 - - [06/Jan/2026 08:15:01] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:15:21,674 - INFO - 127.0.0.1 - - [06/Jan/2026 08:15:21] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:15:21,681 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 1, 'strength_mpa': 32, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:15:21,720 - INFO - Prediction successful: 30.540307297920876
+2026-01-06 08:15:21,721 - INFO - 127.0.0.1 - - [06/Jan/2026 08:15:21] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:29:50,705 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\packaging full stack\\AI-Powered-Sustainable-Packaging-Recommendation-System\\src\\inference\\predictor.py', reloading
+2026-01-06 08:29:51,455 - INFO -  * Restarting with stat
+2026-01-06 08:29:59,092 - WARNING -  * Debugger is active!
+2026-01-06 08:29:59,102 - INFO -  * Debugger PIN: 930-122-614
+2026-01-06 08:30:42,580 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-06 08:30:42,580 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-06 08:30:42,585 - INFO -  * Restarting with stat
+2026-01-06 08:30:48,948 - WARNING -  * Debugger is active!
+2026-01-06 08:30:48,957 - INFO -  * Debugger PIN: 930-122-614
+2026-01-06 08:31:02,118 - INFO - 127.0.0.1 - - [06/Jan/2026 08:31:02] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:31:02,126 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 15, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:31:02,164 - INFO - Prediction successful: 63.06
+2026-01-06 08:31:02,166 - INFO - 127.0.0.1 - - [06/Jan/2026 08:31:02] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:31:56,031 - INFO - 127.0.0.1 - - [06/Jan/2026 08:31:56] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:31:56,041 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:31:56,042 - INFO - 127.0.0.1 - - [06/Jan/2026 08:31:56] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:31:56,975 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:31:56,977 - INFO - 127.0.0.1 - - [06/Jan/2026 08:31:56] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:32:07,923 - INFO - 127.0.0.1 - - [06/Jan/2026 08:32:07] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:32:07,931 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:32:07,932 - INFO - 127.0.0.1 - - [06/Jan/2026 08:32:07] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:32:59,683 - INFO - 127.0.0.1 - - [06/Jan/2026 08:32:59] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:32:59,694 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 15, 'strength_mpa': 32, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:32:59,733 - INFO - Prediction successful: 61.8
+2026-01-06 08:32:59,734 - INFO - 127.0.0.1 - - [06/Jan/2026 08:32:59] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:33:20,558 - INFO - 127.0.0.1 - - [06/Jan/2026 08:33:20] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:33:20,569 - INFO - Cache used for key: 11cf24e2d5a7ce9ffc5d53faaa9949a7
+2026-01-06 08:33:20,571 - INFO - 127.0.0.1 - - [06/Jan/2026 08:33:20] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:33:48,437 - INFO - 127.0.0.1 - - [06/Jan/2026 08:33:48] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:33:48,446 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:33:48,447 - INFO - 127.0.0.1 - - [06/Jan/2026 08:33:48] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:34:01,581 - INFO - 127.0.0.1 - - [06/Jan/2026 08:34:01] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:34:01,590 - INFO - Cache used for key: 11cf24e2d5a7ce9ffc5d53faaa9949a7
+2026-01-06 08:34:01,591 - INFO - 127.0.0.1 - - [06/Jan/2026 08:34:01] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:34:10,728 - INFO - 127.0.0.1 - - [06/Jan/2026 08:34:10] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:34:10,740 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 30, 'strength_mpa': 32, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:34:10,773 - INFO - Prediction successful: 61.8
+2026-01-06 08:34:10,774 - INFO - 127.0.0.1 - - [06/Jan/2026 08:34:10] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:34:11,351 - INFO - Cache used for key: b06901a7dddd8a93c899894009c0b9a3
+2026-01-06 08:34:11,352 - INFO - 127.0.0.1 - - [06/Jan/2026 08:34:11] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:34:18,532 - INFO - 127.0.0.1 - - [06/Jan/2026 08:34:18] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:34:18,542 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 30, 'strength_mpa': 40, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:34:18,570 - INFO - Prediction successful: 63.49
+2026-01-06 08:34:18,572 - INFO - 127.0.0.1 - - [06/Jan/2026 08:34:18] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:38:17,046 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\packaging full stack\\AI-Powered-Sustainable-Packaging-Recommendation-System\\src\\inference\\predictor.py', reloading
+2026-01-06 08:38:17,814 - INFO -  * Restarting with stat
+2026-01-06 08:38:59,714 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-06 08:38:59,714 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-06 08:38:59,720 - INFO -  * Restarting with stat
+2026-01-06 08:39:06,181 - WARNING -  * Debugger is active!
+2026-01-06 08:39:06,191 - INFO -  * Debugger PIN: 930-122-614
+2026-01-06 08:39:17,597 - INFO - 127.0.0.1 - - [06/Jan/2026 08:39:17] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:39:17,610 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 15, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:39:17,665 - ERROR - Prediction failed: 'fragility_index'
+2026-01-06 08:39:17,667 - INFO - 127.0.0.1 - - [06/Jan/2026 08:39:17] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:39:18,542 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:39:18,543 - INFO - 127.0.0.1 - - [06/Jan/2026 08:39:18] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:39:18,748 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:39:18,749 - INFO - 127.0.0.1 - - [06/Jan/2026 08:39:18] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:39:18,931 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:39:18,932 - INFO - 127.0.0.1 - - [06/Jan/2026 08:39:18] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:39:19,157 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:39:19,158 - INFO - 127.0.0.1 - - [06/Jan/2026 08:39:19] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:39:19,420 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:39:19,420 - INFO - 127.0.0.1 - - [06/Jan/2026 08:39:19] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:39:35,833 - INFO - 127.0.0.1 - - [06/Jan/2026 08:39:35] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:39:35,840 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 15, 'strength_mpa': 34, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:39:35,870 - ERROR - Prediction failed: 'fragility_index'
+2026-01-06 08:39:35,871 - INFO - 127.0.0.1 - - [06/Jan/2026 08:39:35] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:42:02,309 - INFO - 127.0.0.1 - - [06/Jan/2026 08:42:02] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:42:02,317 - INFO - Cache used for key: c73f9d13fa05e23adf6ce6ea556dae39
+2026-01-06 08:42:02,318 - INFO - 127.0.0.1 - - [06/Jan/2026 08:42:02] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:43:14,217 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\packaging full stack\\AI-Powered-Sustainable-Packaging-Recommendation-System\\src\\inference\\predictor.py', reloading
+2026-01-06 08:43:15,202 - INFO -  * Restarting with stat
+2026-01-06 08:45:06,554 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-06 08:45:06,555 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-06 08:45:06,558 - INFO -  * Restarting with stat
+2026-01-06 08:45:12,355 - WARNING -  * Debugger is active!
+2026-01-06 08:45:12,364 - INFO -  * Debugger PIN: 930-122-614
+2026-01-06 08:45:24,876 - INFO - 127.0.0.1 - - [06/Jan/2026 08:45:24] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:45:24,885 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 15, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:45:24,924 - INFO - Prediction successful: 63.06
+2026-01-06 08:45:24,925 - INFO - 127.0.0.1 - - [06/Jan/2026 08:45:24] "POST /predict HTTP/1.1" 200 -
+2026-01-06 08:46:10,060 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\packaging full stack\\AI-Powered-Sustainable-Packaging-Recommendation-System\\src\\inference\\predictor.py', reloading
+2026-01-06 08:46:10,658 - INFO -  * Restarting with stat
+2026-01-06 08:47:33,876 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-06 08:47:33,876 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-06 08:47:33,880 - INFO -  * Restarting with stat
+2026-01-06 08:47:40,278 - WARNING -  * Debugger is active!
+2026-01-06 08:47:40,287 - INFO -  * Debugger PIN: 930-122-614
+2026-01-06 08:47:50,750 - INFO - 127.0.0.1 - - [06/Jan/2026 08:47:50] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:47:50,763 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 15, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:47:50,802 - ERROR - Prediction failed: 'fragility_index'
+2026-01-06 08:47:50,804 - INFO - 127.0.0.1 - - [06/Jan/2026 08:47:50] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:47:51,651 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:47:51,653 - INFO - 127.0.0.1 - - [06/Jan/2026 08:47:51] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:47:51,865 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:47:51,866 - INFO - 127.0.0.1 - - [06/Jan/2026 08:47:51] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:47:52,072 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:47:52,073 - INFO - 127.0.0.1 - - [06/Jan/2026 08:47:52] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:47:52,323 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:47:52,324 - INFO - 127.0.0.1 - - [06/Jan/2026 08:47:52] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:49:35,802 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\packaging full stack\\AI-Powered-Sustainable-Packaging-Recommendation-System\\src\\inference\\predictor.py', reloading
+2026-01-06 08:49:36,481 - INFO -  * Restarting with stat
+2026-01-06 08:52:24,492 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-06 08:52:24,493 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-06 08:52:24,497 - INFO -  * Restarting with stat
+2026-01-06 08:52:31,060 - WARNING -  * Debugger is active!
+2026-01-06 08:52:31,067 - INFO -  * Debugger PIN: 930-122-614
+2026-01-06 08:52:41,888 - INFO - 127.0.0.1 - - [06/Jan/2026 08:52:41] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:52:41,896 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 15, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:52:41,899 - ERROR - Prediction failed: Missing required columns: ['fragility_index']
+2026-01-06 08:52:41,901 - INFO - 127.0.0.1 - - [06/Jan/2026 08:52:41] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:54:57,251 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.174:5000
+2026-01-06 08:54:57,251 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-06 08:54:57,255 - INFO -  * Restarting with stat
+2026-01-06 08:55:03,649 - WARNING -  * Debugger is active!
+2026-01-06 08:55:03,661 - INFO -  * Debugger PIN: 930-122-614
+2026-01-06 08:55:10,890 - INFO - 127.0.0.1 - - [06/Jan/2026 08:55:10] "OPTIONS /predict HTTP/1.1" 200 -
+2026-01-06 08:55:10,898 - INFO - Prediction request received: {'material_type': 'glass', 'industry_use_case': 'electronics', 'source_type': 'recycled', 'weight_capacity_kg': 15, 'strength_mpa': 38, 'recyclability_percent': 70, 'biodegradability_percent': 20, 'co2_emission_kg_per_kg': 1.2, 'co2_impact_index': 0.5, 'cost_efficiency_index': 0.8, 'cost_per_kg': 1.5, 'recyclability_category': 'high'}
+2026-01-06 08:55:10,901 - ERROR - Prediction failed: Missing required columns: ['fragility_index']
+2026-01-06 08:55:10,903 - INFO - 127.0.0.1 - - [06/Jan/2026 08:55:10] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:55:11,560 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:55:11,560 - INFO - 127.0.0.1 - - [06/Jan/2026 08:55:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:55:11,761 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:55:11,762 - INFO - 127.0.0.1 - - [06/Jan/2026 08:55:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:55:11,950 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:55:11,951 - INFO - 127.0.0.1 - - [06/Jan/2026 08:55:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 08:55:12,197 - INFO - Cache used for key: 2c12f03bf0f47b9fdb0399845056c965
+2026-01-06 08:55:12,199 - INFO - 127.0.0.1 - - [06/Jan/2026 08:55:12] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2026-01-06 09:17:30,814 - INFO -  * Detected change in 'C:\\Users\\GANGA BHARTI\\Desktop\\packaging full stack\\AI-Powered-Sustainable-Packaging-Recommendation-System\\app\\routes\\predict.py', reloading
+2026-01-06 09:17:31,429 - INFO -  * Restarting with stat

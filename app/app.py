@@ -1,68 +1,45 @@
-# -------------------------------
-# Fix Python path (important)
-# -------------------------------
 import sys
 import os
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-if PROJECT_ROOT not in sys.path:
-    sys.path.append(PROJECT_ROOT)
+# --- 1. PATH SETUP ---
+# Add the project root to path so we can import 'src' if needed
+current_dir = os.path.dirname(os.path.abspath(__file__)) # .../app
+project_root = os.path.dirname(current_dir) # .../Packaging-System
+sys.path.append(project_root)
 
-# -------------------------------
-# Flask & Extensions
-# -------------------------------
-from flask import Flask
+from flask import Flask, jsonify
+from flask_cors import CORS
 from flask_migrate import Migrate
-from flask_caching import Cache
 
-from backend.db.base import db
-from routes.predict import predict_bp
-
-# -------------------------------
-# Create Flask app
-# -------------------------------
-app = Flask(__name__)
-
-# -------------------------------
-# Database Configuration
-# -------------------------------
-app.config["SQLALCHEMY_DATABASE_URI"] = (
-    "postgresql://username:Ravi%40384@localhost:5432/packaging_db"
-)
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
-# -------------------------------
-# Cache Configuration (STEP 15)
-# -------------------------------
-app.config["CACHE_TYPE"] = "SimpleCache"
-app.config["CACHE_DEFAULT_TIMEOUT"] = 300
-
+# --- 2. CORRECT IMPORTS (Relative to where you are running) ---
+# Since we run this file directly, we import from sibling folders directly.
+# DO NOT use "from app.routes..."
+from routes.predict import predict_bp 
 from extensions import cache
-cache.init_app(app)
+from backend.db.base import db 
 
-# -------------------------------
-# Initialize DB & Migrations
-# -------------------------------
+app = Flask(__name__)
+CORS(app)
+
+# --- 3. CONFIGURATION ---
+# Update password if needed
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:Ravi%40384@localhost:5432/packaging_db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["CACHE_TYPE"] = "SimpleCache"
+
+# --- 4. INITIALIZATION ---
+cache.init_app(app)
 db.init_app(app)
 migrate = Migrate(app, db)
 
-# -------------------------------
-# Health Check Route
-# -------------------------------
-@app.route("/health", methods=["GET"])
-def health_check():
-    return {
-        "status": "ok",
-        "service": "AI-Powered Sustainable Packaging API"
-    }, 200
-
-# -------------------------------
-# Register Blueprints
-# -------------------------------
+# --- 5. REGISTER ROUTES ---
 app.register_blueprint(predict_bp)
 
-# -------------------------------
-# Run Server
-# -------------------------------
+@app.route("/health", methods=["GET"])
+def health_check():
+    return jsonify({"status": "ok", "service": "Packaging AI API"}), 200
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    # --- FIX: CHANGED PORT TO 5001 TO AVOID SOCKET ERROR ---
+    print("Starting app on port 5001...")
+    app.run(host="0.0.0.0", port=5001, debug=True)

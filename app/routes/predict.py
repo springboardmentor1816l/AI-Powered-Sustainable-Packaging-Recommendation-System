@@ -1,88 +1,132 @@
+from flask import Blueprint, request, jsonify
+import pandas as pd
 import sys
 import os
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-if PROJECT_ROOT not in sys.path:
-    sys.path.append(PROJECT_ROOT)
+# ---------------- PATH SETUP ----------------
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(current_dir, '../../'))
+if project_root not in sys.path:
+    sys.path.append(project_root)
 
-from flask import Blueprint, request, jsonify
-import pandas as pd
-import json
-import hashlib
-
-from extensions import cache
-from security import require_api_key
-from logging_config import logger
 from src.inference.predictor import MaterialSuitabilityPredictor
 
 predict_bp = Blueprint("predict", __name__)
 
-predictor = MaterialSuitabilityPredictor()
+# ---------------- LOAD PREDICTOR ----------------
+predictor = MaterialSuitabilityPredictor(
+    model_path="models/trained/material_suitability_model.pkl",
+    preprocessor_path="models/preprocessing/preprocessing_pipeline.pkl"
+)
 
-REQUIRED_FIELDS = {
-    "material_type": str,
-    "industry_use_case": str,
-    "source_type": str,
-    "weight_capacity_kg": (int, float),
-    "strength_mpa": (int, float),
-    "recyclability_percent": (int, float),
-    "biodegradability_percent": (int, float),
-    "co2_emission_kg_per_kg": (int, float),
-    "co2_impact_index": (int, float),
-    "cost_efficiency_index": (int, float),
-    "cost_per_kg": (int, float),
-    "recyclability_category": str
-}
+# ---------------- MATERIAL DATABASE ----------------
+MATERIAL_DATABASE = [
+    {
+        "name": "Corrugated Cardboard (Heavy Duty)",
+        "strength_mpa": 80,
+        "recyclability_percent": 90,
+        "biodegradability_percent": 100,
+        "co2_emission_kg_per_kg": 0.8,
+        "ideal_weight_range": (5, 50),
+        "fragility_support": 3
+    },
+    {
+        "name": "Molded Pulp (Eco-Friendly)",
+        "strength_mpa": 30,
+        "recyclability_percent": 100,
+        "biodegradability_percent": 100,
+        "co2_emission_kg_per_kg": 0.5,
+        "ideal_weight_range": (0.1, 5),
+        "fragility_support": 4
+    },
+    {
+        "name": "Styrofoam (EPS)",
+        "strength_mpa": 40,
+        "recyclability_percent": 10,
+        "biodegradability_percent": 0,
+        "co2_emission_kg_per_kg": 2.5,
+        "ideal_weight_range": (0.1, 10),
+        "fragility_support": 5
+    }
+]
 
-def make_cache_key():
-    payload = request.get_json(silent=True) or {}
-    payload_str = json.dumps(payload, sort_keys=True)
-    return hashlib.md5(payload_str.encode()).hexdigest()
-
+# ---------------- PREDICT ENDPOINT ----------------
 @predict_bp.route("/predict", methods=["POST"])
-@require_api_key
-@cache.cached(timeout=300, key_prefix=make_cache_key)
 def predict():
-
-    if not request.is_json:
-        logger.warning("Non-JSON request received")
-        return jsonify({"error": "Request must be JSON"}), 400
-
-    data = request.get_json()
-    logger.info(f"Prediction request received: {data}")
-
-    missing_fields = [f for f in REQUIRED_FIELDS if f not in data]
-    if missing_fields:
-        logger.warning(f"Missing fields: {missing_fields}")
-        return jsonify({
-            "error": "Missing required fields",
-            "missing_fields": missing_fields
-        }), 400
-
-    for field, expected_type in REQUIRED_FIELDS.items():
-        if not isinstance(data[field], expected_type):
-            logger.warning(f"Invalid type for field: {field}")
-            return jsonify({
-                "error": "Invalid data type",
-                "field": field,
-                "expected": str(expected_type)
-            }), 400
-
     try:
-        input_df = pd.DataFrame([data])
-        prediction = predictor.predict(input_df)
+        data = request.get_json(force=True)
 
-        logger.info(f"Prediction successful: {prediction[0]}")
+        # ---------- VALIDATION ----------
+        required_fields = ["weight_capacity_kg", "fragility_index", "shipping_type"]
+        for field in required_fields:
+            if field not in data:
+                return jsonify({"error": f"Missing required field: {field}"}), 400
 
+        weight = float(data["weight_capacity_kg"])
+        fragility = int(data["fragility_index"])
+        shipping = data["shipping_type"]
+
+        fragility = max(1, min(fragility, 5))
+
+        # ---------- STEP 1: STRICT FILTER ----------
+        candidates = []
+        for mat in MATERIAL_DATABASE:
+            min_w, max_w = mat["ideal_weight_range"]
+            if min_w <= weight <= max_w and fragility <= mat["fragility_support"]:
+                candidates.append(mat)
+
+        # ---------- STEP 2: RELAX FRAGILITY ----------
+        if not candidates:
+            for mat in MATERIAL_DATABASE:
+                min_w, max_w = mat["ideal_weight_range"]
+                if min_w <= weight <= max_w:
+                    candidates.append(mat)
+
+        # ---------- STEP 3: RELAX WEIGHT (FINAL FALLBACK) ----------
+        if not candidates:
+            candidates = MATERIAL_DATABASE.copy()
+
+        # ---------- RANK CANDIDATES ----------
+        best_material = None
+        best_score = -1
+        best_explanation = None
+
+        for mat in candidates:
+
+            adjusted_strength = mat["strength_mpa"]
+
+            adjusted_cost = data.get("cost_per_kg", 60) + weight * 2
+
+            adjusted_co2 = mat["co2_emission_kg_per_kg"]
+            if shipping == "International":
+                adjusted_co2 *= 1.5
+
+            input_df = pd.DataFrame([{
+                "strength_mpa": adjusted_strength,
+                "recyclability_percent": mat["recyclability_percent"],
+                "biodegradability_percent": mat["biodegradability_percent"],
+                "co2_emission_kg_per_kg": adjusted_co2,
+                "fragility_index": fragility,
+                "cost_per_kg": adjusted_cost
+            }])
+
+            result = predictor.predict(input_df, explain=True)
+            score = result["final_score"]
+
+            if score > best_score:
+                best_score = score
+                best_material = mat["name"]
+                best_explanation = result["explanation"]
+
+        # ---------- RESPONSE ----------
         return jsonify({
-            "prediction": float(prediction[0]),
-            "model": "material_suitability_model",
-            "cached": True,
+            "prediction": round(best_score, 2),
+            "recommended_material": best_material,
+            "explanation": best_explanation,
             "status": "success"
-        }), 200
+        })
 
     except Exception as e:
-        logger.error(f"Prediction failed: {str(e)}")
         return jsonify({
             "error": "Prediction failed",
             "details": str(e)
