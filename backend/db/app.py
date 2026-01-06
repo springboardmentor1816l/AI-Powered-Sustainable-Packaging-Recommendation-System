@@ -1,10 +1,28 @@
 from flask import Flask, jsonify
+
+# Database
+from models import db
+
+# Prediction routes
 from predict import register_prediction_routes
 
+# ------------------------
 # Create Flask app
+# ------------------------
 app = Flask(__name__)
 
-# Register prediction routes
+# ------------------------
+# Database Configuration
+# ------------------------
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:postgres@localhost:5432/ecopackai_db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+# Initialize database with Flask app
+db.init_app(app)
+
+# ------------------------
+# Register API Routes
+# ------------------------
 register_prediction_routes(app)
 
 # ------------------------
@@ -17,7 +35,6 @@ def health_check():
         "service": "EcoPackAI API",
         "message": "Service is running successfully"
     }), 200
-
 
 # ------------------------
 # Run the Flask App

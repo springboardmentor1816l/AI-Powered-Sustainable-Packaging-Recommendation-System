@@ -1,0 +1,103 @@
+/* -------- Global Styles -------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* -------- Header & Navigation -------- */
+header {
+    background-color: #2c7be5;
+    color: white;
+    padding: 15px 30px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* -------- Main Content -------- */
+main {
+    background-color: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+main h2 {
+    margin-top: 0;
+    color: #2c7be5;
+}
+
+/* -------- Form Styling -------- */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #2c7be5;
+}
+
+/* -------- Button -------- */
+button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a68d1;
+}
+
+/* -------- Error / Message -------- */
+#errorMsg {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* -------- Footer -------- */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    color: #666;
+}
