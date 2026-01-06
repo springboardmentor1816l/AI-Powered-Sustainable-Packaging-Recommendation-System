@@ -1,28 +1,43 @@
+# ------------------------
+# Standard Imports
+# ------------------------
 from flask import Flask, jsonify
-
-# Database
-from models import db
-
-# Prediction routes
-from predict import register_prediction_routes
+from flask_caching import Cache
+import logging
 
 # ------------------------
-# Create Flask app
+# Logging Configuration
+# ------------------------
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s"
+)
+
+# ------------------------
+# Create Flask App
 # ------------------------
 app = Flask(__name__)
 
 # ------------------------
 # Database Configuration
 # ------------------------
+from models import db
+
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:postgres@localhost:5432/ecopackai_db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-# Initialize database with Flask app
 db.init_app(app)
+
+# ------------------------
+# Cache Configuration
+# ------------------------
+cache = Cache(config={"CACHE_TYPE": "SimpleCache"})
+cache.init_app(app)
 
 # ------------------------
 # Register API Routes
 # ------------------------
+from predict import register_prediction_routes
 register_prediction_routes(app)
 
 # ------------------------

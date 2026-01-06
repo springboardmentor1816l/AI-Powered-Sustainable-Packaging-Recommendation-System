@@ -1,6 +1,7 @@
 from . import db
 from datetime import datetime
 
+
 class Prediction(db.Model):
     __tablename__ = "recommendation_logs"
 
