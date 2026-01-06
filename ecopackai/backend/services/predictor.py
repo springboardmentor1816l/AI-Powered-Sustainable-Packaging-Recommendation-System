@@ -1,8 +1,8 @@
 import pandas as pd
 import joblib
 
-cost_model = joblib.load("models/cost_impact_model.pkl")
-co2_model  = joblib.load("models/co2_impact_model.pkl")
+cost_model = joblib.load("backend/models/cost_impact_model.pkl")
+co2_model  = joblib.load("backend/models/co2_impact_model.pkl")
 
 FEATURES = list(cost_model.feature_names_in_)
 

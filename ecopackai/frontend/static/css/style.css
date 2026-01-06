@@ -1,0 +1,102 @@
+/* ================================
+   EcoPackAI – Global Styles
+   ================================ */
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* ================================
+   Navbar
+   ================================ */
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+/* ================================
+   Headings
+   ================================ */
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: #1b5e20;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+
+.btn-success {
+    background-color: #2e7d32;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #1b5e20;
+}
+
+/* ================================
+   Forms
+   ================================ */
+
+.form-label {
+    font-weight: 500;
+}
+
+.form-control,
+.form-select {
+    border-radius: 6px;
+}
+
+.text-danger {
+    font-size: 0.85rem;
+}
+
+/* ================================
+   Tables
+   ================================ */
+
+.table thead th {
+    text-align: center;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* ================================
+   Cards (Dashboard)
+   ================================ */
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   Footer
+   ================================ */
+
+footer {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* ================================
+   Responsive Adjustments
+   ================================ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}

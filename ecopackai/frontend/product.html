@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoPackAI | Product Input</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./static/css/style.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">EcoPackAI</a>
+        <div class="navbar-nav">
+            <a class="nav-link" href="product.html">Product</a>
+            <a class="nav-link" href="results.html">Results</a>
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Product Form -->
+<div class="container mt-5">
+    <h2 class="mb-4">Enter Product Details</h2>
+
+    <form id="productForm">
+
+        <!-- Category -->
+        <div class="mb-3">
+            <label class="form-label">Product Category</label>
+            <select class="form-select" id="category">
+                <option value="">Select category</option>
+                <option value="Food">Food</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Cosmetics">Cosmetics</option>
+                <option value="Pharmaceutical">Pharmaceutical</option>
+            </select>
+            <small class="text-danger" id="errorCategory"></small>
+        </div>
+
+        <!-- Shipping Type -->
+        <div class="mb-3">
+            <label class="form-label">Shipping Type</label>
+            <select class="form-select" id="shipping_type">
+                <option value="">Select shipping</option>
+                <option value="Air">Air</option>
+                <option value="Road">Road</option>
+                <option value="Sea">Sea</option>
+            </select>
+            <small class="text-danger" id="errorShipping"></small>
+        </div>
+
+        <!-- Material Type -->
+        <div class="mb-3">
+            <label class="form-label">Material Type</label>
+            <select class="form-select" id="material_type">
+                <option value="">Select material</option>
+                <option value="PLA">PLA</option>
+                <option value="Paper">Paper</option>
+                <option value="Bagasse">Bagasse</option>
+            </select>
+            <small class="text-danger" id="errorMaterial"></small>
+        </div>
+
+        <!-- Packaging Type -->
+        <div class="mb-3">
+            <label class="form-label">Packaging Type</label>
+            <select class="form-select" id="packaging_type">
+                <option value="">Select packaging</option>
+                <option value="Box">Box</option>
+                <option value="Pouch">Pouch</option>
+                <option value="Bottle">Bottle</option>
+            </select>
+            <small class="text-danger" id="errorPackaging"></small>
+        </div>
+
+        <!-- Supplier Region -->
+        <div class="mb-3">
+            <label class="form-label">Supplier Region</label>
+            <select class="form-select" id="supplier_region">
+                <option value="">Select region</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="North America">North America</option>
+            </select>
+            <small class="text-danger" id="errorRegion"></small>
+        </div>
+
+        <!-- Weight -->
+        <div class="mb-3">
+            <label class="form-label">Product Weight (kg)</label>
+            <input type="number" class="form-control" id="product_weight_kg" step="0.01">
+            <small class="text-danger" id="errorWeight"></small>
+        </div>
+
+        <!-- Fragility -->
+        <div class="mb-3">
+            <label class="form-label">Fragility Index (0 – 1)</label>
+            <input type="number" class="form-control"
+                   id="fragility_index" min="0" max="1" step="0.1">
+            <small class="text-danger" id="errorFragility"></small>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Get Recommendation
+        </button>
+
+    </form>
+</div>
+
+<!-- JS -->
+<script src="static/js/predict.js"></script>
+
+</body>
+</html>
+
