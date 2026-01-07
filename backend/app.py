@@ -2,6 +2,7 @@
 # Standard Imports
 # ------------------------
 from flask import Flask, jsonify
+from flask_cors import CORS
 from flask_caching import Cache
 import logging
 
@@ -19,11 +20,23 @@ logging.basicConfig(
 app = Flask(__name__)
 
 # ------------------------
+# CORS Configuration
+# ------------------------
+CORS(app, resources={r"/*": {"origins": "*"}})
+
+# ------------------------
 # Database Configuration
 # ------------------------
+import os
 from models import db
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:postgres@localhost:5432/ecopackai_db"
+# Use SQLite for development if PostgreSQL is not available
+DATABASE_URL = os.getenv(
+    "DATABASE_URL", 
+    "sqlite:///ecopackai.db"
+)
+
+app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db.init_app(app)
@@ -35,8 +48,21 @@ cache = Cache(config={"CACHE_TYPE": "SimpleCache"})
 cache.init_app(app)
 
 # ------------------------
+# Register Middleware
+# ------------------------
+from middleware.auth import require_api_key
+
+@app.before_request
+def check_api_key():
+    # Skip auth for health check and OPTIONS requests (CORS preflight)
+    if request.path == "/health" or request.method == "OPTIONS":
+        return None
+    return require_api_key()
+
+# ------------------------
 # Register API Routes
 # ------------------------
+from flask import request
 from predict import register_prediction_routes
 register_prediction_routes(app)
 

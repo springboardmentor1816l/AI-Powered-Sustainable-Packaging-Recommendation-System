@@ -1,4 +1,8 @@
-from backend.db.app import app
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent / "backend"))
+
+from app import app
 
 def test_health():
     client = app.test_client()

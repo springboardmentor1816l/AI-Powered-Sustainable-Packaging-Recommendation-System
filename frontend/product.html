@@ -43,7 +43,11 @@
         <button type="submit">Get Recommendation</button>
     </form>
 
-    <p id="errorMsg"></p>
+    <!-- Messages -->
+    <p id="loadingMsg" style="display:none;">Loading recommendations...</p>
+    <p id="errorMsg" style="color:red;"></p>
+    <p id="apiError" style="color:red;"></p>
+
 </main>
 
 <script src="js/predict.js"></script>
