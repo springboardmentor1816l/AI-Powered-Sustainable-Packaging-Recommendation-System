@@ -1,26 +1,44 @@
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, TIMESTAMP
-from sqlalchemy.orm import relationship
-from .database import Base
+from sqlalchemy import Column, Integer, Float, String, DateTime, ForeignKey
+from sqlalchemy.sql import func
+from .extensions import Base
 
-class Material(Base):
-    __tablename__ = "materials"
-
-    material_id = Column(Integer, primary_key=True, index=True)
-    material_type = Column(String, nullable=False)
-    strength_mpa = Column(Float)
-    weight_capacity = Column(Float)
-    biodegradability_percent = Column(Float)
-    co2_emission_score = Column(Float)
-    recyclability_percent = Column(Float)
-    cost_per_kg = Column(Float)
-    industry_use_case = Column(String)
 
 class Product(Base):
     __tablename__ = "products"
 
-    product_id = Column(Integer, primary_key=True, index=True)
-    product_name = Column(String)
-    category = Column(String)
-    product_weight = Column(Float)
-    fragility_index = Column(Integer)
+    id = Column(Integer, primary_key=True, index=True)
+    category = Column(String, index=True)
+    product_weight_kg = Column(Float)
+    fragility_index = Column(Float)
     shipping_type = Column(String)
+
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class Material(Base):
+    __tablename__ = "materials"
+
+    id = Column(Integer, primary_key=True, index=True)
+    material_type = Column(String, index=True)
+    recyclability_pct = Column(Float)
+    load_handling_score = Column(Float)
+    moisture_resistance_score = Column(Float)
+    thermal_resistance_score = Column(Float)
+    sustainability_score = Column(Float)
+
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class Prediction(Base):
+    __tablename__ = "predictions"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    product_id = Column(Integer, ForeignKey("products.id"))
+    material_id = Column(Integer, ForeignKey("materials.id"))
+
+    predicted_cost = Column(Float)
+    predicted_co2 = Column(Float)
+    final_score = Column(Float)
+
+    created_at = Column(DateTime(timezone=True), server_default=func.now())

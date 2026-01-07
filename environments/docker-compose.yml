@@ -8,6 +8,10 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    environment:
+      FLASK_APP: backend.app:create_app
+      FLASK_ENV: development
+
 
   db:
     image: postgres:15

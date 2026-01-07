@@ -20,3 +20,17 @@ data/interim/
 data/final/X_encoded_scaled.csv
 data/final/X_regression_encoded_scaled.csv
 data/final/material_recommendations.csv
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+.env
+
+# ML artifacts
+models/trained/
+data/raw/
+
+# OS
+.DS_Store
