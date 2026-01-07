@@ -1,24 +1,26 @@
-version: '3.8'
-
 services:
-
   backend:
     build:
-      context: ..              # project root
+      context: ..
       dockerfile: environments/Dockerfile
+    container_name: ecopack-backend
     ports:
       - "8000:8000"
     volumes:
-      - ../:/app
+      - ../backend:/app/backend
+    environment:
+      API_KEY: ecopack-secret-key
     depends_on:
       - db
+    restart: always
 
   db:
     image: mysql:8.0
+    container_name: ecopack-mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_ROOT_HOST: "%"               # IMPORTANT FIX
+      MYSQL_ROOT_HOST: "%"
       MYSQL_DATABASE: mydb
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
@@ -26,17 +28,6 @@ services:
       - "3306:3306"
     volumes:
       - mysqldata:/var/lib/mysql
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    restart: always
-    ports:
-      - "8085:80"
-    environment:
-      PMA_HOST: db
-      PMA_PORT: 3306
-    depends_on:
-      - db
 
 volumes:
   mysqldata:
