@@ -1,11 +1,38 @@
 from flask import Blueprint, request, jsonify
+from .auth import require_api_key
+
+
 
 predict_bp = Blueprint("predict", __name__)
 
 @predict_bp.route("/predict", methods=["POST"])
 def predict():
+    auth_error = require_api_key()
+    if auth_error:
+        return auth_error
+
     data = request.get_json()
+
+    # Input validation
+    weight = data.get("weight")
+    fragility = data.get("fragility")
+    material = data.get("material_type")
+
+    if weight is None or fragility is None or material is None:
+        return jsonify({"error": "Missing input fields"}), 400
+
+    # 🔮 Dummy ML logic (replace later with real model)
+    if fragility > 2:
+        recommended = "paper"
+        cost = 5 + weight * 2
+        co2 = 0.3 * weight
+    else:
+        recommended = "plastic"
+        cost = 4 + weight * 1.5
+        co2 = 0.6 * weight
+
     return jsonify({
-        "status": "success",
-        "received": data
+        "recommended_material": recommended,
+        "estimated_cost": round(cost, 2),
+        "estimated_co2": round(co2, 2)
     })
