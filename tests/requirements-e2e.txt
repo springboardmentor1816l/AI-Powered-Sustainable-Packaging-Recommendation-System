@@ -1,0 +1,12 @@
+# End-to-End Testing Requirements for EcoPackAI
+
+# Playwright for browser automation
+playwright==1.40.0
+
+# Pytest for test framework
+pytest==7.4.3
+pytest-playwright==0.4.3
+pytest-html==4.1.1
+
+# Additional utilities
+python-dotenv==1.0.0

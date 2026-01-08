@@ -68,7 +68,16 @@ document.getElementById("productForm").addEventListener("submit", function (e) {
     .then(data => {
         loadingMsg.style.display = "none";
 
-        // Store response for results page
+        // Add product information to the response for analytics
+        data.product_info = {
+            product_name: name,
+            category: category,
+            product_weight_kg: weight,
+            fragility_index: fragility / 10,
+            shipping_type: shipping
+        };
+
+        // Store response for results page and analytics
         localStorage.setItem("recommendationData", JSON.stringify(data));
 
         // Redirect to results page

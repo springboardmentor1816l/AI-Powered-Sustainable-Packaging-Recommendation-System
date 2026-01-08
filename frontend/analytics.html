@@ -1,29 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Analytics | EcoPackAI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard | EcoPackAI</title>
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- jsPDF Library for PDF Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
 
 <header>
-    <h1>EcoPackAI</h1>
+    <h1>🌱 EcoPackAI</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="product.html">Product Input</a>
-        <a href="analytics.html">Analytics</a>
+        <a href="analytics.html" class="active">Analytics</a>
     </nav>
 </header>
 
-<main>
-    <h2>Analytics Dashboard</h2>
-    <p>Analytics features coming soon...</p>
-    <p>Track your packaging recommendations, cost savings, and CO₂ reduction over time.</p>
+<main class="analytics-container">
+    <div class="analytics-header">
+        <h2>📊 Analytics Dashboard</h2>
+        <p class="subtitle">Interactive insights into your packaging sustainability</p>
+        
+        <div class="export-controls">
+            <button id="exportCSV" class="btn-export" disabled>
+                📥 Export CSV
+            </button>
+            <button id="exportPDF" class="btn-export" disabled>
+                📄 Export PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- Summary Cards -->
+    <section id="summaryCards" class="summary-section">
+        <!-- Dynamically populated by JavaScript -->
+    </section>
+
+    <!-- Charts Container -->
+    <section id="chartsContainer" class="charts-grid">
+        
+        <!-- Cost Comparison Chart -->
+        <div class="chart-card">
+            <canvas id="costChart"></canvas>
+        </div>
+
+        <!-- CO2 Comparison Chart -->
+        <div class="chart-card">
+            <canvas id="co2Chart"></canvas>
+        </div>
+
+        <!-- Sustainability Ranking Chart -->
+        <div class="chart-card chart-wide">
+            <canvas id="sustainabilityChart"></canvas>
+        </div>
+
+        <!-- Combined Metrics Chart -->
+        <div class="chart-card chart-wide">
+            <canvas id="combinedChart"></canvas>
+        </div>
+
+    </section>
+
+    <!-- Data Table -->
+    <section class="data-table-section">
+        <h3>📋 Detailed Recommendations</h3>
+        <div class="table-container">
+            <table id="detailsTable" class="analytics-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Material</th>
+                        <th>Predicted Cost (₹)</th>
+                        <th>CO₂ Impact (kg)</th>
+                        <th>Sustainability Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
 </main>
 
 <footer>
-    <p>© 2026 EcoPackAI</p>
+    <p>© 2026 EcoPackAI - Sustainable Packaging Intelligence</p>
 </footer>
+
+<script src="js/analytics.js"></script>
 
 </body>
 </html>
