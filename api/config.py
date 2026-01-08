@@ -11,5 +11,5 @@ SQLALCHEMY_DATABASE_URI = (
 )
 
 SQLALCHEMY_TRACK_MODIFICATIONS = False
-SQLALCHEMY_DATABASE_URI = "postgresql://postgres:postgres@localhost:5432/ecopackai_db"
+SQLALCHEMY_DATABASE_URI = "postgresql://postgres:postgres@localhost:5432/testdb"
 
