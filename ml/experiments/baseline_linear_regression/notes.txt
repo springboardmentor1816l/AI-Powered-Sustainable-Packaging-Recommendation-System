@@ -1,0 +1,4 @@
+Baseline Linear Regression experiment
+Target variable: CO2 Score
+Dataset: integrated_dataset_v1
+Purpose: Baseline model for experiment tracking and versioning

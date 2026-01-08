@@ -1,0 +1,23 @@
+ranking_modes:
+  balanced:
+    weight_cost: 0.3
+    weight_co2: 0.3
+    weight_suitability: 0.3
+    weight_recyclability: 0.1
+
+  sustainability_first:
+    weight_cost: 0.2
+    weight_co2: 0.45
+    weight_suitability: 0.25
+    weight_recyclability: 0.1
+
+  cost_first:
+    weight_cost: 0.5
+    weight_co2: 0.2
+    weight_suitability: 0.2
+    weight_recyclability: 0.1
+
+constraints:
+  min_recyclability: 0.6
+  max_cost: null
+  min_strength: null

@@ -1,0 +1,5 @@
+name,length,width,height,fragility
+glass_bottle,20,6,6,high
+cardboard_box,30,20,15,low
+smartphone_box,18,10,4,medium
+food_container,15,10,8,low

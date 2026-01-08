@@ -1,0 +1,17 @@
+{
+  "model_name": "Material Impact Prediction System",
+  "version": "1.0",
+  "training_status": "Completed",
+  "targets": [
+    "Cost per Unit",
+    "Carbon Footprint (kg CO2/unit)"
+  ],
+  "models": {
+    "cost_model": "rf_cost.joblib",
+    "co2_model": "co2_model.pkl"
+  },
+  "preprocessing_pipeline": "preprocessing_pipeline.joblib",
+  "data_source": "integratedfinal.csv",
+  "evaluation_metrics_file": "rf_cost_metrics.csv",
+  "ready_for_deployment": true
+}
