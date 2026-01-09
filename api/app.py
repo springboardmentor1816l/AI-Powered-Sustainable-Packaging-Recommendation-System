@@ -1,6 +1,14 @@
 from flask import Flask, jsonify, request
 from api.config import SQLALCHEMY_DATABASE_URI
-from api.extensions import db
+from api.extensions import db, cache
+from api.middleware.auth import require_api_key
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s"
+)
+
 
 def create_app():
     app = Flask(__name__)
@@ -12,13 +20,10 @@ def create_app():
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     # =====================
-    # Initialize Database
+    # Initialize Extensions
     # =====================
     db.init_app(app)
-
-    with app.app_context():
-        from models.material import Material
-        db.create_all()
+    cache.init_app(app)
 
     # =====================
     # Health Check
@@ -32,67 +37,58 @@ def create_app():
     # =====================
     @app.route("/materials", methods=["GET"])
     def get_materials():
-        from models.material import Material
+        from api.models.material import Material
 
         materials = Material.query.all()
 
         return jsonify([
             {
-                "material_id": m.material_id,
-                "material_type": m.material_type,
-                "strength_mpa": m.strength_mpa,
-                "weight_capacity": m.weight_capacity,
-                "recyclability_percent": m.recyclability_percent,
+                "id": m.id,
+                "name": m.name,
                 "biodegradability_percent": m.biodegradability_percent,
-                "cost_per_kg": m.cost_per_kg
+                "co2_per_kg": m.co2_per_kg,
+                "created_at": m.created_at.isoformat()
             }
             for m in materials
         ])
 
     # =====================
-    # Predict API
+    # Predict API (will cache later)
     # =====================
     @app.route("/predict", methods=["POST"])
     def predict():
-        data = request.get_json()
+        # 🔐 AUTH FIRST
+        auth_error = require_api_key()
+        if auth_error:
+            return auth_error
+    
+        # ✅ Cache ONLY valid requests
+        @cache.cached(timeout=300)
+        def cached_prediction():
+            logging.info("Prediction request processed")
 
-        required_fields = [
-            "product_weight",
-            "fragility_index",
-            "shipping_type",
-            "category",
-            "material_type",
-            "strength_mpa",
-            "weight_capacity",
-            "recyclability_percent",
-            "biodegradability_percent"
-        ]
+    
+            data = request.get_json()
+    
+            if not data:
+                logging.error("Invalid JSON received in /predict")
+                return {"error": "Invalid JSON"}, 400
 
-        # Validation
-        for field in required_fields:
-            if field not in data or data[field] is None:
-                return {
-                    "error": f"Missing or invalid field: {field}"
-                }, 400
+    
+            return {
+                "predictions": [
+                    {
+                        "category": data.get("category"),
+                        "material_type": data.get("material_type"),
+                        "biodegradability_percent": data.get("biodegradability_percent"),
+                        "predicted_cost": 0.42,
+                        "predicted_co2": 0.51
+                    }
+                ]
+            }
 
-        # Dummy Prediction Response
-        return {
-            "predictions": [
-                {
-                    "product_weight": data["product_weight"],
-                    "fragility_index": data["fragility_index"],
-                    "shipping_type": data["shipping_type"],
-                    "category": data["category"],
-                    "material_type": data["material_type"],
-                    "strength_mpa": data["strength_mpa"],
-                    "weight_capacity": data["weight_capacity"],
-                    "recyclability_percent": data["recyclability_percent"],
-                    "biodegradability_percent": data["biodegradability_percent"],
-                    "predicted_cost": 0.42,
-                    "predicted_co2": 0.51
-                }
-            ]
-        }
+        return cached_prediction()
+
 
     return app
 
