@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sustainable Packaging Recommendation</title>
+
+  <!-- Bootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body class="container mt-5">
+
+<h2 class="mb-4">Enter Product Details</h2>
+
+<form onsubmit="event.preventDefault(); predictPackaging();">
+
+  <div class="mb-3">
+    <label class="form-label">Product Name</label>
+    <input type="text" id="productName" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Product Category</label>
+    <select id="category" class="form-control" required>
+      <option value="">Select</option>
+      <option value="electronics">Electronics</option>
+      <option value="food">Food</option>
+      <option value="pharmaceutical">Pharmaceutical</option>
+      <option value="furniture">Furniture</option>
+      <option value="general">General</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Weight (kg)</label>
+    <input type="number" id="weight" class="form-control" min="0.1" step="0.1" required />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Fragility Index (1–5)</label>
+    <input type="number" id="fragility" class="form-control" min="1" max="5" required />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Shipping Type</label>
+    <select id="shipping" class="form-control" required>
+      <option value="">Select</option>
+      <option value="Local">Local</option>
+      <option value="International">International</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Predict Suitability</button>
+</form>
+
+<div id="error" class="text-danger mt-3"></div>
+
+<div id="result" class="alert alert-success mt-4 d-none">
+  <h4 id="recTitle"></h4>
+  <p id="recScore"></p>
+</div>
+
+<div id="charts" class="mt-4 d-none">
+  <h4>Analytics Dashboard</h4>
+  <canvas id="scoreChart" height="120"></canvas>
+  <canvas id="co2Chart" height="120" class="mt-4"></canvas>
+  <canvas id="costChart" height="120" class="mt-4"></canvas>
+
+  <div class="mt-4">
+    <button class="btn btn-outline-primary me-2" onclick="exportCSV()">Export CSV</button>
+    <button class="btn btn-outline-danger" onclick="exportPDF()">Export PDF</button>
+  </div>
+</div>
+
+<script>
+let latestAnalytics = [];
+let scoreChart, co2Chart, costChart;
+
+async function predictPackaging() {
+
+  document.getElementById("error").innerText = "";
+  document.getElementById("charts").classList.add("d-none");
+  document.getElementById("result").classList.add("d-none");
+
+  const payload = {
+    product_name: document.getElementById("productName").value,
+    product_category: document.getElementById("category").value,
+    weight_capacity_kg: parseFloat(document.getElementById("weight").value),
+    fragility_index: parseInt(document.getElementById("fragility").value),
+    shipping_type: document.getElementById("shipping").value
+  };
+
+  try {
+    const res = await fetch("http://127.0.0.1:5001/predict", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Prediction failed");
+
+    document.getElementById("result").classList.remove("d-none");
+    document.getElementById("recTitle").innerText =
+      `Recommended Material: ${data.recommended_material}`;
+    document.getElementById("recScore").innerText =
+      `Suitability Score: ${data.prediction}%`;
+
+    latestAnalytics = data.analytics || [];
+    document.getElementById("charts").classList.remove("d-none");
+    renderCharts(latestAnalytics);
+
+  } catch (err) {
+    document.getElementById("error").innerText = err.message;
+  }
+}
+
+/* ✅ CHART RENDERING */
+function renderCharts(analytics) {
+
+  const labels = analytics.map(a => a.material);
+  const scores = analytics.map(a => a.suitability_score);
+  const co2 = analytics.map(a => a.co2);
+  const cost = analytics.map(a => a.cost);
+
+  scoreChart?.destroy();
+  co2Chart?.destroy();
+  costChart?.destroy();
+
+  scoreChart = new Chart(document.getElementById("scoreChart"), {
+    type: "bar",
+    data: { labels, datasets: [{ label: "Suitability Score", data: scores }] }
+  });
+
+  co2Chart = new Chart(document.getElementById("co2Chart"), {
+    type: "bar",
+    data: { labels, datasets: [{ label: "CO₂ Emission", data: co2 }] }
+  });
+
+  costChart = new Chart(document.getElementById("costChart"), {
+    type: "bar",
+    data: { labels, datasets: [{ label: "Cost Index", data: cost }] }
+  });
+}
+
+/* ✅ CSV EXPORT */
+function exportCSV() {
+  if (!latestAnalytics.length) return alert("No analytics data");
+
+  const headers = Object.keys(latestAnalytics[0]).join(",");
+  const rows = latestAnalytics.map(o => Object.values(o).join(","));
+  const csv = [headers, ...rows].join("\n");
+
+  const blob = new Blob([csv], { type: "text/csv" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "packaging_analytics.csv";
+  a.click();
+}
+
+/* ✅ PDF EXPORT */
+function exportPDF() {
+  if (!latestAnalytics.length) return alert("No analytics data");
+
+  const { jsPDF } = window.jspdf;
+  const pdf = new jsPDF();
+
+  pdf.setFontSize(14);
+  pdf.text("Sustainable Packaging Analytics Report", 10, 10);
+
+  let y = 20;
+  latestAnalytics.forEach(item => {
+    pdf.setFontSize(11);
+    pdf.text(`Material: ${item.material}`, 10, y); y += 6;
+    pdf.text(`Score: ${item.suitability_score}`, 10, y); y += 6;
+    pdf.text(`CO₂: ${item.co2}`, 10, y); y += 6;
+    pdf.text(`Cost: ${item.cost}`, 10, y); y += 10;
+  });
+
+  pdf.save("packaging_analytics.pdf");
+}
+</script>
+
+</body>
+</html>
