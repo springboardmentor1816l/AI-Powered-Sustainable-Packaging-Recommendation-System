@@ -1,5 +1,7 @@
 # src/main.py
 from fastapi import FastAPI
+from src.inference.analytics import analytics_bp
+app.register_blueprint(analytics_bp)
 
 app = FastAPI()
 

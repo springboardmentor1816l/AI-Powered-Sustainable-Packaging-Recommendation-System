@@ -5,7 +5,7 @@ import os
 
 # ---------------- PATH SETUP ----------------
 current_dir = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.abspath(os.path.join(current_dir, '../../'))
+project_root = os.path.abspath(os.path.join(current_dir, "../../"))
 if project_root not in sys.path:
     sys.path.append(project_root)
 
@@ -18,6 +18,20 @@ predictor = MaterialSuitabilityPredictor(
     model_path="models/trained/material_suitability_model.pkl",
     preprocessor_path="models/preprocessing/preprocessing_pipeline.pkl"
 )
+
+# ---------------- CATEGORY MODIFIERS ----------------
+def category_modifier(category: str):
+    """
+    Domain logic (NOT ML):
+    Adjusts strength importance and fragility sensitivity
+    """
+    return {
+        "electronics": {"strength": 1.2, "fragility": 1.4},
+        "pharmaceutical": {"strength": 1.1, "fragility": 1.5},
+        "food": {"strength": 1.0, "fragility": 1.1},
+        "furniture": {"strength": 1.3, "fragility": 0.8},
+        "general": {"strength": 1.0, "fragility": 1.0}
+    }.get(category, {"strength": 1.0, "fragility": 1.0})
 
 # ---------------- MATERIAL DATABASE ----------------
 MATERIAL_DATABASE = [
@@ -56,50 +70,56 @@ def predict():
     try:
         data = request.get_json(force=True)
 
-        # ---------- VALIDATION ----------
-        required_fields = ["weight_capacity_kg", "fragility_index", "shipping_type"]
-        for field in required_fields:
+        # -------- VALIDATION --------
+        required = [
+            "product_name",
+            "product_category",
+            "weight_capacity_kg",
+            "fragility_index",
+            "shipping_type"
+        ]
+
+        for field in required:
             if field not in data:
-                return jsonify({"error": f"Missing required field: {field}"}), 400
+                return jsonify({"error": f"Missing field: {field}"}), 400
+
+        product_name = data["product_name"]
+        category = data["product_category"].lower()
 
         weight = float(data["weight_capacity_kg"])
-        fragility = int(data["fragility_index"])
+        fragility = max(1, min(int(data["fragility_index"]), 5))
         shipping = data["shipping_type"]
 
-        fragility = max(1, min(fragility, 5))
+        modifiers = category_modifier(category)
 
-        # ---------- STEP 1: STRICT FILTER ----------
-        candidates = []
-        for mat in MATERIAL_DATABASE:
-            min_w, max_w = mat["ideal_weight_range"]
-            if min_w <= weight <= max_w and fragility <= mat["fragility_support"]:
-                candidates.append(mat)
-
-        # ---------- STEP 2: RELAX FRAGILITY ----------
-        if not candidates:
-            for mat in MATERIAL_DATABASE:
-                min_w, max_w = mat["ideal_weight_range"]
-                if min_w <= weight <= max_w:
-                    candidates.append(mat)
-
-        # ---------- STEP 3: RELAX WEIGHT (FINAL FALLBACK) ----------
-        if not candidates:
-            candidates = MATERIAL_DATABASE.copy()
-
-        # ---------- RANK CANDIDATES ----------
-        best_material = None
         best_score = -1
-        best_explanation = None
+        best_material = None
+        analytics = []
 
-        for mat in candidates:
+        for mat in MATERIAL_DATABASE:
 
-            adjusted_strength = mat["strength_mpa"]
+            # -------- WEIGHT COMPATIBILITY --------
+            min_w, max_w = mat["ideal_weight_range"]
+            if not (min_w <= weight <= max_w):
+                continue
 
-            adjusted_cost = data.get("cost_per_kg", 60) + weight * 2
+            # -------- ADJUSTED STRENGTH --------
+            adjusted_strength = mat["strength_mpa"] * modifiers["strength"]
 
+            # -------- FRAGILITY PENALTY --------
+            fragility_penalty = (
+                abs(mat["fragility_support"] - fragility)
+                * 8
+                * modifiers["fragility"]
+            )
+
+            # -------- CO₂ ADJUSTMENT --------
             adjusted_co2 = mat["co2_emission_kg_per_kg"]
             if shipping == "International":
-                adjusted_co2 *= 1.5
+                adjusted_co2 *= 1.6
+
+            # -------- COST MODEL --------
+            adjusted_cost = 50 + weight * 3
 
             input_df = pd.DataFrame([{
                 "strength_mpa": adjusted_strength,
@@ -110,19 +130,37 @@ def predict():
                 "cost_per_kg": adjusted_cost
             }])
 
-            result = predictor.predict(input_df, explain=True)
-            score = result["final_score"]
+            raw_score = predictor.predict(input_df)[0]
+            final_score = max(0, min(raw_score - fragility_penalty, 100))
 
-            if score > best_score:
-                best_score = score
+            analytics.append({
+                "material": mat["name"],
+                "suitability_score": round(final_score, 2),
+                "co2": round(adjusted_co2, 2),
+                "cost": round(adjusted_cost, 2),
+                "strength": round(adjusted_strength, 2),
+                "recyclability": mat["recyclability_percent"],
+                "biodegradability": mat["biodegradability_percent"],
+                "category_used": category
+            })
+
+            if final_score > best_score:
+                best_score = final_score
                 best_material = mat["name"]
-                best_explanation = result["explanation"]
 
-        # ---------- RESPONSE ----------
+        # -------- SAFETY FALLBACK --------
+        if not best_material:
+            best_material = "Corrugated Cardboard (Heavy Duty)"
+            best_score = 65.0
+
+        analytics.sort(key=lambda x: x["suitability_score"], reverse=True)
+
         return jsonify({
+            "product": product_name,
+            "category": category,
             "prediction": round(best_score, 2),
             "recommended_material": best_material,
-            "explanation": best_explanation,
+            "analytics": analytics,
             "status": "success"
         })
 
