@@ -130,8 +130,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             <tr>
                                 <th>Rank</th>
                                 <th>Material</th>
-                                <th>Cost</th>
-                                <th>CO₂</th>
+                                <th>Cost($)</th>
+                                <th>CO₂(kg)</th>
                                 <th>Biodegradability</th>
                             </tr>
                         </thead>
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     new Chart(costChart, {
         type: "bar",
-        data: { labels, datasets: [{ label: "Cost", data: predictions.map(p => p.predicted_cost) }] }
+        data: { labels, datasets: [{ label: "Cost($)", data: predictions.map(p => p.predicted_cost) }] }
     });
 
     // CSV Export
