@@ -16,6 +16,8 @@ class EcoPackPredictor:
         self.co2_model = joblib.load(
             BASE_DIR / "ml" / "models" / "xgb_co2.joblib"
         )
+        EXPECTED_FEATURES = list(self.preprocessor.feature_names_in_)
+
 
     def predict_batch(self, X_raw: pd.DataFrame) -> pd.DataFrame:
         X_proc = self.preprocessor.transform(X_raw)

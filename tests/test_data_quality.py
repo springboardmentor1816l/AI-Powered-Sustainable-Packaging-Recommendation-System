@@ -2,10 +2,16 @@ import pandas as pd
 import pytest
 from pathlib import Path
 
-DATA_PATH = Path("../data/model_ready/materials_final_encoded.csv")
+# --------------------------------------------------
+# Resolve project root and data path safely
+# --------------------------------------------------
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DATA_PATH = PROJECT_ROOT / "data" / "model_ready" / "materials_final_encoded.csv"
 
 @pytest.fixture(scope="module")
 def df():
+    assert DATA_PATH.exists(), f"Dataset not found at {DATA_PATH}"
     return pd.read_csv(DATA_PATH)
 
 # --------------------------------------------------
@@ -56,7 +62,6 @@ def test_percentage_ranges(df):
         assert df[col].between(0, 100).all(), f"Invalid percentage range in {col}"
 
 def test_non_negative_numeric_columns(df):
-    # Columns that must always be non-negative (business constraints)
     non_negative_cols = [
         "Recyclability (%)",
         "Recycled Content (%)",
@@ -94,7 +99,7 @@ def test_cost_positive(df):
 # --------------------------------------------------
 
 def test_onehot_columns_binary(df):
-    encoded_cols = [c for c in df.columns if "product_cat_" in c or "usecase_" in c]
+    encoded_cols = [c for c in df.columns if c.startswith("product_cat_") or c.startswith("usecase_")]
     for col in encoded_cols:
         assert set(df[col].unique()).issubset({0, 1}), f"Non-binary values in {col}"
 

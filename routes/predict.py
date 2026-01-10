@@ -1,70 +1,63 @@
 from flask import Blueprint, request, jsonify
 import pandas as pd
+import json
+import logging
+from middleware.auth import require_api_key
 from src.inference.predictor import EcoPackPredictor
+from models.db import SessionLocal
+from models.prediction_history import PredictionHistory
 
 predict_bp = Blueprint("predict", __name__)
 predictor = EcoPackPredictor()
+logger = logging.getLogger(__name__)
 
-# ------------------------------------------------------------------
-# Schema (strict)
-# ------------------------------------------------------------------
-REQUIRED_FIELDS = {
-    "packaging_type",
-    "material_type",
-    "supplier_region",
-    "recyclability_percent",
-    "recycled_content_percent",
-    "reusability_percent",
-    "biodegradation_time_days",
-    "endoflife_disposal_percent",
-    "carbon_footprint_kg_co2unit",
-    "co2_emission_per_kg_estimated",
-    "waste_reduction_impact_percent",
-    "sustainability_target_progress_percent",
-    "load_handling_score",
-    "moisture_resistance_score",
-    "thermal_resistance_score",
-    "cost_per_unit_usd",
-    "annual_usage_units",
-    "total_material_weight_tons",
-    "supplier_sustainability_compliance_percent"
-}
+@predict_bp.before_request
+def secure():
+    auth_error = require_api_key()
+    if auth_error:
+        return auth_error
 
-# ------------------------------------------------------------------
-# Endpoint
-# ------------------------------------------------------------------
 @predict_bp.route("/predict", methods=["POST"])
 def predict():
     payload = request.get_json()
+    if not payload or not isinstance(payload, list):
+        return jsonify({"error": "Invalid input"}), 400
 
-    if not payload:
-        return jsonify({"error": "Empty request body"}), 400
+    df = pd.DataFrame(payload)
+    EXPECTED_FEATURES = predictor.preprocessor.feature_names_in_
 
-    if not isinstance(payload, list):
-        return jsonify({"error": "Input must be a list of records"}), 400
+    missing = sorted(set(EXPECTED_FEATURES) - set(df.columns))
+    extra = sorted(set(df.columns) - set(EXPECTED_FEATURES))
 
-    # Validate records
-    for i, record in enumerate(payload):
-        missing = REQUIRED_FIELDS - record.keys()
-        if missing:
-            return jsonify({
-                "error": f"Record {i} missing required fields",
-                "missing_fields": list(missing)
-            }), 400
-
-    try:
-        df = pd.DataFrame(payload)
-        preds = predictor.predict_batch(df)
-
-        response = pd.concat([df, preds], axis=1)
-
+    if missing:
         return jsonify({
-            "count": len(response),
-            "predictions": response.to_dict(orient="records")
-        }), 200
+            "error": "Missing required features",
+            "missing_features": missing
+        }), 400
 
-    except Exception as e:
+    if extra:
         return jsonify({
-            "error": "Prediction failed",
-            "details": str(e)
-        }), 500
+            "error": "Unexpected extra features",
+            "extra_features": extra
+        }), 400
+        
+    preds = predictor.predict_batch(df)
+
+    response = pd.concat([df, preds], axis=1)
+
+    db = SessionLocal()
+    for _, row in response.iterrows():
+        db.add(PredictionHistory(
+            request_payload=json.dumps(row.to_dict()),
+            predicted_cost=row["predicted_cost"],
+            predicted_co2=row["predicted_co2"]
+        ))
+    db.commit()
+    db.close()
+
+    logger.info("Prediction request processed")
+
+    return jsonify({
+        "count": len(response),
+        "predictions": response.to_dict(orient="records")
+    })

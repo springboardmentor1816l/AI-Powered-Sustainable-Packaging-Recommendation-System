@@ -1,10 +1,15 @@
 from flask import Flask, jsonify
 from routes.predict import predict_bp
+import logging
 
 def create_app():
     app = Flask(__name__)
 
-    # Register blueprints
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s | %(levelname)s | %(message)s"
+    )
+
     app.register_blueprint(predict_bp, url_prefix="/api")
 
     @app.route("/health", methods=["GET"])
