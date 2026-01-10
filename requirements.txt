@@ -8,3 +8,4 @@ scikit-learn
 xgboost
 joblib
 matplotlib
+flask_cors
