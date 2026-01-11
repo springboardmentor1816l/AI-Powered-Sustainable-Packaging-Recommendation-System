@@ -1,0 +1,7 @@
+material_type,strength_mpa,weight_capacity,biodegradability_percent,co2_emission_score,recyclability_percent,cost_per_kg,industry_use_case
+Cardboard,0,0,0,0,0,0,"E-commerce, Food & Beverage, Consumer Goods, Apparel"
+Paper/Bio-Based,0,0,0,0,0,0,"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection"
+Steel,0,0,0,0,0,0,"Heavy Industrial Components, High-Security Goods"
+Plastic,0,0,0,0,0,0,"Electronics, Medium-Value Goods, Retail Logistics"
+Plastic,0,0,0,0,0,0,"Low-Value Goods, Secondary Protection for Non-Fragile Items"
+Plastic,0,0,0,0,0,0,"Industrial Components, Heavy Machinery, Automotive Parts"
