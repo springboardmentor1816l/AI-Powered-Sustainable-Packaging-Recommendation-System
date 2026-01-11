@@ -1,141 +1,103 @@
 console.log("predict.js loaded");
 
 const form = document.getElementById("predictForm");
-const tableCard = document.getElementById("resultCard");
-const table = document.getElementById("resultTable");
-const tbody = table.querySelector("tbody");
 const errorBox = document.getElementById("errorBox");
 const loadingBox = document.getElementById("loading");
+const tbody = document.querySelector("#resultTable tbody");
 
-// Helper: validate number fields
-function validateNumber(id, min = -Infinity, max = Infinity, required = true) {
-    const el = document.getElementById(id);
-    const val = el.value.trim();
-    if (required && val === "") return `${id.replace("_", " ")} is required`;
-    const num = Number(val);
-    if (isNaN(num)) return `${id.replace("_", " ")} must be a number`;
-    if (num < min || num > max) return `${id.replace("_", " ")} must be between ${min} and ${max}`;
+const costChartCanvas = document.getElementById("costChart");
+const co2ChartCanvas = document.getElementById("co2Chart");
+const sustainabilityChartCanvas = document.getElementById("sustainabilityChart");
+
+let latestResults = [];
+let costChart, co2Chart, sustainabilityChart;
+
+/* ---------- Validation ---------- */
+function vNum(id, min=0, max=Infinity) {
+    const v = document.getElementById(id).value;
+    if (v === "" || isNaN(v)) return `${id} invalid`;
+    if (+v < min || +v > max) return `${id} out of range`;
     return null;
 }
 
-// Helper: validate select fields
-function validateSelect(id) {
-    const el = document.getElementById(id);
-    if (!el.value) return `${id.replace("_", " ")} must be selected`;
-    return null;
-}
-
-form.addEventListener("submit", async (e) => {
+/* ---------- Submit ---------- */
+form.addEventListener("submit", async e => {
     e.preventDefault();
-    errorBox.innerText = "";
-    tbody.innerHTML = "";
-    tableCard.style.display = "none";
-
-    // Validation
-    const errors = [];
-
-    // Text input
-    if (!document.getElementById("product_name").value.trim()) {
-        errors.push("Product Name is required");
-    }
-
-    // Select inputs
-    ["product_category", "shipping_type"].forEach(id => {
-        const err = validateSelect(id);
-        if (err) errors.push(err);
-    });
-
-    // Numeric inputs
-    const numericFields = [
-        {id:"product_weight", min:0},
-        {id:"fragility_score", min:0, max:1},
-        {id:"moisture_sensitivity", min:0, max:1},
-        {id:"thermal_sensitivity", min:0, max:1},
-        {id:"expected_shelf_life_days", min:1},
-        {id:"material_cost_per_kg", min:0},
-        {id:"co2_emission_per_kg", min:0},
-        {id:"biodegradability_percent", min:0, max:100},
-        {id:"load_handling_score", min:0, max:1},
-        {id:"sustainability_score", min:0, max:100}
-    ];
-
-    numericFields.forEach(f => {
-        const err = validateNumber(f.id, f.min, f.max);
-        if (err) errors.push(err);
-    });
-
-    // Show validation errors inline
-    if (errors.length > 0) {
-        errorBox.innerHTML = errors.map(e => `• ${e}`).join("<br>");
-        return; // Stop submission
-    }
-
-    // Prepare payload
-    const payload = {
-        product_name: document.getElementById("product_name").value.trim(),
-        product_category: document.getElementById("product_category").value,
-        shipping_type: document.getElementById("shipping_type").value,
-        product_weight: Number(document.getElementById("product_weight").value),
-        fragility_score: Number(document.getElementById("fragility_score").value),
-        moisture_sensitivity: Number(document.getElementById("moisture_sensitivity").value),
-        thermal_sensitivity: Number(document.getElementById("thermal_sensitivity").value),
-        expected_shelf_life_days: Number(document.getElementById("expected_shelf_life_days").value),
-        material_cost_per_kg: Number(document.getElementById("material_cost_per_kg").value),
-        co2_emission_per_kg: Number(document.getElementById("co2_emission_per_kg").value),
-        biodegradability_percent: Number(document.getElementById("biodegradability_percent").value),
-        load_handling_score: Number(document.getElementById("load_handling_score").value),
-        sustainability_score: Number(document.getElementById("sustainability_score").value),
-        hazardous_material_flag: Number(document.getElementById("hazardous_material_flag").value),
-        recyclability_category: document.getElementById("recyclability_category").value,
-        supplier_region: document.getElementById("supplier_region").value,
-        material_type: document.getElementById("material_type").value
-    };
-
-    // Show loading
+    errorBox.innerHTML = "";
     loadingBox.style.display = "block";
 
-    try {
-        const response = await fetch("http://127.0.0.1:5000/predict", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "X-API-KEY": "ecopackai-secret-key"
-            },
-            body: JSON.stringify(payload)
-        });
+    const errors = [
+        !product_name.value && "Product name required",
+        vNum("product_weight",0),
+        vNum("fragility_score",0,1),
+        vNum("moisture_sensitivity",0,1),
+        vNum("thermal_sensitivity",0,1),
+        vNum("expected_shelf_life_days",1),
+        vNum("material_cost_per_kg",0),
+        vNum("co2_emission_per_kg",0),
+        vNum("biodegradability_percent",0,100),
+        vNum("load_handling_score",0,1),
+        vNum("sustainability_score",0,100)
+    ].filter(Boolean);
 
-        const data = await response.json();
-        console.log("📥 API response:", data);
-
-        // Hide loading
+    if (errors.length) {
         loadingBox.style.display = "none";
-
-        if (!Array.isArray(data) || data.length === 0) {
-            errorBox.innerText = "No recommendations received from server.";
-            return;
-        }
-
-        // Render results
-        tbody.innerHTML = "";
-        data.forEach((item, idx) => {
-            const row = document.createElement("tr");
-            if (idx === 0) row.classList.add("top"); // Highlight top
-
-            row.innerHTML = `
-                <td>${item.material_name || "-"}</td>
-                <td>${item.predicted_cost || "-"}</td>
-                <td>${item.co2_footprint?.toFixed(3) || "-"}</td>
-                <td>${item.sustainability_score || "-"}</td>
-                <td>${item.rank || "-"}</td>
-            `;
-            tbody.appendChild(row);
-        });
-
-        tableCard.style.display = "block";
-
-    } catch (err) {
-        console.error("❌ Error:", err);
-        loadingBox.style.display = "none";
-        errorBox.innerText = "Failed to fetch recommendations. Check console.";
+        errorBox.innerHTML = errors.map(e=>`• ${e}`).join("<br>");
+        return;
     }
+
+    const payload = Object.fromEntries(
+        [...document.querySelectorAll("input,select")].map(i => [i.id, isNaN(i.value)?i.value:+i.value])
+    );
+
+    const res = await fetch("http://127.0.0.1:5000/predict", {
+        method:"POST",
+        headers:{"Content-Type":"application/json","X-API-KEY":"ecopackai-secret-key"},
+        body: JSON.stringify(payload)
+    });
+
+    const data = await res.json();
+    loadingBox.style.display = "none";
+
+    latestResults = data;
+    tbody.innerHTML = "";
+
+    data.forEach((r,i)=>{
+        const tr = document.createElement("tr");
+        if (i===0) tr.classList.add("top");
+        tr.innerHTML = `<td>${r.material_name}</td><td>${r.predicted_cost}</td><td>${r.co2_footprint}</td><td>${r.sustainability_score}</td><td>${r.rank}</td>`;
+        tbody.appendChild(tr);
+    });
+
+    document.getElementById("resultCard").style.display="block";
+    document.getElementById("analyticsCard").style.display="block";
+
+    renderCharts(data);
 });
+
+/* ---------- Charts ---------- */
+function renderCharts(d){
+    const labels = d.map(x=>x.material_name);
+    costChart?.destroy(); co2Chart?.destroy(); sustainabilityChart?.destroy();
+
+    costChart = new Chart(costChartCanvas,{type:"bar",data:{labels,datasets:[{label:"Cost",data:d.map(x=>x.predicted_cost)}]}});
+    co2Chart = new Chart(co2ChartCanvas,{type:"bar",data:{labels,datasets:[{label:"CO₂",data:d.map(x=>x.co2_footprint)}]}});
+    sustainabilityChart = new Chart(sustainabilityChartCanvas,{type:"bar",data:{labels,datasets:[{label:"Sustainability",data:d.map(x=>x.sustainability_score)}]}});
+}
+
+/* ---------- Export ---------- */
+exportCSV.onclick = () => {
+    let csv = "Material,Cost,CO2,Sustainability,Rank\n";
+    latestResults.forEach(r=>csv+=`${r.material_name},${r.predicted_cost},${r.co2_footprint},${r.sustainability_score},${r.rank}\n`);
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([csv]));
+    a.download="EcoPackAI.csv"; a.click();
+};
+
+exportPDF.onclick = () => {
+    const pdf = new jspdf.jsPDF();
+    pdf.text("EcoPackAI Sustainability Report",10,10);
+    let y=25;
+    latestResults.forEach(r=>{pdf.text(`${r.rank}. ${r.material_name} | CO₂:${r.co2_footprint}`,10,y); y+=10;});
+    pdf.save("EcoPackAI_Report.pdf");
+};
