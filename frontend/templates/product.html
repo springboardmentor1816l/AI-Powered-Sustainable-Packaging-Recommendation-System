@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EcoPackAI</title>
+</head>
+<body>
+
+<h2>EcoPackAI – Product Input</h2>
+
+<div id="error" style="color:red;"></div>
+
+<form id="productForm">
+
+    <label>Product Name</label><br>
+    <input type="text" id="name"><br><br>
+
+    <label>Category</label><br>
+    <input type="text" id="category"><br><br>
+
+    <label>Weight (kg)</label><br>
+    <input type="number" id="weight"><br><br>
+
+    <label>Fragility (1–5)</label><br>
+    <input type="number" id="fragility"><br><br>
+
+    <label>Shipping Type</label><br>
+    <select id="shipping">
+        <option value="">Select</option>
+        <option value="standard">Standard</option>
+        <option value="express">Express</option>
+    </select><br><br>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+<script src="../static/js/predict.js"></script>
+
+</body>
+</html>

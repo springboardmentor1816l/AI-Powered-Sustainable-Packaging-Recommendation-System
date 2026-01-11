@@ -1,0 +1,26 @@
+body {
+    font-family: Arial;
+    background: #f4f9f4;
+    padding: 30px;
+}
+
+h1, h2 {
+    color: #2e7d32;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+button {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#error {
+    color: red;
+}
