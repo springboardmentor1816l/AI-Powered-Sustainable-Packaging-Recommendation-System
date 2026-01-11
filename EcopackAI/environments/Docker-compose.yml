@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: environments/Dockerfile
+    container_name: ecopackai_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../src:/app/src
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: ecopackai_db
+    environment:
+      POSTGRES_USER: ecopack
+      POSTGRES_PASSWORD: ecopack123
+      POSTGRES_DB: ecopack_db
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: ecopackai_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@ecopack.ai
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
