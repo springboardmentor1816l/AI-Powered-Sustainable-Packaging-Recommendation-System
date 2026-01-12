@@ -2,28 +2,729 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EcoPackAI</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoPackAI – Sustainable Packaging Recommendations</title>
+  <meta name="description" content="AI-powered sustainable packaging recommendation engine for cost and CO₂ optimization">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+  <style>
+    :root {
+      --primary: 152 60% 28%;
+      --primary-light: 152 45% 45%;
+      --primary-dark: 152 65% 18%;
+      --accent: 38 92% 50%;
+      --accent-light: 45 93% 58%;
+      --background: 60 30% 96%;
+      --foreground: 150 10% 15%;
+      --card: 0 0% 100%;
+      --muted: 150 10% 45%;
+      --border: 150 15% 85%;
+      --success: 142 71% 45%;
+      --warning: 38 92% 50%;
+      --danger: 0 84% 60%;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(150 20% 92%) 100%);
+      color: hsl(var(--foreground));
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+      background: transparent;
+    }
+    .navbar.scrolled {
+      background: hsla(var(--card) / 0.95);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px hsla(var(--primary) / 0.1);
+    }
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: hsl(var(--foreground));
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: hsl(var(--primary));
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover { color: hsl(var(--primary)); }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 20% 20%, hsla(var(--primary) / 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, hsla(var(--accent) / 0.1) 0%, transparent 50%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+      animation: fadeInUp 1s ease-out;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: hsla(var(--primary) / 0.1);
+      border: 1px solid hsla(var(--primary) / 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: hsl(var(--primary));
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: hsl(var(--muted));
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1.125rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 40px hsla(var(--primary) / 0.3);
+      border: none;
+      cursor: pointer;
+    }
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 50px hsla(var(--primary) / 0.4);
+    }
+    .floating-element {
+      position: absolute;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.6;
+    }
+    .floating-element.leaf1 { top: 20%; left: 10%; font-size: 3rem; animation-delay: 0s; }
+    .floating-element.leaf2 { top: 60%; right: 15%; font-size: 2.5rem; animation-delay: 2s; }
+    .floating-element.leaf3 { bottom: 20%; left: 20%; font-size: 2rem; animation-delay: 4s; }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 4rem;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      text-align: center;
+      background: hsla(var(--card) / 0.8);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem 2rem;
+      border-radius: 1rem;
+      border: 1px solid hsla(var(--border));
+    }
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: hsl(var(--primary));
+    }
+    .stat-label {
+      font-size: 0.875rem;
+      color: hsl(var(--muted));
+      margin-top: 0.25rem;
+    }
+
+    /* Recommend Section */
+    .recommend {
+      padding: 5rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .recommend-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .recommend-header h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .recommend-header p {
+      color: hsl(var(--muted));
+      font-size: 1.125rem;
+    }
+    .recommend-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 2rem;
+    }
+    @media (max-width: 968px) {
+      .recommend-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Form Card */
+    .form-card {
+      background: hsl(var(--card));
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 20px 60px hsla(var(--primary) / 0.1);
+      border: 1px solid hsla(var(--border));
+    }
+    .form-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: hsl(var(--primary));
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: hsl(var(--foreground));
+    }
+    .form-input, .form-select {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 2px solid hsl(var(--border));
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      background: hsl(var(--card));
+    }
+    .form-input:focus, .form-select:focus {
+      outline: none;
+      border-color: hsl(var(--primary));
+      box-shadow: 0 0 0 4px hsla(var(--primary) / 0.1);
+    }
+    .form-range {
+      width: 100%;
+      height: 8px;
+      border-radius: 4px;
+      background: hsl(var(--border));
+      appearance: none;
+      cursor: pointer;
+    }
+    .form-range::-webkit-slider-thumb {
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+      cursor: pointer;
+      box-shadow: 0 4px 10px hsla(var(--primary) / 0.3);
+    }
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: hsl(var(--muted));
+      margin-top: 0.5rem;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+      color: white;
+      border: none;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px hsla(var(--primary) / 0.3);
+    }
+
+    /* Results Card */
+    .results-card {
+      background: hsl(var(--card));
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 20px 60px hsla(var(--primary) / 0.1);
+      border: 1px solid hsla(var(--border));
+    }
+    .results-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: hsl(var(--primary));
+    }
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+    .results-table th {
+      text-align: left;
+      padding: 1rem;
+      background: hsla(var(--primary) / 0.05);
+      font-weight: 600;
+      color: hsl(var(--primary));
+      border-bottom: 2px solid hsl(var(--border));
+    }
+    .results-table td {
+      padding: 1rem;
+      border-bottom: 1px solid hsl(var(--border));
+    }
+    .results-table tr:hover {
+      background: hsla(var(--primary) / 0.02);
+    }
+    .sustainability-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .sustainability-high { background: hsla(var(--success) / 0.15); color: hsl(var(--success)); }
+    .sustainability-medium { background: hsla(var(--warning) / 0.15); color: hsl(var(--warning)); }
+    .sustainability-low { background: hsla(var(--danger) / 0.15); color: hsl(var(--danger)); }
+
+    .export-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    .export-btn {
+      flex: 1;
+      padding: 0.875rem 1.5rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .export-csv {
+      background: transparent;
+      border: 2px solid hsl(var(--primary));
+      color: hsl(var(--primary));
+    }
+    .export-csv:hover { background: hsla(var(--primary) / 0.1); }
+    .export-pdf {
+      background: transparent;
+      border: 2px solid hsl(var(--danger));
+      color: hsl(var(--danger));
+    }
+    .export-pdf:hover { background: hsla(var(--danger) / 0.1); }
+
+    /* Loader */
+    .loader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem;
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid hsl(var(--border));
+      border-top-color: hsl(var(--primary));
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    .loader p {
+      margin-top: 1rem;
+      color: hsl(var(--muted));
+      font-weight: 500;
+    }
+
+    /* Empty State */
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem;
+      text-align: center;
+    }
+    .empty-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+    .empty-state h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .empty-state p {
+      color: hsl(var(--muted));
+    }
+
+    /* About Section */
+    .about {
+      background: linear-gradient(135deg, hsl(var(--primary-dark)) 0%, hsl(var(--primary)) 100%);
+      color: white;
+      padding: 5rem 2rem;
+    }
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .about-item {
+      text-align: center;
+      padding: 2rem;
+      background: hsla(255 255 255 / 0.1);
+      border-radius: 1rem;
+      backdrop-filter: blur(10px);
+    }
+    .about-item-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .about-item h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .about-item p {
+      opacity: 0.8;
+      font-size: 0.95rem;
+    }
+    .about-footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid hsla(255 255 255 / 0.2);
+      opacity: 0.8;
+    }
+
+    .d-none { display: none !important; }
+  </style>
 </head>
-<body class="bg-light">
+<body>
 
-<nav class="navbar navbar-dark bg-success">
-  <div class="container">
-    <span class="navbar-brand mb-0 h1">EcoPackAI</span>
-  </div>
-</nav>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="navbar-brand">EcoPackAI</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#recommend">Recommend</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
 
-<div class="container mt-5 text-center">
-  <h1>AI-Powered Sustainable Packaging</h1>
-  <p class="lead mt-3">
-    Analyze product packaging requirements and receive AI-driven
-    cost and CO₂ emission predictions.
-  </p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="floating-element leaf1"></div>
+    <div class="floating-element leaf2"></div>
+    <div class="floating-element leaf3"></div>
+    
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span></span>
+        <span>AI-Powered Sustainability</span>
+      </div>
+      <h1>
+        Sustainable Packaging<br>
+        <span class="gradient-text">Recommendation Engine</span>
+      </h1>
+      <p>
+        Leverage machine learning to optimize your packaging decisions for cost efficiency and minimal environmental impact.
+      </p>
+      <button class="hero-cta" onclick="document.getElementById('recommend').scrollIntoView({behavior:'smooth'})">
+        <span>Get Recommendations</span>
+        <span>→</span>
+      </button>
 
-  <a href="product_form.html" class="btn btn-success btn-lg mt-4">
-    Start Product Analysis
-  </a>
-</div>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-value">50+</div>
+          <div class="stat-label">Packaging Materials</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">30%</div>
+          <div class="stat-label">Average CO₂ Reduction</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">AI</div>
+          <div class="stat-label">Powered Analysis</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Recommend Section -->
+  <section id="recommend" class="recommend">
+    <div class="recommend-header">
+      <h2>Product Configuration</h2>
+      <p>Enter your product details to receive AI-powered sustainable packaging recommendations</p>
+    </div>
+
+    <div class="recommend-grid">
+      <!-- Form -->
+      <div class="form-card">
+        <div class="form-title">
+          <span></span>
+          <span>Configure Your Product</span>
+        </div>
+
+        <form id="productForm">
+          <div class="form-group">
+            <label class="form-label">Product Name</label>
+            <input type="text" class="form-input" id="product_name" placeholder="e.g., Organic Coffee Beans" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Category</label>
+            <select class="form-select" id="category" required>
+              <option value="">Select category...</option>
+              <option value="Food">Food</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Cosmetics">Cosmetics</option>
+              <option value="Pharmacy">Pharmacy</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Weight (kg)</label>
+            <input type="number" class="form-input" id="product_weight" placeholder="e.g., 0.5" step="0.01" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Fragility Index</label>
+            <input type="range" class="form-range" id="fragility_index" min="1" max="5" value="3">
+            <div class="range-labels">
+              <span>1 - Durable</span>
+              <span>3 - Moderate</span>
+              <span>5 - Fragile</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Shipping Type</label>
+            <select class="form-select" id="shipping_type" required>
+              <option value="">Select shipping type...</option>
+              <option value="Air">Air</option>
+              <option value="Road">Road</option>
+              <option value="Sea">Sea</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span></span>
+            <span>Generate Recommendation</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Results -->
+      <div>
+        <!-- Loader -->
+        <div id="loader" class="results-card loader d-none">
+          <div class="spinner"></div>
+          <p>Running AI inference...</p>
+        </div>
+
+        <!-- Results Card -->
+        <div id="results-card" class="results-card d-none">
+          <div class="results-title">
+            <span></span>
+            <span>Top Recommendations</span>
+          </div>
+
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Material</th>
+                <th>Cost</th>
+                <th>CO₂</th>
+                <th>Sustainability</th>
+              </tr>
+            </thead>
+            <tbody id="results-body"></tbody>
+          </table>
+
+          <div class="export-buttons">
+            <button class="export-btn export-csv" onclick="exportCSV()">
+              <span></span>
+              <span>Export CSV</span>
+            </button>
+            <button class="export-btn export-pdf" onclick="exportPDF()">
+              <span></span>
+              <span>Download PDF</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Empty State (shown by default) -->
+        <div id="empty-state" class="results-card empty-state">
+          <div class="empty-icon"></div>
+          <h3>No Results Yet</h3>
+          <p>Configure your product and click "Generate Recommendation" to see AI-powered suggestions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <div class="about-grid">
+        <div class="about-item">
+          <div class="about-item-icon"></div>
+          <h3>Machine Learning</h3>
+          <p>Advanced AI models trained on packaging data for accurate predictions</p>
+        </div>
+        <div class="about-item">
+          <div class="about-item-icon"></div>
+          <h3>Eco-Friendly</h3>
+          <p>Optimize for minimal environmental impact and carbon footprint</p>
+        </div>
+        <div class="about-item">
+          <div class="about-item-icon"></div>
+          <h3>Cost Efficient</h3>
+          <p>Balance sustainability with cost-effectiveness for your business</p>
+        </div>
+        <div class="about-item">
+          <div class="about-item-icon"></div>
+          <h3>Data-Driven</h3>
+          <p>Powered by comprehensive packaging material database</p>
+        </div>
+      </div>
+
+      <div class="about-footer">
+        Built with Flask, PostgreSQL & Machine Learning · © 2026 EcoPackAI
+      </div>
+    </div>
+  </section>
+
+  <!-- Load external app.js -->
+  <script src="assets/js/app.js"></script>
+  
+  <!-- Additional UI logic -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Hide empty state when results are shown
+    const originalSubmitHandler = form.onsubmit;
+    const emptyState = document.getElementById('empty-state');
+    
+    // Watch for loader visibility changes to hide empty state
+    const observer = new MutationObserver(() => {
+      if (!loader.classList.contains('d-none') || !resultsCard.classList.contains('d-none')) {
+        emptyState.classList.add('d-none');
+      }
+    });
+    
+    observer.observe(loader, { attributes: true, attributeFilter: ['class'] });
+    observer.observe(resultsCard, { attributes: true, attributeFilter: ['class'] });
+  </script>
 </body>
 </html>
