@@ -6,6 +6,10 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
 def require_api_key():
+    # Allow CORS preflight
+    if request.method == "OPTIONS":
+        return None
+
     key = request.headers.get("X-API-Key")
     if not key or key != API_KEY:
         return jsonify({"error": "Unauthorized"}), 401
