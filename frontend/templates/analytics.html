@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row mb-4 align-items-center">
+        <div class="col">
+            <h2 class="fw-bold text-success">Sustainability Analytics</h2>
+            <p class="text-muted">Tracking AI-driven material recommendations and environmental impact.</p>
+        </div>
+        <div class="col-auto">
+            <div class="btn-group">
+                <a href="{{ url_for('export_csv') }}" class="btn btn-outline-success btn-sm">Export CSV</a>
+                <button onclick="window.print()" class="btn btn-outline-primary btn-sm">Download PDF Report</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-3 mb-5 text-center">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 bg-success text-white p-3">
+                <small class="text-uppercase opacity-75 fw-bold" style="font-size: 0.75rem;">Cumulative CO2 Saved</small>
+                <h2 class="fw-bold mb-0" id="total_co2_saved">0.0 kg</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 bg-primary text-white p-3">
+                <small class="text-uppercase opacity-75 fw-bold" style="font-size: 0.75rem;">Avg. Suitability Score</small>
+                <h2 class="fw-bold mb-0" id="avg_suitability">0.0%</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 bg-dark text-white p-3">
+                <small class="text-uppercase opacity-75 fw-bold" style="font-size: 0.75rem;">Total Recommendations</small>
+                <h2 class="fw-bold mb-0" id="total_recs">0</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 p-4">
+                <h5 class="fw-bold text-dark mb-3">Industry Distribution</h5>
+                <div style="position: relative; height: 250px; width: 100%;">
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 p-4">
+                <h5 class="fw-bold text-dark mb-3">Avg. Score & Cost Index</h5>
+                <div style="position: relative; height: 250px; width: 100%;">
+                    <canvas id="metricsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const data = JSON.parse('{{ data_json | safe }}');
+        
+        // Update Stats
+        document.getElementById('total_co2_saved').innerText = data.stats.total_co2.toFixed(1) + ' kg';
+        document.getElementById('avg_suitability').innerText = data.stats.avg_score.toFixed(1) + '%';
+        document.getElementById('total_recs').innerText = data.stats.total_count;
+
+        // 1. Industry Distribution (Doughnut)
+        new Chart(document.getElementById('categoryChart'), {
+            type: 'doughnut',
+            data: {
+                labels: data.charts.labels,
+                datasets: [{
+                    data: data.charts.counts,
+                    backgroundColor: ['#1b4332', '#2d6a4f', '#40916c', '#52b788', '#74c69d'],
+                    borderWidth: 0
+                }]
+            },
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false, // Allows the chart to fill the 250px container
+                plugins: { legend: { position: 'bottom', labels: { boxWidth: 12 } } }
+            }
+        });
+
+        // 2. Metrics Chart (Bar)
+        new Chart(document.getElementById('metricsChart'), {
+            type: 'bar',
+            data: {
+                labels: data.charts.labels,
+                datasets: [{
+                    label: 'Suitability %',
+                    data: data.charts.scores,
+                    backgroundColor: '#2d6a4f',
+                    borderRadius: 5
+                }]
+            },
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false, // Forces the bar chart into the 250px height
+                scales: { 
+                    y: { beginAtZero: true, max: 100, ticks: { font: { size: 10 } } },
+                    x: { ticks: { font: { size: 10 } } }
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+/* Add to static/css/style.css */
+.border-success {
+    border-color: #2d6a4f !important;
+}
+
+.border-primary {
+    border-color: #4361ee !important;
+}
+
+.badge {
+    padding: 0.5em 1em;
+    font-weight: 500;
+}
+
+.display-4 {
+    letter-spacing: -1px;
+}

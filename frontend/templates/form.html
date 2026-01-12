@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-body p-4">
+                    <h2 class="h4 mb-4 text-success fw-bold">Packaging Analysis Form</h2>
+                    <p class="text-muted small mb-4">Enter product details below for AI-driven packaging recommendations.</p>
+                    
+                    <form action="/recommend" method="POST" id="predictionForm" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Product Name</label>
+                                <input type="text" name="product_name" id="product_name" class="form-control" placeholder="e.g. Eco-Friendly Laptop" required>
+                                <div class="invalid-feedback">A product name is required.</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Category</label>
+                                <select name="category" id="category" class="form-select" required>
+                                    <option value="" selected disabled>Choose category...</option>
+                                    <option value="Cosmetics">Cosmetics</option>
+                                    <option value="Drinkware">Drinkware</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Food">Food</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a category.</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Product Weight (kg)</label>
+                                <input type="number" name="weight" id="weight" class="form-control" step="0.1" min="0.1" placeholder="e.g. 1.5" required>
+                                <div class="invalid-feedback">Please enter a valid weight.</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Fragility Index (0.0 - 1.0)</label>
+                                <input type="number" name="fragility" id="fragility_index" class="form-control" step="0.1" min="0" max="1" placeholder="e.g. 0.3" required>
+                                <div class="invalid-feedback">Index must be between 0.0 and 1.0.</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Shipping Type</label>
+                                <select name="shipping_type" id="shipping_type" class="form-select" required>
+                                    <option value="" selected disabled>Choose shipping method...</option>
+                                    <option value="Air">Air (Express)</option>
+                                    <option value="Road">Road (Standard)</option>
+                                    <option value="Sea">Sea (International/Bulk)</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a shipping type.</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <button type="submit" class="btn btn-success btn-lg w-100 py-3 fw-bold">
+                                Run Sustainability Analysis
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Frontend-Backend Integration Logic
+    document.getElementById('predictionForm').addEventListener('submit', function(e) {
+        if (!this.checkValidity()) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        this.classList.add('was-validated');
+    });
+</script>
+{% endblock %}

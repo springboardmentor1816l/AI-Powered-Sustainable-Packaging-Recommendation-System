@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Recommendation Results - EcoPackAI{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h2 class="display-5">AI-Powered Packaging Recommendations</h2>
+        <p class="text-muted">Optimized for <strong>{{ product.product_category }}</strong> ({{ product.product_weight }} kg)</p>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="card-title mb-4">Top Material recommendations</h4>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Material Type</th>
+                            <th>Estimated Cost (INR)</th>
+                            <th>CO2 Footprint (kg)</th>
+                            <th>Suitability Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in results %}
+                        <tr>
+                            <td><span class="badge bg-secondary">{{ loop.index }}</span></td>
+                            <td><strong>{{ item.material_type }}</strong></td>
+                            <td>₹{{ "%.2f"|format(item.cost_prediction) }}</td>
+                            <td>{{ "%.2f"|format(item.co2_prediction) }}</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="progress flex-grow-1 me-2" style="height: 20px;">
+                                        <div class="progress-bar {% if item.suitability_score > 80 %}bg-success{% elif item.suitability_score > 50 %}bg-warning{% else %}bg-danger{% endif %}" 
+                                             role="progressbar" 
+                                             style="width: {{ item.suitability_score }}%;" 
+                                             aria-valuenow="{{ item.suitability_score }}" 
+                                             aria-valuemin="0" 
+                                             aria-valuemax="100">
+                                             {{ item.suitability_score }}%
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between">
+        <a href="{{ url_for('predict_form') }}" class="btn btn-outline-primary">← Back to Input</a>
+        <a href="{{ url_for('show_analytics') }}" class="btn btn-success">View Sustainability Dashboard →</a>
+    </div>
+</div>
+{% endblock %}
