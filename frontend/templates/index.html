@@ -1,15 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>EcoPackAI</title>
+    <meta charset="UTF-8">
+    <title>EcoPackAI – Sustainable Packaging</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
 
-<h2>Welcome to EcoPackAI</h2>
-<p>Sustainable Packaging Recommendation System</p>
+<nav class="navbar navbar-dark bg-success mb-4">
+    <div class="container">
+        <span class="navbar-brand">🌱 EcoPackAI</span>
+    </div>
+</nav>
 
-<a href="product_form.html">Go to Product Form</a>
+<div class="container">
+    <h3 class="mb-3">Product Details</h3>
 
+    <form id="productForm">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Product Name</label>
+                <input type="text" class="form-control" id="product_name" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>Category</label>
+                <select class="form-control" id="category">
+                    <option value="">Select</option>
+                    <option>Food</option>
+                    <option>Electronics</option>
+                    <option>Cosmetics</option>
+                </select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label>Weight (kg)</label>
+                <input type="number" step="0.1" class="form-control" id="weight">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label>Fragility (1–5)</label>
+                <input type="number" min="1" max="5" class="form-control" id="fragility">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label>Shipping Type</label>
+                <select class="form-control" id="shipping">
+                    <option>Standard</option>
+                    <option>Express</option>
+                </select>
+            </div>
+        </div>
+
+      <button id="predictBtn" type="button" class="btn btn-success">
+    Get Recommendation
+</button>
+<p id="error" class="text-danger mt-2"></p>
+    </form>
+
+    <hr>
+
+    <h4>Recommendations</h4>
+    <table class="table table-bordered" id="resultTable" style="display:none;">
+        <thead class="table-success">
+            <tr>
+                <th>Rank</th>
+                <th>Material</th>
+                <th>Cost</th>
+                <th>CO₂</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="/static/js/predict.js"></script>
 </body>
 </html>
 

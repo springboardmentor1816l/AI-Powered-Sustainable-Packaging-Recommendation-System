@@ -1,11 +1,16 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from extensions.db import db
 from api.predict import predict_bp
 import os
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(
+        __name__,
+        template_folder="frontend/templates",
+        static_folder="frontend/static"
+    )
 
+    # Database config
     app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
         "DATABASE_URL", "sqlite:///local.db"
     )
@@ -13,10 +18,17 @@ def create_app():
 
     db.init_app(app)
 
-    @app.route("/health", methods=["GET"])
+    # Home page
+    @app.route("/")
+    def home():
+        return render_template("index.html")
+
+    # Health check
+    @app.route("/health")
     def health():
         return jsonify({"status": "ok"})
 
+    # API routes
     app.register_blueprint(predict_bp, url_prefix="/api")
 
     with app.app_context():

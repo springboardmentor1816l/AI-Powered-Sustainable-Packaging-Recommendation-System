@@ -1,30 +1,50 @@
-ddocument.getElementById("productForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+document.getElementById("predictBtn").addEventListener("click", async function () {
 
-    let name = document.getElementById("name").value;
-    let category = document.getElementById("category").value;
-    let weight = document.getElementById("weight").value;
-    let fragility = document.getElementById("fragility").value;
-    let shipping = document.getElementById("shipping").value;
+    // 1️⃣ Get values from form
+    const weight = document.getElementById("weight").value;
+    const fragility = document.getElementById("fragility").value;
+    const category = document.getElementById("category").value;
 
-    let errorDiv = document.getElementById("error");
-
-    errorDiv.innerText = "";
-
-    if (!name || !category || !weight || !fragility || !shipping) {
-        errorDiv.innerText = "All fields are required";
+    // 2️⃣ Basic validation
+    if (!weight || !fragility || !category) {
+        document.getElementById("error").innerText = "Please fill all required fields";
         return;
     }
 
-    if (weight <= 0) {
-        errorDiv.innerText = "Weight must be greater than 0";
-        return;
-    }
+    document.getElementById("error").innerText = "";
 
-    if (fragility < 1 || fragility > 5) {
-        errorDiv.innerText = "Fragility must be between 1 and 5";
-        return;
-    }
+    // 3️⃣ Call backend API
+    const response = await fetch("/api/predict", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-API-KEY": "demo-key"
+        },
+        body: JSON.stringify({
+            weight: parseFloat(weight),
+            fragility: parseInt(fragility),
+            material_type: category
+        })
+    });
 
-    alert("Validation passed! Ready to predict 🚀");
+    const data = await response.json();
+
+    // 4️⃣ Show result
+    const table = document.getElementById("resultTable");
+    const tbody = table.querySelector("tbody");
+    tbody.innerHTML = "";
+
+    const row = `
+        <tr>
+            <td>1</td>
+            <td>${data.recommended_material}</td>
+            <td>${data.estimated_cost}</td>
+            <td>${data.estimated_co2}</td>
+            <td>${data.score}</td>
+        </tr>
+    `;
+
+    tbody.innerHTML = row;
+    table.style.display = "table";
 });
+

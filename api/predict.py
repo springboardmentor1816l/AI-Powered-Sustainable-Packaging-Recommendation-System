@@ -8,7 +8,7 @@ predict_bp = Blueprint("predict", __name__)
 def predict():
     data = request.get_json()
 
-    # Input validation
+    # 1️⃣ Input validation
     weight = data.get("weight")
     fragility = data.get("fragility")
     material = data.get("material_type")
@@ -16,7 +16,7 @@ def predict():
     if weight is None or fragility is None or material is None:
         return jsonify({"error": "Missing input fields"}), 400
 
-    # 🔮 Dummy ML logic
+    # 2️⃣ Simple recommendation logic (acts like ML)
     if fragility > 2:
         recommended = "paper"
         cost = 5 + weight * 2
@@ -26,8 +26,13 @@ def predict():
         cost = 4 + weight * 1.5
         co2 = 0.6 * weight
 
+    # 3️⃣ ADD SCORE (THIS FIXES YOUR PROBLEM)
+    score = round(1 / (cost + co2), 3)
+
+    # 4️⃣ Final response
     return jsonify({
         "recommended_material": recommended,
         "estimated_cost": round(cost, 2),
-        "estimated_co2": round(co2, 2)
+        "estimated_co2": round(co2, 2),
+        "score": score
     })
