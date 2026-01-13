@@ -1,8 +1,11 @@
 
 import pandas as pd
 import numpy as np
+import os
 
-DF_PATH = "/content/ecopackai/data/processed/cleaned_integrated_materials.csv"
+# Get the correct path relative to the project root
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DF_PATH = os.path.join(PROJECT_ROOT, "data", "processed", "cleaned_integrated_materials.csv")
 
 def load_df():
     return pd.read_csv(DF_PATH)

@@ -12,7 +12,7 @@ if (!data || !data.predictions || data.predictions.length === 0) {
         row.innerHTML = `
             <td>${item.rank}</td>
             <td>${item.material}</td>
-            <td>₹${item.predicted_cost}</td>
+            <td>Rs.${item.predicted_cost}</td>
             <td>${item.co2}</td>
             <td>${item.sustainability_score}</td>
         `;

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        button { padding: 10px 20px; background: #4CAF50; color: white; border: none; cursor: pointer; }
+        #result { margin-top: 20px; white-space: pre-wrap; background: #f5f5f5; padding: 10px; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Quick API Test</h1>
+    <button onclick="testAPI()">Test /predict API</button>
+    <div id="result"></div>
+
+    <script>
+        async function testAPI() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Testing...';
+
+            const payload = {
+                product_name: "Test Product",
+                category: "Electronics",
+                product_weight_kg: 2,
+                fragility_index: 0.5,
+                shipping_type: "Air"
+            };
+
+            try {
+                console.log('Sending request:', payload);
+                
+                const response = await fetch('http://localhost:5000/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                console.log('Response status:', response.status);
+                
+                const data = await response.json();
+                console.log('Response data:', data);
+
+                if (response.ok) {
+                    resultDiv.innerHTML = 'SUCCESS!\n\n' + JSON.stringify(data, null, 2);
+                    resultDiv.style.color = 'green';
+                } else {
+                    resultDiv.innerHTML = 'ERROR: ' + response.status + '\n\n' + JSON.stringify(data, null, 2);
+                    resultDiv.className = 'error';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.innerHTML = 'NETWORK ERROR:\n' + error.message;
+                resultDiv.className = 'error';
+            }
+        }
+
+        // Auto-test on load
+        window.onload = () => {
+            setTimeout(testAPI, 500);
+        };
+    </script>
+</body>
+</html>

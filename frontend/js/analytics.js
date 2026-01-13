@@ -84,13 +84,13 @@ class AnalyticsDashboard {
                 </div>
                 <div class="summary-card card-cost">
                     <h3>Average Cost</h3>
-                    <p class="card-value">₹${avgCost}</p>
+                    <p class="card-value">Rs.${avgCost}</p>
                     <p class="card-label">Across ${predictions.length} materials</p>
                 </div>
                 <div class="summary-card card-co2">
-                    <h3>Average CO₂ Impact</h3>
+                    <h3>Average CO2 Impact</h3>
                     <p class="card-value">${avgCO2}</p>
-                    <p class="card-label">kg CO₂ equivalent</p>
+                    <p class="card-label">kg CO2 equivalent</p>
                 </div>
                 <div class="summary-card card-sustainability">
                     <h3>Avg Sustainability</h3>
@@ -125,7 +125,7 @@ class AnalyticsDashboard {
             data: {
                 labels: materials,
                 datasets: [{
-                    label: 'Predicted Cost (₹)',
+                    label: 'Predicted Cost (Rs.)',
                     data: costs,
                     backgroundColor: colors,
                     borderColor: colors.map(c => c.replace('0.7', '1')),
@@ -144,7 +144,7 @@ class AnalyticsDashboard {
                     legend: { display: false },
                     tooltip: {
                         callbacks: {
-                            label: (context) => `Cost: ₹${context.parsed.y.toFixed(2)}`
+                            label: (context) => `Cost: Rs.${context.parsed.y.toFixed(2)}`
                         }
                     }
                 },
@@ -153,7 +153,7 @@ class AnalyticsDashboard {
                         beginAtZero: true,
                         title: {
                             display: true,
-                            text: 'Cost (₹)'
+                            text: 'Cost (Rs.)'
                         }
                     }
                 }
@@ -176,7 +176,7 @@ class AnalyticsDashboard {
             data: {
                 labels: materials,
                 datasets: [{
-                    label: 'CO₂ Emissions (kg)',
+                    label: 'CO2 Emissions (kg)',
                     data: co2Values,
                     backgroundColor: colors,
                     borderColor: colors.map(c => c.replace('0.7', '1')),
@@ -189,13 +189,13 @@ class AnalyticsDashboard {
                 plugins: {
                     title: {
                         display: true,
-                        text: 'CO₂ Impact Comparison',
+                        text: 'CO2 Impact Comparison',
                         font: { size: 16, weight: 'bold' }
                     },
                     legend: { display: false },
                     tooltip: {
                         callbacks: {
-                            label: (context) => `CO₂: ${context.parsed.y.toFixed(2)} kg`
+                            label: (context) => `CO2: ${context.parsed.y.toFixed(2)} kg`
                         }
                     }
                 },
@@ -204,7 +204,7 @@ class AnalyticsDashboard {
                         beginAtZero: true,
                         title: {
                             display: true,
-                            text: 'CO₂ Emissions (kg)'
+                            text: 'CO2 Emissions (kg)'
                         }
                     }
                 }
@@ -223,7 +223,7 @@ class AnalyticsDashboard {
         const colors = this.generateColorGradient(scores, '#FF6B6B', '#51CF66', true);
 
         this.charts.sustainabilityChart = new Chart(ctx, {
-            type: 'horizontalBar',
+            type: 'bar',
             data: {
                 labels: materials,
                 datasets: [{
@@ -296,7 +296,7 @@ class AnalyticsDashboard {
                         fill: true
                     },
                     {
-                        label: 'CO₂ Impact (normalized)',
+                        label: 'CO2 Impact (normalized)',
                         data: normalizedCO2,
                         borderColor: '#36A2EB',
                         backgroundColor: 'rgba(54, 162, 235, 0.1)',
@@ -397,7 +397,7 @@ class AnalyticsDashboard {
             row.innerHTML = `
                 <td>${pred.rank}</td>
                 <td>${pred.material}</td>
-                <td>₹${parseFloat(pred.predicted_cost).toFixed(2)}</td>
+                <td>Rs.${parseFloat(pred.predicted_cost).toFixed(2)}</td>
                 <td>${parseFloat(pred.co2).toFixed(2)}</td>
                 <td>${parseFloat(pred.sustainability_score).toFixed(2)}</td>
             `;
@@ -413,16 +413,19 @@ class AnalyticsDashboard {
     }
 
     exportToCSV() {
+        console.log('Export CSV clicked');
+        
         if (!this.data || !this.data.predictions) {
             alert("No data available to export");
             return;
         }
 
-        const predictions = this.data.predictions;
-        const productInfo = this.data.product_info || {};
+        try {
+            const predictions = this.data.predictions;
+            const productInfo = this.data.product_info || {};
 
-        // CSV Headers
-        let csv = "EcoPackAI Sustainability Report\n\n";
+            // CSV Headers
+            let csv = "EcoPackAI Sustainability Report\n\n";
         csv += "Product Information\n";
         csv += `Product Name,${productInfo.product_name || 'N/A'}\n`;
         csv += `Weight (kg),${productInfo.product_weight_kg || 'N/A'}\n`;
@@ -432,7 +435,7 @@ class AnalyticsDashboard {
         csv += `\nGenerated,${new Date().toLocaleString()}\n\n`;
 
         csv += "Material Recommendations\n";
-        csv += "Rank,Material,Predicted Cost (₹),CO₂ Impact (kg),Sustainability Score\n";
+        csv += "Rank,Material,Predicted Cost (Rs.),CO2 Impact (kg),Sustainability Score\n";
 
         predictions.forEach(pred => {
             csv += `${pred.rank},"${pred.material}",${pred.predicted_cost},${pred.co2},${pred.sustainability_score}\n`;
@@ -444,8 +447,8 @@ class AnalyticsDashboard {
         const avgCO2 = (predictions.reduce((sum, p) => sum + parseFloat(p.co2), 0) / predictions.length).toFixed(2);
         const avgSustainability = (predictions.reduce((sum, p) => sum + parseFloat(p.sustainability_score), 0) / predictions.length).toFixed(2);
 
-        csv += `Average Cost (₹),${avgCost}\n`;
-        csv += `Average CO₂ Impact (kg),${avgCO2}\n`;
+        csv += `Average Cost (Rs.),${avgCost}\n`;
+        csv += `Average CO2 Impact (kg),${avgCO2}\n`;
         csv += `Average Sustainability Score,${avgSustainability}\n`;
 
         // Download
@@ -462,16 +465,30 @@ class AnalyticsDashboard {
         document.body.removeChild(link);
 
         this.showExportNotification("CSV exported successfully!");
+        } catch (error) {
+            console.error('CSV Export Error:', error);
+            alert('Failed to export CSV: ' + error.message);
+        }
     }
 
     exportToPDF() {
+        console.log('Export PDF clicked');
+        
         if (!this.data || !this.data.predictions) {
             alert("No data available to export");
             return;
         }
 
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
+        try {
+            // Check if jsPDF is loaded
+            if (!window.jspdf) {
+                alert("PDF library not loaded. Please refresh the page and try again.");
+                console.error('jsPDF library not found');
+                return;
+            }
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
 
         const predictions = this.data.predictions;
         const productInfo = this.data.product_info || {};
@@ -506,7 +523,7 @@ class AnalyticsDashboard {
 
         doc.autoTable({
             startY: yPos,
-            head: [['Rank', 'Material', 'Cost (₹)', 'CO₂ (kg)', 'Score']],
+            head: [['Rank', 'Material', 'Cost (Rs.)', 'CO2 (kg)', 'Score']],
             body: predictions.map(p => [
                 p.rank,
                 p.material,
@@ -530,9 +547,9 @@ class AnalyticsDashboard {
         const avgSustainability = (predictions.reduce((sum, p) => sum + parseFloat(p.sustainability_score), 0) / predictions.length).toFixed(2);
 
         doc.setFontSize(10);
-        doc.text(`Average Cost: ₹${avgCost}`, 20, yPos);
+        doc.text(`Average Cost: Rs.${avgCost}`, 20, yPos);
         yPos += 7;
-        doc.text(`Average CO₂ Impact: ${avgCO2} kg`, 20, yPos);
+        doc.text(`Average CO2 Impact: ${avgCO2} kg`, 20, yPos);
         yPos += 7;
         doc.text(`Average Sustainability Score: ${avgSustainability}/100`, 20, yPos);
         yPos += 10;
@@ -544,7 +561,7 @@ class AnalyticsDashboard {
         
         doc.setFontSize(12);
         doc.setTextColor(40, 167, 69);
-        doc.text("🏆 Best Recommendation", 20, yPos + 8);
+        doc.text("Best Recommendation", 20, yPos + 8);
         
         doc.setFontSize(10);
         doc.setTextColor(0, 0, 0);
@@ -560,6 +577,10 @@ class AnalyticsDashboard {
         doc.save(`EcoPackAI_Report_${Date.now()}.pdf`);
 
         this.showExportNotification("PDF exported successfully!");
+        } catch (error) {
+            console.error('PDF Export Error:', error);
+            alert('Failed to export PDF: ' + error.message);
+        }
     }
 
     showExportNotification(message) {

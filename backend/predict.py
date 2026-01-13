@@ -38,29 +38,47 @@ except Exception as e:
     USE_ADVANCED_RANKING = False
 
 
-def calculate_simplified_sustainability(cost, co2, recyclability, category):
-    """Backup simplified sustainability scoring"""
-    category_weights = {
-        "Food": {"cost": 0.4, "co2": 0.3, "recyclability": 0.3},
-        "Electronics": {"cost": 0.3, "co2": 0.2, "recyclability": 0.5},
-        "Cosmetics": {"cost": 0.5, "co2": 0.2, "recyclability": 0.3},
-        "Pharmacy": {"cost": 0.35, "co2": 0.25, "recyclability": 0.4}
-    }
+def calculate_sustainability_score(biodegradability, recyclability, is_renewable=True):
+    """
+    Calculate Sustainability Score based on:
+    - Biodegradability (40%)
+    - Recyclability (40%)
+    - Renewable resources (20%)
     
-    weights = category_weights.get(category, {"cost": 0.33, "co2": 0.33, "recyclability": 0.34})
+    All inputs should be on 0-100 scale.
+    """
+    renewability_score = 80 if is_renewable else 20  # Bio-based materials get higher score
     
-    # Normalize metrics (0-100 scale)
-    cost_score = max(0, 100 - cost)
-    co2_score = max(0, 100 - (co2 * 5))
-    recyc_score = recyclability
-    
-    sustainability = (
-        cost_score * weights["cost"] +
-        co2_score * weights["co2"] +
-        recyc_score * weights["recyclability"]
+    sustainability_score = (
+        biodegradability * 0.40 +      # 40% weight
+        recyclability * 0.40 +          # 40% weight
+        renewability_score * 0.20       # 20% weight
     )
     
-    return round(max(0, min(100, sustainability)), 2)
+    return round(max(0, min(100, sustainability_score)), 2)
+
+
+def calculate_co2_performance_score(co2_emissions, max_co2=50):
+    """
+    Calculate CO2 Performance Score.
+    Lower emissions = Higher score (inverted scale).
+    
+    Score = 100 - (emissions / max_emissions * 100)
+    """
+    co2_score = 100 - (co2_emissions / max_co2 * 100)
+    return round(max(0, min(100, co2_score)), 2)
+
+
+def calculate_final_ranking_score(sustainability_score, co2_performance_score, alpha=0.6, beta=0.4):
+    """
+    Composite Score Calculation:
+    Final Score = alpha * Sustainability Score + beta * CO2 Performance Score
+    
+    Default weights: Sustainability (60%) > CO2 Impact (40%)
+    This ensures sustainability is prioritized over CO2 impact.
+    """
+    final_score = (alpha * sustainability_score) + (beta * co2_performance_score)
+    return round(max(0, min(100, final_score)), 2)
 
 
 def register_prediction_routes(app):
@@ -106,6 +124,9 @@ def register_prediction_routes(app):
 
         if data["category"] not in VALID_CATEGORIES:
             return jsonify({"error": "Invalid category value"}), 400
+
+        if data["shipping_type"] not in VALID_SHIPPING:
+            return jsonify({"error": "Invalid shipping_type value"}), 400
 
         # ----------------------------
         # 4. ML Model Prediction Logic
@@ -189,64 +210,215 @@ def register_prediction_routes(app):
                 print(error_details)
                 return jsonify({"error": f"ML prediction failed: {str(e)}"}), 500
         else:
-            # Fallback to mock predictions
-            # Top 4 sustainable packaging materials with different properties
+            # =====================================================
+            # RANKING LOGIC: CO2 Impact & Sustainability
+            # =====================================================
+            # EcoPackAI ranks packaging materials by evaluating how well 
+            # each material minimizes CO2 impact while maximizing sustainability,
+            # based on the product's physical and logistical requirements.
+            
+            # === MATERIAL DATABASE ===
+            # Packaging materials with comprehensive properties
             materials_data = [
-                {"name": "Recycled Cardboard", "cost_factor": 1.0, "co2_factor": 1.3, "recyclability": 88, "fragility_bonus": 5},
-                {"name": "PLA (Polylactic Acid)", "cost_factor": 1.6, "co2_factor": 0.7, "recyclability": 92, "fragility_bonus": 8},
-                {"name": "Kraft Paper", "cost_factor": 0.8, "co2_factor": 1.1, "recyclability": 85, "fragility_bonus": 3},
-                {"name": "Bio-Plastic (Cornstarch)", "cost_factor": 1.4, "co2_factor": 0.8, "recyclability": 90, "fragility_bonus": 7}
+                {
+                    "name": "Recycled Cardboard", 
+                    "base_co2_per_kg": 1.3,        # kg CO2 per kg material
+                    "recyclability": 88,           # 0-100 scale
+                    "biodegradability": 85,        # 0-100 scale
+                    "is_renewable": True,          # From renewable resources
+                    "strength_factor": 0.7,        # Thickness multiplier for strength
+                    "max_weight": 15,              # kg capacity
+                    "fragility_protection": 6,     # Protection level 1-10
+                    "shipping_suitability": {"Air": 0.9, "Road": 1.0, "Sea": 0.95},
+                    "category_bonus": {"Food": 1.1, "Electronics": 0.9, "Cosmetics": 0.95, "Pharmacy": 0.9}
+                },
+                {
+                    "name": "PLA (Polylactic Acid)", 
+                    "base_co2_per_kg": 0.7,
+                    "recyclability": 92, 
+                    "biodegradability": 95,
+                    "is_renewable": True,
+                    "strength_factor": 0.85,
+                    "max_weight": 10,
+                    "fragility_protection": 8,
+                    "shipping_suitability": {"Air": 1.0, "Road": 0.95, "Sea": 0.7},
+                    "category_bonus": {"Food": 1.0, "Electronics": 1.1, "Cosmetics": 1.15, "Pharmacy": 1.1}
+                },
+                {
+                    "name": "Kraft Paper", 
+                    "base_co2_per_kg": 1.1,
+                    "recyclability": 85, 
+                    "biodegradability": 90,
+                    "is_renewable": True,
+                    "strength_factor": 0.5,
+                    "max_weight": 8,
+                    "fragility_protection": 4,
+                    "shipping_suitability": {"Air": 0.7, "Road": 1.0, "Sea": 0.9},
+                    "category_bonus": {"Food": 1.05, "Electronics": 0.7, "Cosmetics": 1.0, "Pharmacy": 0.9}
+                },
+                {
+                    "name": "Bio-Plastic (Cornstarch)", 
+                    "base_co2_per_kg": 0.8,
+                    "recyclability": 90, 
+                    "biodegradability": 98,
+                    "is_renewable": True,
+                    "strength_factor": 0.8,
+                    "max_weight": 12,
+                    "fragility_protection": 7,
+                    "shipping_suitability": {"Air": 0.95, "Road": 1.0, "Sea": 0.9},
+                    "category_bonus": {"Food": 1.15, "Electronics": 1.0, "Cosmetics": 1.1, "Pharmacy": 1.2}
+                },
+                {
+                    "name": "Mushroom Packaging",
+                    "base_co2_per_kg": 0.4,
+                    "recyclability": 75,
+                    "biodegradability": 100,
+                    "is_renewable": True,
+                    "strength_factor": 0.6,
+                    "max_weight": 7,
+                    "fragility_protection": 9,
+                    "shipping_suitability": {"Air": 0.8, "Road": 0.95, "Sea": 0.6},
+                    "category_bonus": {"Food": 0.9, "Electronics": 1.2, "Cosmetics": 1.0, "Pharmacy": 0.95}
+                },
+                {
+                    "name": "Bagasse (Sugarcane Fiber)",
+                    "base_co2_per_kg": 0.5,
+                    "recyclability": 80,
+                    "biodegradability": 95,
+                    "is_renewable": True,
+                    "strength_factor": 0.55,
+                    "max_weight": 6,
+                    "fragility_protection": 5,
+                    "shipping_suitability": {"Air": 0.75, "Road": 1.0, "Sea": 0.85},
+                    "category_bonus": {"Food": 1.2, "Electronics": 0.8, "Cosmetics": 1.0, "Pharmacy": 1.0}
+                }
             ]
             
+            # =====================================================
+            # STEP 1: FEASIBILITY CHECK
+            # =====================================================
+            # Filter materials based on product requirements
+            feasible_materials = []
+            
+            for mat in materials_data:
+                # 1a. Weight Capacity Check
+                if data["product_weight_kg"] > mat["max_weight"]:
+                    continue
+                
+                # 1b. Fragility Protection Check
+                # High fragility (>0.7) requires protection level >= 6
+                # Medium fragility (0.4-0.7) requires protection level >= 4
+                required_protection = 6 if data["fragility_index"] > 0.7 else (4 if data["fragility_index"] > 0.4 else 2)
+                if mat["fragility_protection"] < required_protection:
+                    continue
+                
+                # 1c. Shipping Type Suitability Check
+                shipping_suitability = mat["shipping_suitability"].get(data["shipping_type"], 0)
+                if shipping_suitability < 0.7:  # Below 70% suitability = not feasible
+                    continue
+                
+                feasible_materials.append(mat)
+            
+            # Fallback: If no materials pass, include all with reduced scores
+            if not feasible_materials:
+                feasible_materials = materials_data
+                print("Warning: No materials meet all feasibility criteria. Showing all options.")
+            
+            # =====================================================
+            # STEP 2 & 3: CO2 ESTIMATION & SUSTAINABILITY SCORING
+            # =====================================================
             predictions = []
             
-            # Category-specific adjustments
-            category_weights = {
-                "Food": {"cost": 0.4, "co2": 0.3, "recyclability": 0.3},
-                "Electronics": {"cost": 0.3, "co2": 0.2, "recyclability": 0.5},
-                "Cosmetics": {"cost": 0.5, "co2": 0.2, "recyclability": 0.3},
-                "Pharmacy": {"cost": 0.35, "co2": 0.25, "recyclability": 0.4}
-            }
-            
-            weights = category_weights.get(data["category"], {"cost": 0.33, "co2": 0.33, "recyclability": 0.34})
-            
-            for idx, mat_info in enumerate(materials_data, 1):
-                # Calculate costs based on material properties and product weight
-                base_cost = data["product_weight_kg"] * 45 * mat_info["cost_factor"]
-                fragility_factor = data["fragility_index"] * (40 - mat_info["fragility_bonus"])
-                cost = base_cost + fragility_factor
+            for mat in feasible_materials:
+                # ---------------------------------------------------
+                # 2a. Calculate Required Material Thickness
+                # ---------------------------------------------------
+                # Thickness based on weight and fragility requirements
+                base_thickness = 1.0  # Base thickness in relative units
+                weight_factor = 1 + (data["product_weight_kg"] / mat["max_weight"]) * 0.5
+                fragility_factor = 1 + (data["fragility_index"] * mat["strength_factor"])
+                required_thickness = base_thickness * weight_factor * fragility_factor
                 
-                # Calculate CO2 based on weight, shipping type, and material
-                shipping_multiplier = {"Air": 3.5, "Road": 1.5, "Sea": 0.8}.get(data["shipping_type"], 1.5)
-                co2 = data["product_weight_kg"] * shipping_multiplier * 2.0 * mat_info["co2_factor"]
+                # ---------------------------------------------------
+                # 2b. CO2 Impact Estimation
+                # ---------------------------------------------------
+                # CO2 = base_emission * weight * thickness * shipping_multiplier
+                shipping_emission_multiplier = {
+                    "Air": 3.5,      # Highest emissions (air freight)
+                    "Road": 1.5,     # Medium emissions (truck)
+                    "Sea": 0.8       # Lowest emissions (ship)
+                }.get(data["shipping_type"], 1.5)
                 
-                # Normalize metrics for scoring (0-100 scale)
-                # Lower cost is better, so invert
-                cost_score = max(0, 100 - cost)
-                # Lower CO2 is better, so invert
-                co2_score = max(0, 100 - (co2 * 5))
-                # Higher recyclability is better
-                recyc_score = mat_info["recyclability"]
+                co2_emissions = (
+                    mat["base_co2_per_kg"] * 
+                    data["product_weight_kg"] * 
+                    required_thickness * 
+                    shipping_emission_multiplier
+                )
                 
-                # Calculate weighted sustainability score based on category
-                sustainability = (
-                    cost_score * weights["cost"] +
-                    co2_score * weights["co2"] +
-                    recyc_score * weights["recyclability"]
+                # ---------------------------------------------------
+                # 2c. Predicted Cost Calculation
+                # ---------------------------------------------------
+                base_cost_per_kg = 45  # Base cost in Rs.
+                cost = (
+                    base_cost_per_kg * 
+                    data["product_weight_kg"] * 
+                    required_thickness * 
+                    (1 / mat["strength_factor"])  # Stronger materials = less material needed
+                )
+                
+                # ---------------------------------------------------
+                # 3a. Sustainability Score Calculation
+                # ---------------------------------------------------
+                # Biodegradability (40%) + Recyclability (40%) + Renewability (20%)
+                category_modifier = mat["category_bonus"].get(data["category"], 1.0)
+                
+                adjusted_biodegradability = min(100, mat["biodegradability"] * category_modifier)
+                adjusted_recyclability = min(100, mat["recyclability"] * category_modifier)
+                
+                sustainability_score = calculate_sustainability_score(
+                    adjusted_biodegradability,
+                    adjusted_recyclability,
+                    mat["is_renewable"]
+                )
+                
+                # ---------------------------------------------------
+                # 3b. CO2 Performance Score
+                # ---------------------------------------------------
+                # Lower emissions = Higher score
+                co2_performance_score = calculate_co2_performance_score(co2_emissions, max_co2=50)
+                
+                # =====================================================
+                # STEP 4: COMPOSITE SCORE CALCULATION
+                # =====================================================
+                # Final Score = alpha(Sustainability) + beta(CO2 Performance)
+                # Sustainability is prioritized: alpha=0.6, beta=0.4
+                final_score = calculate_final_ranking_score(
+                    sustainability_score,
+                    co2_performance_score,
+                    alpha=0.6,  # Sustainability weight (60%)
+                    beta=0.4    # CO2 impact weight (40%)
                 )
                 
                 predictions.append({
-                    "rank": idx,
-                    "material": mat_info["name"],
+                    "rank": 0,
+                    "material": mat["name"],
                     "predicted_cost": round(cost, 2),
-                    "co2": round(co2, 2),
-                    "sustainability_score": round(max(0, min(100, sustainability)), 2)
+                    "co2": round(co2_emissions, 2),
+                    "sustainability_score": final_score,
+                    # Additional metrics for transparency
+                    "biodegradability": mat["biodegradability"],
+                    "recyclability": mat["recyclability"],
+                    "co2_performance": co2_performance_score
                 })
             
-            # Sort by sustainability score (best first)
+            # =====================================================
+            # STEP 5: FINAL RANKING
+            # =====================================================
+            # Sort by Final Score (descending) - highest score = Rank #1
             predictions.sort(key=lambda x: x["sustainability_score"], reverse=True)
             
-            # Re-rank after sorting
+            # Assign ranks
             for idx, pred in enumerate(predictions, 1):
                 pred["rank"] = idx
 

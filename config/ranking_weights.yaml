@@ -1,9 +1,23 @@
+# EcoPackAI Ranking Configuration
+# Based on Weighted Composite Score Calculation
+# Priority: Sustainability > CO₂ Impact > Cost
+
 constraints:
-  max_cost: 40
-  min_recyclability: B
-  min_suitability: 50
-top_n: 3
+  max_cost: 200        # Maximum acceptable cost threshold
+  min_recyclability: 50 # Minimum recyclability percentage
+  max_co2: 20          # Maximum CO₂ emissions (kg)
+  
+top_n: 4  # Return top 4 recommendations
+
+# Weighted Composite Score Formula:
+# Final Score = w1(Sustainability) + w2(CO₂ Impact) + w3(Cost)
 weights:
-  co2: 0.4
-  cost: 0.3
-  suitability: 0.3
+  sustainability: 0.50  # 50% - Highest priority (biodegradability + recyclability + renewability)
+  co2_impact: 0.30      # 30% - Second priority (lower emissions = higher score)
+  cost: 0.20            # 20% - Third priority (cost optimization without compromising sustainability)
+
+# Sustainability sub-components:
+sustainability_breakdown:
+  recyclability: 0.40   # 40% of sustainability score
+  biodegradability: 0.40 # 40% of sustainability score
+  renewability: 0.20    # 20% of sustainability score (raw material source)

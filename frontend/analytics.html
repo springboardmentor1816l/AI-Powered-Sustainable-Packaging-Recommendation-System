@@ -10,13 +10,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     
     <!-- jsPDF Library for PDF Export -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js" integrity="sha512-2/YdOMV+YNpanLCF5MdQwaoFRVbTmrJ4u4EpqS/USXJaD482FH9/BVcZGM7M5eRN3TmJHkp2M7xrBZfbO1s61g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
 <header>
-    <h1>🌱 EcoPackAI</h1>
+    <h1>EcoPackAI</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="product.html">Product Input</a>
@@ -26,15 +26,15 @@
 
 <main class="analytics-container">
     <div class="analytics-header">
-        <h2>📊 Analytics Dashboard</h2>
+        <h2>Analytics Dashboard</h2>
         <p class="subtitle">Interactive insights into your packaging sustainability</p>
         
         <div class="export-controls">
             <button id="exportCSV" class="btn-export" disabled>
-                📥 Export CSV
+                Export CSV
             </button>
             <button id="exportPDF" class="btn-export" disabled>
-                📄 Export PDF
+                Export PDF
             </button>
         </div>
     </div>
@@ -71,15 +71,15 @@
 
     <!-- Data Table -->
     <section class="data-table-section">
-        <h3>📋 Detailed Recommendations</h3>
+        <h3>Detailed Recommendations</h3>
         <div class="table-container">
             <table id="detailsTable" class="analytics-table">
                 <thead>
                     <tr>
                         <th>Rank</th>
                         <th>Material</th>
-                        <th>Predicted Cost (₹)</th>
-                        <th>CO₂ Impact (kg)</th>
+                        <th>Predicted Cost (Rs.)</th>
+                        <th>CO2 Impact (kg)</th>
                         <th>Sustainability Score</th>
                     </tr>
                 </thead>

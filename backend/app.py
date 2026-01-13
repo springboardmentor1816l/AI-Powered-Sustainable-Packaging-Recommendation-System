@@ -50,14 +50,19 @@ cache.init_app(app)
 # ------------------------
 # Register Middleware
 # ------------------------
-from middleware.auth import require_api_key
+# from middleware.auth import require_api_key
 
+# @app.before_request
+# def check_api_key():
+#     # Skip auth for health check and OPTIONS requests (CORS preflight)
+#     if request.path == "/health" or request.method == "OPTIONS":
+#         return None
+#     return require_api_key()
+
+# Temporarily disable API key authentication for development
 @app.before_request
 def check_api_key():
-    # Skip auth for health check and OPTIONS requests (CORS preflight)
-    if request.path == "/health" or request.method == "OPTIONS":
-        return None
-    return require_api_key()
+    pass
 
 # ------------------------
 # Register API Routes

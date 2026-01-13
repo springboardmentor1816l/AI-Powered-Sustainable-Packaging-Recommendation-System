@@ -54,8 +54,7 @@ document.getElementById("productForm").addEventListener("submit", function (e) {
     fetch("http://localhost:5000/predict", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
-            "X-API-KEY": "secret123"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(payload)
     })
