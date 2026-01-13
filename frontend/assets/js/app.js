@@ -47,6 +47,8 @@ form.addEventListener("submit", async (e) => {
         </tr>`;
     });
 
+    renderCharts(lastRecommendations);
+
     loader.classList.add("d-none");
     resultsCard.classList.remove("d-none");
 
@@ -55,6 +57,90 @@ form.addEventListener("submit", async (e) => {
     loader.classList.add("d-none");
   }
 });
+
+let costChart, gaugeChart;
+
+function renderCharts(data) {
+  renderCostCo2Chart(data);
+  renderSustainabilityGauge(data);
+}
+
+function renderCostCo2Chart(data) {
+  const ctx = document.getElementById("costCo2Chart");
+
+  if (costChart) costChart.destroy();
+
+  costChart = new Chart(ctx, {
+    type: "scatter",
+    data: {
+      datasets: [{
+        label: "Cost vs CO₂ Trade-off",
+        data: data.map(d => ({
+          x: d.predicted_cost,
+          y: d.predicted_co2
+        })),
+        backgroundColor: "rgba(46,204,113,0.7)"
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: { title: { display: true, text: "Cost ($)" }},
+        y: { title: { display: true, text: "CO₂ Footprint" }}
+      }
+    }
+  });
+}
+
+function renderSustainabilityGauge(data) {
+  const ctx = document.getElementById("sustainabilityGauge");
+
+  const avgScore =
+    data.reduce((s, d) => s + d.sustainability_score, 0) / data.length * 100;
+
+  if (gaugeChart) gaugeChart.destroy();
+
+  gaugeChart = new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: ["Sustainability", "Remaining"],
+      datasets: [{
+        data: [avgScore, 100 - avgScore],
+        backgroundColor: ["#2ecc71", "#ecf0f1"],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      cutout: "75%",
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          enabled: true,
+          callbacks: {
+            label: (ctx) => `${ctx.label}: ${ctx.raw.toFixed(1)}%`
+          }
+        }
+      }
+    },
+    plugins: [{
+      id: "centerText",
+      beforeDraw(chart) {
+        const { width } = chart;
+        const { ctx } = chart;
+        ctx.restore();
+
+        const fontSize = (width / 8).toFixed(2);
+        ctx.font = `600 ${fontSize}px Plus Jakarta Sans`;
+        ctx.fillStyle = "#2ecc71";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+
+        ctx.fillText(`${avgScore.toFixed(1)}%`, width / 2, chart.height / 2);
+        ctx.save();
+      }
+    }]
+  });
+}
 
 function exportCSV() {
   if (!lastRecommendations.length) {

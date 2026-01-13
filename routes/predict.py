@@ -136,18 +136,34 @@ def predict():
 
     # Weight sensitivity (heavier products penalize weak materials)
     weight = float(product_df.loc[0, "product_weight"])
+    # Heavier products penalize weak load handling materials
     results["weight_penalty"] = (
-        (weight / results["product_weight_kg"].max())
-        * (1 - results["reusability_"] / 100.0)
+        min(weight / 5.0, 1.0) *  # normalize weight impact
+        (1 - results["load_handling_score"] / 5.0)
     )
+    
+    # Shipping sensitivity: air shipping penalizes high CO2 materials
+    results["shipping_penalty"] = 0.0
 
+    if product_df.loc[0, "shipping_type"] == "Air":
+        results["shipping_penalty"] = results["co2_norm"] * 0.5
+    elif product_df.loc[0, "shipping_type"] == "Road":
+        results["shipping_penalty"] = results["co2_norm"] * 0.25
+    # Sea shipping = lowest penalty
+
+    # Category bonus
+    results["category_bonus"] = results["category_match_flag"] * 0.05
+
+    # Final sustainability score
     results["sustainability_score"] = (
-        0.45 * results["recyclability_norm"]
-        + 0.35 * (1 - results["co2_norm"])
-        - 0.10 * results["fragility_penalty"]
+        0.40 * results["recyclability_norm"]
+        + 0.30 * (1 - results["co2_norm"])
+        - 0.15 * results["fragility_penalty"]
         - 0.10 * results["weight_penalty"]
+        - 0.05 * results["shipping_penalty"]
+        + results["category_bonus"]
     )
-
+    
     # Safety clamp
     results["sustainability_score"] = results["sustainability_score"].clip(0, 1)
 

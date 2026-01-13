@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoPackAI – Sustainable Packaging Recommendations</title>
-  <meta name="description" content="AI-powered sustainable packaging recommendation engine for cost and CO₂ optimization">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description"
+    content="AI-powered sustainable packaging recommendation engine for cost and CO₂ optimization">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     :root {
       --primary: 152 60% 28%;
@@ -25,8 +29,12 @@
       --danger: 0 84% 60%;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(150 20% 92%) 100%);
@@ -37,19 +45,45 @@
 
     /* Animations */
     @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(5deg); }
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
     }
+
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @keyframes spin {
-      to { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
+
     @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
     }
 
     /* Navbar */
@@ -66,11 +100,13 @@
       transition: all 0.3s ease;
       background: transparent;
     }
+
     .navbar.scrolled {
       background: hsla(var(--card) / 0.95);
       backdrop-filter: blur(20px);
       box-shadow: 0 4px 30px hsla(var(--primary) / 0.1);
     }
+
     .navbar-brand {
       font-size: 1.5rem;
       font-weight: 800;
@@ -80,11 +116,13 @@
       background-clip: text;
       text-decoration: none;
     }
+
     .nav-links {
       display: flex;
       gap: 2rem;
       list-style: none;
     }
+
     .nav-links a {
       color: hsl(var(--foreground));
       text-decoration: none;
@@ -92,6 +130,7 @@
       transition: color 0.3s ease;
       position: relative;
     }
+
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -102,8 +141,14 @@
       background: hsl(var(--primary));
       transition: width 0.3s ease;
     }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-links a:hover { color: hsl(var(--primary)); }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: hsl(var(--primary));
+    }
 
     /* Hero Section */
     .hero {
@@ -116,19 +161,22 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: 
+      background:
         radial-gradient(ellipse at 20% 20%, hsla(var(--primary) / 0.15) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 80%, hsla(var(--accent) / 0.1) 0%, transparent 50%);
     }
+
     .hero-content {
       position: relative;
       z-index: 10;
       max-width: 900px;
       animation: fadeInUp 1s ease-out;
     }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -142,24 +190,28 @@
       color: hsl(var(--primary));
       margin-bottom: 1.5rem;
     }
+
     .hero h1 {
       font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 1.5rem;
     }
+
     .hero h1 .gradient-text {
       background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     .hero p {
       font-size: 1.25rem;
       color: hsl(var(--muted));
       max-width: 600px;
       margin: 0 auto 2rem;
     }
+
     .hero-cta {
       display: inline-flex;
       align-items: center;
@@ -176,18 +228,38 @@
       border: none;
       cursor: pointer;
     }
+
     .hero-cta:hover {
       transform: translateY(-3px);
       box-shadow: 0 15px 50px hsla(var(--primary) / 0.4);
     }
+
     .floating-element {
       position: absolute;
       animation: float 6s ease-in-out infinite;
       opacity: 0.6;
     }
-    .floating-element.leaf1 { top: 20%; left: 10%; font-size: 3rem; animation-delay: 0s; }
-    .floating-element.leaf2 { top: 60%; right: 15%; font-size: 2.5rem; animation-delay: 2s; }
-    .floating-element.leaf3 { bottom: 20%; left: 20%; font-size: 2rem; animation-delay: 4s; }
+
+    .floating-element.leaf1 {
+      top: 20%;
+      left: 10%;
+      font-size: 3rem;
+      animation-delay: 0s;
+    }
+
+    .floating-element.leaf2 {
+      top: 60%;
+      right: 15%;
+      font-size: 2.5rem;
+      animation-delay: 2s;
+    }
+
+    .floating-element.leaf3 {
+      bottom: 20%;
+      left: 20%;
+      font-size: 2rem;
+      animation-delay: 4s;
+    }
 
     /* Stats */
     .stats {
@@ -197,6 +269,7 @@
       margin-top: 4rem;
       flex-wrap: wrap;
     }
+
     .stat-item {
       text-align: center;
       background: hsla(var(--card) / 0.8);
@@ -205,11 +278,13 @@
       border-radius: 1rem;
       border: 1px solid hsla(var(--border));
     }
+
     .stat-value {
       font-size: 2rem;
       font-weight: 800;
       color: hsl(var(--primary));
     }
+
     .stat-label {
       font-size: 0.875rem;
       color: hsl(var(--muted));
@@ -222,26 +297,33 @@
       max-width: 1400px;
       margin: 0 auto;
     }
+
     .recommend-header {
       text-align: center;
       margin-bottom: 3rem;
     }
+
     .recommend-header h2 {
       font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
     }
+
     .recommend-header p {
       color: hsl(var(--muted));
       font-size: 1.125rem;
     }
+
     .recommend-grid {
       display: grid;
       grid-template-columns: 1fr 1.5fr;
       gap: 2rem;
     }
+
     @media (max-width: 968px) {
-      .recommend-grid { grid-template-columns: 1fr; }
+      .recommend-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* Form Card */
@@ -252,6 +334,7 @@
       box-shadow: 0 20px 60px hsla(var(--primary) / 0.1);
       border: 1px solid hsla(var(--border));
     }
+
     .form-title {
       display: flex;
       align-items: center;
@@ -261,16 +344,20 @@
       margin-bottom: 1.5rem;
       color: hsl(var(--primary));
     }
+
     .form-group {
       margin-bottom: 1.25rem;
     }
+
     .form-label {
       display: block;
       font-weight: 500;
       margin-bottom: 0.5rem;
       color: hsl(var(--foreground));
     }
-    .form-input, .form-select {
+
+    .form-input,
+    .form-select {
       width: 100%;
       padding: 0.875rem 1rem;
       border: 2px solid hsl(var(--border));
@@ -280,11 +367,14 @@
       transition: all 0.3s ease;
       background: hsl(var(--card));
     }
-    .form-input:focus, .form-select:focus {
+
+    .form-input:focus,
+    .form-select:focus {
       outline: none;
       border-color: hsl(var(--primary));
       box-shadow: 0 0 0 4px hsla(var(--primary) / 0.1);
     }
+
     .form-range {
       width: 100%;
       height: 8px;
@@ -293,6 +383,7 @@
       appearance: none;
       cursor: pointer;
     }
+
     .form-range::-webkit-slider-thumb {
       appearance: none;
       width: 24px;
@@ -302,6 +393,7 @@
       cursor: pointer;
       box-shadow: 0 4px 10px hsla(var(--primary) / 0.3);
     }
+
     .range-labels {
       display: flex;
       justify-content: space-between;
@@ -309,6 +401,7 @@
       color: hsl(var(--muted));
       margin-top: 0.5rem;
     }
+
     .submit-btn {
       width: 100%;
       padding: 1rem;
@@ -325,6 +418,7 @@
       justify-content: center;
       gap: 0.5rem;
     }
+
     .submit-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 30px hsla(var(--primary) / 0.3);
@@ -338,6 +432,7 @@
       box-shadow: 0 20px 60px hsla(var(--primary) / 0.1);
       border: 1px solid hsla(var(--border));
     }
+
     .results-title {
       display: flex;
       align-items: center;
@@ -347,11 +442,13 @@
       margin-bottom: 1.5rem;
       color: hsl(var(--primary));
     }
+
     .results-table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 1.5rem;
     }
+
     .results-table th {
       text-align: left;
       padding: 1rem;
@@ -360,13 +457,16 @@
       color: hsl(var(--primary));
       border-bottom: 2px solid hsl(var(--border));
     }
+
     .results-table td {
       padding: 1rem;
       border-bottom: 1px solid hsl(var(--border));
     }
+
     .results-table tr:hover {
       background: hsla(var(--primary) / 0.02);
     }
+
     .sustainability-badge {
       display: inline-block;
       padding: 0.25rem 0.75rem;
@@ -374,14 +474,27 @@
       font-size: 0.875rem;
       font-weight: 600;
     }
-    .sustainability-high { background: hsla(var(--success) / 0.15); color: hsl(var(--success)); }
-    .sustainability-medium { background: hsla(var(--warning) / 0.15); color: hsl(var(--warning)); }
-    .sustainability-low { background: hsla(var(--danger) / 0.15); color: hsl(var(--danger)); }
+
+    .sustainability-high {
+      background: hsla(var(--success) / 0.15);
+      color: hsl(var(--success));
+    }
+
+    .sustainability-medium {
+      background: hsla(var(--warning) / 0.15);
+      color: hsl(var(--warning));
+    }
+
+    .sustainability-low {
+      background: hsla(var(--danger) / 0.15);
+      color: hsl(var(--danger));
+    }
 
     .export-buttons {
       display: flex;
       gap: 1rem;
     }
+
     .export-btn {
       flex: 1;
       padding: 0.875rem 1.5rem;
@@ -394,18 +507,26 @@
       justify-content: center;
       gap: 0.5rem;
     }
+
     .export-csv {
       background: transparent;
       border: 2px solid hsl(var(--primary));
       color: hsl(var(--primary));
     }
-    .export-csv:hover { background: hsla(var(--primary) / 0.1); }
+
+    .export-csv:hover {
+      background: hsla(var(--primary) / 0.1);
+    }
+
     .export-pdf {
       background: transparent;
       border: 2px solid hsl(var(--danger));
       color: hsl(var(--danger));
     }
-    .export-pdf:hover { background: hsla(var(--danger) / 0.1); }
+
+    .export-pdf:hover {
+      background: hsla(var(--danger) / 0.1);
+    }
 
     /* Loader */
     .loader {
@@ -415,6 +536,7 @@
       justify-content: center;
       padding: 4rem;
     }
+
     .spinner {
       width: 48px;
       height: 48px;
@@ -423,6 +545,7 @@
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
+
     .loader p {
       margin-top: 1rem;
       color: hsl(var(--muted));
@@ -438,16 +561,19 @@
       padding: 4rem;
       text-align: center;
     }
+
     .empty-icon {
       font-size: 4rem;
       margin-bottom: 1rem;
       opacity: 0.5;
     }
+
     .empty-state h3 {
       font-size: 1.25rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
+
     .empty-state p {
       color: hsl(var(--muted));
     }
@@ -458,16 +584,19 @@
       color: white;
       padding: 5rem 2rem;
     }
+
     .about-content {
       max-width: 1200px;
       margin: 0 auto;
     }
+
     .about-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
       margin-bottom: 3rem;
     }
+
     .about-item {
       text-align: center;
       padding: 2rem;
@@ -475,19 +604,23 @@
       border-radius: 1rem;
       backdrop-filter: blur(10px);
     }
+
     .about-item-icon {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+
     .about-item h3 {
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
+
     .about-item p {
       opacity: 0.8;
       font-size: 0.95rem;
     }
+
     .about-footer {
       text-align: center;
       padding-top: 2rem;
@@ -495,9 +628,12 @@
       opacity: 0.8;
     }
 
-    .d-none { display: none !important; }
+    .d-none {
+      display: none !important;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -516,7 +652,7 @@
     <div class="floating-element leaf1"></div>
     <div class="floating-element leaf2"></div>
     <div class="floating-element leaf3"></div>
-    
+
     <div class="hero-content">
       <div class="hero-badge">
         <span></span>
@@ -527,7 +663,8 @@
         <span class="gradient-text">Recommendation Engine</span>
       </h1>
       <p>
-        Leverage machine learning to optimize your packaging decisions for cost efficiency and minimal environmental impact.
+        Leverage machine learning to optimize your packaging decisions for cost efficiency and minimal environmental
+        impact.
       </p>
       <button class="hero-cta" onclick="document.getElementById('recommend').scrollIntoView({behavior:'smooth'})">
         <span>Get Recommendations</span>
@@ -585,7 +722,8 @@
 
           <div class="form-group">
             <label class="form-label">Weight (kg)</label>
-            <input type="number" class="form-input" id="product_weight" placeholder="e.g., 0.5" step="0.01" min="0" required>
+            <input type="number" class="form-input" id="product_weight" placeholder="e.g., 0.5" step="0.01" min="0"
+              required>
           </div>
 
           <div class="form-group">
@@ -643,6 +781,11 @@
             <tbody id="results-body"></tbody>
           </table>
 
+          <div class="charts-section" style="margin-top:2rem;">
+            <canvas id="costCo2Chart" height="180"></canvas>
+            <canvas id="sustainabilityGauge" height="180" style="margin-top:2rem;"></canvas>
+          </div>
+
           <div class="export-buttons">
             <button class="export-btn export-csv" onclick="exportCSV()">
               <span></span>
@@ -699,7 +842,7 @@
 
   <!-- Load external app.js -->
   <script src="assets/js/app.js"></script>
-  
+
   <!-- Additional UI logic -->
   <script>
     // Navbar scroll effect
@@ -715,16 +858,17 @@
     // Hide empty state when results are shown
     const originalSubmitHandler = form.onsubmit;
     const emptyState = document.getElementById('empty-state');
-    
+
     // Watch for loader visibility changes to hide empty state
     const observer = new MutationObserver(() => {
       if (!loader.classList.contains('d-none') || !resultsCard.classList.contains('d-none')) {
         emptyState.classList.add('d-none');
       }
     });
-    
+
     observer.observe(loader, { attributes: true, attributeFilter: ['class'] });
     observer.observe(resultsCard, { attributes: true, attributeFilter: ['class'] });
   </script>
 </body>
+
 </html>
