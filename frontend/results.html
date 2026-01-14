@@ -2,68 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Recommendation Result</title>
+  <title>EcoPackAI – Recommendation Result</title>
 
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
   />
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #eef7f2, #f7fcfa);
+      font-family: "Inter", sans-serif;
+    }
+
+    .result-card {
+      border-radius: 18px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+      border: none;
+    }
+
+    .badge-best {
+      background-color: #2ecc71;
+      font-size: 0.85rem;
+    }
+
+    .explain-box {
+      background: #f8fdfb;
+      border-left: 5px solid #2ecc71;
+      padding: 16px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 
-<body class="container mt-5">
+<body>
 
-  <h2 class="mb-4">Sustainable Packaging Recommendation</h2>
+<div class="container mt-5">
 
-  <!-- Result Table -->
-  <table class="table table-bordered table-striped">
-    <thead class="table-success">
-      <tr>
-        <th>Rank</th>
-        <th>Material</th>
-        <th>Suitability Score</th>
-        <th>Remark</th>
-      </tr>
-    </thead>
-    <tbody id="resultBody"></tbody>
-  </table>
+  <h2 class="text-center text-success mb-4">
+    🌱 Sustainable Packaging Recommendation
+  </h2>
 
-  <a href="predict.html" class="btn btn-secondary mt-3">
-    Try Another Product
-  </a>
+  <!-- RESULT CARD -->
+  <div class="card result-card p-4 mb-4">
 
-  <script>
-    const result = JSON.parse(localStorage.getItem("prediction"));
-    const productName = localStorage.getItem("product_name");
+    <h5 class="mb-3">📦 Product Summary</h5>
+    <p id="productInfo" class="text-muted"></p>
 
-    const tbody = document.getElementById("resultBody");
+    <hr>
 
-    if (!result || !result.prediction) {
-      tbody.innerHTML = `
-        <tr>
-          <td colspan="4" class="text-danger text-center">
-            No recommendation data available.
-          </td>
-        </tr>
-      `;
-    } else {
-      const score = result.prediction;
+    <h5 class="mb-3">
+      🏆 Best Recommended Material
+      <span class="badge badge-best text-white ms-2">AI Selected</span>
+    </h5>
 
-      let remark = "Moderate suitability";
-      if (score >= 80) remark = "Excellent sustainable choice";
-      else if (score >= 60) remark = "Good sustainable choice";
-      else if (score >= 40) remark = "Average – improvements possible";
-      else remark = "Low suitability";
+    <div class="row text-center mb-3">
+      <div class="col-md-4">
+        <h6>Material</h6>
+        <p id="material" class="fw-semibold"></p>
+      </div>
+      <div class="col-md-4">
+        <h6>Sustainability Score</h6>
+        <p id="score" class="fw-semibold"></p>
+      </div>
+      <div class="col-md-4">
+        <h6>Decision Remark</h6>
+        <p id="remark" class="fw-semibold"></p>
+      </div>
+    </div>
 
-      tbody.innerHTML = `
-        <tr>
-          <td><strong>1</strong></td>
-          <td>Recommended Packaging Material</td>
-          <td><strong>${score}%</strong></td>
-          <td>${remark}</td>
-        </tr>
-      `;
-    }
-  </script>
+    <div class="explain-box">
+      <h6>🔍 Why this material?</h6>
+      <ul class="mb-0">
+        <li>Lowest combined environmental impact among evaluated materials</li>
+        <li>Suitable for product fragility and weight constraints</li>
+        <li>Optimized balance between cost efficiency and sustainability</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="text-center">
+    <a href="predict.html" class="btn btn-success me-2">
+      🔄 Analyze Another Product
+    </a>
+    <a href="analytics.html" class="btn btn-outline-primary">
+      📊 View Analytics Dashboard
+    </a>
+  </div>
+
+  <footer class="text-center mt-5 text-muted">
+    © 2026 EcoPackAI · AI for Sustainable Engineering
+  </footer>
+
+</div>
+
+<script>
+  /**
+   * Expecting data stored from predict.html
+   * best_material, sustainability_score, product details
+   */
+
+  const result = JSON.parse(localStorage.getItem("best_result"));
+  const product = JSON.parse(localStorage.getItem("product_input"));
+
+  const productInfo = document.getElementById("productInfo");
+  const materialEl = document.getElementById("material");
+  const scoreEl = document.getElementById("score");
+  const remarkEl = document.getElementById("remark");
+
+  if (!result || !product) {
+    productInfo.innerHTML =
+      "<span class='text-danger'>No recommendation data available.</span>";
+  } else {
+    productInfo.innerText = `
+      ${product.product_name} | Category: ${product.product_category}
+      | Weight: ${product.weight_capacity_kg} kg
+      | Fragility: ${product.fragility_index}
+      | Shipping: ${product.shipping_type}
+    `;
+
+    materialEl.innerText = result.material;
+    scoreEl.innerText = result.suitability_score;
+
+    let remark = "Moderate sustainability";
+    if (result.suitability_score >= 80)
+      remark = "Excellent sustainable choice";
+    else if (result.suitability_score >= 60)
+      remark = "Good sustainable choice";
+    else if (result.suitability_score >= 40)
+      remark = "Average – improvements possible";
+    else
+      remark = "Low sustainability";
+
+    remarkEl.innerText = remark;
+  }
+</script>
 
 </body>
 </html>

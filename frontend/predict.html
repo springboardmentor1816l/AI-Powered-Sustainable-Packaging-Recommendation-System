@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sustainable Packaging Recommendation</title>
+  <title>EcoPackAI – Packaging Recommendation</title>
 
   <!-- Bootstrap -->
   <link
@@ -13,90 +13,216 @@
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!-- jsPDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #eef7f2, #f7fcfa);
+      font-family: "Inter", sans-serif;
+    }
+
+    .page-title {
+      color: #145a32;
+      font-weight: 700;
+    }
+
+    .card {
+      border-radius: 16px;
+      border: none;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+    }
+
+    .form-hint {
+      font-size: 0.85rem;
+      color: #6c757d;
+    }
+
+    .rank-1 {
+      background-color: #e6f4ea !important;
+      font-weight: 600;
+    }
+
+    .summary-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 18px;
+      border-left: 5px solid #2ecc71;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
 </head>
 
-<body class="container mt-5">
+<body>
 
-<h2 class="mb-4">Enter Product Details</h2>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-success" href="index.html">
+      EcoPackAI 🌱
+    </a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="predict.html">Predict</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="analytics.html">Analytics</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<form onsubmit="event.preventDefault(); predictPackaging();">
+<div class="container mt-5">
 
-  <div class="mb-3">
-    <label class="form-label">Product Name</label>
-    <input type="text" id="productName" class="form-control" required />
+  <!-- PAGE HEADER -->
+  <div class="text-center mb-4">
+    <h2 class="page-title">AI-Powered Packaging Recommendation</h2>
+    <p class="text-muted">
+      Compare <strong>ranked packaging materials</strong> based on
+      <strong>cost</strong>, <strong>CO₂ footprint</strong>, and
+      <strong>sustainability score</strong>.
+    </p>
   </div>
 
-  <div class="mb-3">
-    <label class="form-label">Product Category</label>
-    <select id="category" class="form-control" required>
-      <option value="">Select</option>
-      <option value="electronics">Electronics</option>
-      <option value="food">Food</option>
-      <option value="pharmaceutical">Pharmaceutical</option>
-      <option value="furniture">Furniture</option>
-      <option value="general">General</option>
-    </select>
+  <!-- ================= INPUT FORM ================= -->
+  <div class="card p-4 mb-5">
+    <h5 class="mb-3 text-success">📦 Product Information</h5>
+
+    <form onsubmit="event.preventDefault(); predictPackaging();">
+      <div class="row g-3">
+
+        <div class="col-md-6">
+          <label class="form-label">Product Name</label>
+          <input id="productName" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Product Category</label>
+          <select id="category" class="form-control" required>
+            <option value="">Select</option>
+            <option>electronics</option>
+            <option>food</option>
+            <option>pharmaceutical</option>
+            <option>furniture</option>
+            <option>general</option>
+          </select>
+          <div class="form-hint">
+            Industry category affects strength & fragility weighting
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Weight Capacity (kg)</label>
+          <input id="weight" type="number" class="form-control" min="0.1" step="0.1" required>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Fragility Index (1–5)</label>
+          <input id="fragility" type="number" class="form-control" min="1" max="5" required>
+          <div class="form-hint">1 = Strong, 5 = Highly Fragile</div>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Shipping Type</label>
+          <select id="shipping" class="form-control" required>
+            <option value="">Select</option>
+            <option>Local</option>
+            <option>International</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="mt-4 text-end">
+        <button class="btn btn-success px-4">
+          🔍 Analyze Packaging Options
+        </button>
+      </div>
+    </form>
+
+    <div id="error" class="text-danger mt-3"></div>
   </div>
 
-  <div class="mb-3">
-    <label class="form-label">Weight (kg)</label>
-    <input type="number" id="weight" class="form-control" min="0.1" step="0.1" required />
+  <!-- ================= SUMMARY ================= -->
+  <div id="summarySection" class="row mb-4 d-none">
+    <div class="col-md-4">
+      <div class="summary-card">
+        <h6>🌱 Best Material</h6>
+        <p id="bestMaterial" class="mb-0 fw-semibold"></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="summary-card">
+        <h6>♻ Sustainability Score</h6>
+        <p id="bestScore" class="mb-0 fw-semibold"></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="summary-card">
+        <h6>💰 Estimated Cost</h6>
+        <p id="bestCost" class="mb-0 fw-semibold"></p>
+      </div>
+    </div>
   </div>
 
-  <div class="mb-3">
-    <label class="form-label">Fragility Index (1–5)</label>
-    <input type="number" id="fragility" class="form-control" min="1" max="5" required />
+  <!-- ================= RESULT TABLE ================= -->
+  <div id="tableSection" class="d-none">
+
+    <h4 class="mb-3 text-success">📊 Ranked Material Comparison</h4>
+
+    <table class="table table-bordered align-middle bg-white">
+      <thead class="table-dark">
+        <tr>
+          <th>Rank</th>
+          <th>Material</th>
+          <th>Cost (USD)</th>
+          <th>CO₂ Impact (kg)</th>
+          <th>Sustainability Score</th>
+        </tr>
+      </thead>
+      <tbody id="resultTable"></tbody>
+    </table>
   </div>
 
-  <div class="mb-3">
-    <label class="form-label">Shipping Type</label>
-    <select id="shipping" class="form-control" required>
-      <option value="">Select</option>
-      <option value="Local">Local</option>
-      <option value="International">International</option>
-    </select>
+  <!-- ================= CHARTS ================= -->
+  <div id="charts" class="row mt-5 g-4 d-none">
+    <div class="col-md-6">
+      <div class="card p-3">
+        <canvas id="scoreChart"></canvas>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card p-3">
+        <canvas id="costChart"></canvas>
+      </div>
+    </div>
   </div>
 
-  <button type="submit" class="btn btn-primary">Predict Suitability</button>
-</form>
-
-<div id="error" class="text-danger mt-3"></div>
-
-<div id="result" class="alert alert-success mt-4 d-none">
-  <h4 id="recTitle"></h4>
-  <p id="recScore"></p>
-</div>
-
-<div id="charts" class="mt-4 d-none">
-  <h4>Analytics Dashboard</h4>
-  <canvas id="scoreChart" height="120"></canvas>
-  <canvas id="co2Chart" height="120" class="mt-4"></canvas>
-  <canvas id="costChart" height="120" class="mt-4"></canvas>
-
-  <div class="mt-4">
-    <button class="btn btn-outline-primary me-2" onclick="exportCSV()">Export CSV</button>
-    <button class="btn btn-outline-danger" onclick="exportPDF()">Export PDF</button>
-  </div>
+  <footer class="text-center">
+    © 2026 EcoPackAI · Intelligent Sustainable Packaging
+  </footer>
 </div>
 
 <script>
 let latestAnalytics = [];
-let scoreChart, co2Chart, costChart;
+let scoreChart, costChart;
 
 async function predictPackaging() {
 
-  document.getElementById("error").innerText = "";
-  document.getElementById("charts").classList.add("d-none");
-  document.getElementById("result").classList.add("d-none");
+  error.innerText = "";
+  tableSection.classList.add("d-none");
+  charts.classList.add("d-none");
+  summarySection.classList.add("d-none");
 
   const payload = {
-    product_name: document.getElementById("productName").value,
-    product_category: document.getElementById("category").value,
-    weight_capacity_kg: parseFloat(document.getElementById("weight").value),
-    fragility_index: parseInt(document.getElementById("fragility").value),
-    shipping_type: document.getElementById("shipping").value
+    product_name: productName.value,
+    product_category: category.value,
+    weight_capacity_kg: +weight.value,
+    fragility_index: +fragility.value,
+    shipping_type: shipping.value
   };
 
   try {
@@ -109,86 +235,98 @@ async function predictPackaging() {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || "Prediction failed");
 
-    document.getElementById("result").classList.remove("d-none");
-    document.getElementById("recTitle").innerText =
-      `Recommended Material: ${data.recommended_material}`;
-    document.getElementById("recScore").innerText =
-      `Suitability Score: ${data.prediction}%`;
+    latestAnalytics = data.recommendations || [];
 
-    latestAnalytics = data.analytics || [];
-    document.getElementById("charts").classList.remove("d-none");
+    // SAFETY CHECK
+    if (latestAnalytics.length === 0) {
+      error.innerText = "No suitable packaging materials found.";
+      return;
+    }
+
+    renderTable(latestAnalytics);
     renderCharts(latestAnalytics);
 
+    const best = latestAnalytics[0];
+    bestMaterial.innerText = best.material;
+    bestScore.innerText = best.suitability_score;
+    bestCost.innerText = `$${best.cost.toFixed(2)}`;
+
+    // Store for results & analytics pages
+    localStorage.setItem("best_result", JSON.stringify(best));
+    localStorage.setItem("product_input", JSON.stringify(payload));
+
+    const history =
+      JSON.parse(localStorage.getItem("ecoPackHistory") || "[]");
+
+    history.push({
+      product_category: payload.product_category,
+      suitability_score: best.suitability_score,
+      cost: best.cost,
+      co2: best.co2,
+      timestamp: new Date().toISOString()
+    });
+
+    localStorage.setItem("ecoPackHistory", JSON.stringify(history));
+
+    summarySection.classList.remove("d-none");
+    tableSection.classList.remove("d-none");
+    charts.classList.remove("d-none");
+
   } catch (err) {
-    document.getElementById("error").innerText = err.message;
+    error.innerText = err.message;
   }
 }
 
-/* ✅ CHART RENDERING */
-function renderCharts(analytics) {
+/* ================= TABLE ================= */
+function renderTable(data) {
+  resultTable.innerHTML = "";
+  data.forEach((item, i) => {
+    const tr = document.createElement("tr");
+    if (i === 0) tr.classList.add("rank-1");
+    tr.innerHTML = `
+      <td>${i + 1}</td>
+      <td>${item.material}</td>
+      <td>${item.cost.toFixed(2)}</td>
+      <td>${item.co2.toFixed(3)}</td>
+      <td>${item.suitability_score}</td>
+    `;
+    resultTable.appendChild(tr);
+  });
+}
 
-  const labels = analytics.map(a => a.material);
-  const scores = analytics.map(a => a.suitability_score);
-  const co2 = analytics.map(a => a.co2);
-  const cost = analytics.map(a => a.cost);
+/* ================= CHARTS ================= */
+function renderCharts(data) {
 
   scoreChart?.destroy();
-  co2Chart?.destroy();
   costChart?.destroy();
 
-  scoreChart = new Chart(document.getElementById("scoreChart"), {
-    type: "bar",
-    data: { labels, datasets: [{ label: "Suitability Score", data: scores }] }
-  });
+  scoreChart = new Chart(
+    document.getElementById("scoreChart"),
+    {
+      type: "bar",
+      data: {
+        labels: data.map(x => x.material),
+        datasets: [{
+          label: "Sustainability Score",
+          data: data.map(x => x.suitability_score)
+        }]
+      }
+    }
+  );
 
-  co2Chart = new Chart(document.getElementById("co2Chart"), {
-    type: "bar",
-    data: { labels, datasets: [{ label: "CO₂ Emission", data: co2 }] }
-  });
-
-  costChart = new Chart(document.getElementById("costChart"), {
-    type: "bar",
-    data: { labels, datasets: [{ label: "Cost Index", data: cost }] }
-  });
-}
-
-/* ✅ CSV EXPORT */
-function exportCSV() {
-  if (!latestAnalytics.length) return alert("No analytics data");
-
-  const headers = Object.keys(latestAnalytics[0]).join(",");
-  const rows = latestAnalytics.map(o => Object.values(o).join(","));
-  const csv = [headers, ...rows].join("\n");
-
-  const blob = new Blob([csv], { type: "text/csv" });
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "packaging_analytics.csv";
-  a.click();
-}
-
-/* ✅ PDF EXPORT */
-function exportPDF() {
-  if (!latestAnalytics.length) return alert("No analytics data");
-
-  const { jsPDF } = window.jspdf;
-  const pdf = new jsPDF();
-
-  pdf.setFontSize(14);
-  pdf.text("Sustainable Packaging Analytics Report", 10, 10);
-
-  let y = 20;
-  latestAnalytics.forEach(item => {
-    pdf.setFontSize(11);
-    pdf.text(`Material: ${item.material}`, 10, y); y += 6;
-    pdf.text(`Score: ${item.suitability_score}`, 10, y); y += 6;
-    pdf.text(`CO₂: ${item.co2}`, 10, y); y += 6;
-    pdf.text(`Cost: ${item.cost}`, 10, y); y += 10;
-  });
-
-  pdf.save("packaging_analytics.pdf");
+  costChart = new Chart(
+    document.getElementById("costChart"),
+    {
+      type: "bar",
+      data: {
+        labels: data.map(x => x.material),
+        datasets: [{
+          label: "Cost (USD)",
+          data: data.map(x => x.cost)
+        }]
+      }
+    }
+  );
 }
 </script>
 

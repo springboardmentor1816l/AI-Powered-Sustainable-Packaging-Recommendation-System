@@ -92,35 +92,35 @@ def predict():
 
         modifiers = category_modifier(category)
 
-        best_score = -1
-        best_material = None
         analytics = []
 
+        # -------- EVALUATE EACH MATERIAL --------
         for mat in MATERIAL_DATABASE:
 
-            # -------- WEIGHT COMPATIBILITY --------
+            # Weight compatibility check
             min_w, max_w = mat["ideal_weight_range"]
             if not (min_w <= weight <= max_w):
                 continue
 
-            # -------- ADJUSTED STRENGTH --------
+            # Strength adjustment
             adjusted_strength = mat["strength_mpa"] * modifiers["strength"]
 
-            # -------- FRAGILITY PENALTY --------
+            # Fragility penalty
             fragility_penalty = (
                 abs(mat["fragility_support"] - fragility)
                 * 8
                 * modifiers["fragility"]
             )
 
-            # -------- CO₂ ADJUSTMENT --------
+            # CO₂ adjustment
             adjusted_co2 = mat["co2_emission_kg_per_kg"]
             if shipping == "International":
                 adjusted_co2 *= 1.6
 
-            # -------- COST MODEL --------
+            # Cost estimation
             adjusted_cost = 50 + weight * 3
 
+            # ML input
             input_df = pd.DataFrame([{
                 "strength_mpa": adjusted_strength,
                 "recyclability_percent": mat["recyclability_percent"],
@@ -140,27 +140,29 @@ def predict():
                 "cost": round(adjusted_cost, 2),
                 "strength": round(adjusted_strength, 2),
                 "recyclability": mat["recyclability_percent"],
-                "biodegradability": mat["biodegradability_percent"],
-                "category_used": category
+                "biodegradability": mat["biodegradability_percent"]
             })
 
-            if final_score > best_score:
-                best_score = final_score
-                best_material = mat["name"]
+        # -------- SORT & PICK TOP 3 --------
+        analytics.sort(
+            key=lambda x: x["suitability_score"],
+            reverse=True
+        )
 
-        # -------- SAFETY FALLBACK --------
-        if not best_material:
-            best_material = "Corrugated Cardboard (Heavy Duty)"
-            best_score = 65.0
+        top_n = analytics[:3]  # 👈 TOP 3 RESULTS
 
-        analytics.sort(key=lambda x: x["suitability_score"], reverse=True)
+        # Add rank field
+        ranked_results = []
+        for idx, item in enumerate(top_n, start=1):
+            ranked_results.append({
+                "rank": idx,
+                **item
+            })
 
         return jsonify({
             "product": product_name,
             "category": category,
-            "prediction": round(best_score, 2),
-            "recommended_material": best_material,
-            "analytics": analytics,
+            "recommendations": ranked_results,
             "status": "success"
         })
 
@@ -169,3 +171,4 @@ def predict():
             "error": "Prediction failed",
             "details": str(e)
         }), 500
+

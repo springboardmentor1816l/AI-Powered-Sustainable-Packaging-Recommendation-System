@@ -9,28 +9,221 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
   />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(135deg, #e9f7ef, #f4fbf8);
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    .navbar-brand {
+      font-weight: 700;
+      color: #145a32 !important;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 55px 45px;
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
+      margin-top: 40px;
+    }
+
+    .hero-title {
+      font-weight: 700;
+      font-size: 2.9rem;
+      color: #145a32;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: #555;
+      margin-top: 15px;
+      line-height: 1.7;
+    }
+
+    .cta-btn {
+      padding: 14px 30px;
+      font-size: 1.05rem;
+      border-radius: 50px;
+    }
+
+    /* Feature Cards */
+    .feature-card {
+      background: #f8fdfb;
+      border-radius: 16px;
+      padding: 28px;
+      height: 100%;
+      border: 1px solid #e3f2eb;
+      transition: transform 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .feature-card h5 {
+      color: #1e8449;
+      font-weight: 600;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    /* How it Works */
+    .step-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 22px;
+      border: 1px solid #e5f3ec;
+      height: 100%;
+    }
+
+    footer {
+      margin-top: 70px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
 </head>
 
-<body class="container mt-5">
+<body>
 
-  <div class="text-center">
-    <h1 class="mb-3">EcoPackAI</h1>
-
-    <p class="lead">
-      AI-powered sustainable packaging recommendations using cost,
-      CO₂ impact, recyclability, strength, and fragility analysis.
-    </p>
-
-    <div class="mt-4">
-      <a href="predict.html" class="btn btn-success btn-lg me-3">
-        Get Recommendation
-      </a>
-
-      <!-- STEP-6: Analytics -->
-      <a href="analytics.html" class="btn btn-outline-primary btn-lg">
-        View Analytics
-      </a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">EcoPackAI 🌱</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="predict.html">Get Recommendation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="results.html">Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="analytics.html">Analytics</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero-card text-center">
+
+      <h1 class="hero-title">EcoPackAI</h1>
+
+      <p class="hero-subtitle">
+        An AI-powered sustainable packaging recommendation platform that helps
+        industries choose the <strong>most cost-effective</strong> and
+        <strong>environmentally responsible</strong> packaging materials based
+        on product characteristics and logistics constraints.
+      </p>
+
+      <!-- CTA BUTTONS -->
+      <div class="mt-4">
+        <a href="predict.html" class="btn btn-success btn-lg cta-btn me-3">
+          Start Packaging Analysis
+        </a>
+
+        <a href="analytics.html" class="btn btn-outline-primary btn-lg cta-btn">
+          View Sustainability Analytics
+        </a>
+      </div>
+
+      <!-- FEATURES -->
+      <div class="row mt-5 g-4">
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <h5>🌍 Sustainability Optimization</h5>
+            <p>
+              Evaluates packaging materials based on CO₂ footprint,
+              recyclability, and environmental compliance.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <h5>🤖 AI-Based Recommendation</h5>
+            <p>
+              Uses machine learning models to predict cost and environmental
+              impact, delivering ranked material recommendations.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card">
+            <h5>📊 Business Intelligence Insights</h5>
+            <p>
+              Interactive dashboards and reports provide transparency and
+              actionable insights for sustainable decision-making.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="row mt-5 g-4">
+      <div class="col-md-3">
+        <div class="step-card text-center">
+          <h6>1️⃣ Enter Product Data</h6>
+          <p class="small text-muted mt-2">
+            Provide product category, weight, fragility, and shipping type.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="step-card text-center">
+          <h6>2️⃣ AI Evaluation</h6>
+          <p class="small text-muted mt-2">
+            ML models analyze cost, durability, and CO₂ impact.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="step-card text-center">
+          <h6>3️⃣ Material Comparison</h6>
+          <p class="small text-muted mt-2">
+            Compare ranked materials with sustainability metrics.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="step-card text-center">
+          <h6>4️⃣ Report & Insights</h6>
+          <p class="small text-muted mt-2">
+            Export reports and track sustainability performance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+      © 2026 EcoPackAI · AI for Sustainable Engineering
+    </footer>
+
   </div>
 
 </body>

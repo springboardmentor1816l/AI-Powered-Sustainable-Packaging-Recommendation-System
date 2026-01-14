@@ -4,18 +4,15 @@ import pandas as pd
 
 class MaterialSuitabilityPredictor:
     """
-    Explainable, multi-factor suitability predictor.
+    Explainable, multi-factor material suitability predictor.
 
-    Factors used (Jan 5 compliance):
-    - Cost efficiency
-    - Strength adequacy
-    - Recyclability
-    - Biodegradability
-    - CO₂ environmental impact
-    - Fragility handling
+    Design principles:
+    - Deterministic and explainable scoring
+    - One-material-in → one-score-out
+    - Ranking handled at API layer (correct separation of concerns)
     """
 
-    # Centralized weights (easy to justify + tune)
+    # Centralized weights (academically justifiable)
     WEIGHTS = {
         "cost": 0.25,
         "recyclability": 0.20,
@@ -30,48 +27,51 @@ class MaterialSuitabilityPredictor:
         model_path="models/trained/material_suitability_model.pkl",
         preprocessor_path="models/preprocessing/preprocessing_pipeline.pkl",
     ):
-        # Model kept for future ML extension (not blindly trusted)
+        # Model kept for future hybrid ML usage (not mandatory for scoring)
         self.model = joblib.load(model_path)
         self.preprocessor = joblib.load(preprocessor_path)
 
     # -----------------------------
-    # Utility: Safe normalization
+    # Utility: Safe Min-Max Normalize
     # -----------------------------
     def _minmax(self, x, mn, mx):
-        return max(0.0, min((x - mn) / (mx - mn + 1e-9), 1.0))
+        if mx - mn == 0:
+            return 0.0
+        return max(0.0, min((x - mn) / (mx - mn), 1.0))
 
     # -----------------------------
-    # Main prediction method
+    # Main Prediction Method
     # -----------------------------
     def predict(self, input_data, explain=False):
 
+        # Ensure DataFrame input
         if isinstance(input_data, dict):
             input_data = pd.DataFrame([input_data])
 
         # -----------------------------
-        # Safe feature extraction
+        # Feature Extraction (Safe Defaults)
         # -----------------------------
-        strength  = input_data.get("strength_mpa", pd.Series([50])).iloc[0]
-        recycle   = input_data.get("recyclability_percent", pd.Series([50])).iloc[0]
-        bio       = input_data.get("biodegradability_percent", pd.Series([50])).iloc[0]
-        co2       = input_data.get("co2_emission_kg_per_kg", pd.Series([1.0])).iloc[0]
-        fragility = input_data.get("fragility_index", pd.Series([3])).iloc[0]
-        cost      = input_data.get("cost_per_kg", pd.Series([80])).iloc[0]
+        strength  = float(input_data.get("strength_mpa", 50).iloc[0])
+        recycle   = float(input_data.get("recyclability_percent", 50).iloc[0])
+        bio       = float(input_data.get("biodegradability_percent", 50).iloc[0])
+        co2       = float(input_data.get("co2_emission_kg_per_kg", 1.0).iloc[0])
+        fragility = int(input_data.get("fragility_index", 3).iloc[0])
+        cost      = float(input_data.get("cost_per_kg", 80).iloc[0])
 
-        fragility = max(1, min(int(fragility), 5))
+        fragility = max(1, min(fragility, 5))
 
         # -----------------------------
-        # Normalized factor scores (0–1)
+        # Normalized Scores (0–1)
         # -----------------------------
-        cost_score      = 1 - self._minmax(cost, 20, 200)
+        cost_score      = 1.0 - self._minmax(cost, 20, 200)
         strength_score  = self._minmax(strength, 5, 100)
         recycle_score   = self._minmax(recycle, 0, 100)
         bio_score       = self._minmax(bio, 0, 100)
-        co2_score       = 1 - self._minmax(co2, 0.2, 5.0)
-        fragility_score = 1 - ((fragility - 1) / 4)
+        co2_score       = 1.0 - self._minmax(co2, 0.2, 5.0)
+        fragility_score = 1.0 - ((fragility - 1) / 4)
 
         # -----------------------------
-        # Final weighted suitability
+        # Weighted Suitability Score
         # -----------------------------
         suitability = (
             self.WEIGHTS["cost"] * cost_score +
@@ -82,10 +82,10 @@ class MaterialSuitabilityPredictor:
             self.WEIGHTS["co2"] * co2_score
         )
 
-        final_score = round(suitability * 100, 2)
+        final_score = round(max(0.0, min(suitability * 100, 100.0)), 2)
 
         # -----------------------------
-        # Explainability output
+        # Explainability (Optional)
         # -----------------------------
         if explain:
             return {
@@ -100,5 +100,7 @@ class MaterialSuitabilityPredictor:
                 }
             }
 
-        # Backward-compatible return
+        # -----------------------------
+        # Backward-Compatible Return
+        # -----------------------------
         return [final_score]
