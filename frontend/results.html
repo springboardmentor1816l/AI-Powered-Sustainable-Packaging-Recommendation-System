@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoPackAI – Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+
+<div class="container mt-5 fade-in">
+
+    <h3 class="mb-4">Recommendation Result</h3>
+
+    <!-- ================= TABLE ================= -->
+    <table class="table table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>Packaging Type</th>
+            <th>Material</th>
+            <th>Predicted Cost</th>
+            <th>Predicted CO₂</th>
+            <th>Sustainability Score</th>
+            <th>Rank</th>
+        </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+    </table>
+
+    <!-- ================= ANALYTICS ================= -->
+    <hr class="my-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="fw-bold text-success">Analytics Dashboard</h4>
+
+        <div>
+            <button class="btn btn-success btn-sm" onclick="exportCSV()">Export CSV</button>
+            <button class="btn btn-outline-success btn-sm" onclick="exportPDF()">Export PDF</button>
+        </div>
+    </div>
+
+    <!-- ===== STAT CARDS ===== -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-3">
+            <div class="card stat-card stat-green">
+                <small>BEST OPTION</small>
+                <h6 id="bestMaterial">–</h6>
+                <small id="bestScore">–</small>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <small>AVG COST</small>
+                <h5 id="avgCost">–</h5>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <small>AVG CO₂</small>
+                <h5 id="avgCO2">–</h5>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card stat-card">
+                <small>AVG SCORE</small>
+                <h5 id="avgScore">–</h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CHARTS ===== -->
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card p-3">
+                <h6 class="text-center">Cost Comparison</h6>
+                <canvas id="costChart"></canvas>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card p-3">
+                <h6 class="text-center">CO₂ Impact</h6>
+                <canvas id="co2Chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="btn btn-secondary mt-4">Back</a>
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1"></script>
+<script src="js/results.js"></script>
+<script src="js/export.js"></script>
+
+
+
+</body>
+</html>

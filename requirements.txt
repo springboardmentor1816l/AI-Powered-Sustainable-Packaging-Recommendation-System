@@ -1,0 +1,10 @@
+flask
+flask_sqlalchemy
+pandas
+numpy
+joblib
+scikit-learn
+xgboost
+pymysql
+Flask-Caching
+pytest

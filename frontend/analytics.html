@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoPackAI – Analytics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        body {
+            background: #f6f9f6;
+        }
+        .stat-card {
+            border-radius: 12px;
+            padding: 20px;
+            height: 100%;
+        }
+        .stat-green {
+            background: linear-gradient(135deg, #2e7d32, #43a047);
+            color: #fff;
+        }
+        .stat-light {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+        }
+        .stat-blue {
+            background: #e3f2fd;
+        }
+        .stat-soft-green {
+            background: #e8f5e9;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+        <a class="navbar-brand" href="#">EcoPackAI</a>
+        <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Product Input</a>
+            <a class="nav-link active" href="analytics.html">Analytics</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+
+    <!-- HEADER -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold text-success">Analytics Dashboard</h3>
+        <div>
+            <button class="btn btn-success btn-sm" onclick="exportCSV()">Export CSV</button>
+            <button class="btn btn-outline-success btn-sm" onclick="exportPDF()">Export PDF</button>
+        </div>
+    </div>
+
+    <!-- STAT CARDS -->
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-3">
+            <div class="stat-card stat-green">
+                <small>BEST RECOMMENDATION</small>
+                <h5 id="bestMaterial">–</h5>
+                <small id="bestScore">Sustainability: –</small>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card stat-light">
+                <small>AVERAGE COST</small>
+                <h4 id="avgCost">–</h4>
+                <small>Across materials</small>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card stat-blue">
+                <small>AVERAGE CO₂ IMPACT</small>
+                <h4 id="avgCO2">–</h4>
+                <small>kg CO₂ equivalent</small>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card stat-soft-green">
+                <small>AVG SUSTAINABILITY</small>
+                <h4 id="avgScore">–</h4>
+                <small>Out of 100</small>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CHARTS -->
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card p-3">
+                <h6 class="fw-bold">Cost Comparison</h6>
+                <canvas id="costChart"></canvas>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card p-3">
+                <h6 class="fw-bold">CO₂ Impact Comparison</h6>
+                <canvas id="co2Chart"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/chart.umd.min.js"></script>
+<script src="chartjs-plugin-zoom.min.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/export.js"></script>
+
+</body>
+</html>

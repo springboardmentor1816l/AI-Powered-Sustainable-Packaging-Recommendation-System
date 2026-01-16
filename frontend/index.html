@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoPackAI – Sustainable Packaging Intelligence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7f5;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            border-radius: 0 0 18px 18px;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #1b5e20, #43a047);
+            color: white;
+            padding: 50px 20px;
+            border-radius: 0 0 40px 40px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-weight: 700;
+        }
+
+        /* CARD */
+        .form-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .form-label {
+            font-weight: 500;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 10px;
+        }
+
+        .btn-success {
+            border-radius: 25px;
+            padding: 12px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        /* LOADING OVERLAY */
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            z-index: 10;
+        }
+
+        /* ANIMATION */
+        .fade-up {
+            animation: fadeUp 0.8s ease;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">EcoPackAI</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h2>AI-Driven Sustainable Packaging</h2>
+    <p class="mt-2">
+        Reduce cost • Minimize CO₂ • Choose smarter packaging
+    </p>
+</div>
+
+<!-- MAIN -->
+<div class="container my-5 fade-up">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8 position-relative">
+
+            <div class="form-card">
+
+                <h4 class="fw-bold text-success mb-4 text-center">
+                    Product Sustainability Input
+                </h4>
+
+                <div id="errorBox" class="alert alert-danger d-none"></div>
+
+                <form id="predictForm">
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="product_name">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Category</label>
+                            <select class="form-select" id="category" required>
+                                <option value="">Select</option>
+                                <option value="food">Food</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="general">General</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Weight (kg)</label>
+                            <input type="number" step="0.1" class="form-control"
+                                   id="product_weight" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Fragility Index (0–1)</label>
+                            <input type="number" step="0.1" min="0" max="1"
+                                   class="form-control" id="fragility_index" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Shipping Type</label>
+                            <select class="form-select" id="shipping_type" required>
+                                <option value="">Select</option>
+                                <option value="road">Road</option>
+                                <option value="air">Air</option>
+                                <option value="sea">Sea</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Material Type</label>
+                            <select class="form-select" id="material_type" required>
+                                <option value="">Select</option>
+                                <option value="paper">Paper</option>
+                                <option value="cardboard">Cardboard</option>
+                                <option value="plastic">Plastic</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Recyclability Score (0–1)</label>
+                            <input type="number" step="0.1" min="0" max="1"
+                                   class="form-control" id="recyclability_score" required>
+                        </div>
+
+                    </div>
+
+                    <button class="btn btn-success w-100 mt-4" type="submit">
+                        Predict Sustainability
+                    </button>
+                </form>
+
+                <!-- LOADING -->
+                <div id="loadingOverlay" class="loading-overlay d-none">
+                    <div class="spinner-border text-success" role="status"></div>
+                    <p class="mt-3 fw-semibold">
+                        Analyzing sustainable packaging options…
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center text-muted py-4">
+    © 2026 EcoPackAI • Sustainable Intelligence Platform
+</footer>
+
+<script src="js/predict.js"></script>
+</body>
+</html>

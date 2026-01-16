@@ -32,3 +32,5 @@ environments_mysqldata/
 # OS
 .DS_Store
 Thumbs.db
+outputs/material_rankings_expanded.csv
+scripts/data_enrichment
