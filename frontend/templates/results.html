@@ -1,47 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Prediction Results</title>
+    <title>EcoPackAI Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
 
-    <h2>Recommendation Results</h2>
+    <div class="container mt-5">
+        <h3 class="mb-3">📊 Recommendation Result</h3>
+        <div class="mt-4 text-center">
+            <a href="product.html" class="btn btn-outline-primary btn-lg">
+                🔙 Back to Recommendation
+            </a>
+        </div>
 
-    <div id="resultsBox">
-        <p><strong>Predicted Cost:</strong> <span id="cost"></span></p>
-        <p><strong>CO₂ Impact:</strong> <span id="co2"></span></p>
-        <p><strong>Recommended Material:</strong> <span id="material"></span></p>
+
+        <div id="prediction-text"></div>
+
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Material</th>
+                    <th>Predicted Cost</th>
+                    <th>CO₂ Impact</th>
+                    <th>Sustainability</th>
+                </tr>
+            </thead>
+            <tbody id="result-table-body"></tbody>
+        </table>
+
+        <canvas id="costChart" height="120"></canvas>
+        <canvas id="co2Chart" height="120"></canvas>
+
+        <div class="mt-3">
+            <button class="btn btn-primary" onclick="exportToCSV()">⬇ Export CSV</button>
+            <button class="btn btn-secondary" onclick="exportToPDF()">🧾 Export PDF</button>
+        </div>
+
     </div>
 
-    <a href="product.html">Try Another Product</a>
-
-    <script>
-        const params = new URLSearchParams(window.location.search);
-
-        const weight = parseFloat(params.get("weight"));
-        const fragility = parseInt(params.get("fragility"));
-
-        document.getElementById("cost").innerText = "₹ " + (weight * 120).toFixed(2);
-        document.getElementById("co2").innerText = (weight * 0.75).toFixed(2) + " kg";
-
-        let material = "";
-
-        if (fragility >= 4) {
-            material = "Molded Pulp";
-        } else if (weight > 1) {
-            material = "Corrugated Cardboard";
-        } else {
-            material = "Recycled Paper";
-        }
-
-        document.getElementById("material").innerText = material;
-    </script>
-
-
+    <script src="../static/js/results.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/charts.js"></script>
+    <script src="/static/js/export.js"></script>
 </body>
 
 </html>

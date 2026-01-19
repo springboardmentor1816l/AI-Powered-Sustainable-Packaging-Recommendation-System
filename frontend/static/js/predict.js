@@ -1,54 +1,45 @@
 document
   .getElementById("predictionForm")
-  .addEventListener("submit", function (e) {
+  .addEventListener("submit", async function (e) {
     e.preventDefault();
+    console.log("Submit clicked");
 
-    let ok = true;
-    const inputs = document.querySelectorAll("input, select");
+    const form = e.target;
 
-    inputs.forEach((i) => {
-      i.classList.remove("is-invalid");
-      if (!i.checkValidity()) {
-        ok = false;
-        i.classList.add("is-invalid");
-      }
-    });
-
-    const weight = parseFloat(document.getElementById("product_weight").value);
-    const frag = parseFloat(document.getElementById("fragility_index").value);
-
-    if (weight <= 0) {
-      ok = false;
-      product_weight.classList.add("is-invalid");
+    // Let browser show validation UI
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      return;
     }
 
-    if (frag < 0 || frag > 1) {
-      ok = false;
-      fragility_index.classList.add("is-invalid");
+    const payload = {
+      product_name: document.getElementById("product_name").value,
+      category: document.getElementById("category").value,
+      product_weight: parseFloat(
+        document.getElementById("product_weight").value
+      ),
+      fragility_index: parseFloat(
+        document.getElementById("fragility_index").value
+      ),
+      shipping_type: document.getElementById("shipping_type").value,
+    };
+
+    try {
+      const response = await fetch("http://127.0.0.1:5000/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) throw new Error(data.error || "Prediction failed");
+
+      // Save result and go to results page
+      localStorage.setItem("ecoResult", JSON.stringify(data));
+      window.location.href = "results.html";
+    } catch (error) {
+      alert("❌ " + error.message);
+      console.error(error);
     }
-
-    if (!ok) return;
-
-    const box = document.getElementById("result-container");
-    const txt = document.getElementById("prediction-text");
-
-    box.style.display = "block";
-
-    // --- DEMO CALCULATIONS (Day-20 compliant) ---
-    const cost = (weight * 120).toFixed(2);
-    const co2 = (weight * 0.75).toFixed(2);
-
-    let material = "Recycled Paper";
-    if (frag >= 0.7) {
-      material = "Molded Pulp";
-    } else if (weight > 1) {
-      material = "Corrugated Cardboard";
-    }
-
-    txt.innerHTML = `
-    <strong>Predicted Cost:</strong> Rs. ${cost}<br>
-<strong>CO2 Impact:</strong> ${co2} kg<br>
-
-    <strong>Recommended Material:</strong> ${material}
-  `;
   });

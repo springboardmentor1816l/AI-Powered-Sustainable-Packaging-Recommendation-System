@@ -38,15 +38,14 @@
 
                         <form id="predictionForm" novalidate>
 
+                        
                             <div class="row g-4">
-
+                        
                                 <div class="col-md-12">
                                     <label class="form-label">Product Name</label>
-                                    <input type="text" class="form-control" id="product_name"
-                                        placeholder="e.g. Glass Water Bottle" required>
-                                    <div class="error-message">Product name is required.</div>
+                                    <input type="text" class="form-control" id="product_name" placeholder="e.g. Glass Water Bottle" required>
                                 </div>
-
+                        
                                 <div class="col-md-6">
                                     <label class="form-label">Product Category</label>
                                     <select class="form-select" id="category" required>
@@ -56,9 +55,8 @@
                                         <option>Food/Beverage</option>
                                         <option>Retail</option>
                                     </select>
-                                    <div class="error-message">Category is required.</div>
                                 </div>
-
+                        
                                 <div class="col-md-6">
                                     <label class="form-label">Shipping Method</label>
                                     <select class="form-select" id="shipping_type" required>
@@ -67,43 +65,65 @@
                                         <option>Ground</option>
                                         <option>Sea</option>
                                     </select>
-                                    <div class="error-message">Shipping type required.</div>
                                 </div>
-
+                        
                                 <div class="col-md-6">
                                     <label class="form-label">Weight (kg)</label>
-                                    <input type="number" step="0.01" class="form-control" id="product_weight"
-                                        placeholder="0.5" required>
-                                    <div class="error-message">Weight must be positive.</div>
+                                    <input type="number" step="0.01" class="form-control" id="product_weight" placeholder="0.5" required>
                                 </div>
-
+                        
                                 <div class="col-md-6">
                                     <label class="form-label">Fragility Index (0–1)</label>
-                                    <input type="number" step="0.1" min="0" max="1" class="form-control"
-                                        id="fragility_index" placeholder="0.3" required>
-                                    <div class="error-message">Value must be between 0 and 1.</div>
+                                    <input type="number" step="0.1" min="0" max="1" class="form-control" id="fragility_index" placeholder="0.3"
+                                        required>
                                 </div>
-
+                        
                             </div>
-
+                        
                             <div class="mt-5 d-grid">
                                 <button type="submit" class="btn btn-primary btn-lg">
                                     Generate Recommendation
                                 </button>
                             </div>
-
+                        
                         </form>
 
-                        <div id="result-container" class="mt-4 p-4">
+
+                        <!-- RESULT SECTION -->
+                        <div id="result-container" class="mt-4 p-4" style="display:none;">
                             <h4>📊 Analysis Result</h4>
+                            <div id="prediction-text" class="mb-3"></div>
                             <hr>
-                            <p id="prediction-text">Awaiting your input...</p>
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Material</th>
+                                        <th>Predicted Cost</th>
+                                        <th>CO₂ Impact</th>
+                                        <th>Sustainability</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="result-table-body"></tbody>
+                            </table>
+
+                            <h4 class="mt-4">📊 Sustainability Analysis</h4>
+
+                            <canvas id="costChart" height="120"></canvas>
+                            <canvas id="co2Chart" height="120"></canvas>
+
+                            <div class="mt-3">
+                                <button class="btn btn-primary" onclick="exportToCSV()">⬇ Export CSV</button>
+                                <button class="btn btn-secondary" onclick="exportToPDF()">🧾 Export PDF</button>
+                            </div>
+
                         </div>
 
                     </div>
                 </div>
 
-                <p class="footer-text">
+                <p class="footer-text text-center mt-4">
                     EcoPackAI v1.0 • Built for Sustainable Logistics Modeling
                 </p>
 
@@ -111,7 +131,14 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../static/js/charts.js"></script>
+    <script src="../static/js/export.js"></script>
     <script src="../static/js/predict.js"></script>
+
+
+
+
 </body>
 
 </html>

@@ -1,39 +1,40 @@
-import pandas as pd
 import joblib
-import numpy as np
-from pathlib import Path
+import pandas as pd
 
 class Predictor:
-    def __init__(self, model_path="ml/models/rf_cost_pipeline.joblib"):
-        # Load the model once when the class is initialized
-        self.model_path = Path(model_path)
-        if not self.model_path.exists():
-            raise FileNotFoundError(f"Model not found at {self.model_path}")
-        self.model = joblib.load(self.model_path)
+    def __init__(self, model_path="ml/models/rf_cost.joblib"):
+        self.model = joblib.load(model_path)
+        self.expected_features = list(self.model.feature_names_in_)
 
     def predict(self, data):
-        import pandas as pd
-        
-        # 1. Create the DataFrame from your sample
         df = pd.DataFrame([data])
-        
-        # 2. RUN PREPROCESSING FIRST (This is the key!)
-        # Instead of manually filling 0s, we let the pipeline transform the words
-        try:
-            # If your model is a Pipeline, it has the 'preprocessing' step built-in
-            # We want to transform the raw dictionary into the model's numeric format
-            transformed_data = self.model.named_steps['preprocessing'].transform(df)
-            
-            # 3. Predict using the transformed numeric data
-            prediction = self.model.predict(df) # Pipelines usually handle df directly
-        except Exception as e:
-            # If the above fails, your pipeline might be set up differently.
-            # Let's use the safer alignment method:
-            expected_features = self.model.feature_names_in_
-            for col in expected_features:
-                if col not in df.columns:
-                    df[col] = 0
-            df = df[expected_features]
-            prediction = self.model.predict(df)
-            
-        return prediction[0]
+
+        # 🧠 Inject realistic defaults for missing features
+        defaults = {
+            "CEI": 0.6,
+            "CII": 0.4,
+            "MSS": 0.7,
+            "strength_mpa": 30,
+            "weight_capacity": 15,
+            "biodegradability_percent": 45,
+            "recyclability_percent": 70,
+            "industry_use_case": "General",
+            "material_type": "Paper/Bio-Based"
+        }
+
+        for col in self.expected_features:
+            if col not in df.columns:
+                df[col] = defaults.get(col, 0)
+
+        # Force categorical columns to string
+        for col in ["category", "shipping_type", "industry_use_case", "material_type"]:
+            if col in df.columns:
+                df[col] = df[col].astype(str)
+
+        # Ensure correct order
+        df = df[self.expected_features]
+
+        prediction = self.model.predict(df)
+        return float(prediction[0])
+
+

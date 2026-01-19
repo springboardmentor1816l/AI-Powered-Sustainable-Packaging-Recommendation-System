@@ -1,35 +1,51 @@
+import joblib
 import pandas as pd
-import yaml
 
-with open("config/ranking_weights.yaml") as f:
-    cfg = yaml.safe_load(f)
+MODEL_PATH = "ml/models/rf_cost_pipeline.joblib"
+model = joblib.load(MODEL_PATH)
 
-def normalize(series):
-    return (series - series.min()) / (series.max() - series.min())
+# These are the raw features the model expects
+EXPECTED = list(model.feature_names_in_)
 
 def rank_materials(df):
+
     df = df.copy()
 
-    # Apply constraints (PDF aligned)
-    df = df[df["recyclability_percent"] >= cfg["constraints"]["min_recyclability"]]
-    df = df[df["cost_per_kg"] <= cfg["constraints"]["max_cost"]]
+    # Apply constraints on RAW data
+    df = df[df["recyclability_percent"] >= 0.4]
+    df = df[df["product_weight"] > 0]
 
-    # Normalize criteria (using real dataset fields)
-    df["cost_n"] = normalize(df["cost_per_kg"])
-    df["co2_n"] = normalize(df["co2_emission_score"])
-    df["suitability_n"] = normalize(df["MSS"])
+    if df.empty:
+        raise ValueError("No materials satisfy the constraints.")
 
-    w = cfg["weights"]
+    # Guarantee correct raw feature set
+    for col in EXPECTED:
+        if col not in df.columns:
+            df[col] = 0
 
-    # Composite score
+    df = df[EXPECTED]
+
+    # 🔥 NO external pipeline — model already contains it
+    df["predicted_cost"] = model.predict(df)
+
+    # Final ranking
+    # Fallback if CO2 column not present
+    if "co2_emission_score" not in df.columns:
+        df["co2_emission_score"] = 0.5  # neutral default
+
     df["final_score"] = (
-        w["cost"] * (1 - df["cost_n"]) +
-        w["co2"] * (1 - df["co2_n"]) +
-        w["suitability"] * df["suitability_n"]
+        0.5 * (1 - df["predicted_cost"]) +
+        0.3 * (1 - df["co2_emission_score"]) +
+        0.2 * df["MSS"]
     )
 
-    # Rank materials per product
-    df = df.sort_values(["product_id", "final_score"], ascending=[True, False])
-    df["rank"] = df.groupby("product_id").cumcount() + 1
+    df = df.sort_values("final_score", ascending=False)
+    df["rank"] = range(1, len(df) + 1)
 
     return df
+
+
+
+
+
+
