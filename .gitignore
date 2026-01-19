@@ -1,2 +1,17 @@
+# Environment
 .env
+
 # Data & reports
+data/
+data_quality/
+
+
+
+# Large files
+*.csv
+*.parquet
+*.pkl
+
+# Python cache
+__pycache__/
+*.pyc
