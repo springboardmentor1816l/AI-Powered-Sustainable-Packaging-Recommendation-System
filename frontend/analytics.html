@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoPackAI Analytics - Interactive Sustainability Visualizations">
+    <title>Analytics & Insights - EcoPackAI</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+    <style>
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 2rem 0;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .chart-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+
+        .chart-subtitle {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .export-section {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="d-flex" style="justify-content: space-between; align-items: center;">
+                <a href="index.html" class="navbar-brand">🌿 EcoPackAI</a>
+                <div class="d-flex gap-2">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="predict.html" class="nav-link">Predict</a>
+                    <a href="results.html" class="nav-link">Results</a>
+                    <a href="analytics.html" class="nav-link active">Analytics</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 2rem 0;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>📊 Analytics & Insights</h1>
+                <p>Interactive visualizations of sustainability and cost metrics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 2rem 1rem;">
+
+        <!-- Export Section -->
+        <section class="card" style="margin-bottom: 3rem;">
+            <div class="card-header">
+                <h3 class="card-title">📥 Export Options</h3>
+                <p class="card-subtitle">Download your analysis results</p>
+            </div>
+
+            <div class="export-section">
+                <button id="exportCSV" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Export to CSV</span>
+                </button>
+
+                <button id="exportPDF" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                    </svg>
+                    <span>Export to PDF</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Key Metrics Summary -->
+        <section style="margin-bottom: 3rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Key Performance Indicators</h2>
+            <div class="stats-grid" id="statsGrid">
+                <!-- Stats will be populated by JavaScript -->
+                <div class="stat-card">
+                    <div class="stat-value" id="avgCost">-</div>
+                    <div class="stat-label">Average Cost ($)</div>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="stat-value" id="avgCO2">-</div>
+                    <div class="stat-label">Average CO₂ (kg)</div>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="stat-value" id="totalPredictions">-</div>
+                    <div class="stat-label">Total Predictions</div>
+                </div>
+                <div class="stat-card" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <div class="stat-value" id="avgSustainability">-</div>
+                    <div class="stat-label">Avg Sustainability Score</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CO2 Comparison Chart -->
+        <section class="chart-card">
+            <h3 class="chart-title">🌍 CO₂ Emissions Comparison</h3>
+            <p class="chart-subtitle">Carbon footprint analysis across materials</p>
+            <div class="chart-container">
+                <canvas id="co2Chart"></canvas>
+            </div>
+        </section>
+
+        <!-- Cost Comparison Chart -->
+        <section class="chart-card">
+            <h3 class="chart-title">💰 Cost Comparison</h3>
+            <p class="chart-subtitle">Material cost analysis and predictions</p>
+            <div class="chart-container">
+                <canvas id="costChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Cost vs CO2 Scatter -->
+        <section class="chart-card">
+            <h3 class="chart-title">📈 Cost vs CO₂ Analysis</h3>
+            <p class="chart-subtitle">Relationship between cost and environmental impact</p>
+            <div class="chart-container">
+                <canvas id="scatterChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Sustainability Radar (if single material) -->
+        <section class="chart-card" id="radarSection" style="display: none;">
+            <h3 class="chart-title">🎯 Sustainability Metrics Radar</h3>
+            <p class="chart-subtitle">Comprehensive view of sustainability indicators</p>
+            <div class="chart-container">
+                <canvas id="radarChart"></canvas>
+            </div>
+        </section>
+
+        <!-- No Data State -->
+        <section id="noDataState" class="text-center" style="padding: 4rem 2rem; display: none;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">📊</div>
+            <h3 style="margin-bottom: 1rem;">No Analytics Data Available</h3>
+            <p class="text-muted" style="margin-bottom: 2rem;">Make predictions to see analytics and insights</p>
+            <a href="predict.html" class="btn btn-primary">
+                <span>Start Predicting</span>
+            </a>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 EcoPackAI - AI-Powered Sustainable Packaging System</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="static/js/analytics.js"></script>
+    <script src="static/js/export.js"></script>
+
+    <script>
+        // Sample data for demonstration - In production, this would come from localStorage or API
+        const sampleMaterials = [
+            {
+                name: 'Recycled Cardboard',
+                predicted_cost: 12.45,
+                predicted_co2: 1.234,
+                cost_confidence: 0.95,
+                recyclability_percent: 95,
+                recycled_content_percent: 70,
+                reusability_percent: 50,
+                waste_reduction_impact_percent: 80,
+                sustainability_target_progress_percent: 85,
+                supplier_sustainability_compliance_percent: 90,
+                overall_sustainability_score: 0.85
+            },
+            {
+                name: 'Biodegradable Plastic',
+                predicted_cost: 18.20,
+                predicted_co2: 2.156,
+                cost_confidence: 0.92,
+                recyclability_percent: 60,
+                recycled_content_percent: 40,
+                reusability_percent: 30,
+                waste_reduction_impact_percent: 70,
+                sustainability_target_progress_percent: 65,
+                supplier_sustainability_compliance_percent: 75,
+                overall_sustainability_score: 0.65
+            },
+            {
+                name: 'Metal Containers',
+                predicted_cost: 25.80,
+                predicted_co2: 3.890,
+                cost_confidence: 0.88,
+                recyclability_percent: 100,
+                recycled_content_percent: 85,
+                reusability_percent: 95,
+                waste_reduction_impact_percent: 90,
+                sustainability_target_progress_percent: 92,
+                supplier_sustainability_compliance_percent: 95,
+                overall_sustainability_score: 0.92
+            },
+            {
+                name: 'Glass Packaging',
+                predicted_cost: 22.15,
+                predicted_co2: 2.780,
+                cost_confidence: 0.90,
+                recyclability_percent: 100,
+                recycled_content_percent: 60,
+                reusability_percent: 100,
+                waste_reduction_impact_percent: 75,
+                sustainability_target_progress_percent: 88,
+                supplier_sustainability_compliance_percent: 85,
+                overall_sustainability_score: 0.88
+            }
+        ];
+
+        // Initialize analytics on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Try to load real data from localStorage
+            let materials = sampleMaterials;
+            const storedData = localStorage.getItem('analyticsData');
+
+            if (storedData) {
+                try {
+                    materials = JSON.parse(storedData);
+                } catch (e) {
+                    console.warn('Failed to parse stored data, using sample data');
+                }
+            }
+
+            if (materials && materials.length > 0) {
+                // Hide no data state
+                document.getElementById('noDataState').style.display = 'none';
+
+                // Update stats
+                updateStats(materials);
+
+                // Create charts
+                window.AnalyticsManager.createCO2ComparisonChart('co2Chart', materials);
+                window.AnalyticsManager.createCostComparisonChart('costChart', materials);
+                window.AnalyticsManager.createCostVsCO2Scatter('scatterChart', materials);
+
+                // Show radar chart for single material
+                if (materials.length === 1) {
+                    document.getElementById('radarSection').style.display = 'block';
+                    window.AnalyticsManager.createSustainabilityRadar('radarChart', materials[0]);
+                }
+
+                // Store data for export
+                localStorage.setItem('latestPrediction', JSON.stringify({
+                    timestamp: new Date().toISOString(),
+                    prediction_type: 'comparison',
+                    results: {
+                        materials: materials
+                    },
+                    metadata: {
+                        cost_model: 'Random Forest',
+                        co2_model: 'XGBoost',
+                        cost_r2: 0.997,
+                        co2_r2: 0.994
+                    }
+                }));
+            } else {
+                // Show no data state
+                document.getElementById('noDataState').style.display = 'block';
+            }
+        });
+
+        function updateStats(materials) {
+            const avgCost = materials.reduce((sum, m) => sum + (m.predicted_cost || 0), 0) / materials.length;
+            const avgCO2 = materials.reduce((sum, m) => sum + (m.predicted_co2 || 0), 0) / materials.length;
+            const avgSustainability = materials.reduce((sum, m) =>
+                sum + (m.overall_sustainability_score || 0), 0) / materials.length;
+
+            document.getElementById('avgCost').textContent = `$${avgCost.toFixed(2)}`;
+            document.getElementById('avgCO2').textContent = `${avgCO2.toFixed(3)}`;
+            document.getElementById('totalPredictions').textContent = materials.length;
+            document.getElementById('avgSustainability').textContent =
+                `${(avgSustainability * 100).toFixed(1)}%`;
+        }
+    </script>
+
+    <!-- Container Utility -->
+    <style>
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    </style>
+</body>
+
+</html>

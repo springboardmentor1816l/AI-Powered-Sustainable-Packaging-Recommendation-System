@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoPackAI Analytics Dashboard">
+    <title>Analytics Dashboard - EcoPackAI</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f0f2f5;
+            overflow-x: hidden;
+        }
+
+        /* Dashboard Container */
+        .dashboard-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Top Header */
+        .dashboard-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .dashboard-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .dashboard-title h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .dashboard-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn-header {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .btn-header:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Main Dashboard Content - Scrollable */
+        .dashboard-content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(200px, auto);
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        /* KPI Cards */
+        .kpi-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.25rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .kpi-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .kpi-label {
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .kpi-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .kpi-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: white;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .kpi-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1;
+        }
+
+        .kpi-trend {
+            font-size: 0.8rem;
+            color: #10b981;
+            margin-top: 0.5rem;
+        }
+
+        /* Chart Cards */
+        .chart-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.25rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            min-height: 350px;
+        }
+
+        .chart-card.large {
+            grid-column: span 2;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .chart-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .chart-body {
+            flex: 1;
+            position: relative;
+            min-height: 280px;
+        }
+
+        .chart-canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        /* Empty State */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            color: #9ca3af;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .empty-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 1400px) {
+            .dashboard-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .chart-card.large {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <div class="dashboard-title">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M9 3v18M15 3v18M3 9h18M3 15h18" />
+                </svg>
+                <h1>EcoPackAI Analytics Dashboard</h1>
+            </div>
+            <div class="dashboard-actions">
+                <button id="exportCSV" class="btn-header">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Export CSV
+                </button>
+                <button id="exportPDF" class="btn-header">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    Export PDF
+                </button>
+                <a href="predict.html" class="btn-header">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="1 4 1 10 7 10" />
+                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+                    </svg>
+                    New Prediction
+                </a>
+                <a href="index.html" class="btn-header">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    </svg>
+                    Home
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Dashboard Content -->
+        <div id="dashboardContent" class="dashboard-content">
+            <!-- KPI Cards -->
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-label">Total Materials</span>
+                    <div class="kpi-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="kpi-value" id="kpiTotal">-</div>
+                <div class="kpi-trend">Materials analyzed</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-label">Avg Cost</span>
+                    <div class="kpi-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="kpi-value" id="kpiCost">-</div>
+                <div class="kpi-trend">USD per unit</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-label">Avg CO₂</span>
+                    <div class="kpi-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2v20M2 12h20" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="kpi-value" id="kpiCO2">-</div>
+                <div class="kpi-trend">kg emissions</div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-label">Sustainability</span>
+                    <div class="kpi-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                        <svg viewBox="0 0 24 24">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="kpi-value" id="kpiSust">-</div>
+                <div class="kpi-trend">Average score</div>
+            </div>
+
+            <!-- Charts -->
+            <div class="chart-card large">
+                <div class="chart-header">
+                    <h3 class="chart-title">Cost Comparison by Material</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="costChart" class="chart-canvas"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card large">
+                <div class="chart-header">
+                    <h3 class="chart-title">CO₂ Emissions Analysis</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="co2Chart" class="chart-canvas"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card large">
+                <div class="chart-header">
+                    <h3 class="chart-title">Sustainability Scores</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="sustainabilityChart" class="chart-canvas"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card large">
+                <div class="chart-header">
+                    <h3 class="chart-title">Cost vs CO₂ Trade-off</h3>
+                </div>
+                <div class="chart-body">
+                    <canvas id="scatterChart" class="chart-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="dashboard-content" style="display: none; grid-template-columns: 1fr;">
+            <div class="empty-state">
+                <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M9 3v18M15 3v18M3 9h18M3 15h18" />
+                </svg>
+                <h3 style="margin-bottom: 0.5rem; color: #374151;">No Analytics Data Available</h3>
+                <p style="margin-bottom: 2rem;">Make predictions to see comprehensive analytics and insights</p>
+                <a href="predict.html" class="btn btn-primary" style="text-decoration: none;">
+                    Start Predicting
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="static/js/export.js"></script>
+    <script src="static/js/analytics.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedData = localStorage.getItem('analyticsData');
+
+            if (!storedData) {
+                document.getElementById('dashboardContent').style.display = 'none';
+                document.getElementById('emptyState').style.display = 'grid';
+                return;
+            }
+
+            try {
+                const materials = JSON.parse(storedData);
+
+                if (!materials || materials.length === 0) {
+                    document.getElementById('dashboardContent').style.display = 'none';
+                    document.getElementById('emptyState').style.display = 'grid';
+                    return;
+                }
+
+                // Update KPIs
+                const avgCost = materials.reduce((sum, m) => sum + (m.predicted_cost || 0), 0) / materials.length;
+                const avgCO2 = materials.reduce((sum, m) => sum + (m.predicted_co2 || 0), 0) / materials.length;
+                const avgSust = materials.reduce((sum, m) => sum + (m.overall_sustainability_score || 0), 0) / materials.length;
+
+                document.getElementById('kpiTotal').textContent = materials.length;
+                document.getElementById('kpiCost').textContent = `$${avgCost.toFixed(2)}`;
+                document.getElementById('kpiCO2').textContent = `${avgCO2.toFixed(3)} kg`;
+                document.getElementById('kpiSust').textContent = `${(avgSust * 100).toFixed(1)}%`;
+
+                // Create Charts
+                createCostChart(materials);
+                createCO2Chart(materials);
+                createSustainabilityChart(materials);
+                createScatterChart(materials);
+
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+                document.getElementById('dashboardContent').style.display = 'none';
+                document.getElementById('emptyState').style.display = 'grid';
+            }
+        });
+
+        function createCostChart(materials) {
+            const ctx = document.getElementById('costChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: materials.map(m => m.name || m.material_name || 'Material'),
+                    datasets: [{
+                        label: 'Cost (USD)',
+                        data: materials.map(m => m.predicted_cost),
+                        backgroundColor: 'rgba(16, 185, 129, 0.8)',
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => `Cost: $${context.parsed.y.toFixed(2)}`
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#f3f4f6' }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        function createCO2Chart(materials) {
+            const ctx = document.getElementById('co2Chart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: materials.map(m => m.name || m.material_name || 'Material'),
+                    datasets: [{
+                        label: 'CO₂ (kg)',
+                        data: materials.map(m => m.predicted_co2),
+                        backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => `CO₂: ${context.parsed.y.toFixed(4)} kg`
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#f3f4f6' }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        function createSustainabilityChart(materials) {
+            const ctx = document.getElementById('sustainabilityChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: materials.map(m => m.name || m.material_name || 'Material'),
+                    datasets: [{
+                        label: 'Sustainability %',
+                        data: materials.map(m => (m.overall_sustainability_score || 0) * 100),
+                        backgroundColor: 'rgba(139, 92, 246, 0.2)',
+                        borderColor: 'rgba(139, 92, 246, 1)',
+                        pointBackgroundColor: 'rgba(139, 92, 246, 1)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: { stepSize: 20 }
+                        }
+                    }
+                }
+            });
+        }
+
+        function createScatterChart(materials) {
+            const ctx = document.getElementById('scatterChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Materials',
+                        data: materials.map(m => ({
+                            x: m.predicted_cost,
+                            y: m.predicted_co2,
+                            material: m.name || m.material_name
+                        })),
+                        backgroundColor: 'rgba(16, 185, 129, 0.6)',
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        pointRadius: 8,
+                        pointHoverRadius: 12
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => {
+                                    const point = context.raw;
+                                    return [
+                                        `Material: ${point.material}`,
+                                        `Cost: $${point.x.toFixed(2)}`,
+                                        `CO₂: ${point.y.toFixed(4)} kg`
+                                    ];
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: { display: true, text: 'Cost (USD)' },
+                            grid: { color: '#f3f4f6' }
+                        },
+                        y: {
+                            title: { display: true, text: 'CO₂ Emissions (kg)' },
+                            grid: { color: '#f3f4f6' }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
