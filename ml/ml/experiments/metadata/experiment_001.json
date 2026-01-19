@@ -1,0 +1,17 @@
+{
+  "experiment_id": "exp_001",
+  "date": "2025-01-02",
+  "dataset_version": "materials_final_scores_v1",
+  "feature_set": "baseline_features_v1",
+  "model_type": "RandomForestRegressor",
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 10,
+    "random_state": 42
+  },
+  "metrics": {
+    "rmse": 0.86,
+    "r2_score": 0.98
+  },
+  "notes": "Baseline suitability score model"
+}

@@ -1,0 +1,2 @@
+model_name,task,version,mse,r2_score
+RandomForestRegressor,cost_prediction,v1,0.7077576249999987,0.9993075712078051

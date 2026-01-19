@@ -1,0 +1,1002 @@
+material_id,material_type,strength_mpa,weight_capacity_kg,biodegradability_percent,co2_emission_kg_per_kg,recyclability_percent,cost_per_kg,industry_use_case,source_type,confidence_level
+1,Virgin Cardboard,15,15,5,1.14,90,45,General Packaging,Literature,High
+2,Recycled Cardboard,15,15,5,0.82,95,40,General Packaging,Literature,High
+3,Virgin Paper,5,5,5,0.91,85,35,Light Packaging,Literature,High
+4,Recycled Paper,5,5,5,0.62,90,30,Light Packaging,Literature,High
+5,PLA Bioplastic,50,10,80,0.5,70,120,Food/Cosmetic,Literature,High
+6,Compostable Plastic,40,8,85,0.6,70,110,Food Packaging,Literature,High
+7,Conventional Plastic (PET),60,15,1,3.0,50,80,General Packaging,Literature,High
+8,Conventional Plastic (HDPE),65,18,1,3.1,55,85,Food/Cosmetics,Literature,High
+9,Recycled PET,60,15,1,1.8,75,90,General Packaging,Literature,High
+10,Sugarcane Bagasse,12,7,90,0.4,80,50,Food Packaging,Literature,High
+11,Wood Pulp Molded Fiber,10,6,85,0.5,75,55,Electronics Packaging,Literature,High
+12,Corrugated Paperboard,16,20,5,1.2,92,48,Electronics Packaging,Literature,High
+13,Cotton Fabric Wrap,20,8,90,0.6,70,100,Food/Cosmetics,Literature,Medium
+14,Jute Bag,25,12,95,0.5,85,90,Food/Cosmetics,Literature,Medium
+15,PLA Sheet,50,12,80,0.55,70,125,Food Packaging,Literature,High
+16,Polylactic Acid Blend,45,10,80,0.5,70,118,Food/Cosmetic,Literature,High
+17,Biodegradable Film,30,8,85,0.6,65,105,Food Packaging,Literature,High
+18,Aluminum Foil,70,20,1,8.0,90,150,Food Packaging,Literature,High
+19,Glass Bottle,90,25,0,2.5,95,120,Drinkware,Literature,High
+20,Steel Can,80,22,0,6.0,90,100,Food/Drink,Literature,High
+21,Mixed Plastic (HDPE+PET),60,15,1,3.5,60,90,General Packaging,Estimate,Medium
+22,Recycled Mixed Plastic,60,15,1,2.0,70,85,General Packaging,Estimate,Medium
+23,PLA Compostable Pack,50,10,85,0.55,70,115,Food/Cosmetics,Literature,High
+24,Paper Pulp Tray,14,10,80,0.9,88,50,Food Packaging,Estimate,Medium
+25,Cardboard Sleeve,16,12,5,1.1,92,42,Electronics Packaging,Estimate,Medium
+26,PLA Clamshell,48,9,80,0.52,70,120,Food Packaging,Literature,High
+27,Recycled Cardboard Box,15,15,5,0.83,95,41,General Packaging,Literature,High
+28,Virgin Cardboard - Heavy Duty,18,20,5,1.2,90,48,Electronics Packaging,Estimate,Medium
+29,Virgin Cardboard - Lightweight,12,10,5,1.1,90,42,Light Packaging,Estimate,Medium
+30,Recycled Cardboard - Heavy Duty,18,20,5,0.85,95,43,Electronics Packaging,Estimate,Medium
+31,Recycled Cardboard - Lightweight,12,10,5,0.8,95,38,Light Packaging,Estimate,Medium
+32,Virgin Cardboard - Food Grade,16,15,5,1.15,90,47,Food Packaging,Estimate,Medium
+33,Recycled Cardboard - Food Grade,16,15,5,0.84,95,41,Food Packaging,Estimate,Medium
+34,Virgin Paper - Coated,6,6,5,0.95,80,37,Labels & Inserts,Estimate,Medium
+35,Virgin Paper - Uncoated,5,5,5,0.9,85,34,Light Packaging,Literature,High
+36,Recycled Paper - Coated,6,6,5,0.65,88,32,Labels & Inserts,Estimate,Medium
+37,Recycled Paper - High Recycle,5,5,5,0.6,92,29,Light Packaging,Literature,High
+38,Virgin Paper - Kraft,7,7,5,0.93,85,36,Mailers,Literature,High
+39,Recycled Paper - Kraft,7,7,5,0.64,90,31,Mailers,Literature,High
+40,PLA Bioplastic - Rigid,52,11,80,0.52,70,122,Food Packaging,Literature,High
+41,PLA Bioplastic - Flexible,48,9,80,0.48,70,118,Food/Cosmetic,Literature,High
+42,PLA Bioplastic - Transparent,50,10,80,0.51,70,121,Food/Cosmetic,Estimate,Medium
+43,PLA Bioplastic - Industrial Grade,55,12,75,0.6,65,130,Electronics Packaging,Estimate,Medium
+44,PLA Bioplastic - Home Compost Grade,45,9,85,0.48,70,119,Food Packaging,Literature,High
+45,Compostable Plastic - Starch Blend,38,7,88,0.58,68,108,Food Packaging,Literature,High
+46,Compostable Plastic - High Barrier,42,8,82,0.62,70,112,Food Packaging,Estimate,Medium
+47,Compostable Plastic - Film,35,6,90,0.55,70,106,Snack Packaging,Estimate,Medium
+48,Compostable Plastic - Rigid Tray,40,8,85,0.6,70,111,Ready Meals,Estimate,Medium
+49,Compostable Plastic - Cold Use,37,7,88,0.57,70,109,Salad Packaging,Estimate,Medium
+50,Conventional Plastic PET - Bottle Grade,62,18,1,3.1,50,82,Beverage Bottles,Literature,High
+51,Conventional Plastic PET - Sheet,58,15,1,2.9,50,78,Blister Packs,Literature,High
+52,Conventional Plastic PET - Film,55,14,1,2.8,50,76,Flex Packaging,Estimate,Medium
+53,Conventional Plastic PET - High Clarity,60,16,1,3.0,50,81,Display Packaging,Literature,High
+54,Conventional Plastic PET - Reheat Grade,63,18,1,3.2,50,83,Bottle Preforms,Estimate,Medium
+55,Conventional Plastic HDPE - Blow Molding,68,20,1,3.2,55,88,Bottles & Jerrycans,Literature,High
+56,Conventional Plastic HDPE - Injection Grade,62,17,1,3.0,55,84,Caps & Closures,Literature,High
+57,Conventional Plastic HDPE - Film,58,16,1,2.9,55,82,Bags & Liners,Estimate,Medium
+58,Conventional Plastic HDPE - High Rigidity,70,21,1,3.3,55,89,Industrial Pails,Estimate,Medium
+59,Conventional Plastic HDPE - Food Grade,65,18,1,3.1,55,86,Food Containers,Literature,High
+60,Recycled PET - Clear,60,15,1,1.9,75,92,Bottles,Estimate,Medium
+61,Recycled PET - Colored,58,14,1,1.7,70,88,Straps & Fibers,Estimate,Medium
+62,Recycled PET - Sheet Grade,59,15,1,1.8,75,90,Blister Packs,Literature,High
+63,Recycled PET - Film Grade,57,14,1,1.75,70,89,Flex Packaging,Estimate,Medium
+64,Recycled PET - High Recycled Content,60,15,1,1.6,80,93,Bottles & Trays,Estimate,Medium
+65,Sugarcane Bagasse - Plate Grade,12,7,90,0.42,80,52,Food Service Ware,Literature,High
+66,Sugarcane Bagasse - Bowl Grade,11,6,92,0.39,80,49,Food Service Ware,Literature,High
+67,Sugarcane Bagasse - Clamshell,13,8,88,0.43,78,53,Takeaway Packaging,Estimate,Medium
+68,Sugarcane Bagasse - Thick Tray,14,9,85,0.45,78,55,Ready Meals,Estimate,Medium
+69,Sugarcane Bagasse - Thin Tray,10,5,92,0.38,82,48,Snacks & Bakery,Estimate,Medium
+70,Wood Pulp Molded Fiber - Corner Protector,11,8,85,0.52,75,57,Electronics Packaging,Literature,High
+71,Wood Pulp Molded Fiber - Insert,9,5,88,0.48,75,54,Electronics Packaging,Literature,High
+72,Wood Pulp Molded Fiber - Tray,10,6,86,0.5,75,56,Furniture & Appliances,Estimate,Medium
+73,Wood Pulp Molded Fiber - Thicker Grade,12,8,82,0.55,70,59,Heavy Goods,Estimate,Medium
+74,Wood Pulp Molded Fiber - Thin Grade,8,4,90,0.47,78,52,Consumer Electronics,Estimate,Medium
+75,Corrugated Paperboard - Single Wall,16,20,5,1.2,92,48,Shipping Boxes,Literature,High
+76,Corrugated Paperboard - Double Wall,18,25,5,1.25,92,50,Heavy Duty Boxes,Literature,High
+77,Corrugated Paperboard - Triple Wall,20,30,5,1.3,92,55,Bulky Appliances,Estimate,Medium
+78,Corrugated Paperboard - Lightweight,14,15,5,1.1,92,45,E-commerce Boxes,Estimate,Medium
+79,Corrugated Paperboard - Recycled Core,16,20,5,1.0,94,46,General Packaging,Estimate,Medium
+80,Cotton Fabric Wrap - Single Layer,18,7,90,0.58,70,95,Gift Packaging,Estimate,Medium
+81,Cotton Fabric Wrap - Double Layer,22,9,88,0.62,70,105,Reusable Wraps,Estimate,Medium
+82,Cotton Fabric Wrap - Printed,20,8,90,0.6,68,102,Brand Packaging,Estimate,Medium
+83,Cotton Fabric Wrap - Organic,19,8,92,0.55,72,110,Premium Packaging,Estimate,Medium
+84,Cotton Fabric Wrap - Heavy Weave,24,10,85,0.65,70,115,Carry Bags,Estimate,Medium
+85,Jute Bag - Light,22,10,95,0.48,85,85,Grocery Bags,Literature,High
+86,Jute Bag - Medium,25,12,95,0.5,85,90,Carry Bags,Literature,High
+87,Jute Bag - Heavy,28,15,93,0.52,85,95,Multi-use Bags,Estimate,Medium
+88,Jute Bag - Laminated,27,14,80,0.7,75,98,Industrial Bags,Estimate,Medium
+89,Jute Bag - Organic,26,13,96,0.49,88,100,Premium Retail,Estimate,Medium
+90,PLA Sheet - Thin,48,10,80,0.54,70,120,Bakery Lids,Estimate,Medium
+91,PLA Sheet - Medium,50,12,80,0.55,70,125,Food Trays,Literature,High
+92,PLA Sheet - Thick,52,14,78,0.6,68,130,Clamshells,Estimate,Medium
+93,PLA Sheet - Anti-fog,49,11,80,0.56,70,128,Fresh Produce,Estimate,Medium
+94,PLA Sheet - High Transparency,51,12,80,0.55,70,127,Display Packs,Estimate,Medium
+95,Polylactic Acid Blend - Flexible,42,9,82,0.49,70,116,Sachets,Estimate,Medium
+96,Polylactic Acid Blend - Rigid,47,11,78,0.52,70,120,Tubs & Cups,Estimate,Medium
+97,Polylactic Acid Blend - High Impact,50,12,75,0.58,68,124,Electronics Blisters,Estimate,Medium
+98,Polylactic Acid Blend - Transparent,45,10,80,0.5,70,118,Display Cartons,Literature,High
+99,Polylactic Acid Blend - Home Compost,40,8,85,0.48,72,115,Food/Cosmetic,Estimate,Medium
+100,Biodegradable Film - Starch Based,28,7,88,0.58,65,102,Snack Wraps,Literature,High
+101,Biodegradable Film - Cellulose Based,32,8,82,0.62,70,108,Overwrap,Estimate,Medium
+102,Biodegradable Film - Barrier,30,8,85,0.6,65,105,Snack Packaging,Literature,High
+103,Biodegradable Film - Compost Home,26,6,90,0.55,68,100,Food Wrap,Estimate,Medium
+104,Biodegradable Film - Industrial,34,9,80,0.65,60,110,Frozen Foods,Estimate,Medium
+105,Aluminum Foil - Thin Household,60,12,1,7.5,90,130,Food Wrap,Literature,High
+106,Aluminum Foil - Thick Catering,75,22,1,8.2,90,155,Food Trays,Literature,High
+107,Aluminum Foil - Laminated,70,20,1,8.5,85,160,Snack Wrap,Estimate,Medium
+108,Aluminum Foil - Pharma Grade,72,18,1,8.3,92,165,Blister Packs,Estimate,Medium
+109,Aluminum Foil - Industrial,80,25,1,8.8,90,170,Insulation,Estimate,Medium
+110,Glass Bottle - Lightweight,85,18,0,2.3,95,115,Beverage,Estimate,Medium
+111,Glass Bottle - Returnable,95,28,0,2.7,98,125,Beverage Refill,Literature,High
+112,Glass Bottle - Amber,90,25,0,2.6,95,122,Beverages & Pharma,Literature,High
+113,Glass Bottle - Fluted,92,26,0,2.5,95,124,Premium Drinks,Estimate,Medium
+114,Glass Bottle - Thick Wall,100,30,0,2.8,95,130,Spirits,Estimate,Medium
+115,Steel Can - Thin Wall,75,18,0,5.8,90,95,Foods,Literature,High
+116,Steel Can - Heavy Wall,85,24,0,6.2,90,105,Bulk Foods,Literature,High
+117,Steel Can - Aerosol,80,20,0,6.1,88,102,Personal Care,Estimate,Medium
+118,Steel Can - Easy Open,78,19,0,6.0,90,100,Ready Foods,Estimate,Medium
+119,Steel Can - BPA Free Lined,80,22,0,6.2,90,108,Premium Foods,Estimate,Medium
+120,Mixed Plastic (HDPE+PET) - Rigid,62,16,1,3.6,60,92,Trays & Lids,Estimate,Medium
+121,Mixed Plastic (HDPE+PET) - Film,58,14,1,3.4,60,88,Multipack Wrap,Estimate,Medium
+122,Mixed Plastic (HDPE+PET) - Laminate,60,15,1,3.5,55,90,Snack Packs,Estimate,Medium
+123,Mixed Plastic (HDPE+PET) - Foam,55,12,1,3.3,50,86,Cushioning,Estimate,Medium
+124,Mixed Plastic (HDPE+PET) - Shrink,57,13,1,3.4,60,89,Bottle Bundling,Estimate,Medium
+125,Recycled Mixed Plastic - Rigid,60,15,1,2.0,70,87,Pallets,Estimate,Medium
+126,Recycled Mixed Plastic - Film,55,13,1,1.9,72,82,Garbage Bags,Estimate,Medium
+127,Recycled Mixed Plastic - Sheet,58,14,1,2.1,68,84,Construction Boards,Estimate,Medium
+128,Recycled Mixed Plastic - Lumber,62,16,1,2.2,65,88,Outdoor Furniture,Estimate,Medium
+129,Recycled Mixed Plastic - Foam,50,11,1,1.8,70,80,Cushioning,Estimate,Medium
+130,PLA Compostable Pack - Thin,48,9,88,0.54,70,112,Snack Trays,Estimate,Medium
+131,PLA Compostable Pack - Thick,52,11,82,0.57,68,118,Meal Trays,Estimate,Medium
+132,PLA Compostable Pack - Clear,50,10,85,0.55,70,115,Fresh Produce,Literature,High
+133,PLA Compostable Pack - Matte,49,10,85,0.56,70,114,Premium Packs,Estimate,Medium
+134,PLA Compostable Pack - Rigid,53,11,80,0.58,68,120,Food/Cosmetics,Estimate,Medium
+135,Paper Pulp Tray - Shallow,13,9,80,0.88,88,49,Fruit & Veg,Estimate,Medium
+136,Paper Pulp Tray - Deep,15,11,78,0.92,86,52,Ready Meals,Estimate,Medium
+137,Paper Pulp Tray - Coated,14,10,75,0.95,85,55,Wet Foods,Estimate,Medium
+138,Paper Pulp Tray - Uncoated,14,10,82,0.9,88,50,Dry Foods,Estimate,Medium
+139,Paper Pulp Tray - Heavy Duty,16,12,75,1.0,85,58,Meat & Fish,Estimate,Medium
+140,Cardboard Sleeve - Light,15,10,5,1.05,92,40,Food Sleeves,Estimate,Medium
+141,Cardboard Sleeve - Heavy,17,14,5,1.15,92,44,Electronics Sleeves,Estimate,Medium
+142,Cardboard Sleeve - Printed,16,12,5,1.12,90,45,Brand Packaging,Estimate,Medium
+143,Cardboard Sleeve - Recycled,16,12,5,0.9,95,41,General Sleeves,Estimate,Medium
+144,Cardboard Sleeve - Kraft,16,12,5,1.08,92,43,Eco Sleeves,Estimate,Medium
+145,PLA Clamshell - Salad,46,8,80,0.5,70,118,Fresh Salads,Literature,High
+146,PLA Clamshell - Bakery,48,9,80,0.52,70,120,Bakery Items,Literature,High
+147,PLA Clamshell - Fruit,49,9,80,0.53,70,121,Berries & Fruit,Estimate,Medium
+148,PLA Clamshell - Dessert,47,8,82,0.51,70,119,Desserts,Estimate,Medium
+149,PLA Clamshell - Takeaway,50,10,78,0.56,68,123,Meals,Estimate,Medium
+150,Recycled Cardboard Box - Small Parcel,15,12,5,0.8,95,39,E-commerce,Estimate,Medium
+151,Recycled Cardboard Box - Medium Parcel,16,15,5,0.82,95,41,E-commerce,Literature,High
+152,Recycled Cardboard Box - Large Parcel,17,18,5,0.85,95,43,E-commerce,Estimate,Medium
+153,Recycled Cardboard Box - Extra Heavy,18,22,5,0.9,93,45,Appliances,Estimate,Medium
+154,Recycled Cardboard Box - Archive,14,12,5,0.78,96,38,Document Storage,Estimate,Medium
+155,Bamboo Fiber Pulp Tray,16,10,90,0.4,80,60,Food Packaging,Literature,High
+156,Bamboo Fiber Clamshell,18,12,88,0.42,78,65,Takeaway Food,Estimate,Medium
+157,Bamboo Paper Cup Board,14,8,85,0.45,80,58,Hot Cups,Estimate,Medium
+158,Bamboo Molded Cushioning,15,9,88,0.43,78,62,Electronics Packaging,Estimate,Medium
+159,Bamboo Fiber Plate,13,7,92,0.39,82,57,Disposable Tableware,Estimate,Medium
+160,Hemp Fiber Pulp,18,11,92,0.38,80,70,Premium Packaging,Estimate,Medium
+161,Hemp Paperboard,20,14,90,0.4,82,75,Boxes & Cartons,Estimate,Medium
+162,Hemp Fabric Bag,25,12,95,0.42,85,90,Reusable Bags,Estimate,Medium
+163,Hemp Molded Fiber Insert,17,10,90,0.41,80,72,Electronics Inserts,Estimate,Medium
+164,Hemp Pulp Tray,16,9,92,0.39,82,68,Food Packaging,Estimate,Medium
+165,Mushroom Mycelium Foam,8,5,98,0.3,60,80,Cushioning,Literature,High
+166,Mushroom Mycelium Rigid Block,10,7,98,0.32,60,85,Protective Packaging,Literature,High
+167,Mushroom Mycelium Corner,9,6,98,0.31,60,82,Electronics Packaging,Estimate,Medium
+168,Mushroom Mycelium Insert,7,4,98,0.29,60,78,Small Appliances,Estimate,Medium
+169,Mushroom Mycelium Board,11,8,95,0.35,60,88,Panels & Liners,Estimate,Medium
+170,Seaweed Bioplastic Film,25,6,90,0.4,65,100,Edible Wraps,Literature,High
+171,Seaweed Bioplastic Pouch,28,7,88,0.42,65,105,Dry Foods,Estimate,Medium
+172,Seaweed Bioplastic Coating,22,5,92,0.38,65,95,Fiber Barriers,Estimate,Medium
+173,Seaweed Bioplastic Laminate,30,8,85,0.45,60,110,Snack Packs,Estimate,Medium
+174,Seaweed Bioplastic Rigid,32,9,80,0.5,60,115,Trays,Estimate,Medium
+175,Paper Honeycomb Board,18,25,80,1.1,85,70,Furniture Packaging,Literature,High
+176,Paper Honeycomb Panel,20,28,80,1.15,85,75,Pallet Tops,Estimate,Medium
+177,Paper Honeycomb Cushion,16,20,82,1.05,88,65,Void Fill,Estimate,Medium
+178,Paper Honeycomb Edge Protector,19,24,80,1.12,85,72,Edge Protection,Estimate,Medium
+179,Paper Honeycomb Pallet,22,30,78,1.2,82,80,Light Pallets,Estimate,Medium
+180,Recycled Paper Honeycomb,18,25,82,0.95,90,68,Furniture Packaging,Estimate,Medium
+181,Bio-PE (Sugarcane-based),55,15,15,1.5,75,140,Bottles & Caps,Literature,High
+182,Bio-PE Film,50,13,20,1.4,75,135,Flex Packaging,Estimate,Medium
+183,Bio-PE Rigid,58,17,10,1.6,70,145,Containers,Estimate,Medium
+184,Bio-PE Shrink,52,14,20,1.45,75,138,Shrink Wrap,Estimate,Medium
+185,Bio-PE Coating,48,12,25,1.35,78,132,Paper Coatings,Estimate,Medium
+186,Paper-PLA Laminate,18,12,60,1.0,75,120,Hot Cups,Literature,High
+187,Paper-PE Laminate,20,15,5,2.5,65,90,Beverage Cartons,Literature,High
+188,Paper-BioPE Laminate,19,14,30,1.8,70,110,Beverage Cartons,Estimate,Medium
+189,Cardboard-PLA Laminate,21,18,55,1.2,75,125,Frozen Foods,Estimate,Medium
+190,Cardboard-Compostable Laminate,20,17,60,1.05,78,118,Snack Packs,Estimate,Medium
+191,Recycled Paper-PLA Laminate,17,12,65,0.9,80,115,Food Service,Estimate,Medium
+192,Flexible Paper Wrap,8,4,80,0.7,85,40,Confectionery Wrap,Literature,High
+193,Flexible Kraft Paper Wrap,10,5,82,0.75,88,42,Bakery Wrap,Estimate,Medium
+194,Glassine Paper Wrap,6,4,75,0.8,80,45,Oily Foods,Estimate,Medium
+195,Greaseproof Paper,7,4,78,0.78,80,46,Bakery Wrap,Literature,High
+196,Waxed Paper,6,3,70,0.85,50,50,Cheese/Meat Wrap,Estimate,Medium
+197,Recycled Flexible Paper Wrap,8,4,82,0.6,90,38,Confectionery Wrap,Estimate,Medium
+198,Paper Mailer - Padded,14,8,75,0.9,85,50,E-commerce Mailers,Literature,High
+199,Paper Mailer - Rigid,16,10,75,0.95,85,55,Documents,Estimate,Medium
+200,Paper Mailer - Lightweight,12,6,80,0.85,90,45,Apparel,Estimate,Medium
+201,Paper Mailer - Recycled,14,8,80,0.7,92,48,E-commerce,Estimate,Medium
+202,Paper Mailer - Honeycomb,18,10,78,0.98,85,60,Fragile Goods,Estimate,Medium
+203,Recycled Plastic Mailer,50,10,1,2.1,70,70,E-commerce,Estimate,Medium
+204,Bio-based Plastic Mailer,45,9,40,1.4,65,95,E-commerce,Estimate,Medium
+205,Compostable Mailer,35,7,85,0.7,60,105,E-commerce,Literature,High
+206,Paper-Padded Compostable Mailer,20,9,80,0.85,70,90,E-commerce,Estimate,Medium
+207,Cardboard Envelope,15,7,5,1.0,90,40,Documents,Estimate,Medium
+208,Virgin PET Tray,60,15,1,3.0,50,80,Food Trays,Literature,High
+209,Recycled PET Tray,60,15,1,1.8,75,88,Food Trays,Literature,High
+210,PP Rigid Container,55,14,1,2.5,40,70,Food Containers,Literature,High
+211,PP Film,45,10,1,2.3,40,68,Snack Packaging,Literature,High
+212,PP Nonwoven,30,8,1,2.1,40,65,Shopping Bags,Estimate,Medium
+213,Recycled PP Rigid,55,14,1,1.9,55,72,Containers,Estimate,Medium
+214,Recycled PP Film,45,10,1,1.8,55,70,Packaging Film,Estimate,Medium
+215,LDPE Film,30,8,1,2.4,30,65,Stretch Wrap,Literature,High
+216,Recycled LDPE Film,30,8,1,1.7,45,60,Garbage Bags,Estimate,Medium
+217,Bio-based LDPE Film,32,9,10,1.3,55,80,Stretch Wrap,Estimate,Medium
+218,Paper Cushioning - Shredded,6,4,85,0.7,90,35,Void Fill,Literature,High
+219,Paper Cushioning - Crinkle,7,4,85,0.75,90,37,Gift Packaging,Estimate,Medium
+220,Paper Cushioning - Molded,9,5,80,0.8,88,40,Fragile Goods,Estimate,Medium
+221,Air Cushion - Virgin Plastic,35,10,1,3.0,50,60,Void Fill,Literature,High
+222,Air Cushion - Recycled Plastic,35,10,1,2.0,70,65,Void Fill,Estimate,Medium
+223,Air Cushion - Bio-based Plastic,30,9,20,1.4,60,75,Void Fill,Estimate,Medium
+224,Paper Air Cushion,10,6,80,0.8,88,50,Void Fill,Estimate,Medium
+225,Inflatable Paper-Plastic Hybrid,25,9,60,1.6,70,70,Void Fill,Estimate,Medium
+226,EPS Foam (Expanded Polystyrene),15,12,0,5.0,10,40,Electronics Packaging,Literature,High
+227,Molded EPS Corner,16,13,0,5.2,10,42,TV Packaging,Estimate,Medium
+228,Recycled EPS,15,12,0,3.5,30,38,Insulation,Estimate,Medium
+229,EPP Foam (Expanded Polypropylene),18,14,0,4.0,20,55,Returnable Packaging,Estimate,Medium
+230,Bio-based Foam,14,10,40,2.0,40,70,Protective Packaging,Estimate,Medium
+231,Paper Foam,10,8,80,1.2,70,60,Protective Packaging,Estimate,Medium
+232,Molded Pulp Corner - Recycled,11,7,85,0.5,80,52,Electronics,Literature,High
+233,Molded Pulp Corner - Virgin,12,8,80,0.6,75,55,Appliances,Estimate,Medium
+234,Coconut Fiber Pad,9,6,95,0.4,60,50,Produce Packaging,Estimate,Medium
+235,Coconut Fiber Molded Pack,11,7,95,0.42,60,55,Fruit Trays,Estimate,Medium
+236,Rice Husk Composite,20,12,85,1.5,60,80,Reusable Tableware,Estimate,Medium
+237,Rice Husk Molded Tray,16,10,88,1.3,60,70,Frozen Foods,Estimate,Medium
+238,Wheat Straw Pulp Tray,14,10,90,0.45,75,55,Food Trays,Estimate,Medium
+239,Wheat Straw Molded Fiber,12,8,92,0.42,75,52,Produce Packaging,Estimate,Medium
+240,Kenaf Fiber Board,22,14,85,1.2,70,90,Display Packaging,Estimate,Medium
+241,Bagasse-Kenaf Blend Board,18,12,88,1.0,72,80,Food & Retail Packs,Estimate,Medium
+242,Bio-based Nylon Film,70,15,10,4.0,60,180,High Barrier Packs,Estimate,Medium
+243,Bio-based Nylon Laminate,72,16,10,4.1,60,190,Retort Pouches,Estimate,Medium
+244,Paper-Nylon Laminate,25,18,5,3.5,55,150,High Barrier Pouches,Estimate,Medium
+245,Recycled Aluminum Sheet,70,20,1,4.0,98,130,General Packaging,Estimate,Medium
+246,Aluminum-Cardboard Composite,40,18,5,5.0,70,140,Liquid Cartons,Estimate,Medium
+247,Aluminum-PET Laminate,55,20,1,6.0,30,150,Snack Packs,Literature,High
+248,Recycled Aluminum-PET Laminate,55,20,1,4.5,50,145,Snack Packs,Estimate,Medium
+249,Mono-material PE Pouch,45,12,1,2.5,50,80,Recyclable Pouches,Literature,High
+250,Mono-material PP Pouch,48,13,1,2.4,55,82,Recyclable Pouches,Estimate,Medium
+251,Mono-material PET Pouch,52,14,1,3.2,60,90,Recyclable Pouches,Estimate,Medium
+252,Paper-based Pouch with Dispersion Barrier,20,10,60,1.1,75,95,Snacks,Estimate,Medium
+253,Paper-based Pouch with Bio-coating,18,9,65,1.0,78,98,Snacks,Estimate,Medium
+254,Recycled Paper-based Pouch,17,9,70,0.9,85,92,Dry Foods,Estimate,Medium
+255,Cellulose Film,30,7,85,0.7,70,110,Confectionery,Literature,High
+256,Regenerated Cellulose Film,32,8,80,0.75,70,115,Confectionery,Estimate,Medium
+257,Cellulose-BioPE Laminate,35,9,60,1.2,68,120,Snacks,Estimate,Medium
+258,Home Compostable Cellulose Film,28,6,90,0.65,72,105,Food Packaging,Estimate,Medium
+259,PLA-Cellulose Blend Film,40,9,85,0.6,70,118,Food Packaging,Estimate,Medium
+260,HDPE-Net Bag,20,12,1,3.0,40,70,Fruit Nets,Literature,High
+261,Recycled HDPE-Net Bag,20,12,1,2.1,60,75,Fruit Nets,Estimate,Medium
+262,Jute-PP Hybrid Bag,28,16,70,2.0,45,85,Rice & Grain Bags,Estimate,Medium
+263,Paper-PP Hybrid Bag,25,14,50,2.1,50,80,Rice & Flour Bags,Estimate,Medium
+264,Multiwall Paper Bag,18,16,70,1.2,85,60,Industrial Powders,Literature,High
+265,Recycled Multiwall Paper Bag,18,16,75,1.0,90,55,Industrial Powders,Estimate,Medium
+266,PE-lined Paper Bag,20,18,5,2.6,65,70,Cement/Grain,Estimate,Medium
+267,BioPE-lined Paper Bag,20,18,20,1.9,70,85,Cement/Grain,Estimate,Medium
+268,PLA-lined Paper Bag,18,16,60,1.2,72,90,Dry Foods,Estimate,Medium
+269,Glass Jar,85,20,0,2.4,95,115,Food/Cosmetics,Literature,High
+270,Recycled Glass Jar,85,20,0,2.0,98,110,Food/Cosmetics,Estimate,Medium
+271,Lightweight Glass Jar,80,16,0,2.2,95,110,Spreads & Sauces,Estimate,Medium
+272,Tempered Glass Jar,95,22,0,2.6,95,125,Premium Foods,Estimate,Medium
+273,Glass Ampoule,70,8,0,2.3,95,130,Pharma,Estimate,Medium
+274,Returnable Glass Crate,60,25,0,3.0,90,100,Beverage Logistics,Estimate,Medium
+275,Wooden Crate,25,30,60,2.5,60,90,Fruit & Vegetables,Literature,High
+276,Recycled Wood Crate,25,30,60,1.8,70,85,Fruit & Vegetables,Estimate,Medium
+277,Plywood Crate,30,35,50,3.0,50,95,Heavy Machinery,Estimate,Medium
+278,OSB Wood Crate,28,32,55,2.8,55,92,General Cargo,Estimate,Medium
+279,Bio-based PU Foam,16,11,30,3.0,40,90,Protective Packaging,Estimate,Medium
+280,Recycled PU Foam,16,11,0,2.5,50,70,Furniture & Packs,Estimate,Medium
+281,Cork Block,20,10,95,0.8,70,85,Protective Inserts,Estimate,Medium
+282,Cork Sheet,18,9,95,0.75,70,80,Bottle Gaskets,Estimate,Medium
+283,Recycled Rubber Cushion,18,12,0,2.0,50,60,Shock Absorption,Estimate,Medium
+284,Virgin Rubber Cushion,20,14,0,2.5,40,70,Shock Absorption,Estimate,Medium
+285,Paper-Rubber Hybrid Pad,15,10,50,1.5,55,65,Shock & Vibration,Estimate,Medium
+286,Organic Cotton Pouch,18,7,95,0.5,75,110,Small Goods,Estimate,Medium
+287,Recycled Cotton Pouch,17,7,90,0.45,80,95,Small Goods,Estimate,Medium
+288,Linen Bag,22,10,95,0.55,78,105,Fashion Packaging,Estimate,Medium
+289,Bio-based Polyester Fabric,25,12,20,2.0,50,120,Textile Bags,Estimate,Medium
+290,Recycled Polyester Fabric,25,12,1,1.8,70,100,Textile Bags,Estimate,Medium
+291,Paper Tube - Thin Wall,14,8,75,0.9,90,50,Cosmetic Packaging,Estimate,Medium
+292,Paper Tube - Thick Wall,18,12,70,1.0,88,60,Powder Packs,Estimate,Medium
+293,Recycled Paper Tube,16,10,80,0.8,92,55,Gift Packs,Estimate,Medium
+294,PLA-Coated Paper Tube,17,10,60,0.95,80,70,Cosmetics,Estimate,Medium
+295,BioPE-Coated Paper Tube,18,11,25,1.2,78,75,Cosmetics,Estimate,Medium
+296,PE Foam Sheet,18,12,1,3.0,30,60,Surface Protection,Literature,High
+297,Recycled PE Foam Sheet,18,12,1,2.2,50,63,Surface Protection,Estimate,Medium
+298,Bio-based PE Foam Sheet,16,11,15,1.8,55,75,Protective Packaging,Estimate,Medium
+299,PET Foam Sheet,20,13,1,3.5,40,80,High Performance Packs,Estimate,Medium
+300,EVA Foam Sheet,18,12,1,3.2,30,65,Protective Packaging,Estimate,Medium
+301,PLA Foam Sheet,14,9,80,1.0,60,90,Protective Packaging,Estimate,Medium
+302,Starch Loose Fill Pellets,10,7,95,0.5,60,70,Void Fill,Literature,High
+303,Paper Loose Fill,8,6,90,0.7,88,50,Void Fill,Estimate,Medium
+304,Recycled Paper Loose Fill,8,6,92,0.6,92,48,Void Fill,Estimate,Medium
+305,PLA Loose Fill,12,8,85,0.8,60,80,Void Fill,Estimate,Medium
+306,Molded Starch Foam,14,9,90,0.9,55,85,Protective Packaging,Estimate,Medium
+307,Coated Kraft Paper Sack,18,16,60,1.3,75,65,Industrial Goods,Estimate,Medium
+308,Recycled Kraft Paper Sack,16,14,70,1.0,85,60,Industrial Goods,Estimate,Medium
+309,BioBarrier Coated Sack,17,15,65,1.1,78,72,Food Powders,Estimate,Medium
+310,Paper-Clay Composite Board,20,16,80,1.4,70,85,Display,Estimate,Medium
+311,Paper-Mineral Composite Board,22,18,75,1.6,65,90,Print Packaging,Estimate,Medium
+312,Recycled Paper-Mineral Board,20,17,78,1.3,72,82,Print Packaging,Estimate,Medium
+313,HDPE Bottle - Virgin,65,18,1,3.1,55,85,Food/Cosmetics,Literature,High
+314,HDPE Bottle - Recycled,65,18,1,2.0,70,82,Food/Cosmetics,Estimate,Medium
+315,PP Bottle - Virgin,55,16,1,2.6,45,80,Personal Care,Literature,High
+316,PP Bottle - Recycled,55,16,1,1.9,60,76,Personal Care,Estimate,Medium
+317,PET Bottle - Virgin,60,18,1,3.0,50,80,Beverages,Literature,High
+318,PET Bottle - Recycled Blend,60,18,1,2.0,70,82,Beverages,Estimate,Medium
+319,Glass Dropper Bottle,70,10,0,2.4,95,130,Cosmetics,Estimate,Medium
+320,Aluminum Dropper Bottle,65,9,1,7.0,90,140,Cosmetics,Estimate,Medium
+321,Steel Drum,85,40,0,8.0,90,120,Bulk Liquids,Literature,High
+322,Reconditioned Steel Drum,85,40,0,5.0,95,110,Bulk Liquids,Estimate,Medium
+323,HDPE Drum,70,35,1,4.0,50,100,Bulk Liquids,Estimate,Medium
+324,Recycled HDPE Drum,70,35,1,3.0,65,95,Bulk Liquids,Estimate,Medium
+325,IBCs (HDPE Steel Cage),80,100,1,10.0,60,200,Bulk Liquids,Estimate,Medium
+326,Wooden Pallet - New,30,1000,60,3.0,60,80,Logistics,Literature,High
+327,Wooden Pallet - Recycled,30,1000,60,2.0,75,70,Logistics,Estimate,Medium
+328,Plastic Pallet - HDPE,40,1200,1,5.0,50,120,Logistics,Estimate,Medium
+329,Recycled Plastic Pallet,40,1200,1,3.5,65,110,Logistics,Estimate,Medium
+330,Paper Pallet,25,800,75,1.5,70,90,Logistics,Estimate,Medium
+331,Bio-based Plastic Pallet,38,1100,20,3.5,55,130,Logistics,Estimate,Medium
+332,Aluminum Pallet,45,1500,1,12.0,85,240,Logistics,Estimate,Medium
+333,Mono-material PE Shrink Film,40,12,1,2.4,50,70,Shrink Bundling,Literature,High
+334,Recycled PE Shrink Film,40,12,1,1.8,65,68,Shrink Bundling,Estimate,Medium
+335,Mono-material PP Shrink Film,42,13,1,2.3,55,72,Shrink Bundling,Estimate,Medium
+336,Bio-based Shrink Film,35,11,20,1.6,55,90,Shrink Bundling,Estimate,Medium
+337,PaperStrap,20,15,80,0.9,85,60,Bundle Strapping,Estimate,Medium
+338,PP Strap,55,20,1,2.5,30,50,Bundle Strapping,Literature,High
+339,Recycled PP Strap,55,20,1,1.8,50,48,Bundle Strapping,Estimate,Medium
+340,Polyester Strap (PET),65,25,1,3.0,40,70,Heavy Strapping,Estimate,Medium
+341,Recycled PET Strap,65,25,1,2.0,60,68,Heavy Strapping,Estimate,Medium
+342,Steel Strap,80,30,0,6.0,90,90,Heavy Strapping,Literature,High
+343,Bio-based Strap,40,12,30,1.7,60,80,Light Bundling,Estimate,Medium
+344,Paper Tape - Virgin,12,5,80,0.8,85,40,Box Sealing,Literature,High
+345,Paper Tape - Recycled,12,5,82,0.6,90,38,Box Sealing,Estimate,Medium
+346,Plastic Tape - PP,25,6,1,2.3,30,35,Box Sealing,Literature,High
+347,Plastic Tape - Recycled,25,6,1,1.7,50,34,Box Sealing,Estimate,Medium
+348,Bio-based Plastic Tape,22,6,30,1.5,45,45,Box Sealing,Estimate,Medium
+349,Water-activated Paper Tape,14,6,80,0.9,88,42,Box Sealing,Estimate,Medium
+350,Compostable Tape,18,6,85,0.7,60,55,Box Sealing,Estimate,Medium
+351,Virgin Cardboard - E-commerce Light,14,12,5,1.12,90,44,E-commerce,Estimate,Medium
+352,Virgin Cardboard - E-commerce Heavy,18,20,5,1.2,90,48,E-commerce,Estimate,Medium
+353,Recycled Cardboard - E-commerce Light,14,12,5,0.78,95,39,E-commerce,Estimate,Medium
+354,Recycled Cardboard - E-commerce Heavy,18,20,5,0.85,95,44,E-commerce,Estimate,Medium
+355,Virgin Cardboard - White Top,16,15,5,1.16,88,47,Display Boxes,Estimate,Medium
+356,Recycled Cardboard - White Top,16,15,5,0.86,92,42,Display Boxes,Estimate,Medium
+357,High-strength Virgin Cardboard,20,25,5,1.25,88,52,Industrial,Estimate,Medium
+358,High-strength Recycled Cardboard,20,25,5,0.9,93,48,Industrial,Estimate,Medium
+359,Low-density Virgin Cardboard,12,10,5,1.05,92,40,Light Goods,Estimate,Medium
+360,Low-density Recycled Cardboard,12,10,5,0.76,96,36,Light Goods,Estimate,Medium
+361,Recycled Paper - Newsprint,4,4,5,0.55,90,25,Void Fill/Wrap,Estimate,Medium
+362,Recycled Paper - High Bright,5,5,5,0.6,88,32,Print Inserts,Estimate,Medium
+363,Virgin Paper - High Bright,6,5,5,0.95,80,38,Print Inserts,Estimate,Medium
+364,Recycled Paper - Tissue,3,3,5,0.5,92,20,Protective Wrap,Estimate,Medium
+365,Virgin Paper - Tissue,3,3,5,0.85,85,22,Protective Wrap,Estimate,Medium
+366,Virgin Paper - Board,10,8,5,1.1,82,40,Cartons,Estimate,Medium
+367,Recycled Paper - Board,10,8,5,0.8,90,35,Cartons,Estimate,Medium
+368,Virgin Paper - Beer Carrier Board,12,10,5,1.2,80,45,Multipacks,Estimate,Medium
+369,Recycled Paper - Beer Carrier Board,12,10,5,0.9,88,40,Multipacks,Estimate,Medium
+370,Virgin Paper - Liquid Packaging Board,14,12,5,1.3,78,55,Cartons,Estimate,Medium
+371,PLA Bioplastic - High Heat,55,11,70,0.7,60,135,Hot Fill Packs,Estimate,Medium
+372,PLA Bioplastic - Cold Chain,50,10,85,0.5,70,125,Cold Foods,Estimate,Medium
+373,PLA Bioplastic - Fiber-filled,60,12,75,0.8,65,140,Durables,Estimate,Medium
+374,PLA Bioplastic - Mineral-filled,65,14,70,0.9,60,145,Durables,Estimate,Medium
+375,PLA Bioplastic - Flex-rigid Blend,52,11,80,0.6,68,130,General Packaging,Estimate,Medium
+376,Compostable Plastic - Home Compost Low Temp,35,7,90,0.55,68,108,Food Wrap,Estimate,Medium
+377,Compostable Plastic - Industrial High Temp,45,9,80,0.65,70,115,Food Packs,Estimate,Medium
+378,Compostable Plastic - Transparent Film,32,7,85,0.6,65,104,Window Packs,Estimate,Medium
+379,Compostable Plastic - Opaque Film,34,8,85,0.62,65,106,General Wraps,Estimate,Medium
+380,Compostable Plastic - Coated Paper Barrier,30,8,80,0.7,70,110,Snack Packs,Estimate,Medium
+381,Conventional Plastic PET - High Barrier,65,16,1,3.3,45,90,Retort Packs,Estimate,Medium
+382,Conventional Plastic PET - Metallized,60,15,1,3.5,40,95,Snack Packs,Estimate,Medium
+383,Conventional Plastic PET - Silica Coated,62,16,1,3.4,45,100,High Barrier Films,Estimate,Medium
+384,Conventional Plastic PET - Reheat Clear,64,18,1,3.2,50,85,Bottle Preforms,Estimate,Medium
+385,Conventional Plastic PET - Thick Sheet,70,20,1,3.6,45,110,Thermoforming,Estimate,Medium
+386,Conventional Plastic HDPE - Pipe Grade,80,25,1,3.4,50,95,Pipe/Conduit,Estimate,Medium
+387,Conventional Plastic HDPE - Blow Fill,68,20,1,3.1,55,87,Blow Bottles,Estimate,Medium
+388,Conventional Plastic HDPE - High MFI,60,16,1,3.0,55,83,Thin Wall,Estimate,Medium
+389,Conventional Plastic HDPE - Low MFI,70,22,1,3.3,50,90,Heavy Containers,Estimate,Medium
+390,Conventional Plastic HDPE - Film LL Blend,58,16,1,2.9,50,80,Shopping Bags,Estimate,Medium
+391,Recycled PET - Food Grade,60,15,1,1.9,80,95,Food Packs,Estimate,Medium
+392,Recycled PET - Non Food Grade,60,15,1,1.7,75,85,Fibers/Straps,Estimate,Medium
+393,Recycled PET - Fiber Grade,58,14,1,1.6,70,82,Textiles,Estimate,Medium
+394,Recycled PET - Sheet High Recycled Content,60,15,1,1.6,80,92,Trays,Estimate,Medium
+395,Recycled PET - Bottle Grade High Recycled,60,15,1,1.5,85,98,Bottles,Estimate,Medium
+396,Sugarcane Bagasse - Hot Cup Liner,10,6,88,0.42,75,55,Hot Drinks,Estimate,Medium
+397,Sugarcane Bagasse - Cold Cup Liner,10,6,90,0.4,78,52,Cold Drinks,Estimate,Medium
+398,Sugarcane Bagasse - Heavy Plate,15,9,85,0.45,78,58,Food Service,Estimate,Medium
+399,Sugarcane Bagasse - Compartment Tray,14,10,88,0.43,80,57,Meal Trays,Estimate,Medium
+400,Sugarcane Bagasse - Lid,11,7,90,0.41,80,53,Food Trays,Estimate,Medium
+401,Wood Pulp Molded Fiber - Phone Insert,9,5,88,0.48,75,54,Electronics,Literature,High
+402,Wood Pulp Molded Fiber - Laptop Insert,11,7,85,0.52,73,58,Electronics,Estimate,Medium
+403,Wood Pulp Molded Fiber - TV Frame,12,8,82,0.55,70,60,Electronics,Estimate,Medium
+404,Wood Pulp Molded Fiber - Bottle Pack,10,6,86,0.5,75,56,Beverage,Estimate,Medium
+405,Wood Pulp Molded Fiber - Cosmetic Insert,8,4,90,0.47,78,52,Cosmetics,Estimate,Medium
+406,Corrugated Paperboard - BC Flute,18,25,5,1.25,90,50,Shipping,Literature,High
+407,Corrugated Paperboard - EB Flute,17,22,5,1.22,92,49,Display,Estimate,Medium
+408,Corrugated Paperboard - E Flute,15,18,5,1.15,92,46,Small Packs,Estimate,Medium
+409,Corrugated Paperboard - F Flute,14,16,5,1.12,92,44,Micro Packs,Estimate,Medium
+410,Corrugated Paperboard - RSC Box Board,16,20,5,1.2,92,48,Regular Slotted,Estimate,Medium
+411,Cotton Fabric Wrap - Gift Grade,19,8,90,0.6,70,100,Gift Wrap,Estimate,Medium
+412,Cotton Fabric Wrap - Industrial,22,10,88,0.65,65,95,Industrial Wrap,Estimate,Medium
+413,Cotton Fabric Wrap - Printed Premium,20,8,88,0.62,68,110,Premium Packaging,Estimate,Medium
+414,Cotton Fabric Wrap - Dyed,21,9,88,0.63,68,105,Brand Wraps,Estimate,Medium
+415,Cotton Fabric Wrap - Recycled Blend,18,7,92,0.55,75,90,General Wraps,Estimate,Medium
+416,Jute Bag - Retail,24,11,95,0.5,85,88,Retail Bags,Estimate,Medium
+417,Jute Bag - Supermarket,26,13,95,0.52,85,92,Shopping Bags,Estimate,Medium
+418,Jute Bag - Promotional,23,10,95,0.49,87,86,Promo Bags,Estimate,Medium
+419,Jute Bag - Heavy Duty Retail,29,16,93,0.55,83,98,Heavy Retail Bags,Estimate,Medium
+420,Jute Bag - Drawstring,21,9,95,0.48,88,84,Gift Bags,Estimate,Medium
+421,PLA Sheet - Retail Food Grade,50,12,80,0.55,70,125,Food Packs,Literature,High
+422,PLA Sheet - Industrial,52,13,78,0.6,68,130,Electronics,Estimate,Medium
+423,PLA Sheet - High Impact,55,14,75,0.65,65,135,Durables,Estimate,Medium
+424,PLA Sheet - Printing Grade,49,11,80,0.56,70,122,Print Packaging,Estimate,Medium
+425,PLA Sheet - Barrier Coated,51,12,78,0.6,68,128,Snacks,Estimate,Medium
+426,Polylactic Acid Blend - Bottle,48,11,80,0.5,70,120,Bottles,Estimate,Medium
+427,Polylactic Acid Blend - Sheet High Barrier,47,11,78,0.55,68,123,Snacks,Estimate,Medium
+428,Polylactic Acid Blend - Film High Clarity,45,10,80,0.5,70,118,Window Packs,Estimate,Medium
+429,Polylactic Acid Blend - Foamable,42,9,80,0.6,65,115,Foam Packs,Estimate,Medium
+430,Polylactic Acid Blend - Injection Grade,50,12,78,0.58,68,125,Closures,Estimate,Medium
+431,Biodegradable Film - High Clarity,31,8,85,0.6,65,106,Confectionery,Estimate,Medium
+432,Biodegradable Film - Matte Finish,29,7,87,0.59,67,104,Snacks,Estimate,Medium
+433,Biodegradable Film - Metallized,33,8,80,0.7,60,112,Snacks,Estimate,Medium
+434,Biodegradable Film - Printed,30,8,85,0.62,65,108,Brand Packs,Estimate,Medium
+435,Biodegradable Film - Anti-fog,31,8,85,0.61,65,109,Fresh Produce,Estimate,Medium
+436,Aluminum Foil - Household Heavy,65,15,1,7.8,90,140,Household,Estimate,Medium
+437,Aluminum Foil - Converter Grade,68,18,1,8.1,90,150,Converters,Estimate,Medium
+438,Aluminum Foil - Bare Pharma,72,18,1,8.3,92,160,Pharma,Literature,High
+439,Aluminum Foil - Lacquered Pharma,74,19,1,8.4,90,165,Pharma,Estimate,Medium
+440,Aluminum Foil - Flexible Laminates,70,20,1,8.5,85,155,Snack Packs,Estimate,Medium
+441,Glass Bottle - Cosmetics,80,15,0,2.4,95,120,Cosmetics,Literature,High
+442,Glass Bottle - Pharma Syrup,85,18,0,2.5,95,118,Pharma,Estimate,Medium
+443,Glass Bottle - Oil,88,20,0,2.6,95,122,Edible Oil,Estimate,Medium
+444,Glass Bottle - Sauce,83,17,0,2.4,95,118,Sauces,Estimate,Medium
+445,Glass Bottle - Spirit,92,22,0,2.7,95,130,Spirits,Estimate,Medium
+446,Steel Can - Beverage,78,19,0,6.0,90,100,Beverages,Literature,High
+447,Steel Can - Food 3-piece,80,22,0,6.1,90,102,Canned Food,Estimate,Medium
+448,Steel Can - Food 2-piece,82,23,0,6.2,90,104,Canned Food,Estimate,Medium
+449,Steel Can - Paint,85,24,0,6.3,90,108,Paints,Estimate,Medium
+450,Steel Can - Aerosol Food,78,19,0,6.1,88,106,Edible Aerosols,Estimate,Medium
+451,Mixed Plastic (HDPE+PET) - Bottle,62,16,1,3.6,60,92,Bottles,Estimate,Medium
+452,Mixed Plastic (HDPE+PET) - Container,60,15,1,3.5,60,90,Tubs,Estimate,Medium
+453,Mixed Plastic (HDPE+PET) - Rigid Thin Wall,58,14,1,3.4,60,88,Trays,Estimate,Medium
+454,Mixed Plastic (HDPE+PET) - Pallet Components,65,18,1,3.7,55,95,Pallet Parts,Estimate,Medium
+455,Mixed Plastic (HDPE+PET) - Edge Protectors,60,15,1,3.5,58,92,Edge Protectors,Estimate,Medium
+456,Recycled Mixed Plastic - Bottle,60,15,1,2.0,70,87,Non-food Bottles,Estimate,Medium
+457,Recycled Mixed Plastic - Container,58,14,1,1.9,70,85,Tubs,Estimate,Medium
+458,Recycled Mixed Plastic - Sheet High Density,62,16,1,2.2,65,90,Boards,Estimate,Medium
+459,Recycled Mixed Plastic - Film Low Gauge,52,13,1,1.8,72,82,Films,Estimate,Medium
+460,Recycled Mixed Plastic - Foam High Resilience,48,11,1,1.7,70,80,Foam Packs,Estimate,Medium
+461,PLA Compostable Pack - Salad Bowl,50,10,85,0.55,70,118,Salad Packs,Estimate,Medium
+462,PLA Compostable Pack - Soup Bowl,52,11,80,0.6,68,120,Soup Packs,Estimate,Medium
+463,PLA Compostable Pack - Flat Tray,48,9,88,0.54,70,116,Trays,Estimate,Medium
+464,PLA Compostable Pack - Hinged Lid,49,9,86,0.55,70,117,Clamshells,Estimate,Medium
+465,PLA Compostable Pack - Lid Only,47,8,88,0.52,70,114,Lids,Estimate,Medium
+466,Paper Pulp Tray - Fruit Punnet,13,9,80,0.88,88,50,Fruit Punnets,Estimate,Medium
+467,Paper Pulp Tray - Meat Tray,15,11,78,0.95,85,55,Meat Packs,Estimate,Medium
+468,Paper Pulp Tray - Egg Tray,12,10,84,0.9,88,48,Egg Packs,Literature,High
+469,Paper Pulp Tray - Industrial,16,12,75,1.0,85,60,Parts Packaging,Estimate,Medium
+470,Paper Pulp Tray - Cosmetic,11,8,85,0.87,90,52,Cosmetics,Estimate,Medium
+471,Cardboard Sleeve - Beverage Multipack,17,14,5,1.15,90,45,Drinks Multipacks,Estimate,Medium
+472,Cardboard Sleeve - Cosmetics,15,10,5,1.05,92,42,Beauty Packs,Estimate,Medium
+473,Cardboard Sleeve - Confectionery,14,9,5,1.02,92,40,Chocolate Packs,Estimate,Medium
+474,Cardboard Sleeve - Frozen Foods,16,12,5,1.1,90,44,Frozen Packs,Estimate,Medium
+475,Cardboard Sleeve - Ready Meals,16,12,5,1.1,90,44,Ready Meals,Estimate,Medium
+476,PLA Clamshell - Two-compartment,50,10,78,0.56,68,123,Meals,Estimate,Medium
+477,PLA Clamshell - Three-compartment,52,11,78,0.58,68,125,Meals,Estimate,Medium
+478,PLA Clamshell - Snack,48,9,82,0.54,70,118,Snacks,Estimate,Medium
+479,PLA Clamshell - Bakery Large,49,9,80,0.53,70,120,Bakery,Estimate,Medium
+480,PLA Clamshell - Small Portion,47,8,85,0.51,70,116,Small Meals,Estimate,Medium
+481,Recycled Cardboard Box - Wine Shipper,18,20,5,0.85,95,45,Wine Packs,Estimate,Medium
+482,Recycled Cardboard Box - Book Shipper,15,15,5,0.8,95,40,Books,Estimate,Medium
+483,Recycled Cardboard Box - Apparel Shipper,14,12,5,0.78,95,39,Apparel,Estimate,Medium
+484,Recycled Cardboard Box - Electronics Shipper,17,18,5,0.83,95,44,Electronics,Estimate,Medium
+485,Recycled Cardboard Box - Grocery Shipper,16,16,5,0.82,95,42,Grocery,Estimate,Medium
+486,Bamboo Fiber Cup,14,9,90,0.45,78,65,Hot/Cold Cups,Estimate,Medium
+487,Bamboo Fiber Bowl,15,10,88,0.46,78,68,Bowls,Estimate,Medium
+488,Bamboo Fiber Plate - Large,16,10,88,0.47,78,70,Plates,Estimate,Medium
+489,Bamboo Fiber Plate - Small,14,8,90,0.44,80,63,Plates,Estimate,Medium
+490,Bamboo Fiber Tray,17,11,88,0.48,75,72,Trays,Estimate,Medium
+491,Hemp Fiber Sack,22,14,90,0.4,80,85,Bulk Sacks,Estimate,Medium
+492,Hemp Fiber Board,24,15,85,1.1,70,95,Boards,Estimate,Medium
+493,Hemp Fiber Molded Shell,21,13,88,1.0,75,92,Protective Shells,Estimate,Medium
+494,Hemp Paper - Thin,7,5,90,0.38,80,60,Print Wrap,Estimate,Medium
+495,Hemp Paper - Board,12,8,90,0.4,82,68,Cartons,Estimate,Medium
+496,Mushroom Mycelium Tray,9,6,98,0.32,60,82,Trays,Estimate,Medium
+497,Mushroom Mycelium Bottle Protector,10,7,98,0.33,60,85,Bottle Packs,Estimate,Medium
+498,Mushroom Mycelium Electronics Pack,11,8,98,0.34,60,88,Electronics,Estimate,Medium
+499,Mushroom Mycelium Box Insert,8,5,98,0.31,60,80,General Packaging,Estimate,Medium
+500,Mushroom Mycelium Block - Heavy,12,9,96,0.36,60,90,Heavy Goods,Estimate,Medium
+501,Seaweed Bioplastic - Snack Film,27,7,88,0.41,65,102,Snacks,Estimate,Medium
+502,Seaweed Bioplastic - Standup Pouch,29,8,85,0.43,65,108,Snacks,Estimate,Medium
+503,Seaweed Bioplastic - Bottle Coating,24,6,90,0.4,65,98,Bottle Lining,Estimate,Medium
+504,Seaweed Bioplastic - Blister Form,31,9,82,0.46,60,112,Blisters,Estimate,Medium
+505,Seaweed Bioplastic - Adhesive Film,26,7,88,0.42,65,104,Labels,Estimate,Medium
+506,Paper Honeycomb Door Filler,21,30,80,1.2,80,85,Interior Doors,Estimate,Medium
+507,Paper Honeycomb Edge Filler,19,24,80,1.1,80,78,Furniture,Estimate,Medium
+508,Paper Honeycomb Pallet Top,22,28,78,1.25,78,88,Pallet Top,Estimate,Medium
+509,Paper Honeycomb Core Panel,23,32,78,1.3,75,90,Sandwich Panels,Estimate,Medium
+510,Recycled Paper Honeycomb Pallet,20,26,80,1.0,85,82,Pallet,Estimate,Medium
+511,Bio-PE Cap,60,14,10,1.6,75,145,Bottle Caps,Estimate,Medium
+512,Bio-PE Bottle,55,15,15,1.5,75,140,Bottles,Estimate,Medium
+513,Bio-PE Pouch Film,48,13,20,1.4,75,135,Pouches,Estimate,Medium
+514,Bio-PE Shrink Hood,50,14,20,1.45,75,138,Pallet Hoods,Estimate,Medium
+515,Bio-PE Liner Bag,45,12,25,1.35,78,132,Liners,Estimate,Medium
+516,Paper-PLA Cup,18,10,60,1.0,75,120,Hot Cups,Literature,High
+517,Paper-PLA Bowl,19,11,60,1.05,75,122,Bowls,Estimate,Medium
+518,Paper-PE Cup,20,12,5,2.4,65,90,Hot Cups,Literature,High
+519,Paper-BioPE Cup,19,11,30,1.7,70,110,Hot Cups,Estimate,Medium
+520,Paper-PLA Lid,17,9,60,0.95,75,115,Lids,Estimate,Medium
+521,FSC Virgin Cardboard,16,15,5,1.14,92,46,General Packaging,Literature,High
+522,FSC Recycled Cardboard,16,15,5,0.82,96,41,General Packaging,Literature,High
+523,FSC Virgin Paper,5,5,5,0.9,87,36,Light Packaging,Literature,High
+524,FSC Recycled Paper,5,5,5,0.6,92,31,Light Packaging,Literature,High
+525,FSC Corrugated Board,16,20,5,1.18,94,49,Shipping,Literature,High
+526,FSC Molded Fiber,10,6,85,0.5,80,56,Electronics,Literature,High
+527,Low-carbon Virgin Cardboard,15,15,5,0.9,90,48,General Packaging,Estimate,Medium
+528,Low-carbon Recycled Cardboard,15,15,5,0.7,95,43,General Packaging,Estimate,Medium
+529,Low-carbon Virgin Paper,5,5,5,0.75,85,38,Light Packaging,Estimate,Medium
+530,Low-carbon Recycled Paper,5,5,5,0.5,92,33,Light Packaging,Estimate,Medium
+531,CO2-optimized PLA,50,10,80,0.4,70,130,Food Packaging,Estimate,Medium
+532,CO2-optimized Compostable Film,35,8,85,0.45,70,120,Food Packaging,Estimate,Medium
+533,Recycled High-Strength PET,65,16,1,1.7,80,95,High Strength Packs,Estimate,Medium
+534,Recycled High-Strength Cardboard,18,20,5,0.85,95,47,Heavy Boxes,Estimate,Medium
+535,High-recycled Corrugated,16,20,5,0.9,98,46,Shipping,Estimate,Medium
+536,Recycled Bagasse Board,14,9,88,0.38,82,52,Food Trays,Estimate,Medium
+537,Recycled Molded Fiber,10,6,88,0.45,80,53,Cushioning,Estimate,Medium
+538,Recycled Glass Bottle,90,25,0,2.0,98,115,Drinks,Estimate,Medium
+539,Recycled Steel Can,80,22,0,4.0,95,95,Foods,Estimate,Medium
+540,Closed-loop PET Bottle,60,18,1,1.5,90,100,Beverages,Estimate,Medium
+541,Closed-loop Cardboard Box,16,16,5,0.7,98,45,E-commerce,Estimate,Medium
+542,Closed-loop Paper Mailer,14,8,80,0.6,98,40,Mailers,Estimate,Medium
+543,Closed-loop HDPE Bottle,65,18,1,2.0,80,88,Personal Care,Estimate,Medium
+544,Closed-loop PP Container,55,16,1,1.9,70,78,Food Packs,Estimate,Medium
+545,Paper-Clay Mix Cup,16,9,80,1.2,70,75,Hot Cups,Estimate,Medium
+546,Paper-Bagasse Mix Board,17,10,85,1.0,75,70,Cartons,Estimate,Medium
+547,Paper-Wheat Straw Mix Board,16,9,87,0.95,78,68,Cartons,Estimate,Medium
+548,Paper-Rice Husk Mix Board,17,10,85,1.0,75,72,Cartons,Estimate,Medium
+549,Paper-Kenaf Mix Board,18,11,83,1.05,72,74,Cartons,Estimate,Medium
+550,Algae-based Bioplastic,40,9,85,0.45,65,110,Food Packs,Estimate,Medium
+551,Algae-based Film,35,8,88,0.42,68,105,Snacks,Estimate,Medium
+552,Algae-based Rigid Tray,42,10,80,0.48,65,115,Trays,Estimate,Medium
+553,Algae-based Coating,30,7,90,0.4,70,100,Paper Coating,Estimate,Medium
+554,Algae-based Laminate,38,9,82,0.46,65,112,Snacks,Estimate,Medium
+555,Recycled Textile Padding,12,8,85,0.6,70,50,Padding,Estimate,Medium
+556,Recycled Denim Padding,14,9,88,0.65,68,55,Padding,Estimate,Medium
+557,Recycled Wool Padding,16,10,90,0.7,72,60,Insulating Packs,Estimate,Medium
+558,Bio-based Polyester Padding,15,9,30,1.8,50,75,Insulating Packs,Estimate,Medium
+559,Cellulose Fiber Padding,10,7,90,0.8,80,55,Padding,Estimate,Medium
+560,Recycled PET Fiber Padding,16,10,1,1.6,70,65,Padding,Estimate,Medium
+561,Low-density EPS,10,8,0,4.5,10,35,Protective,Estimate,Medium
+562,High-density EPS,20,14,0,5.5,10,45,Protective,Estimate,Medium
+563,Graphite EPS,22,15,0,6.0,10,50,Insulating,Estimate,Medium
+564,PLA-EPS Hybrid Foam,18,12,40,3.0,30,70,Protective,Estimate,Medium
+565,Compostable Foam from PLA-Starch,15,10,80,1.5,50,80,Protective,Estimate,Medium
+566,Paper-starch Loose Fill,9,7,90,0.8,75,60,Loose Fill,Estimate,Medium
+567,Bio-based PU Foam High,18,12,30,3.3,40,95,Protective,Estimate,Medium
+568,Waste-paper Molded Inserts,9,6,85,0.7,85,45,Inserts,Estimate,Medium
+569,Recycled Newsprint Molded Inserts,8,5,85,0.6,90,40,Inserts,Estimate,Medium
+570,Thin Recycled Glass Sheet,50,12,0,1.8,98,130,Display,Estimate,Medium
+571,Thick Recycled Glass Sheet,70,18,0,2.2,98,145,Display,Estimate,Medium
+572,Recycled Glass Microsphere Filler,60,10,0,1.5,98,120,Filler,Estimate,Medium
+573,Glass-particulate Filled PP,65,16,1,3.0,40,90,Durables,Estimate,Medium
+574,Glass-particulate Filled PLA,60,14,70,1.2,60,130,Durables,Estimate,Medium
+575,Wood-plastic Composite (WPC),50,20,10,2.5,40,80,Pallet Decks,Estimate,Medium
+576,Recycled WPC,50,20,10,2.0,50,75,Pallet Decks,Estimate,Medium
+577,Paper-based Edge Protector,18,14,80,1.0,85,60,Edge Protection,Estimate,Medium
+578,Recycled Paper-based Edge Protector,18,14,82,0.9,90,55,Edge Protection,Estimate,Medium
+579,Virgin Plastic Edge Protector (PP),55,20,1,2.5,30,50,Edge Protection,Estimate,Medium
+580,Recycled Plastic Edge Protector (PP),55,20,1,1.9,50,48,Edge Protection,Estimate,Medium
+581,Paper-based Corner Board,16,12,80,0.95,88,55,Corner Protection,Estimate,Medium
+582,Recycled Paper-based Corner Board,16,12,82,0.85,92,50,Corner Protection,Estimate,Medium
+583,Bio-based Corner Protector,20,14,35,1.7,60,80,Corner Protection,Estimate,Medium
+584,Paper-organic Fiber Board,18,13,85,1.0,75,70,Boards,Estimate,Medium
+585,Recycled Paper-organic Fiber Board,18,13,88,0.9,80,65,Boards,Estimate,Medium
+586,Virgin Cardboard - Pharma Folding Box,15,12,5,1.1,90,45,Pharma,Estimate,Medium
+587,Recycled Cardboard - Pharma Folding Box,15,12,5,0.8,95,40,Pharma,Estimate,Medium
+588,Virgin Paper - Pharma Leaflet,5,4,5,0.9,85,35,Pharma Inserts,Estimate,Medium
+589,Recycled Paper - Pharma Leaflet,5,4,5,0.6,90,30,Pharma Inserts,Estimate,Medium
+590,Blister Pack PET-Alu,65,18,1,7.0,30,160,Pharma,Literature,High
+591,Blister Pack PVC-Alu,60,16,1,8.0,10,120,Pharma,Literature,High
+592,Recyclable Blister PET-PET,65,18,1,3.0,40,150,Pharma,Estimate,Medium
+593,Paper Blister with PLA Window,30,12,70,1.2,70,140,Pharma,Estimate,Medium
+594,Paper Blister with Cellulose Window,28,11,80,1.0,72,135,Pharma,Estimate,Medium
+595,Paper-stick Pack,15,8,75,0.9,85,50,Stick Packs,Estimate,Medium
+596,Plastic-stick Pack (PET/PE),50,12,1,3.0,30,70,Stick Packs,Estimate,Medium
+597,Bio-based-stick Pack,40,10,40,1.8,50,90,Stick Packs,Estimate,Medium
+598,Recyclable Mono-PE Stick Pack,45,11,1,2.5,50,85,Stick Packs,Estimate,Medium
+599,Recycled Mono-PE Stick Pack,45,11,1,1.9,65,80,Stick Packs,Estimate,Medium
+600,Virgin PP Rigid Cup,50,13,1,2.6,40,75,Food Cups,Literature,High
+601,Recycled PP Rigid Cup,50,13,1,1.9,55,72,Food Cups,Estimate,Medium
+602,Virgin HIPS Cup,45,12,1,3.0,10,65,Dairy Cups,Literature,High
+603,Recycled HIPS Cup,45,12,1,2.1,30,60,Dairy Cups,Estimate,Medium
+604,PLA Rigid Cup,50,10,80,0.6,70,120,Dairy Cups,Estimate,Medium
+605,Paper Cup with Bio-liner,18,9,60,1.1,75,115,Dairy Cups,Estimate,Medium
+606,Paper-seeded Insert (Plantable),5,3,95,0.5,80,80,Gift Inserts,Estimate,Medium
+607,Seeded Paper Tag,4,2,95,0.45,80,75,Tags,Estimate,Medium
+608,Seeded Cardboard,10,6,90,0.8,80,85,Gift Boxes,Estimate,Medium
+609,Wood Tag,25,5,60,1.5,60,70,Tags,Estimate,Medium
+610,Bamboo Tag,22,4,85,0.9,70,80,Tags,Estimate,Medium
+611,Virgin Cardboard - Cold Chain Box,18,18,5,1.2,90,52,Cold Chain,Literature,High
+612,Recycled Cardboard - Cold Chain Box,18,18,5,0.82,95,48,Cold Chain,Estimate,Medium
+613,PU Insulated Cold Chain Box,30,40,0,4.0,30,150,Cold Chain,Estimate,Medium
+614,EPS Insulated Cold Chain Box,20,30,0,5.0,10,70,Cold Chain,Literature,High
+615,Vacuum Insulated Panel Insert,50,50,0,15.0,80,300,Cold Chain,Estimate,Medium
+616,Gel Pack - Reusable,5,5,0,4.0,0,200,Cold Chain,Estimate,Medium
+617,Paper-based Gel Pack Pouch,6,5,80,1.0,80,80,Cold Chain,Estimate,Medium
+618,Bio-gel Pack,5,5,50,3.0,0,180,Cold Chain,Estimate,Medium
+619,Recycled Plastic Gel Pack Pouch,6,5,1,2.0,60,70,Cold Chain,Estimate,Medium
+620,Compostable Gel Pack Pouch,6,5,85,0.8,65,90,Cold Chain,Estimate,Medium
+621,Virgin Cardboard - Returnable Tray,18,16,5,1.14,88,50,Return Systems,Estimate,Medium
+622,Recycled Cardboard - Returnable Tray,18,16,5,0.8,93,46,Return Systems,Estimate,Medium
+623,PP Returnable Tray,60,20,1,2.5,40,80,Return Systems,Estimate,Medium
+624,Recycled PP Returnable Tray,60,20,1,1.9,55,76,Return Systems,Estimate,Medium
+625,HDPE Crate,70,25,1,3.0,50,90,Return Systems,Literature,High
+626,Recycled HDPE Crate,70,25,1,2.2,65,85,Return Systems,Estimate,Medium
+627,Steel Returnable Crate,80,30,0,7.0,90,150,Return Systems,Estimate,Medium
+628,Aluminum Returnable Crate,75,28,1,10.0,90,180,Return Systems,Estimate,Medium
+629,Paper-based Dunnage,12,8,85,0.8,90,50,Dunnage,Estimate,Medium
+630,Recycled Paper-based Dunnage,12,8,88,0.6,92,48,Dunnage,Estimate,Medium
+631,Textile-based Dunnage,20,10,60,1.5,50,70,Dunnage,Estimate,Medium
+632,Plastic-based Dunnage,50,15,1,3.0,30,60,Dunnage,Estimate,Medium
+633,Recycled Plastic-based Dunnage,50,15,1,2.0,50,58,Dunnage,Estimate,Medium
+634,PLA-based Dunnage,40,12,80,0.8,60,90,Dunnage,Estimate,Medium
+635,Corrugated Plastic Sheet (PP),50,18,1,2.5,30,65,Layer Pads,Estimate,Medium
+636,Recycled Corrugated Plastic Sheet,50,18,1,1.9,50,62,Layer Pads,Estimate,Medium
+637,Paper-based Layer Pad,20,16,80,1.1,85,55,Layer Pads,Estimate,Medium
+638,Recycled Paper-based Layer Pad,20,16,82,0.9,90,50,Layer Pads,Estimate,Medium
+639,Plastic Pallet Top Sheet,35,12,1,2.5,30,55,Pallet Top,Estimate,Medium
+640,Recycled Plastic Pallet Top Sheet,35,12,1,1.8,50,52,Pallet Top,Estimate,Medium
+641,Paper Pallet Top Sheet,15,10,80,0.8,90,45,Pallet Top,Estimate,Medium
+642,Recycled Paper Pallet Top Sheet,15,10,82,0.6,92,40,Pallet Top,Estimate,Medium
+643,Virgin Cardboard - Retail Ready,16,14,5,1.1,90,46,Retail Ready,Estimate,Medium
+644,Recycled Cardboard - Retail Ready,16,14,5,0.8,95,42,Retail Ready,Estimate,Medium
+645,Virgin Cardboard - Display Ready,15,13,5,1.1,88,45,Displays,Estimate,Medium
+646,Recycled Cardboard - Display Ready,15,13,5,0.78,93,40,Displays,Estimate,Medium
+647,Plastic Shelf-ready Tray (PET),60,15,1,3.0,40,80,Retail Ready,Estimate,Medium
+648,Recycled Plastic Shelf-ready Tray (rPET),60,15,1,1.9,60,82,Retail Ready,Estimate,Medium
+649,Paper-based Shelf-ready Tray,18,14,80,1.0,85,55,Retail Ready,Estimate,Medium
+650,Recycled Paper-based Shelf-ready Tray,18,14,82,0.8,90,50,Retail Ready,Estimate,Medium
+651,Virgin Cardboard - Luxury Box,18,15,5,1.2,85,60,Luxury Packaging,Estimate,Medium
+652,Recycled Cardboard - Luxury Box,18,15,5,0.9,90,55,Luxury Packaging,Estimate,Medium
+653,Rigid Board - Luxury (Paper-based),22,18,5,1.4,80,80,Luxury Packaging,Estimate,Medium
+654,Recycled Rigid Board - Luxury,22,18,5,1.1,85,75,Luxury Packaging,Estimate,Medium
+655,Textile-covered Rigid Board,24,18,60,1.6,70,95,Luxury Packaging,Estimate,Medium
+656,Wooden Gift Box,28,20,60,2.8,60,110,Luxury Packaging,Estimate,Medium
+657,Bamboo Gift Box,26,18,80,1.5,70,105,Luxury Packaging,Estimate,Medium
+658,Metal Tin Gift Box,40,20,1,6.0,90,120,Luxury Packaging,Estimate,Medium
+659,Recycled Metal Tin Gift Box,40,20,1,4.0,95,110,Luxury Packaging,Estimate,Medium
+660,Glass Gift Jar,80,18,0,2.4,95,115,Luxury Packaging,Estimate,Medium
+661,Compostable Window Carton (PLA),18,12,80,0.9,70,95,Window Boxes,Estimate,Medium
+662,Compostable Window Carton (Cellulose),17,11,85,0.85,72,92,Window Boxes,Estimate,Medium
+663,Recycled Window Carton (PET Window),18,12,1,2.0,70,85,Window Boxes,Estimate,Medium
+664,Paperboard Window Carton (No Plastic),16,11,80,1.0,85,80,Window Boxes,Estimate,Medium
+665,Virgin Cardboard - Electronics Inner Box,17,14,5,1.16,90,48,Electronics,Literature,High
+666,Recycled Cardboard - Electronics Inner Box,17,14,5,0.84,95,44,Electronics,Estimate,Medium
+667,Molded Fiber Electronics Inner Tray,11,7,85,0.5,80,55,Electronics,Estimate,Medium
+668,Anti-static Plastic Electronics Tray (PS),50,15,1,3.5,10,75,Electronics,Literature,High
+669,Recycled Anti-static Plastic Electronics Tray,50,15,1,2.5,30,70,Electronics,Estimate,Medium
+670,ESD Foam Insert,18,12,0,4.0,20,90,Electronics,Literature,High
+671,Recycled ESD Foam Insert,18,12,0,3.0,40,85,Electronics,Estimate,Medium
+672,Paper-based ESD Insert,14,9,80,1.0,70,65,Electronics,Estimate,Medium
+673,Conductive Plastic Bag,45,10,1,3.0,30,60,Electronics,Estimate,Medium
+674,Recycled Conductive Plastic Bag,45,10,1,2.2,50,58,Electronics,Estimate,Medium
+675,Paper-based Conductive Bag,15,7,75,1.1,70,70,Electronics,Estimate,Medium
+676,Virgin Cardboard - Food Sleeve,15,10,5,1.1,90,44,Food,Estimate,Medium
+677,Recycled Cardboard - Food Sleeve,15,10,5,0.8,95,40,Food,Estimate,Medium
+678,Virgin Cardboard - Bakery Box,16,12,5,1.12,90,46,Bakery,Estimate,Medium
+679,Recycled Cardboard - Bakery Box,16,12,5,0.82,95,42,Bakery,Estimate,Medium
+680,Virgin Cardboard - Pizza Box,17,14,5,1.15,90,48,Pizza,Estimate,Medium
+681,Recycled Cardboard - Pizza Box,17,14,5,0.85,95,44,Pizza,Estimate,Medium
+682,Bagasse Pizza Box,15,12,88,0.45,78,60,Pizza,Estimate,Medium
+683,Wheat Straw Pizza Box,16,13,90,0.48,78,62,Pizza,Estimate,Medium
+684,Paper-based Pizza Box,17,14,80,1.0,85,52,Pizza,Estimate,Medium
+685,Virgin Cardboard - Frozen Food Carton,16,12,5,1.1,90,46,Frozen Food,Estimate,Medium
+686,Recycled Cardboard - Frozen Food Carton,16,12,5,0.8,95,42,Frozen Food,Estimate,Medium
+687,Plastic Frozen Food Bag (PE),30,8,1,2.5,30,60,Frozen Food,Literature,High
+688,Recycled Plastic Frozen Food Bag,30,8,1,1.8,50,58,Frozen Food,Estimate,Medium
+689,Paper-PE Frozen Food Bag,20,10,5,2.7,60,80,Frozen Food,Estimate,Medium
+690,Paper-BioPE Frozen Food Bag,19,10,20,1.9,70,95,Frozen Food,Estimate,Medium
+691,PLA Frozen Food Bag,35,9,80,0.7,65,110,Frozen Food,Estimate,Medium
+692,Virgin Cardboard - Beverage Carrier 4-pack,17,14,5,1.2,88,48,Beverage,Estimate,Medium
+693,Recycled Cardboard - Beverage Carrier 4-pack,17,14,5,0.85,93,44,Beverage,Estimate,Medium
+694,Virgin Cardboard - Beverage Carrier 6-pack,18,16,5,1.25,88,50,Beverage,Estimate,Medium
+695,Recycled Cardboard - Beverage Carrier 6-pack,18,16,5,0.9,93,46,Beverage,Estimate,Medium
+696,Virgin Cardboard - Beverage Carrier 8-pack,19,18,5,1.3,88,52,Beverage,Estimate,Medium
+697,Recycled Cardboard - Beverage Carrier 8-pack,19,18,5,0.95,93,48,Beverage,Estimate,Medium
+698,PP Ring Carrier,55,18,1,2.5,20,40,Beverage,Literature,High
+699,Bio-based Ring Carrier,45,16,40,1.8,30,70,Beverage,Estimate,Medium
+700,Paper-based Ring Carrier,20,14,80,1.0,85,55,Beverage,Estimate,Medium
+701,Virgin Paper - Label,6,3,5,0.9,80,30,Labels,Literature,High
+702,Recycled Paper - Label,6,3,5,0.6,90,25,Labels,Estimate,Medium
+703,Plastic Label (PP),25,4,1,2.3,30,40,Labels,Literature,High
+704,Plastic Label (PET),30,5,1,3.0,40,50,Labels,Estimate,Medium
+705,Bio-based Plastic Label,22,4,30,1.5,50,60,Labels,Estimate,Medium
+706,Removable Paper Label,6,3,5,0.9,80,32,Labels,Estimate,Medium
+707,Wash-off Plastic Label,25,4,1,2.0,40,45,Labels,Estimate,Medium
+708,Compostable Label,20,4,85,0.7,60,55,Labels,Estimate,Medium
+709,Virgin Paper - Tape Backing,10,4,5,0.9,85,30,Tape,Estimate,Medium
+710,Recycled Paper - Tape Backing,10,4,5,0.6,92,28,Tape,Estimate,Medium
+711,Plastic Tape Backing (PVC),30,6,1,3.5,10,40,Tape,Literature,High
+712,Plastic Tape Backing (PP),25,5,1,2.3,30,35,Tape,Estimate,Medium
+713,Bio-based Plastic Tape Backing,22,5,30,1.5,45,45,Tape,Estimate,Medium
+714,Virgin Paper - Gift Wrap,5,3,5,0.9,80,28,Gift Wrap,Estimate,Medium
+715,Recycled Paper - Gift Wrap,5,3,5,0.6,90,24,Gift Wrap,Estimate,Medium
+716,Virgin Tissue Paper - Gift,3,2,5,0.85,85,20,Gift Wrap,Estimate,Medium
+717,Recycled Tissue Paper - Gift,3,2,5,0.5,92,18,Gift Wrap,Estimate,Medium
+718,Metalized Gift Wrap (PET),30,4,1,4.0,20,60,Gift Wrap,Estimate,Medium
+719,Compostable Gift Wrap (Cellulose),25,4,85,0.7,65,55,Gift Wrap,Estimate,Medium
+720,Virgin Cardboard - Toy Box,16,14,5,1.1,90,47,Toys,Estimate,Medium
+721,Recycled Cardboard - Toy Box,16,14,5,0.8,95,42,Toys,Estimate,Medium
+722,Molded Fiber Toy Insert,10,6,85,0.5,80,52,Toys,Estimate,Medium
+723,Plastic Toy Blister (PET),60,15,1,3.0,40,80,Toys,Literature,High
+724,Recycled Plastic Toy Blister (rPET),60,15,1,1.8,60,82,Toys,Estimate,Medium
+725,Paper-based Toy Blister,25,12,70,1.1,80,90,Toys,Estimate,Medium
+726,Virgin Paper - Instruction Leaflet,5,4,5,0.9,85,35,Leaflets,Estimate,Medium
+727,Recycled Paper - Instruction Leaflet,5,4,5,0.6,90,30,Leaflets,Estimate,Medium
+728,Virgin Paperboard - Cosmetic Box,16,12,5,1.1,88,50,Cosmetics,Estimate,Medium
+729,Recycled Paperboard - Cosmetic Box,16,12,5,0.8,92,45,Cosmetics,Estimate,Medium
+730,Molded Fiber Cosmetic Insert,9,5,85,0.5,80,50,Cosmetics,Estimate,Medium
+731,Plastic Cosmetic Jar (PET),60,15,1,3.0,40,80,Cosmetics,Literature,High
+732,Recycled Plastic Cosmetic Jar (rPET),60,15,1,1.8,60,82,Cosmetics,Estimate,Medium
+733,Glass Cosmetic Jar,80,18,0,2.4,95,120,Cosmetics,Estimate,Medium
+734,Aluminum Cosmetic Jar,70,16,1,7.5,90,130,Cosmetics,Estimate,Medium
+735,Paper-based Cosmetic Jar,20,12,80,1.0,85,90,Cosmetics,Estimate,Medium
+736,Plastic Pump Dispenser (PP),55,10,1,2.6,30,60,Dispensers,Estimate,Medium
+737,Recycled Plastic Pump Dispenser,55,10,1,1.9,50,58,Dispensers,Estimate,Medium
+738,Metal Pump Dispenser,65,12,1,6.0,90,90,Dispensers,Estimate,Medium
+739,Paper-based Pump Dispenser,25,8,75,1.4,80,80,Dispensers,Estimate,Medium
+740,Bio-based Pump Dispenser,50,9,40,2.0,50,75,Dispensers,Estimate,Medium
+741,Virgin Cardboard - Pharma Shipping Box,18,16,5,1.18,90,50,Pharma Shipping,Estimate,Medium
+742,Recycled Cardboard - Pharma Shipping Box,18,16,5,0.82,95,46,Pharma Shipping,Estimate,Medium
+743,Insulated Pharma Shipper (EPS),20,30,0,5.0,10,80,Pharma,Estimate,Medium
+744,Insulated Pharma Shipper (PU),30,40,0,4.0,30,150,Pharma,Estimate,Medium
+745,Insulated Pharma Shipper (Paper-based),22,28,80,1.5,70,100,Pharma,Estimate,Medium
+746,Phase-change Material Pack - Reusable,5,5,0,4.0,0,200,Pharma,Estimate,Medium
+747,Phase-change Material Pack - Single Use,5,5,0,3.0,0,150,Pharma,Estimate,Medium
+748,Paper-based Pallet Collar,20,20,80,1.2,85,70,Palletization,Estimate,Medium
+749,Recycled Paper-based Pallet Collar,20,20,82,1.0,90,65,Palletization,Estimate,Medium
+750,Plastic Pallet Collar,50,25,1,3.5,30,80,Palletization,Estimate,Medium
+751,Recycled Plastic Pallet Collar,50,25,1,2.5,50,75,Palletization,Estimate,Medium
+752,Wood Pallet Collar,35,30,60,2.5,60,90,Palletization,Estimate,Medium
+753,Bio-based Pallet Collar,40,22,30,2.0,50,95,Palletization,Estimate,Medium
+754,Virgin Cardboard - Bulk Bin,20,25,5,1.3,88,55,Bulk Bins,Estimate,Medium
+755,Recycled Cardboard - Bulk Bin,20,25,5,0.9,93,50,Bulk Bins,Estimate,Medium
+756,Plastic Bulk Bin (HDPE),70,30,1,4.0,50,110,Bulk Bins,Estimate,Medium
+757,Recycled Plastic Bulk Bin,70,30,1,2.8,65,105,Bulk Bins,Estimate,Medium
+758,Metal Bulk Bin (Steel),80,35,0,7.0,90,140,Bulk Bins,Estimate,Medium
+759,Bio-based Bulk Bin,50,25,30,2.5,55,120,Bulk Bins,Estimate,Medium
+760,Virgin Cardboard - Archive Box,14,10,5,1.05,90,40,Archive,Literature,High
+761,Recycled Cardboard - Archive Box,14,10,5,0.78,95,36,Archive,Estimate,Medium
+762,Paper-based Archive Box,12,8,80,0.9,90,35,Archive,Estimate,Medium
+763,Plastic Archive Box,45,18,1,3.0,30,60,Archive,Estimate,Medium
+764,Recycled Plastic Archive Box,45,18,1,2.0,50,58,Archive,Estimate,Medium
+765,Virgin Paper - Envelope,6,4,5,0.9,85,30,Envelopes,Literature,High
+766,Recycled Paper - Envelope,6,4,5,0.6,90,26,Envelopes,Estimate,Medium
+767,Plastic Envelope (PE),25,8,1,2.5,30,40,Envelopes,Estimate,Medium
+768,Recycled Plastic Envelope (PE),25,8,1,1.8,50,38,Envelopes,Estimate,Medium
+769,Compostable Envelope,18,6,85,0.7,60,55,Envelopes,Estimate,Medium
+770,Paperboard Mailing Carton,16,10,80,1.0,85,45,Envelopes,Estimate,Medium
+771,Virgin Cardboard - Shoe Box,16,14,5,1.1,90,46,Shoes,Estimate,Medium
+772,Recycled Cardboard - Shoe Box,16,14,5,0.8,95,42,Shoes,Estimate,Medium
+773,Paper-based Shoe Insert,10,6,80,0.8,90,35,Shoes,Estimate,Medium
+774,Plastic Shoe Box,40,16,1,3.0,30,60,Shoes,Estimate,Medium
+775,Bio-based Shoe Box,20,14,40,1.5,60,80,Shoes,Estimate,Medium
+776,Virgin Cardboard - Apparel Box,16,12,5,1.1,90,45,Apparel,Estimate,Medium
+777,Recycled Cardboard - Apparel Box,16,12,5,0.8,95,41,Apparel,Estimate,Medium
+778,Paper Mailer - Apparel,14,8,80,0.9,90,40,Apparel,Estimate,Medium
+779,Plastic Mailer - Apparel,30,10,1,2.5,30,50,Apparel,Estimate,Medium
+780,Recycled Plastic Mailer - Apparel,30,10,1,1.8,50,48,Apparel,Estimate,Medium
+781,Bio-based Mailer - Apparel,25,9,40,1.7,50,70,Apparel,Estimate,Medium
+782,Compostable Mailer - Apparel,20,8,85,0.7,60,90,Apparel,Estimate,Medium
+783,Virgin Paper - Carton Board for E-commerce,16,14,5,1.1,88,48,E-commerce,Estimate,Medium
+784,Recycled Paper - Carton Board for E-commerce,16,14,5,0.8,92,44,E-commerce,Estimate,Medium
+785,Paper-based Protective Sleeve,12,8,80,0.8,90,40,E-commerce,Estimate,Medium
+786,Recycled Paper-based Protective Sleeve,12,8,82,0.6,92,38,E-commerce,Estimate,Medium
+787,Plastic Bubble Mailer (PE),30,10,1,2.5,30,50,E-commerce,Literature,High
+788,Recycled Plastic Bubble Mailer,30,10,1,1.8,50,48,E-commerce,Estimate,Medium
+789,Paper-based Bubble Mailer,15,8,80,0.9,85,45,E-commerce,Estimate,Medium
+790,Compostable Bubble Mailer,20,8,85,0.7,60,80,E-commerce,Estimate,Medium
+791,Virgin Cardboard - Book Mailer,15,10,5,1.1,90,42,Books,Estimate,Medium
+792,Recycled Cardboard - Book Mailer,15,10,5,0.8,95,38,Books,Estimate,Medium
+793,Paper Mailer - Book,14,8,80,0.9,90,40,Books,Estimate,Medium
+794,Plastic Mailer - Book,30,10,1,2.5,30,50,Books,Estimate,Medium
+795,Compostable Mailer - Book,20,8,85,0.7,60,80,Books,Estimate,Medium
+796,Virgin Cardboard - Wine Box,18,16,5,1.2,88,50,Wine,Estimate,Medium
+797,Recycled Cardboard - Wine Box,18,16,5,0.9,93,46,Wine,Estimate,Medium
+798,Molded Pulp Wine Pack,12,9,85,0.5,80,55,Wine,Estimate,Medium
+799,Plastic Wine Insert (PET),65,18,1,3.0,40,85,Wine,Estimate,Medium
+800,Recycled Plastic Wine Insert (rPET),65,18,1,1.8,60,82,Wine,Estimate,Medium
+801,Virgin Cardboard - Fruit Box,18,16,5,1.2,90,48,Fruit,Estimate,Medium
+802,Recycled Cardboard - Fruit Box,18,16,5,0.82,95,44,Fruit,Estimate,Medium
+803,Plastic Fruit Crate (HDPE),70,25,1,3.0,50,90,Fruit,Literature,High
+804,Recycled Plastic Fruit Crate,70,25,1,2.2,65,85,Fruit,Estimate,Medium
+805,Molded Pulp Fruit Tray,12,9,85,0.5,80,55,Fruit,Estimate,Medium
+806,Paper-based Fruit Wrap,7,4,80,0.7,90,35,Fruit,Estimate,Medium
+807,Bio-based Fruit Bag,25,8,40,1.5,50,70,Fruit,Estimate,Medium
+808,Compostable Fruit Bag,20,7,85,0.7,60,80,Fruit,Estimate,Medium
+809,Virgin Cardboard - Vegetable Box,18,16,5,1.2,90,48,Vegetables,Estimate,Medium
+810,Recycled Cardboard - Vegetable Box,18,16,5,0.82,95,44,Vegetables,Estimate,Medium
+811,Plastic Vegetable Crate (HDPE),70,25,1,3.0,50,90,Vegetables,Estimate,Medium
+812,Recycled Plastic Vegetable Crate,70,25,1,2.2,65,85,Vegetables,Estimate,Medium
+813,Molded Pulp Vegetable Tray,12,9,85,0.5,80,55,Vegetables,Estimate,Medium
+814,Paper-based Vegetable Wrap,7,4,80,0.7,90,35,Vegetables,Estimate,Medium
+815,Bio-based Vegetable Bag,25,8,40,1.5,50,70,Vegetables,Estimate,Medium
+816,Compostable Vegetable Bag,20,7,85,0.7,60,80,Vegetables,Estimate,Medium
+817,Virgin Cardboard - Meat Box,18,16,5,1.2,88,50,Meat,Estimate,Medium
+818,Recycled Cardboard - Meat Box,18,16,5,0.9,93,46,Meat,Estimate,Medium
+819,Plastic Meat Tray (PET/PE),65,18,1,3.0,30,80,Meat,Literature,High
+820,Recycled Plastic Meat Tray,65,18,1,2.0,50,78,Meat,Estimate,Medium
+821,Paper-based Meat Tray,17,12,80,1.1,85,60,Meat,Estimate,Medium
+822,Compostable Meat Tray (Bagasse),15,11,88,0.45,78,60,Meat,Estimate,Medium
+823,Plastic Meat Vacuum Pouch (PA/PE),70,20,1,4.0,20,85,Meat,Literature,High
+824,Recyclable Mono-PE Meat Pouch,50,16,1,2.5,50,80,Meat,Estimate,Medium
+825,Compostable Meat Pouch,40,14,85,0.8,60,100,Meat,Estimate,Medium
+826,Virgin Cardboard - Dairy Carton,16,12,5,1.1,88,48,Dairy,Literature,High
+827,Recycled Cardboard - Dairy Carton,16,12,5,0.8,92,44,Dairy,Estimate,Medium
+828,Liquid Carton (Paper/PE),25,15,5,3.0,60,100,Dairy,Literature,High
+829,Liquid Carton (Paper/BioPE),25,15,20,2.0,70,120,Dairy,Estimate,Medium
+830,Liquid Carton (Paper/PE/Alu),30,18,5,6.0,30,150,Dairy,Literature,High
+831,Recycled Liquid Carton Board,26,16,5,2.5,75,110,Dairy,Estimate,Medium
+832,PLA Dairy Cup,50,10,80,0.6,70,120,Dairy,Estimate,Medium
+833,PET Dairy Cup,55,11,1,3.0,40,80,Dairy,Literature,High
+834,PP Dairy Cup,50,10,1,2.6,40,75,Dairy,Literature,High
+835,Recycled PP Dairy Cup,50,10,1,1.9,55,72,Dairy,Estimate,Medium
+836,Paper-based Dairy Tub,20,12,80,1.1,85,90,Dairy,Estimate,Medium
+837,Virgin Cardboard - Egg Carton,15,10,5,1.1,90,40,Eggs,Literature,High
+838,Recycled Cardboard - Egg Carton,15,10,5,0.8,95,36,Eggs,Estimate,Medium
+839,Molded Pulp Egg Carton,12,9,85,0.5,80,45,Eggs,Literature,High
+840,Plastic Egg Carton (PET),65,15,1,3.0,40,70,Eggs,Literature,High
+841,Recycled Plastic Egg Carton (rPET),65,15,1,1.8,60,68,Eggs,Estimate,Medium
+842,Paper-based Egg Tray,12,9,85,0.5,85,42,Eggs,Estimate,Medium
+843,Virgin Cardboard - Cereal Box,16,12,5,1.1,90,45,Cereals,Literature,High
+844,Recycled Cardboard - Cereal Box,16,12,5,0.8,95,41,Cereals,Literature,High
+845,Plastic Cereal Liner (PE),25,8,1,2.5,30,40,Cereals,Literature,High
+846,Recycled Plastic Cereal Liner,25,8,1,1.8,50,38,Cereals,Estimate,Medium
+847,Paper-based Cereal Liner,12,6,80,0.9,90,35,Cereals,Estimate,Medium
+848,Compostable Cereal Liner,20,7,85,0.7,60,60,Cereals,Estimate,Medium
+849,Virgin Cardboard - Snack Box,16,12,5,1.1,90,45,Snacks,Estimate,Medium
+850,Recycled Cardboard - Snack Box,16,12,5,0.8,95,41,Snacks,Estimate,Medium
+851,Plastic Snack Pouch (PET/PE),50,12,1,3.0,30,70,Snacks,Literature,High
+852,Recyclable Mono-PE Snack Pouch,45,11,1,2.5,50,75,Snacks,Estimate,Medium
+853,Paper-based Snack Pouch,18,10,70,1.1,85,80,Snacks,Estimate,Medium
+854,Compostable Snack Pouch,35,9,85,0.7,60,90,Snacks,Estimate,Medium
+855,Metalized Snack Pouch (PET/Alu/PE),60,15,1,6.0,20,90,Snacks,Literature,High
+856,Paper-based Snack Pouch with Barrier,20,10,65,1.2,75,95,Snacks,Estimate,Medium
+857,Virgin Cardboard - Chocolate Box,16,12,5,1.1,90,50,Confectionery,Estimate,Medium
+858,Recycled Cardboard - Chocolate Box,16,12,5,0.8,95,45,Confectionery,Estimate,Medium
+859,Plastic Chocolate Tray (PET),65,15,1,3.0,40,80,Confectionery,Literature,High
+860,Recycled Plastic Chocolate Tray (rPET),65,15,1,1.8,60,78,Confectionery,Estimate,Medium
+861,Paper-based Chocolate Tray,14,10,80,1.0,85,60,Confectionery,Estimate,Medium
+862,Compostable Chocolate Tray (Bagasse),15,11,88,0.45,78,60,Confectionery,Estimate,Medium
+863,Virgin Cardboard - Coffee Box,16,12,5,1.1,90,45,Coffee,Literature,High
+864,Recycled Cardboard - Coffee Box,16,12,5,0.8,95,41,Coffee,Literature,High
+865,Plastic Coffee Pouch (PET/Alu/PE),60,15,1,6.0,20,90,Coffee,Literature,High
+866,Recyclable Coffee Pouch (Mono-PE),45,11,1,2.5,50,75,Coffee,Estimate,Medium
+867,Paper-based Coffee Pouch,18,10,70,1.1,85,80,Coffee,Estimate,Medium
+868,Compostable Coffee Pouch,35,9,85,0.7,60,90,Coffee,Estimate,Medium
+869,Virgin Cardboard - Tea Box,16,12,5,1.1,90,45,Tea,Literature,High
+870,Recycled Cardboard - Tea Box,16,12,5,0.8,95,41,Tea,Literature,High
+871,Plastic Tea Pouch (PET/PE),50,12,1,3.0,30,70,Tea,Literature,High
+872,Recyclable Mono-PE Tea Pouch,45,11,1,2.5,50,75,Tea,Estimate,Medium
+873,Paper-based Tea Pouch,18,10,70,1.1,85,80,Tea,Estimate,Medium
+874,Compostable Tea Pouch,35,9,85,0.7,60,90,Tea,Estimate,Medium
+875,Tea Bag Paper,5,3,90,0.7,80,40,Tea,Literature,High
+876,Bio-based Tea Bag (PLA Mesh),35,8,80,0.6,60,90,Tea,Literature,High
+877,Compostable Tea Bag Mesh,30,7,85,0.6,65,85,Tea,Estimate,Medium
+878,Recycled Tea Bag Paper,5,3,90,0.55,85,35,Tea,Estimate,Medium
+879,Virgin Cardboard - Pet Food Box,16,12,5,1.1,90,45,Pet Food,Estimate,Medium
+880,Recycled Cardboard - Pet Food Box,16,12,5,0.8,95,41,Pet Food,Estimate,Medium
+881,Plastic Pet Food Pouch (PET/PE),50,12,1,3.0,30,70,Pet Food,Literature,High
+882,Recyclable Mono-PE Pet Food Pouch,45,11,1,2.5,50,75,Pet Food,Estimate,Medium
+883,Paper-based Pet Food Pouch,18,10,70,1.1,85,80,Pet Food,Estimate,Medium
+884,Compostable Pet Food Pouch,35,9,85,0.7,60,90,Pet Food,Estimate,Medium
+885,Metal Pet Food Can (Steel),80,22,0,6.0,90,100,Pet Food,Literature,High
+886,Recycled Metal Pet Food Can,80,22,0,4.0,95,95,Pet Food,Estimate,Medium
+887,Virgin Cardboard - Home Care Box,16,12,5,1.1,90,45,Home Care,Estimate,Medium
+888,Recycled Cardboard - Home Care Box,16,12,5,0.8,95,41,Home Care,Estimate,Medium
+889,Plastic Home Care Bottle (HDPE),65,18,1,3.1,50,80,Home Care,Literature,High
+890,Recycled Plastic Home Care Bottle,65,18,1,2.0,70,78,Home Care,Estimate,Medium
+891,Plastic Home Care Pouch (PE),30,10,1,2.5,30,50,Home Care,Estimate,Medium
+892,Recyclable Mono-PE Home Care Pouch,30,10,1,2.3,50,55,Home Care,Estimate,Medium
+893,Compostable Home Care Pouch,25,9,85,0.7,60,80,Home Care,Estimate,Medium
+894,Paper-based Home Care Box with PLA liner,18,12,60,1.1,75,90,Home Care,Estimate,Medium
+895,Virgin Cardboard - Personal Care Box,16,12,5,1.1,90,45,Personal Care,Estimate,Medium
+896,Recycled Cardboard - Personal Care Box,16,12,5,0.8,95,41,Personal Care,Estimate,Medium
+897,Plastic Personal Care Bottle (PET),60,15,1,3.0,40,80,Personal Care,Literature,High
+898,Recycled Plastic Personal Care Bottle (rPET),60,15,1,1.8,60,78,Personal Care,Estimate,Medium
+899,Paper-based Personal Care Pouch,18,10,70,1.1,85,80,Personal Care,Estimate,Medium
+900,Compostable Personal Care Pouch,35,9,85,0.7,60,90,Personal Care,Estimate,Medium
+901,Virgin Cardboard - Electronics Outer Box,18,18,5,1.2,90,50,Electronics,Literature,High
+902,Recycled Cardboard - Electronics Outer Box,18,18,5,0.82,95,46,Electronics,Literature,High
+903,Molded Fiber Electronics Outer Tray,12,8,85,0.5,80,56,Electronics,Estimate,Medium
+904,Plastic Electronics Outer Shell (ABS),70,20,1,4.0,20,90,Electronics,Literature,High
+905,Recycled Plastic Electronics Outer Shell,70,20,1,3.0,40,85,Electronics,Estimate,Medium
+906,Paper-based Electronics Outer Box with ESD,16,14,80,1.1,75,60,Electronics,Estimate,Medium
+907,Virgin Cardboard - Pharma Inner Box,15,11,5,1.1,90,44,Pharma,Estimate,Medium
+908,Recycled Cardboard - Pharma Inner Box,15,11,5,0.8,95,40,Pharma,Estimate,Medium
+909,Molded Fiber Pharma Insert,9,5,85,0.5,80,50,Pharma,Estimate,Medium
+910,Plastic Blister - Pharma (PVC),60,15,1,8.0,10,120,Pharma,Literature,High
+911,Recyclable Blister - Pharma (PET),65,16,1,3.0,40,150,Pharma,Estimate,Medium
+912,Paper-based Blister - Pharma,28,12,70,1.2,70,140,Pharma,Estimate,Medium
+913,Glass Vial,70,10,0,2.4,95,130,Pharma,Literature,High
+914,Plastic Vial (PET),60,12,1,3.0,40,80,Pharma,Estimate,Medium
+915,Recycled Plastic Vial (rPET),60,12,1,1.8,60,78,Pharma,Estimate,Medium
+916,Virgin Cardboard - Medical Device Box,18,16,5,1.2,90,48,Medical,Estimate,Medium
+917,Recycled Cardboard - Medical Device Box,18,16,5,0.82,95,44,Medical,Estimate,Medium
+918,Molded Fiber Medical Device Insert,11,7,85,0.5,80,54,Medical,Estimate,Medium
+919,Plastic Medical Device Blister (PET),65,16,1,3.0,40,80,Medical,Estimate,Medium
+920,Recycled Plastic Medical Device Blister (rPET),65,16,1,1.8,60,78,Medical,Estimate,Medium
+921,Paper-based Medical Device Pouch,20,10,80,1.1,85,90,Medical,Estimate,Medium
+922,Plastic Medical Device Pouch (PE),30,10,1,2.5,30,50,Medical,Estimate,Medium
+923,Recyclable Mono-PE Medical Device Pouch,30,10,1,2.3,50,55,Medical,Estimate,Medium
+924,Compostable Medical Device Pouch,25,9,85,0.7,60,80,Medical,Estimate,Medium
+925,Virgin Cardboard - Industrial Box,20,20,5,1.3,88,50,Industrial,Estimate,Medium
+926,Recycled Cardboard - Industrial Box,20,20,5,0.9,93,46,Industrial,Estimate,Medium
+927,Plastic Industrial Container (HDPE),70,30,1,4.0,50,100,Industrial,Estimate,Medium
+928,Recycled Plastic Industrial Container,70,30,1,2.8,65,95,Industrial,Estimate,Medium
+929,Metal Industrial Container (Steel),80,35,0,7.0,90,140,Industrial,Estimate,Medium
+930,Bio-based Industrial Container,50,25,30,2.5,55,120,Industrial,Estimate,Medium
+931,Virgin Cardboard - Chemical Box,18,16,5,1.2,88,48,Chemicals,Estimate,Medium
+932,Recycled Cardboard - Chemical Box,18,16,5,0.82,93,44,Chemicals,Estimate,Medium
+933,Plastic Chemical Drum (HDPE),70,35,1,4.0,50,100,Chemicals,Estimate,Medium
+934,Recycled Plastic Chemical Drum,70,35,1,2.8,65,95,Chemicals,Estimate,Medium
+935,Metal Chemical Drum (Steel),85,40,0,8.0,90,140,Chemicals,Literature,High
+936,Composite Chemical Drum (Steel/PE),80,38,1,7.0,70,150,Chemicals,Estimate,Medium
+937,Virgin Cardboard - Cosmetic Shipping Box,16,12,5,1.1,90,45,Cosmetic Shipping,Estimate,Medium
+938,Recycled Cardboard - Cosmetic Shipping Box,16,12,5,0.8,95,41,Cosmetic Shipping,Estimate,Medium
+939,Paper-based Cosmetic Shipping Filler,10,6,80,0.8,90,35,Cosmetic Shipping,Estimate,Medium
+940,Plastic Cosmetic Shipping Filler (PE),30,10,1,2.5,30,50,Cosmetic Shipping,Estimate,Medium
+941,Recycled Plastic Cosmetic Shipping Filler,30,10,1,1.8,50,48,Cosmetic Shipping,Estimate,Medium
+942,Compostable Cosmetic Shipping Filler,20,8,85,0.7,60,80,Cosmetic Shipping,Estimate,Medium
+943,Virgin Cardboard - Subscription Box,16,12,5,1.1,90,45,Subscription,Estimate,Medium
+944,Recycled Cardboard - Subscription Box,16,12,5,0.8,95,41,Subscription,Estimate,Medium
+945,Paper-based Subscription Filler,10,6,80,0.8,90,35,Subscription,Estimate,Medium
+946,Plastic Subscription Filler (PE),30,10,1,2.5,30,50,Subscription,Estimate,Medium
+947,Recycled Plastic Subscription Filler,30,10,1,1.8,50,48,Subscription,Estimate,Medium
+948,Compostable Subscription Filler,20,8,85,0.7,60,80,Subscription,Estimate,Medium
+949,Virgin Cardboard - Gift Box,16,12,5,1.1,90,50,Gifts,Estimate,Medium
+950,Recycled Cardboard - Gift Box,16,12,5,0.8,95,45,Gifts,Estimate,Medium
+951,Paper-based Gift Filler,10,6,80,0.8,90,40,Gifts,Estimate,Medium
+952,Plastic Gift Filler (PE),30,10,1,2.5,30,55,Gifts,Estimate,Medium
+953,Recycled Plastic Gift Filler,30,10,1,1.8,50,50,Gifts,Estimate,Medium
+954,Compostable Gift Filler,20,8,85,0.7,60,85,Gifts,Estimate,Medium
+955,Virgin Cardboard - Electronics Accessory Box,15,11,5,1.1,90,44,Electronics Accessory,Estimate,Medium
+956,Recycled Cardboard - Electronics Accessory Box,15,11,5,0.8,95,40,Electronics Accessory,Estimate,Medium
+957,Molded Fiber Electronics Accessory Insert,9,5,85,0.5,80,50,Electronics Accessory,Estimate,Medium
+958,Plastic Electronics Accessory Blister (PET),60,15,1,3.0,40,80,Electronics Accessory,Estimate,Medium
+959,Recycled Plastic Electronics Accessory Blister (rPET),60,15,1,1.8,60,78,Electronics Accessory,Estimate,Medium
+960,Paper-based Electronics Accessory Pouch,18,10,80,1.0,85,70,Electronics Accessory,Estimate,Medium
+961,Virgin Cardboard - Beverage Shipping Box,18,18,5,1.2,88,48,Beverage Shipping,Estimate,Medium
+962,Recycled Cardboard - Beverage Shipping Box,18,18,5,0.82,93,44,Beverage Shipping,Estimate,Medium
+963,Molded Pulp Beverage Divider,12,9,85,0.5,80,55,Beverage Shipping,Estimate,Medium
+964,Plastic Beverage Divider (PET),65,18,1,3.0,40,80,Beverage Shipping,Estimate,Medium
+965,Recycled Plastic Beverage Divider (rPET),65,18,1,1.8,60,78,Beverage Shipping,Estimate,Medium
+966,Paper-based Beverage Divider,16,12,80,1.0,85,60,Beverage Shipping,Estimate,Medium
+967,Virgin Cardboard - Pallet Box,22,24,5,1.3,88,55,Palletization,Estimate,Medium
+968,Recycled Cardboard - Pallet Box,22,24,5,0.9,93,50,Palletization,Estimate,Medium
+969,Plastic Pallet Box (HDPE),70,30,1,4.0,50,120,Palletization,Estimate,Medium
+970,Recycled Plastic Pallet Box,70,30,1,2.8,65,115,Palletization,Estimate,Medium
+971,Metal Pallet Box (Steel),80,35,0,7.0,90,150,Palletization,Estimate,Medium
+972,Bio-based Pallet Box,50,25,30,2.5,55,130,Palletization,Estimate,Medium
+973,Virgin Cardboard - Bulk Liquid Box,20,20,5,1.3,88,55,Bulk Liquids,Estimate,Medium
+974,Recycled Cardboard - Bulk Liquid Box,20,20,5,0.9,93,50,Bulk Liquids,Estimate,Medium
+975,Plastic Bag-in-Box Liner (PE),35,15,1,2.5,30,60,Bulk Liquids,Estimate,Medium
+976,Recyclable Mono-PE Bag-in-Box Liner,35,15,1,2.3,50,65,Bulk Liquids,Estimate,Medium
+977,Compostable Bag-in-Box Liner,30,14,85,0.8,60,85,Bulk Liquids,Estimate,Medium
+978,Plastic IBC Inner Bottle (HDPE),70,35,1,4.0,50,100,Bulk Liquids,Estimate,Medium
+979,Recycled Plastic IBC Inner Bottle,70,35,1,2.8,65,95,Bulk Liquids,Estimate,Medium
+980,Metal IBC Cage (Steel),80,40,0,7.0,90,140,Bulk Liquids,Estimate,Medium
+981,Virgin Cardboard - Shipping Sleeve,18,16,5,1.2,90,48,Shipping,Estimate,Medium
+982,Recycled Cardboard - Shipping Sleeve,18,16,5,0.82,95,44,Shipping,Estimate,Medium
+983,Paper-based Shipping Sleeve,15,12,80,1.0,90,42,Shipping,Estimate,Medium
+984,Plastic Shipping Sleeve (PE),35,12,1,2.5,30,50,Shipping,Estimate,Medium
+985,Recycled Plastic Shipping Sleeve,35,12,1,1.8,50,48,Shipping,Estimate,Medium
+986,Compostable Shipping Sleeve,25,10,85,0.7,60,80,Shipping,Estimate,Medium
+987,Virgin Cardboard - Retail Shelf Tray,16,14,5,1.1,90,46,Retail,Estimate,Medium
+988,Recycled Cardboard - Retail Shelf Tray,16,14,5,0.8,95,42,Retail,Estimate,Medium
+989,Paper-based Retail Shelf Tray,14,12,80,0.9,90,40,Retail,Estimate,Medium
+990,Plastic Retail Shelf Tray (PET),60,15,1,3.0,40,80,Retail,Estimate,Medium
+991,Recycled Plastic Retail Shelf Tray (rPET),60,15,1,1.8,60,78,Retail,Estimate,Medium
+992,Compostable Retail Shelf Tray,30,10,85,0.7,60,90,Retail,Estimate,Medium
+993,Virgin Cardboard - POS Display,18,14,5,1.2,88,50,POS,Estimate,Medium
+994,Recycled Cardboard - POS Display,18,14,5,0.9,93,46,POS,Estimate,Medium
+995,Paper-based POS Display,16,12,80,1.0,90,45,POS,Estimate,Medium
+996,Plastic POS Display (PET),65,18,1,3.0,40,90,POS,Estimate,Medium
+997,Recycled Plastic POS Display (rPET),65,18,1,1.8,60,88,POS,Estimate,Medium
+998,Compostable POS Display,30,10,85,0.7,60,95,POS,Estimate,Medium
+999,Virgin Cardboard - Secondary Pack,16,12,5,1.1,90,45,Secondary,Estimate,Medium
+1000,Recycled Cardboard - Secondary Pack,16,12,5,0.8,95,41,Secondary,Estimate,Medium
+
