@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Input | EcoPackAI</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="main-header">
+    <h1>EcoPackAI</h1>
+    <nav aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="product.html" class="active">Product Input</a>
+        <a href="analytics.html">Analytics</a>
+    </nav>
+</header>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="product-container">
+
+    <section class="form-header">
+        <h2>Enter Product Details</h2>
+        <p class="subtitle">
+            Provide basic product information to receive eco-friendly packaging recommendations
+        </p>
+    </section>
+
+    <!-- ================= PRODUCT FORM ================= -->
+    <form id="productForm" class="product-form" aria-label="Product Input Form">
+
+        <!-- Product Name -->
+        <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input
+                type="text"
+                id="productName"
+                placeholder="e.g., Organic Shampoo Bottle"
+                required
+            >
+        </div>
+
+        <!-- Category -->
+        <div class="form-group">
+            <label for="category">Product Category</label>
+            <select id="category" required>
+                <option value="">Select category</option>
+                <option value="Food">Food</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Cosmetics">Cosmetics</option>
+                <option value="Pharmacy">Pharmacy</option>
+            </select>
+        </div>
+
+        <!-- Weight -->
+        <div class="form-group">
+            <label for="weight">Product Weight (kg)</label>
+            <input
+                type="number"
+                id="weight"
+                step="0.01"
+                min="0.01"
+                placeholder="e.g., 0.75"
+                required
+            >
+        </div>
+
+        <!-- Fragility -->
+        <div class="form-group">
+            <label for="fragility">Fragility Index (1–10)</label>
+            <input
+                type="number"
+                id="fragility"
+                min="1"
+                max="10"
+                placeholder="1 = Low, 10 = High"
+                required
+            >
+        </div>
+
+        <!-- Shipping Type -->
+        <div class="form-group">
+            <label for="shipping">Shipping Type</label>
+            <select id="shipping" required>
+                <option value="">Select shipping mode</option>
+                <option value="Air">Air</option>
+                <option value="Road">Road</option>
+                <option value="Sea">Sea</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="primary-btn">
+            Get Packaging Recommendation
+        </button>
+
+    </form>
+
+    <!-- ================= STATUS MESSAGES ================= -->
+    <section class="status-messages" aria-live="polite">
+        <p id="loadingMsg" class="info-text" style="display:none;">
+            Loading recommendations...
+        </p>
+
+        <p id="errorMsg" class="error-text"></p>
+        <p id="apiError" class="error-text"></p>
+    </section>
+
+</main>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="js/predict.js"></script>
+
+</body>
+</html>
