@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test | EcoPackAI</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #2e7d32;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #43a047;
+        }
+
+        #result {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-family: Consolas, monospace;
+        }
+
+        .success {
+            color: #2e7d32;
+        }
+
+        .error {
+            color: #c62828;
+        }
+
+        .info {
+            color: #1565c0;
+        }
+
+        .payload {
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>EcoPackAI – API Test Console</h1>
+    <p>
+        This page tests the <strong>/predict</strong> endpoint by sending a sample product payload
+        and displaying the server response.
+    </p>
+
+    <button onclick="testAPI()">Test /predict API</button>
+
+    <div class="payload">
+        <strong>Test Payload:</strong>
+        <pre>{
+  "product_name": "Test Product",
+  "category": "Electronics",
+  "product_weight_kg": 2,
+  "fragility_index": 0.5,
+  "shipping_type": "Air"
+}</pre>
+    </div>
+
+    <div id="result" class="info">Waiting for test...</div>
+
+    <script>
+        async function testAPI() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.className = 'info';
+            resultDiv.textContent = 'Testing API...';
+
+            const payload = {
+                product_name: "Test Product",
+                category: "Electronics",
+                product_weight_kg: 2,
+                fragility_index: 0.5,
+                shipping_type: "Air"
+            };
+
+            try {
+                console.log('Sending request:', payload);
+
+                const response = await fetch('http://localhost:5000/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const text = await response.text();
+                let data;
+
+                try {
+                    data = JSON.parse(text);
+                } catch {
+                    throw new Error("Invalid JSON response from server");
+                }
+
+                if (response.ok) {
+                    resultDiv.className = 'success';
+                    resultDiv.textContent =
+                        'SUCCESS ✅\n\n' + JSON.stringify(data, null, 2);
+                } else {
+                    resultDiv.className = 'error';
+                    resultDiv.textContent =
+                        'API ERROR ❌ (Status ' + response.status + ')\n\n' +
+                        JSON.stringify(data, null, 2);
+                }
+
+            } catch (error) {
+                console.error('Network error:', error);
+                resultDiv.className = 'error';
+                resultDiv.textContent =
+                    'NETWORK ERROR ❌\n\n' + error.message;
+            }
+        }
+
+        // Auto-run test on page load
+        window.onload = () => {
+            setTimeout(testAPI, 500);
+        };
+    </script>
+
+</body>
+</html>
