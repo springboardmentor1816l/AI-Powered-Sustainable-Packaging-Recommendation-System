@@ -1,0 +1,8 @@
+original_shape: (606000, 28)
+cleaned_shape: (606000, 34)
+rows_removed: 0
+missing_values_handled: 0
+duplicates_removed: 0
+categorical_features_encoded: 6
+numerical_features_normalized: 18
+total_ml_features: 24

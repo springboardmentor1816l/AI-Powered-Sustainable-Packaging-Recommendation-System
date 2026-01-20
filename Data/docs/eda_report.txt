@@ -1,0 +1,7 @@
+EcoPackAI - Exploratory Data Analysis Report
+============================================================
+
+Dataset shape: (606000, 24)
+
+Data Quality Issues:
+ No issues detected

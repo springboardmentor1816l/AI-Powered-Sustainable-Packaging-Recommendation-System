@@ -1,0 +1,6 @@
+{
+  "co2_impact_index": "Environmental impact (lower is better)",
+  "cost_efficiency_index": "Economic efficiency (higher is better)",
+  "material_suitability_score": "Product-material compatibility",
+  "overall_sustainability_score": "Final sustainability score"
+}
