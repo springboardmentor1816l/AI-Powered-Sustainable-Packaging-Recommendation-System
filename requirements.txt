@@ -11,3 +11,7 @@ shap
 flask
 flask-cors
 xgboost
+flask-sqlalchemy
+flask-migrate
+psycopg2-binary
+flask-caching

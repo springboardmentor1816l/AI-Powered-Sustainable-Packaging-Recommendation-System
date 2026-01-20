@@ -1,11 +1,27 @@
 from flask import Blueprint, request, jsonify
 from backend.services.predictor import predictor
+from backend.cache import cache
+from backend.middleware.auth import require_api_key
 import logging
 
 predict_bp = Blueprint('predict', __name__)
 logger = logging.getLogger(__name__)
 
+def make_cache_key(*args, **kwargs):
+    """
+    Create a cache key based on the request JSON body.
+    """
+    if request.is_json:
+        data = request.get_json()
+        # Create a deterministic string representation of the data
+        # Sort keys to ensure consistent order
+        import json
+        return json.dumps(data, sort_keys=True)
+    return request.url
+
 @predict_bp.route('/predict', methods=['POST'])
+@require_api_key
+@cache.cached(timeout=60, make_cache_key=make_cache_key)
 def predict():
     """
     Prediction endpoint.
@@ -20,6 +36,7 @@ def predict():
     }
     """
     try:
+        logger.info("Processing prediction request (not cached)")
         data = request.get_json()
         
         # Input Validation
