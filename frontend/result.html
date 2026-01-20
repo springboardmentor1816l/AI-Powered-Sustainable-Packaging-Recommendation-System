@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analysis Result</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>📊 Analysis Result</h1>
+
+  <div class="result-card">
+    <h2>Recommended Material: <span id="material"></span></h2>
+    <p><strong>Cost:</strong>  <span id="cost"></span></p>
+    <p><strong>CO₂ Impact:</strong> <span id="co2"></span> </p>
+    <p><strong>Sustainability Score:</strong> <span id="score"></span></p>
+    <p><strong>Shipping:</strong> <span id="shipping"></span></p>
+  </div>
+
+  <div class="charts">
+    <div class="chart-card"><canvas id="costChart"></canvas></div>
+    <div class="chart-card"><canvas id="co2Chart"></canvas></div>
+    <div class="chart-card"><canvas id="scoreChart"></canvas></div>
+  </div>
+
+  <div class="export-buttons">
+    <button id="exportCsv">Export CSV</button>
+    <button id="exportPdf">Export PDF</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script src="js/result.js"></script>
+</body>
+</html>
