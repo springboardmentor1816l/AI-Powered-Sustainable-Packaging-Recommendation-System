@@ -61,7 +61,7 @@ The final sustainability score is calculated on a **0–100 scale**, ensuring tr
 ---
 
 ## 🏗 System Architecture
-
+```text
 Frontend (HTML, Bootstrap, Chart.js)
 ↓
 Flask REST API
@@ -72,11 +72,8 @@ Material Ranking Logic
 ↓
 LocalStorage / PostgreSQL (design-ready)
 ↓
-BI Analytics Dashboard
-
-yaml
-Copy code
-
+BI Analytics Dashboard 
+```
 ### Architecture Highlights
 - Predictor scores **one material at a time**
 - Ranking handled at the **API layer**
@@ -127,100 +124,78 @@ This enables **business intelligence–driven sustainability reporting**.
 
 ## 📁 Project Structure
 
+  ```text
 EcoPackAI/
-│
 ├── backend/
-│ ├── app.py
-│ ├── routes/
-│ │ └── predict.py
-│ ├── inference/
-│ │ └── predictor.py
-│ └── models/
-│
+│   ├── app.py
+│   ├── inference/
+│   │   └── predictor.py
+│   ├── models/
+│   └── routes/
+│       └── predict.py
 ├── frontend/
-│ ├── index.html
-│ ├── predict.html
-│ ├── results.html
-│ ├── analytics.html
-│ └── js/
-│
+│   ├── js/
+│   ├── analytics.html
+│   ├── index.html
+│   ├── predict.html
+│   └── results.html
 ├── README.md
 └── requirements.txt
-
-yaml
-Copy code
-
----
+```
 
 ## ▶️ How to Run the Project
 
 ### 1️⃣ Backend Setup
-```bash
 pip install -r requirements.txt
 python app.py
-Backend runs on:
 
-cpp
-Copy code
+
+### Backend runs on:
 http://127.0.0.1:5001
-2️⃣ Frontend
+
+### 2️⃣ Frontend
 Open the frontend directly in a browser:
 
-bash
-Copy code
 frontend/index.html
-🧪 Example Use Case
-Product: Washing Machine
-Category: Electronics
-Weight: 15 kg
-Fragility: Low
-Shipping: Local
+### 🧪 Example Use Case
+- Product: Washing Machine
+- Category: Electronics
+- Weight: 15 kg
+- Fragility: Low
+- Shipping: Local
 
-Output:
+### Output:
 
-Rank 1: Corrugated Cardboard (Heavy Duty)
+- Rank 1: Corrugated Cardboard (Heavy Duty)
+-Rank 2: Styrofoam (EPS)
+- Ranked comparison table and charts
+- Exportable sustainability report
 
-Rank 2: Styrofoam (EPS)
+ ### 🎓 Academic & Evaluation Alignment
+   EcoPackAI satisfies key academic and project evaluation criteria:
+   AI-based decision making
+   Data preprocessing and feature engineering
+   Backend–frontend integration
+   Sustainability analytics and BI dashboard
+   Explainable scoring logic
+   Professional documentation
 
-Ranked comparison table and charts
+### 🔮 Future Enhancements
+   Full PostgreSQL integration
+   Lifecycle Assessment (LCA) modeling
+   User authentication and role-based dashboards
+   Cloud deployment (AWS / Render / Heroku)
+   Advanced explainability visualizations
 
-Exportable sustainability report
+### 👤 Author
+   Ravikant Raj
+   AI-Powered Sustainable Packaging Systems Project
+   2026
 
-🎓 Academic & Evaluation Alignment
-EcoPackAI satisfies key academic and project evaluation criteria:
+### 📜 License
+   This project is developed for academic and learning purposes.
+   Free to extend with proper attribution.
 
-AI-based decision making
-
-Data preprocessing and feature engineering
-
-Backend–frontend integration
-
-Sustainability analytics and BI dashboard
-
-Explainable scoring logic
-
-Professional documentation
-
-🔮 Future Enhancements
-Full PostgreSQL integration
-
-Lifecycle Assessment (LCA) modeling
-
-User authentication and role-based dashboards
-
-Cloud deployment (AWS / Render / Heroku)
-
-Advanced explainability visualizations
-
-👤 Author
-Ravikant Raj
-AI-Powered Sustainable Systems Project
-2026
-
-📜 License
-This project is developed for academic and learning purposes.
-Free to extend with proper attribution.
-
-✅ Final Note
-EcoPackAI is a decision-grade, explainable AI system designed to support
-sustainable engineering and responsible packaging decisions.
+### ✅ Final Note
+   EcoPackAI is a decision-grade, explainable AI system designed to support
+   sustainable engineering and responsible packaging decisions.
