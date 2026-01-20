@@ -1,0 +1,26 @@
+{
+  "dataset": "EcoPackAI Integrated Dataset",
+  "dataset_version": "materials_engineered_v1",
+  "train_test_split": {
+    "train_ratio": 0.8,
+    "test_ratio": 0.2,
+    "stratify_on": "Recyclability Category",
+    "random_seed": 42
+  },
+  "cross_validation": {
+    "strategy": "StratifiedKFold",
+    "n_folds": 5,
+    "shuffle": true,
+    "random_seed": 42
+  },
+  "features_used": [
+    "Material Type",
+    "Biodegradation Time (days)",
+    "Recyclability Category"
+  ],
+  "targets_used": [
+    "recommended_material",
+    "sustainability_score",
+    "cost_efficiency_category"
+  ]
+}
