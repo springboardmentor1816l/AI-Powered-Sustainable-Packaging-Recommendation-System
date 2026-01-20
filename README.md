@@ -1,53 +1,226 @@
-EcoPackAI – AI-Powered Sustainable Packaging Recommendation System
-📍 Project Overview
+# 🌱 EcoPackAI – AI-Powered Sustainable Packaging Recommendation System
 
-EcoPackAI is an intelligent decision-support system designed to help businesses identify the most sustainable, cost-efficient, and durable packaging materials based on product characteristics and supply-chain constraints. The system uses machine learning to evaluate packaging alternatives and recommend optimal solutions that reduce environmental impact while maintaining product safety and performance.
+EcoPackAI is an **AI-driven decision support system** that recommends the most **sustainable and cost-effective packaging materials** based on product characteristics such as **weight, fragility, shipping type, and industry category**.
 
-🎯 Key Objectives
+The system is designed to help organizations **reduce environmental impact** while maintaining **product safety, durability, and cost efficiency**.
 
-Reduce dependency on non-biodegradable packaging
+---
 
-Provide eco-friendly, cost-optimized material recommendations
+## 🚀 Key Features
 
-Enable data-driven packaging decisions
+- 🤖 AI-powered packaging material recommendation  
+- 🥇 Rank-wise comparison of top packaging materials  
+- 🌍 CO₂ footprint analysis  
+- 💰 Cost estimation and comparison  
+- ♻ Sustainability score (0–100 scale)  
+- 📊 Business Intelligence (BI) analytics dashboard  
+- 📈 Industry-wise sustainability insights  
+- 📄 CSV and PDF export for reports  
+- 🔍 Explainable and transparent scoring logic  
 
-Support sustainability and ESG goals for enterprises
+---
 
-✨ Features
+## 🧠 How EcoPackAI Works
 
-🧠 AI-based recommendation engine for packaging materials
+1. **User Inputs Product Details**
+   - Product category
+   - Weight capacity
+   - Fragility index
+   - Shipping type
 
-📦 Material property comparison (durability, biodegradability, cost, carbon footprint)
+2. **AI-Based Evaluation**
+   - Multiple packaging materials are evaluated
+   - Cost, strength, recyclability, biodegradability, CO₂ impact, and fragility handling are analyzed
 
-🔍 Search & filter options based on business needs
+3. **Rank-Wise Recommendation**
+   - Materials are scored on a sustainability scale (0–100)
+   - Top 2–3 best-suited materials are ranked and returned
 
-📊 Analytics dashboard for environmental impact insights
+4. **Visualization and Analytics**
+   - Ranked comparison table
+   - Cost and sustainability charts
+   - Industry-level BI dashboard using historical data
 
-📝 Auto-generated packaging recommendation report
+---
 
-🌐 Full-stack web application
+## 🧮 Sustainability Scoring Factors
 
-🧱 System Architecture
+Each packaging material is evaluated using a **weighted multi-factor model**:
 
-Modular pipeline design
+| Factor | Description |
+|------|------------|
+| Cost Efficiency | Lower cost results in higher score |
+| Strength Adequacy | Ability to safely support product weight |
+| Recyclability | Percentage of recyclable material |
+| Biodegradability | Percentage of biodegradable content |
+| Fragility Handling | Suitability for fragile products |
+| CO₂ Impact | Lower emissions produce higher score |
 
-Input Module – Collects product type, weight, dimensions, shipping conditions & constraints
+The final sustainability score is calculated on a **0–100 scale**, ensuring transparency and explainability.
 
-Material Database – Contains eco-friendly packaging materials dataset
+---
 
-ML Recommendation Engine – Model predicts optimal material combinations
+## 🏗 System Architecture
 
-Optimization & Scoring Module – Evaluates cost, sustainability & performance score
+Frontend (HTML, Bootstrap, Chart.js)
+↓
+Flask REST API
+↓
+Explainable AI Scoring Engine
+↓
+Material Ranking Logic
+↓
+LocalStorage / PostgreSQL (design-ready)
+↓
+BI Analytics Dashboard
 
-Reporting Module – Generates downloadable report
+yaml
+Copy code
 
-Frontend Dashboard – Visualization & report interface
-## 🧪 Experiment Tracking & Model Versioning (Dec 18 Task)
+### Architecture Highlights
+- Predictor scores **one material at a time**
+- Ranking handled at the **API layer**
+- Frontend dynamically adapts to ranked results
+- Clean separation of concerns
 
-### 🔹 Model Training
-A `RandomForestRegressor` is trained using preprocessed feature data.
-The preprocessing pipeline is reused to ensure consistent feature transformation.
+---
 
-### 🔹 Model Versioning
-Each trained model is saved with explicit versioning:
+## 🖥 Technology Stack
 
+### Frontend
+- HTML5  
+- CSS3  
+- Bootstrap 5  
+- JavaScript (Vanilla)  
+- Chart.js  
+
+### Backend
+- Python  
+- Flask  
+- REST APIs  
+
+### AI / Data
+- Explainable scoring model  
+- Pandas  
+- NumPy  
+- Joblib  
+
+### Database & Analytics
+- PostgreSQL (future-ready)  
+- Browser LocalStorage (analytics aggregation)
+
+---
+
+## 📊 Analytics Dashboard
+
+The Industry Analytics dashboard provides:
+
+- Total number of predictions  
+- Industry-wise usage distribution  
+- Average sustainability score  
+- Average cost and CO₂ impact  
+- Exportable CSV analytics reports  
+
+This enables **business intelligence–driven sustainability reporting**.
+
+---
+
+## 📁 Project Structure
+
+EcoPackAI/
+│
+├── backend/
+│ ├── app.py
+│ ├── routes/
+│ │ └── predict.py
+│ ├── inference/
+│ │ └── predictor.py
+│ └── models/
+│
+├── frontend/
+│ ├── index.html
+│ ├── predict.html
+│ ├── results.html
+│ ├── analytics.html
+│ └── js/
+│
+├── README.md
+└── requirements.txt
+
+yaml
+Copy code
+
+---
+
+## ▶️ How to Run the Project
+
+### 1️⃣ Backend Setup
+```bash
+pip install -r requirements.txt
+python app.py
+Backend runs on:
+
+cpp
+Copy code
+http://127.0.0.1:5001
+2️⃣ Frontend
+Open the frontend directly in a browser:
+
+bash
+Copy code
+frontend/index.html
+🧪 Example Use Case
+Product: Washing Machine
+Category: Electronics
+Weight: 15 kg
+Fragility: Low
+Shipping: Local
+
+Output:
+
+Rank 1: Corrugated Cardboard (Heavy Duty)
+
+Rank 2: Styrofoam (EPS)
+
+Ranked comparison table and charts
+
+Exportable sustainability report
+
+🎓 Academic & Evaluation Alignment
+EcoPackAI satisfies key academic and project evaluation criteria:
+
+AI-based decision making
+
+Data preprocessing and feature engineering
+
+Backend–frontend integration
+
+Sustainability analytics and BI dashboard
+
+Explainable scoring logic
+
+Professional documentation
+
+🔮 Future Enhancements
+Full PostgreSQL integration
+
+Lifecycle Assessment (LCA) modeling
+
+User authentication and role-based dashboards
+
+Cloud deployment (AWS / Render / Heroku)
+
+Advanced explainability visualizations
+
+👤 Author
+Ravikant Raj
+AI-Powered Sustainable Systems Project
+2026
+
+📜 License
+This project is developed for academic and learning purposes.
+Free to extend with proper attribution.
+
+✅ Final Note
+EcoPackAI is a decision-grade, explainable AI system designed to support
+sustainable engineering and responsible packaging decisions.
