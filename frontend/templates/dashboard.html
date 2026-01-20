@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - EcoPackAI{% endblock %}
+
+{% block content %}
+<div class="animate-fade-in">
+    <h2 class="mb-4">Analytics Dashboard</h2>
+    <p class="lead text-secondary">Visualize your sustainability impact and cost savings over time.</p>
+    
+    <!-- Summary Cards -->
+    <div class="row mb-5">
+        <div class="col-md-4 mb-3">
+            <div class="card p-4 text-center">
+                <div class="mb-2">
+                    <i class="bi bi-graph-up text-primary" style="font-size: 2rem;"></i>
+                </div>
+                <h3 class="text-white" id="totalPredictions">0</h3>
+                <p class="text-secondary mb-0">Total Predictions</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card p-4 text-center">
+                <div class="mb-2">
+                    <i class="bi bi-currency-dollar text-success" style="font-size: 2rem;"></i>
+                </div>
+                <h3 class="text-white" id="avgCost">₹0.00</h3>
+                <p class="text-secondary mb-0">Average Cost</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card p-4 text-center">
+                <div class="mb-2">
+                    <i class="bi bi-cloud-fog2-fill text-info" style="font-size: 2rem;"></i>
+                </div>
+                <h3 class="text-white" id="avgCO2">0.00 kg</h3>
+                <p class="text-secondary mb-0">Average CO2</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card p-4" style="height: 400px;">
+                <h5 class="text-white mb-3"><i class="bi bi-graph-up me-2"></i>Cost Trends</h5>
+                <canvas id="costChart"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card p-4" style="height: 400px;">
+                <h5 class="text-white mb-3"><i class="bi bi-cloud-fog2 me-2"></i>CO2 Emission Trends</h5>
+                <canvas id="co2Chart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<!-- Dashboard JS -->
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

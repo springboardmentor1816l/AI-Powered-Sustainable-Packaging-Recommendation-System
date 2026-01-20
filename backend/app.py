@@ -6,7 +6,7 @@ from logging.handlers import RotatingFileHandler
 # Add project root to sys.path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 from flask_migrate import Migrate
 from backend.db import db
@@ -16,8 +16,11 @@ from backend.models.product import Product
 from backend.models.prediction import RecommendationLog
 
 from backend.routes.predict import predict_bp
+from backend.routes.analytics import analytics_bp
 
-app = Flask(__name__)
+app = Flask(__name__, 
+            template_folder='../frontend/templates',
+            static_folder='../frontend/static')
 CORS(app)
 
 # Database Configuration
@@ -43,16 +46,23 @@ app.logger.setLevel(logging.INFO)
 app.logger.info('Application startup')
 
 app.register_blueprint(predict_bp)
+app.register_blueprint(analytics_bp)
 
 @app.route('/')
 def index():
-    return jsonify({
-        "message": "Welcome to the Sustainable Packaging Recommendation API",
-        "endpoints": {
-            "health": "/health",
-            "predict": "/predict"
-        }
-    })
+    return render_template('index.html')
+
+@app.route('/input')
+def input_page():
+    return render_template('input.html')
+
+@app.route('/results')
+def results_page():
+    return render_template('results.html')
+
+@app.route('/dashboard')
+def dashboard_page():
+    return render_template('dashboard.html')
 
 @app.route('/health', methods=['GET'])
 def health_check():

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Results - EcoPackAI{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center animate-fade-in">
+    <div class="col-lg-10">
+        <h2 class="mb-4 text-center">Prediction Results</h2>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card p-4 h-100">
+                    <h4 class="text-success mb-3"><i class="bi bi-check-circle-fill me-2"></i>Recommended Material</h4>
+                    <div class="display-4 mb-2" id="recommendedMaterial">Loading...</div>
+                    <p class="text-muted">Based on product attributes and sustainability goals.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card p-4 h-100">
+                    <h4 class="text-info mb-3"><i class="bi bi-bar-chart-fill me-2"></i>Impact Analysis</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex justify-content-between align-items-center">
+                            <span class="text-white"><i class="bi bi-currency-dollar me-2"></i>Predicted Cost:</span>
+                            <span class="h4 mb-0 text-white" id="predictedCost">...</span>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-between align-items-center">
+                            <span class="text-white"><i class="bi bi-cloud-fog2-fill me-2"></i>CO2 Emission:</span>
+                            <span class="h4 mb-0 text-white" id="predictedCO2">...</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <button id="downloadPDF" class="btn btn-success me-2">
+                <i class="bi bi-file-earmark-pdf-fill me-2"></i>Download PDF Report
+            </button>
+            <a href="/input" class="btn btn-outline-light me-2">Analyze Another Product</a>
+            <a href="/dashboard" class="btn btn-primary">View Dashboard</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- jsPDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+{% endblock %}

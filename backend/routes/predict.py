@@ -2,6 +2,8 @@ from flask import Blueprint, request, jsonify
 from backend.services.predictor import predictor
 from backend.cache import cache
 from backend.middleware.auth import require_api_key
+from backend.db import db
+from backend.models.prediction import RecommendationLog
 import logging
 
 predict_bp = Blueprint('predict', __name__)
@@ -59,6 +61,23 @@ def predict():
              
         # Run prediction
         result = predictor.predict(data)
+        
+        # Save to database for analytics
+        try:
+            prediction_log = RecommendationLog(
+                product_id=None,  # We don't have product tracking yet
+                recommended_material_id=None,  # We don't have material tracking yet
+                cost_prediction=result['predicted_cost'],
+                co2_prediction=result['predicted_co2_impact'],
+                material_rank=None
+            )
+            db.session.add(prediction_log)
+            db.session.commit()
+            logger.info(f"Saved prediction to database: ID {prediction_log.rec_id}")
+        except Exception as db_error:
+            logger.warning(f"Failed to save prediction to database: {db_error}")
+            db.session.rollback()
+            # Continue even if DB save fails
         
         return jsonify(result), 200
 

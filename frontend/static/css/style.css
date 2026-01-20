@@ -1,0 +1,234 @@
+:root {
+    --primary-color: #00E676; /* Vibrant Green */
+    --secondary-color: #2979FF; /* Vibrant Blue */
+    --accent-color: #FFEA00; /* Vibrant Yellow */
+    --dark-bg: #0a0a0a;
+    --card-bg: rgba(30, 30, 30, 0.85);
+    --text-primary: #FFFFFF;
+    --text-secondary: #E0E0E0; /* Lighter grey for better readability */
+    --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+body {
+    background-color: var(--dark-bg);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 230, 118, 0.2) 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(41, 121, 255, 0.2) 0%, transparent 25%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.card {
+    background-color: var(--card-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 230, 118, 0.2);
+    border-color: rgba(0, 230, 118, 0.4);
+}
+
+.card h3, .card h4 {
+    color: var(--text-primary);
+}
+
+.card p {
+    color: var(--text-secondary);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 12px;
+    padding: 12px 30px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4);
+    color: #000;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 230, 118, 0.6);
+    opacity: 1;
+    color: #000;
+}
+
+.btn-outline-light {
+    border-radius: 12px;
+    padding: 12px 30px;
+    font-weight: 600;
+    border: 2px solid rgba(255,255,255,0.3);
+    color: #fff;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-color: #fff;
+    color: #fff;
+}
+
+.hero-section {
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+    background: linear-gradient(to right, #ffffff, var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.lead {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.form-control, .form-select {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+    border-radius: 10px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: var(--primary-color);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 4px rgba(0, 230, 118, 0.15);
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.form-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.text-success {
+    color: var(--primary-color) !important;
+}
+
+.text-info {
+    color: var(--secondary-color) !important;
+}
+
+.text-warning {
+    color: var(--accent-color) !important;
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.text-white {
+    color: #FFFFFF !important;
+}
+
+/* Ensure prediction values are white */
+#predictedCost,
+#predictedCO2 {
+    color: #FFFFFF !important;
+    font-weight: 700;
+}
+
+.display-4 {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.alert-danger {
+    background-color: rgba(244, 67, 54, 0.15);
+    border-color: rgba(244, 67, 54, 0.3);
+    color: #ff6b6b;
+}
+
+.footer {
+    padding: 60px 0;
+    margin-top: 80px;
+    border-top: 1px solid var(--glass-border);
+    text-align: center;
+    color: var(--text-secondary);
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Option elements in select */
+option {
+    background-color: #1a1a1a;
+    color: #fff;
+}
