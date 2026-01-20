@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations | EcoPackAI</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="main-header">
+    <h1>EcoPackAI</h1>
+    <nav aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="product.html">Product Input</a>
+        <a href="analytics.html">Analytics</a>
+    </nav>
+</header>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="results-container">
+
+    <!-- Page Header -->
+    <section class="results-header">
+        <div>
+            <h2>Material Recommendations</h2>
+            <p class="subtitle">
+                Ranked packaging materials based on sustainability, cost, and environmental impact
+            </p>
+        </div>
+
+        <!-- CTA -->
+        <button
+            id="viewAnalyticsBtn"
+            class="primary-btn"
+            onclick="window.location.href='analytics.html'"
+            aria-label="View Analytics Dashboard"
+        >
+            View Analytics Dashboard
+        </button>
+    </section>
+
+    <!-- ================= RESULTS TABLE ================= -->
+    <section class="results-table-section" aria-label="Recommendation Results">
+
+        <div class="table-container">
+            <table id="resultsTable" class="analytics-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Material</th>
+                        <th scope="col">Cost (₹)</th>
+                        <th scope="col">CO₂ Impact (kg)</th>
+                        <th scope="col">Sustainability Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated dynamically by results.js -->
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+    <p>© 2026 EcoPackAI — Sustainable Packaging Intelligence</p>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="js/results.js"></script>
+
+</body>
+</html>
