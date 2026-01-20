@@ -1,1 +1,2 @@
-
+model,target,MAE_CV,RMSE_CV,R2_CV,MAE_Test,RMSE_Test,R2_Test
+RandomForestRegressor,sustainability_score,1.002,2.985,0.95,0.941,1.734,0.991
