@@ -1,0 +1,258 @@
+{
+  "version": "v1.0",
+  "project": "EcoPackAI",
+  "created_date": "2026-01-02",
+  "description": "Sustainable Packaging Recommendation System - Trained Models",
+  
+  "models": {
+    "cost_prediction": {
+      "model_name": "Random Forest Regressor",
+      "model_type": "RandomForestRegressor",
+      "target_variable": "cost_per_unit_usd",
+      "model_path": "ml/models/rf_cost.joblib",
+      "training_date": "2025-12-26",
+      "framework": "scikit-learn",
+      "version": "1.3.0",
+      
+      "performance": {
+        "test_mae": 0.2250,
+        "test_rmse": 0.3809,
+        "test_r2": 0.9971,
+        "train_mae": 0.1358,
+        "train_rmse": 0.2167,
+        "train_r2": 0.9991,
+        "overfit_indicator": 0.002,
+        "cross_val_r2_mean": 0.9962,
+        "cross_val_r2_std": 0.0006
+      },
+      
+      "baseline_comparison": {
+        "baseline_model": "Linear Regression",
+        "baseline_r2": 0.9952,
+        "improvement_r2": 0.0019,
+        "improvement_pct": 0.19,
+        "baseline_mae": 0.3702,
+        "improvement_mae": 0.1452,
+        "improvement_mae_pct": 39.21
+      },
+      
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "random_state": 42
+      },
+      
+      "data_info": {
+        "n_samples_train": 322,
+        "n_samples_test": 81,
+        "n_features": 18,
+        "train_test_split": 0.8
+      }
+    },
+    
+    "co2_prediction": {
+      "model_name": "XGBoost Regressor",
+      "model_type": "XGBRegressor",
+      "target_variable": "co2_emission_per_kg_estimated",
+      "model_path": "ml/models/xgb_co2.joblib",
+      "training_date": "2025-12-26",
+      "framework": "xgboost",
+      "version": "2.0.0",
+      
+      "performance": {
+        "test_mae": 0.0389,
+        "test_rmse": 0.0588,
+        "test_r2": 0.9936,
+        "train_mae": 0.0115,
+        "train_rmse": 0.0154,
+        "train_r2": 0.9995,
+        "overfit_indicator": 0.0060,
+        "cross_val_r2_mean": 0.9929,
+        "cross_val_r2_std": 0.0012
+      },
+      
+      "baseline_comparison": {
+        "baseline_model": "Decision Tree",
+        "baseline_r2": 0.9932,
+        "improvement_r2": 0.0004,
+        "improvement_pct": 0.04,
+        "baseline_mae": 0.0374,
+        "improvement_mae": -0.0015,
+        "improvement_mae_pct": -3.92
+      },
+      
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "random_state": 42,
+        "objective": "reg:squarederror"
+      },
+      
+      "data_info": {
+        "n_samples_train": 322,
+        "n_samples_test": 81,
+        "n_features": 17,
+        "train_test_split": 0.8
+      }
+    }
+  },
+  
+  "feature_schema": {
+    "total_features": 25,
+    "numeric_features": 20,
+    "categorical_features": 5,
+    
+    "required_features": [
+      "recyclability_percent",
+      "recycled_content_percent",
+      "reusability_percent",
+      "biodegradation_time_days",
+      "end_of_life_disposal_percent",
+      "carbon_footprint_kg_co2_unit",
+      "waste_reduction_impact_percent",
+      "sustainability_target_progress_percent",
+      "load_handling_score",
+      "moisture_resistance_score",
+      "thermal_resistance_score",
+      "annual_usage_units",
+      "total_material_weight_tons",
+      "supplier_sustainability_compliance_percent",
+      "co2_impact_index",
+      "cost_efficiency_index",
+      "material_suitability_score",
+      "overall_sustainability_score"
+    ],
+    
+    "categorical_features_list": [
+      "packaging_type",
+      "suitable_product_categories",
+      "recommended_packaging_use_cases",
+      "supplier_region",
+      "recyclability_category"
+    ],
+    
+    "feature_groups": {
+      "material_properties": [
+        "recyclability_percent",
+        "recycled_content_percent",
+        "reusability_percent",
+        "biodegradation_time_days",
+        "end_of_life_disposal_percent",
+        "carbon_footprint_kg_co2_unit",
+        "waste_reduction_impact_percent",
+        "sustainability_target_progress_percent"
+      ],
+      "packaging_requirements": [
+        "load_handling_score",
+        "moisture_resistance_score",
+        "thermal_resistance_score"
+      ],
+      "operational_metrics": [
+        "annual_usage_units",
+        "total_material_weight_tons",
+        "supplier_sustainability_compliance_percent"
+      ],
+      "engineered_features": [
+        "co2_impact_index",
+        "cost_efficiency_index",
+        "material_suitability_score",
+        "overall_sustainability_score"
+      ]
+    },
+    
+    "feature_ranges": {
+      "recyclability_percent": {"min": 0, "max": 100},
+      "recycled_content_percent": {"min": 0, "max": 100},
+      "reusability_percent": {"min": 0, "max": 100},
+      "biodegradation_time_days": {"min": 0, "max": 3650},
+      "end_of_life_disposal_percent": {"min": 0, "max": 100},
+      "carbon_footprint_kg_co2_unit": {"min": 0, "max": 50},
+      "waste_reduction_impact_percent": {"min": 0, "max": 100},
+      "sustainability_target_progress_percent": {"min": 0, "max": 100},
+      "load_handling_score": {"min": 1, "max": 10},
+      "moisture_resistance_score": {"min": 1, "max": 10},
+      "thermal_resistance_score": {"min": 1, "max": 10},
+      "annual_usage_units": {"min": 0, "max": 1000000},
+      "total_material_weight_tons": {"min": 0, "max": 1000},
+      "supplier_sustainability_compliance_percent": {"min": 0, "max": 100},
+      "co2_impact_index": {"min": 0, "max": 1},
+      "cost_efficiency_index": {"min": 0, "max": 1},
+      "material_suitability_score": {"min": 0, "max": 100},
+      "overall_sustainability_score": {"min": 0, "max": 1}
+    }
+  },
+  
+  "preprocessing": {
+    "scaling": "StandardScaler for numeric features",
+    "encoding": "OneHotEncoder for categorical features",
+    "imputation": "Mean imputation for missing numeric values",
+    "pipeline_path": "models/preprocessing/preprocessing_pipeline.pkl"
+  },
+  
+  "data_version": {
+    "dataset_name": "EcoPackAI Training Data",
+    "version": "1.0",
+    "total_samples": 403,
+    "data_path": "data/ml_ready/X_raw.csv",
+    "last_updated": "2025-12-15"
+  },
+  
+  "usage": {
+    "single_prediction": {
+      "description": "Predict cost and CO2 for a single material",
+      "example": "predictor.predict_single(features_dict)"
+    },
+    "batch_prediction": {
+      "description": "Predict for multiple materials from CSV",
+      "example": "predictor.batch_predict('input.csv', 'output.csv')"
+    },
+    "api_endpoint": {
+      "description": "REST API endpoint for predictions",
+      "url": "/api/v1.0/predict",
+      "method": "POST"
+    }
+  },
+  
+  "validation": {
+    "cross_validation_folds": 5,
+    "validation_strategy": "K-Fold Cross Validation",
+    "test_set_size": 0.2,
+    "random_seed": 42
+  },
+  
+  "explainability": {
+    "methods": ["SHAP", "Permutation Importance", "Feature Importance"],
+    "artifacts_path": "outputs/explainability/",
+    "shap_summary_available": true,
+    "feature_importance_available": true
+  },
+  
+  "deployment": {
+    "status": "production_ready",
+    "api_version": "v1.0",
+    "min_python_version": "3.8",
+    "dependencies": ["pandas", "numpy", "scikit-learn", "xgboost", "joblib"],
+    "docker_image": "ecopackai:v1.0",
+    "health_check_endpoint": "/health"
+  },
+  
+  "monitoring": {
+    "prediction_logging": true,
+    "performance_tracking": true,
+    "drift_detection": false,
+    "alert_thresholds": {
+      "mae_threshold_cost": 0.5,
+      "mae_threshold_co2": 0.1,
+      "r2_threshold": 0.95
+    }
+  },
+  
+  "contact": {
+    "team": "EcoPackAI Development Team",
+    "email": "support@ecopackai.example.com",
+    "repository": "https://github.com/ecopackai/models"
+  }
+}
