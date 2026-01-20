@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Prediction Request",
+  "type": "object",
+  "properties": {
+    "product_weight_g": {
+      "type": "number",
+      "description": "Weight of the product in grams"
+    },
+    "product_category": {
+      "type": "string",
+      "description": "Category of the product (e.g., electronics, clothing)"
+    },
+    "fragility_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Fragility score from 0 (robust) to 1 (fragile)"
+    },
+    "material_type": {
+      "type": "string",
+      "description": "Type of packaging material"
+    },
+    "material_recyclability_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Recyclability score from 0 to 1"
+    },
+    "transport_distance_km": {
+      "type": "number",
+      "description": "Distance for transport in km"
+    }
+  },
+  "required": [
+    "product_weight_g",
+    "product_category",
+    "fragility_score",
+    "material_type",
+    "material_recyclability_score",
+    "transport_distance_km"
+  ]
+}

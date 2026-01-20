@@ -8,3 +8,6 @@ pyarrow
 openpyxl
 pyyaml
 shap
+flask
+flask-cors
+xgboost
