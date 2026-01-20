@@ -1,404 +1,405 @@
-recyclability_percent,recycled_content_percent,reusability_percent,biodegradation_time_days,end_of_life_disposal_percent,carbon_footprint_kg_co2_unit,co2_emission_per_kg_estimated,waste_reduction_impact_percent,sustainability_target_progress_percent,load_handling_score,moisture_resistance_score,thermal_resistance_score,cost_per_unit_usd,annual_usage_units,total_material_weight_tons,supplier_sustainability_compliance_percent,co2_impact_index,cost_efficiency_index,material_suitability_score,overall_sustainability_score,packaging_type,suitable_product_categories,recommended_packaging_use_cases,supplier_region,recyclability_category
-98,79.0,49.0,188.0,5.0,0.78,0.54,61.0,88.0,6.0,5.0,4.0,2.24,101260.0,790.0,85.0,81.65457949908385,85.25672105672105,44.44444444444444,81.17910282467935,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-100,93.0,31.0,65.0,2.0,0.52,0.32,68.0,98.0,3.0,3.0,3.0,1.82,73961.0,545.0,88.0,92.19744451456552,83.07257187257187,22.22222222222222,87.66910558009793,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,APAC,High
-87,78.0,100.0,180208.0,8.0,3.67,3.25,85.0,79.0,8.0,9.0,9.0,25.0,14649.0,4979.0,88.0,26.1,47.94537684537685,85.18518518518518,65.085,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",AMERICAS,High
-100,89.0,31.0,65.0,3.0,0.48,0.31,69.0,87.0,1.0,1.0,4.0,2.43,75036.0,656.0,81.0,92.33212464924566,81.88764568764569,11.11111111111111,88.01624362723598,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,ROW,High
-100,92.0,28.0,122.0,3.0,0.41,0.31,61.0,89.0,3.0,2.0,3.0,1.69,69209.0,549.0,81.0,87.83340103577153,82.72509712509712,18.51851851851852,84.04169036252003,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,LATAM,High
-85,38.0,87.0,52407.0,12.0,1.01,1.41,78.0,81.0,8.0,8.0,6.0,12.45,56902.0,1222.0,97.0,51.64944792603443,69.12377622377623,70.37037037037037,71.22730677411204,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-91,75.0,93.0,147359.0,8.0,3.43,3.01,84.0,83.0,8.0,10.0,8.0,25.48,23428.0,5016.0,94.0,30.73590489542338,46.81297591297592,85.18518518518518,67.80756671339819,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",ROW,High
-96,75.0,96.0,161066.0,7.0,3.64,3.2,84.0,72.0,8.0,10.0,9.0,25.61,21463.0,4932.0,88.0,29.58616221795073,48.66045066045066,88.88888888888889,69.15515677628275,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",EU,High
-94,66.0,91.0,115102.0,8.0,3.59,3.0,86.0,76.0,8.0,10.0,8.0,25.17,22087.0,4952.0,87.0,32.03012675706286,47.91515151515151,85.18518518518518,69.910544364972,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",EMEA,High
-94,90.0,34.0,31.0,3.0,0.42,0.29,63.0,92.0,1.0,1.0,3.0,2.29,72042.0,549.0,79.0,98.06531986531988,80.95959595959596,7.4074074074074066,86.12286195286197,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,LATAM,High
-100,83.0,50.0,196.0,6.0,0.66,0.54,65.0,92.0,5.0,5.0,4.0,3.48,96598.0,746.0,92.0,82.03647167418191,83.64801864801863,40.74074074074074,83.21276508596367,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-87,70.0,97.0,75709.0,7.0,3.45,3.23,85.0,76.0,8.0,9.0,8.0,24.43,23521.0,5092.0,88.0,27.298668661897278,48.45260295260295,81.48148148148148,65.50453403166405,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",APAC,High
-76,30.0,7.0,70881.0,25.0,2.03,1.59,25.0,56.0,7.0,9.0,6.0,0.9,32265.0,164.0,68.0,46.16272253073297,72.85967365967365,70.37037037037037,50.25695288575653,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,APAC,Medium
-100,85.0,33.0,145.0,3.0,0.46,0.33,70.0,93.0,3.0,3.0,4.0,2.34,74773.0,548.0,80.0,86.52260854420351,82.46247086247087,25.925925925925924,86.28291299047122,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,EMEA,High
-87,41.0,82.0,73043.0,13.0,1.03,1.58,77.0,81.0,8.0,9.0,6.0,12.56,57353.0,1271.0,91.0,49.5624040138666,68.51010101010101,74.07407407407408,70.8968414048533,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,AMERICAS,Medium
-93,84.0,47.0,355.0,5.0,0.77,0.49,61.0,90.0,5.0,5.0,3.0,3.05,102073.0,901.0,91.0,77.83226361684889,81.78329448329448,37.03703703703704,78.09129226589711,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-71,30.0,9.0,72362.0,25.0,1.98,1.39,28.0,58.0,8.0,7.0,8.0,1.07,30307.0,277.0,73.0,47.3322174746307,71.42944832944833,74.07407407407408,49.81627611612075,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,ROW,Medium
-62,27.0,12.0,38310.0,26.0,1.91,1.46,32.0,66.0,7.0,9.0,8.0,1.49,27635.0,268.0,76.0,44.474101707707625,68.51359751359752,77.77777777777777,46.865935597697664,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,EMEA,Medium
-86,41.0,94.0,58200.0,12.0,0.95,1.47,70.0,78.0,8.0,9.0,6.0,12.14,59878.0,1046.0,87.0,51.0132474214086,71.42595182595181,74.07407407407408,68.954636597493,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-92,78.0,53.0,218.0,6.0,0.79,0.53,56.0,88.0,5.0,4.0,5.0,3.44,98966.0,991.0,83.0,79.22939649463338,81.92571872571874,40.74074074074074,76.73028877312169,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-100,94.0,34.0,62.0,3.0,0.47,0.33,69.0,100.0,3.0,1.0,4.0,1.76,71711.0,667.0,76.0,92.4532295945418,83.78912198912198,18.51851851851852,88.05863035808962,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,EU,High
-94,56.0,90.0,36417.0,10.0,1.15,1.36,77.0,85.0,8.0,9.0,7.0,14.36,45723.0,1029.0,93.0,55.487511928269726,68.71359751359752,77.77777777777777,75.42062917489439,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-90,75.0,44.0,211.0,5.0,0.76,0.47,62.0,89.0,4.0,5.0,3.0,3.77,98647.0,753.0,93.0,79.60143683729295,78.88469308469308,33.33333333333333,77.96050289305252,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-88,34.0,89.0,15440.0,13.0,1.07,1.35,74.0,84.0,8.0,7.0,7.0,12.18,63839.0,1020.0,91.0,55.056312298262775,70.94825174825175,70.37037037037037,72.26970930439197,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EMEA,Medium
-63,24.0,16.0,53377.0,24.0,1.98,1.61,31.0,59.0,7.0,9.0,8.0,1.07,31171.0,145.0,63.0,42.33325614612073,70.42944832944833,77.77777777777777,46.16663965114225,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,AMERICAS,Medium
-100,89.0,31.0,81.0,3.0,0.57,0.3,66.0,99.0,3.0,2.0,3.0,2.74,75019.0,595.0,86.0,90.75385360945376,81.2854700854701,18.51851851851852,86.5638487633088,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,AMERICAS,High
-100,79.0,50.0,96.0,4.0,0.8,0.49,55.0,83.0,6.0,4.0,3.0,3.14,98658.0,722.0,85.0,86.9808193311128,84.3084693084693,37.03703703703704,81.94328676588948,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-92,48.0,99.0,42997.0,10.0,1.22,1.52,80.0,82.0,9.0,7.0,7.0,14.94,48860.0,978.0,86.0,52.5166721326713,68.7869463869464,74.07407407407406,74.58083524643496,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-91,47.0,97.0,33532.0,10.0,1.04,1.55,79.0,91.0,8.0,7.0,7.0,14.4,51174.0,959.0,97.0,52.13846278694747,69.13589743589743,70.37037037037037,73.79846197543162,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-100,69.0,96.0,63481.0,8.0,3.49,2.71,85.0,73.0,9.0,9.0,10.0,25.65,24816.0,5014.0,88.0,38.40861415722053,49.78275058275059,92.5925925925926,73.94301495502718,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",EMEA,High
-98,70.0,100.0,134415.0,9.0,3.43,2.98,84.0,72.0,8.0,9.0,9.0,25.95,19847.0,4946.0,92.0,33.335263989674736,49.4,85.18518518518518,71.16734239638616,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",EU,High
-90,41.0,88.0,40345.0,13.0,0.86,1.38,75.0,79.0,7.0,9.0,7.0,11.82,61482.0,1158.0,98.0,53.88416965302836,72.04755244755245,74.07407407407406,72.85945937855992,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,ROW,Medium
-94,78.0,45.0,265.0,5.0,0.79,0.49,64.0,95.0,6.0,3.0,3.0,2.66,100071.0,782.0,90.0,79.42670280280728,82.44087024087024,33.33333333333333,79.89934598098255,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-99,80.0,51.0,192.0,6.0,0.77,0.52,61.0,87.0,5.0,3.0,5.0,2.83,96726.0,713.0,92.0,82.11332619408019,84.81064491064491,37.03703703703704,81.68966416792807,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-70,21.0,10.0,49088.0,24.0,1.98,1.37,27.0,62.0,8.0,9.0,8.0,1.27,29882.0,224.0,66.0,47.769377956259454,70.94094794094794,81.48148148148148,49.31928228469081,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,AMERICAS,Medium
-66,33.0,13.0,93365.0,25.0,1.95,1.64,32.0,54.0,8.0,8.0,8.0,2.18,28979.0,309.0,72.0,42.17527509582919,68.57327117327118,77.77777777777779,47.461346283540216,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,ROW,Medium
-55,26.0,12.0,89889.0,25.0,1.91,1.45,32.0,61.0,9.0,9.0,7.0,1.21,29800.0,153.0,70.0,41.47654424854876,66.95749805749806,81.48148148148148,43.36679048699207,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,APAC,Medium
-97,73.0,98.0,72041.0,8.0,3.51,2.92,89.0,72.0,9.0,9.0,9.0,24.34,23233.0,4984.0,86.0,34.53133244088233,51.827428127428135,88.88888888888889,72.73596635430881,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",EU,High
-100,76.0,51.0,256.0,5.0,0.92,0.55,59.0,96.0,4.0,5.0,5.0,3.31,102546.0,957.0,83.0,80.58048088825278,84.17824397824397,40.74074074074074,80.90316831088846,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-100,80.0,50.0,352.0,5.0,0.77,0.49,65.0,91.0,4.0,5.0,3.0,2.59,97310.0,846.0,86.0,79.9680384762608,85.37684537684537,33.33333333333333,82.48881346669128,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-86,49.0,95.0,13499.0,10.0,1.07,1.39,81.0,88.0,7.0,7.0,7.0,14.96,50168.0,1012.0,97.0,54.13097042023808,66.14809634809635,66.66666666666666,73.34583964708332,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-93,68.0,100.0,65795.0,9.0,3.48,2.85,88.0,79.0,9.0,10.0,10.0,24.67,20183.0,4942.0,80.0,34.38057476829317,50.386402486402496,96.29629629629628,70.98320116890261,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",APAC,High
-100,91.0,33.0,157.0,2.0,0.62,0.31,63.0,91.0,1.0,3.0,2.0,1.75,71864.0,550.0,75.0,86.33583084360616,83.608547008547,11.11111111111111,84.11754079526214,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,EU,High
-89,70.0,97.0,169695.0,8.0,3.65,2.97,83.0,71.0,9.0,9.0,10.0,24.23,19011.0,5005.0,85.0,30.53113960296088,49.44110334110334,92.5925925925926,66.7358988610363,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",EU,High
-100,84.0,32.0,104.0,2.0,0.49,0.31,69.0,95.0,2.0,1.0,3.0,1.83,78051.0,715.0,84.0,88.86273719049103,83.25314685314686,11.11111111111111,86.80195801667185,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,EMEA,High
-84,50.0,95.0,16331.0,10.0,1.24,1.5,78.0,90.0,7.0,8.0,8.0,14.57,51901.0,1113.0,95.0,51.748750898025165,66.3056721056721,74.07407407407408,70.91206281430881,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-80,42.0,91.0,98971.0,12.0,0.89,1.41,77.0,91.0,8.0,8.0,8.0,11.76,60578.0,1249.0,93.0,49.4083815293904,69.76410256410257,77.77777777777779,68.39293353528663,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EMEA,Medium
-100,76.0,52.0,90.0,5.0,0.86,0.49,58.0,85.0,4.0,4.0,4.0,3.23,96300.0,867.0,89.0,87.43163369031319,84.53364413364413,33.33333333333333,83.0010717916096,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-88,51.0,94.0,64030.0,10.0,1.19,1.44,75.0,82.0,9.0,9.0,7.0,14.48,51009.0,930.0,96.0,51.90274019755852,67.48049728049727,81.48148148148148,71.46595906914548,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-93,77.0,49.0,298.0,5.0,0.94,0.49,51.0,88.0,5.0,5.0,3.0,2.68,99951.0,850.0,93.0,78.59136862297179,82.9020202020202,37.03703703703704,75.35697901804012,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-78,24.0,10.0,64044.0,25.0,2.14,1.44,32.0,60.0,9.0,9.0,8.0,1.18,27055.0,315.0,72.0,48.90248014445307,73.51577311577311,85.18518518518518,54.015868050558566,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,LATAM,Medium
-81,36.0,89.0,69350.0,13.0,1.01,1.56,79.0,83.0,9.0,9.0,7.0,11.28,62593.0,1284.0,90.0,48.092317064035065,70.5965034965035,81.48148148148148,68.88231097241227,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-79,41.0,89.0,70484.0,12.0,0.92,1.47,72.0,87.0,9.0,8.0,8.0,11.84,60648.0,1209.0,96.0,48.685447579214646,68.90870240870241,81.48148148148148,66.28990665272512,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EMEA,Medium
-87,49.0,94.0,89963.0,10.0,1.19,1.61,80.0,91.0,9.0,7.0,6.0,15.15,52117.0,941.0,100.0,48.92074065311464,65.87902097902099,70.37037037037037,71.57225922859011,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-80,40.0,90.0,53148.0,12.0,0.96,1.6,75.0,82.0,7.0,9.0,7.0,12.2,55738.0,1079.0,88.0,47.57322509923735,68.70940170940172,74.07407407407406,67.15062878473307,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,ROW,Medium
-100,87.0,30.0,176.0,4.0,0.47,0.29,70.0,100.0,1.0,2.0,2.0,2.61,71749.0,572.0,80.0,85.97383428405368,81.33799533799535,7.4074074074074066,86.09084199941879,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,APAC,High
-80,42.0,95.0,66060.0,12.0,0.99,1.46,74.0,76.0,8.0,8.0,8.0,11.73,60393.0,1187.0,94.0,49.196357237423285,70.62237762237761,77.77777777777779,67.41872503309814,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EMEA,Medium
-100,78.0,50.0,115.0,5.0,0.77,0.52,63.0,91.0,5.0,5.0,5.0,2.8,97679.0,977.0,83.0,85.37831693853035,84.96891996891996,44.44444444444444,83.78241092848562,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-95,81.0,46.0,148.0,5.0,0.84,0.53,57.0,89.0,5.0,5.0,5.0,2.91,104546.0,659.0,85.0,82.21017270301768,82.45524475524475,44.44444444444444,79.12356044605617,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-100,78.0,50.0,218.0,6.0,0.74,0.54,61.0,88.0,4.0,4.0,5.0,2.95,100824.0,950.0,90.0,81.49471635995323,84.67754467754467,37.03703703703704,81.82315072598362,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-96,81.0,49.0,287.0,6.0,0.92,0.53,65.0,89.0,6.0,4.0,4.0,3.62,101365.0,795.0,81.0,79.1218218554896,81.97606837606838,40.74074074074074,80.79263764942135,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-95,84.0,27.0,44.0,3.0,0.31,0.28,69.0,100.0,2.0,2.0,4.0,1.63,75514.0,693.0,86.0,94.73494935850492,81.14164724164725,18.51851851851852,87.10723227547672,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,LATAM,High
-81,70.0,93.0,180125.0,8.0,3.58,2.92,89.0,71.0,9.0,9.0,10.0,25.34,19288.0,5034.0,92.0,28.74490275812247,44.08492618492619,92.5925925925926,65.11071596534286,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",APAC,High
-69,31.0,10.0,17015.0,26.0,2.04,1.57,31.0,63.0,8.0,7.0,8.0,0.21,28810.0,200.0,72.0,46.24273832599472,72.7,74.07407407407408,49.63495841409815,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,EMEA,Medium
-80,51.0,100.0,40031.0,10.0,1.1,1.57,82.0,83.0,9.0,7.0,8.0,14.59,44696.0,1041.0,98.0,48.33537577524624,66.06682206682206,77.77777777777777,69.51738152133618,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-100,75.0,50.0,283.0,5.0,0.77,0.55,64.0,92.0,6.0,3.0,5.0,3.23,102764.0,808.0,83.0,80.11616133232498,84.13364413364414,40.74074074074075,82.24065646631374,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-84,42.0,89.0,50911.0,11.0,0.99,1.54,75.0,82.0,8.0,9.0,6.0,11.34,60692.0,1224.0,90.0,49.63443328587535,71.37995337995339,74.07407407407408,69.27205165005637,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,ROW,Medium
-97,84.0,54.0,168.0,5.0,0.86,0.48,63.0,96.0,6.0,5.0,5.0,2.69,102623.0,782.0,78.0,82.76869059605166,85.08259518259518,48.14814814814815,81.81904170861807,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-82,39.0,83.0,21746.0,12.0,0.9,1.55,76.0,77.0,9.0,8.0,7.0,12.73,59483.0,1150.0,82.0,50.04473455704724,66.87987567987568,77.77777777777777,69.01565709496653,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EMEA,Medium
-73,32.0,13.0,52824.0,25.0,1.94,1.62,35.0,56.0,9.0,9.0,6.0,2.02,27583.0,373.0,69.0,45.21139396236696,70.98407148407149,77.77777777777777,51.87398788682843,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,AMERICAS,Medium
-68,28.0,9.0,61190.0,26.0,2.0,1.42,32.0,62.0,7.0,9.0,8.0,1.47,27876.0,267.0,74.0,46.22628888562253,69.75244755244756,77.77777777777777,49.57920110996788,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,APAC,Medium
-73,32.0,8.0,70772.0,25.0,1.92,1.36,24.0,61.0,7.0,8.0,6.0,1.91,31964.0,256.0,63.0,48.36216335425689,70.1977466977467,66.66666666666666,49.67675717398991,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,EMEA,Medium
-92,42.0,94.0,46640.0,13.0,0.98,1.47,79.0,75.0,9.0,8.0,7.0,11.69,54650.0,1189.0,88.0,53.08676259372569,74.10007770007769,77.77777777777777,74.48036690780398,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,ROW,Medium
-100,77.0,46.0,169.0,4.0,0.75,0.51,57.0,87.0,6.0,3.0,3.0,2.82,96624.0,825.0,90.0,83.23202413541611,84.13006993006992,33.33333333333333,81.23120844739564,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-82,37.0,7.0,21938.0,24.0,1.99,1.59,34.0,62.0,9.0,9.0,8.0,0.92,29678.0,156.0,69.0,49.49318571374495,74.62082362082361,85.18518518518518,56.22261499981073,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,EMEA,Medium
-99,87.0,36.0,171.0,2.0,0.39,0.3,65.0,91.0,2.0,2.0,3.0,1.23,76655.0,523.0,78.0,85.6958477853541,84.91864801864801,14.814814814814811,84.14354672487394,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,AMERICAS,High
-84,44.0,94.0,84051.0,11.0,1.02,1.53,74.0,83.0,9.0,8.0,8.0,11.93,59507.0,1227.0,89.0,49.17474710607714,71.23387723387724,81.48148148148148,68.811161487127,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-88,39.0,87.0,78380.0,11.0,0.94,1.43,78.0,80.0,9.0,9.0,8.0,12.68,56260.0,1242.0,87.0,51.80119396095847,69.57700077700079,85.18518518518518,72.33041788633547,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EMEA,Medium
-98,79.0,48.0,250.0,5.0,0.9,0.52,62.0,90.0,4.0,4.0,5.0,3.39,100328.0,741.0,87.0,80.4967745504023,82.82284382284382,37.03703703703704,81.07387109264079,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-92,38.0,89.0,22417.0,12.0,1.05,1.63,79.0,81.0,7.0,9.0,7.0,11.61,59486.0,1210.0,98.0,51.92303995572289,73.25547785547786,74.07407407407406,74.07306398450301,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EU,Medium
-86,40.0,86.0,86303.0,11.0,1.09,1.47,82.0,79.0,9.0,9.0,8.0,12.38,56647.0,1236.0,85.0,50.55293691667542,69.35975135975137,85.18518518518518,72.39352792083639,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EU,Medium
-71,38.0,13.0,38391.0,25.0,2.09,1.45,34.0,59.0,8.0,7.0,7.0,1.91,31467.0,196.0,63.0,47.30601952669387,70.5977466977467,70.37037037037037,51.60710683434285,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,LATAM,Medium
-100,81.0,44.0,201.0,6.0,0.86,0.54,58.0,89.0,5.0,5.0,3.0,2.6,99953.0,717.0,85.0,81.90626014064173,84.15742035742035,37.03703703703704,81.06719104922459,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-63,32.0,10.0,79705.0,25.0,1.97,1.35,32.0,62.0,7.0,9.0,8.0,2.23,28967.0,217.0,63.0,45.3594321120676,66.97614607614608,77.77777777777777,47.52580123922365,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,LATAM,Medium
-68,29.0,9.0,65252.0,25.0,1.95,1.35,36.0,59.0,7.0,7.0,7.0,0.84,29535.0,227.0,68.0,47.092411816325736,70.97622377622378,66.66666666666666,51.08234413571401,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,AMERICAS,Medium
-100,81.0,48.0,312.0,5.0,0.93,0.52,64.0,83.0,5.0,4.0,5.0,3.18,97331.0,889.0,80.0,80.08379160676039,83.83076923076923,40.74074074074074,82.22932706236612,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-88,52.0,97.0,32911.0,9.0,1.23,1.5,82.0,90.0,8.0,7.0,7.0,14.55,46054.0,1003.0,100.0,51.93699055493524,67.94452214452214,70.37037037037037,73.57794669422732,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-69,35.0,3.0,45188.0,26.0,1.9,1.45,26.0,54.0,9.0,8.0,7.0,0.84,29486.0,185.0,66.0,46.4961119619731,70.07622377622378,77.77777777777777,48.22363918669058,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,EU,Medium
-95,92.0,31.0,66.0,2.0,0.42,0.31,61.0,96.0,3.0,3.0,2.0,2.26,73579.0,650.0,80.0,90.70775229931468,80.71787101787102,18.51851851851852,83.29771330476015,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,LATAM,High
-100,88.0,28.0,133.0,3.0,0.57,0.28,67.0,98.0,2.0,3.0,4.0,1.76,75226.0,663.0,82.0,87.70795123546935,82.58912198912199,22.22222222222222,85.79778293241426,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,EU,High
-95,43.0,90.0,89433.0,12.0,0.96,1.49,77.0,77.0,8.0,9.0,8.0,12.25,59603.0,1126.0,91.0,52.94352152100505,73.1122766122766,81.48148148148148,74.88023253235177,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-97,88.0,29.0,139.0,3.0,0.47,0.32,63.0,89.0,1.0,3.0,4.0,2.55,76866.0,517.0,84.0,86.00555262680942,80.35454545454546,18.51851851851852,82.9519434193833,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,LATAM,High
-82,38.0,93.0,51800.0,11.0,0.87,1.6,76.0,78.0,7.0,9.0,7.0,12.22,58486.0,1211.0,86.0,48.2049143297894,69.87055167055168,74.07407407407406,68.37172001542629,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EMEA,Medium
-100,48.0,96.0,81714.0,10.0,1.14,1.51,82.0,90.0,7.0,9.0,7.0,14.87,46774.0,1086.0,91.0,54.27613954822219,70.72292152292152,74.07407407407406,78.59664884187777,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-100,74.0,49.0,90.0,5.0,0.68,0.52,60.0,88.0,5.0,3.0,3.0,3.63,103469.0,862.0,80.0,87.02759328627279,83.15664335664336,29.629629629629623,83.45965765019547,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-99,78.0,50.0,197.0,5.0,0.77,0.47,59.0,83.0,4.0,3.0,4.0,3.87,96646.0,743.0,87.0,82.65282842492647,82.5904428904429,29.629629629629623,81.27848994872426,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-97,82.0,53.0,291.0,5.0,0.78,0.54,60.0,93.0,5.0,3.0,3.0,2.81,97201.0,880.0,85.0,79.22462803900328,84.64949494949495,29.629629629629623,79.67861981365114,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-99,94.0,30.0,119.0,4.0,0.55,0.31,64.0,92.0,3.0,3.0,3.0,2.49,76341.0,614.0,78.0,87.68955986244575,81.27109557109557,22.22222222222222,84.541345951856,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,APAC,High
-84,50.0,93.0,19133.0,10.0,1.2,1.54,81.0,84.0,8.0,7.0,7.0,15.74,52785.0,1083.0,93.0,50.96882447478413,63.63294483294484,70.37037037037037,71.53908856617444,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-100,88.0,29.0,170.0,3.0,0.52,0.28,58.0,93.0,3.0,2.0,3.0,1.5,67350.0,601.0,74.0,86.29730674784204,83.2941724941725,18.51851851851852,82.6040573617447,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,AMERICAS,High
-100,91.0,33.0,122.0,2.0,0.46,0.31,68.0,91.0,3.0,2.0,2.0,2.02,77375.0,549.0,85.0,87.83340103577153,83.08407148407149,14.814814814814811,86.14169036252004,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,EMEA,High
-94,68.0,96.0,161962.0,8.0,3.58,3.0,85.0,73.0,8.0,9.0,8.0,25.66,21183.0,5063.0,91.0,31.67414489591556,47.96332556332556,81.48148148148148,69.48595071357045,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",LATAM,High
-99,80.0,52.0,242.0,5.0,0.79,0.51,60.0,90.0,4.0,4.0,5.0,3.14,103063.0,782.0,88.0,81.08694324869303,84.40846930846931,37.03703703703704,81.03043013704256,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-100,77.0,46.0,187.0,4.0,0.85,0.52,65.0,88.0,6.0,3.0,5.0,2.7,99808.0,719.0,83.0,82.5520994086969,84.36317016317015,40.74074074074075,83.39323479304393,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-85,41.0,86.0,52150.0,13.0,0.92,1.44,79.0,78.0,7.0,9.0,8.0,12.72,59942.0,1268.0,90.0,51.25147550507899,68.3993006993007,77.77777777777777,71.38801642677764,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-61,22.0,12.0,71775.0,25.0,1.96,1.4,32.0,60.0,7.0,8.0,6.0,1.46,30357.0,178.0,67.0,44.20702234389493,68.27187257187258,66.66666666666666,46.42245782036323,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,LATAM,Medium
-86,50.0,96.0,25270.0,11.0,1.17,1.6,76.0,82.0,7.0,8.0,7.0,14.28,48512.0,1065.0,95.0,50.35521410843986,67.66899766899768,70.37037037037037,70.52432493795395,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-92,43.0,89.0,61952.0,12.0,1.07,1.42,75.0,80.0,8.0,9.0,7.0,12.18,61002.0,1202.0,89.0,53.41146240322304,72.14825174825175,77.77777777777777,73.39401184112806,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EU,Medium
-94,44.0,87.0,35850.0,13.0,1.08,1.49,74.0,80.0,8.0,7.0,7.0,11.55,59371.0,1147.0,89.0,53.75742683091551,73.57202797202797,70.37037037037037,73.91509939082042,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EU,Medium
-92,48.0,97.0,42939.0,11.0,1.13,1.52,80.0,90.0,7.0,7.0,6.0,14.61,48925.0,1033.0,98.0,52.51840010800859,69.02797202797204,62.96296296296296,74.581440037803,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-100,77.0,50.0,152.0,5.0,0.76,0.51,60.0,88.0,5.0,3.0,3.0,2.69,101662.0,790.0,83.0,83.82619850228848,85.18259518259518,29.629629629629623,82.33916947580096,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-95,73.0,99.0,75493.0,7.0,3.61,3.15,83.0,72.0,8.0,10.0,9.0,24.63,22295.0,4967.0,89.0,30.779408575259744,50.864102564102566,88.88888888888889,68.92279300134089,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",EMEA,High
-90,47.0,93.0,66898.0,10.0,1.21,1.38,81.0,87.0,9.0,7.0,6.0,15.71,51480.0,985.0,89.0,53.2589047044768,65.4912198912199,70.37037037037037,74.44061664656688,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-100,92.0,33.0,137.0,3.0,0.56,0.29,66.0,95.0,2.0,2.0,4.0,1.96,75069.0,637.0,79.0,87.39569166022233,83.2006216006216,18.51851851851852,85.38849208107781,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,EMEA,High
-94,79.0,48.0,154.0,5.0,0.9,0.55,60.0,90.0,5.0,3.0,4.0,3.22,96860.0,862.0,86.0,81.41289600269084,81.95306915306915,33.33333333333333,79.39451360094179,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-93,79.0,48.0,272.0,5.0,0.9,0.5,58.0,92.0,6.0,4.0,5.0,2.83,99216.0,778.0,92.0,78.87118974665171,82.4106449106449,44.44444444444444,77.5549164113281,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-87,50.0,95.0,30911.0,10.0,1.2,1.39,82.0,85.0,9.0,8.0,7.0,14.68,52156.0,1113.0,97.0,53.20340842884541,66.99199689199689,77.77777777777777,73.67119295009589,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-87,43.0,89.0,68093.0,12.0,1.06,1.48,77.0,81.0,8.0,9.0,8.0,12.01,57077.0,1217.0,92.0,50.99124141506714,70.97847707847708,81.48148148148148,71.3969344952735,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-86,52.0,99.0,25244.0,10.0,1.18,1.43,82.0,82.0,7.0,8.0,7.0,14.41,49673.0,995.0,86.0,52.646235931468446,68.01647241647242,70.37037037037037,73.12618257601396,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-100,91.0,33.0,177.0,3.0,0.47,0.3,64.0,96.0,2.0,3.0,4.0,2.2,74542.0,540.0,84.0,85.80855097465468,82.73442113442113,22.22222222222222,84.23299284112913,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,EMEA,High
-100,80.0,48.0,310.0,5.0,0.8,0.47,61.0,90.0,5.0,4.0,4.0,3.31,103175.0,758.0,93.0,80.78550942586946,83.57824397824398,37.03703703703703,81.5749282990543,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-69,30.0,12.0,65985.0,25.0,1.96,1.6,31.0,63.0,9.0,9.0,7.0,1.86,30397.0,298.0,69.0,44.012179172958064,69.89487179487179,81.48148148148148,48.85426271053531,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,ROW,Medium
-97,76.0,50.0,332.0,5.0,0.73,0.52,62.0,88.0,5.0,5.0,4.0,2.94,102220.0,740.0,84.0,78.91339711701195,83.7969696969697,40.74074074074074,80.16968899095419,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-94,72.0,99.0,103598.0,7.0,3.56,2.98,82.0,76.0,9.0,10.0,9.0,24.62,21703.0,5063.0,90.0,32.41348576760714,50.58352758352758,92.5925925925926,68.8447200186625,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",APAC,High
-82,48.0,93.0,29304.0,11.0,1.12,1.38,79.0,83.0,7.0,9.0,6.0,15.11,51095.0,966.0,93.0,51.91123267666992,64.25672105672106,70.37037037037037,70.56893143683448,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-86,36.0,92.0,10935.0,13.0,1.06,1.42,75.0,81.0,8.0,7.0,6.0,12.59,62098.0,1250.0,91.0,54.07390167295132,70.15182595182596,66.66666666666666,71.52586558553296,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-100,77.0,53.0,153.0,5.0,0.81,0.51,62.0,84.0,4.0,5.0,4.0,2.83,101569.0,765.0,86.0,83.78873837166951,85.51064491064491,37.03703703703703,82.92605843008431,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-93,71.0,98.0,99557.0,7.0,3.57,3.13,83.0,75.0,8.0,10.0,8.0,25.68,19707.0,4939.0,94.0,30.13690098487932,48.02447552447553,85.18518518518518,67.99791534470776,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",AMERICAS,High
-100,88.0,32.0,176.0,2.0,0.53,0.3,69.0,96.0,2.0,2.0,4.0,2.02,73907.0,597.0,83.0,85.83915414937353,82.88407148407148,18.51851851851852,85.74370395228073,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,LATAM,High
-96,83.0,49.0,275.0,6.0,0.85,0.52,65.0,89.0,6.0,4.0,4.0,3.18,100778.0,819.0,92.0,79.45132338624026,82.83076923076923,40.74074074074074,80.9079631851841,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-84,48.0,97.0,41427.0,9.0,1.06,1.48,80.0,87.0,8.0,7.0,7.0,15.76,48866.0,1053.0,97.0,50.70317090322185,64.3940947940948,70.37037037037037,71.14610981612765,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-99,79.0,48.0,101.0,5.0,0.8,0.53,62.0,87.0,6.0,4.0,4.0,3.1,103099.0,753.0,83.0,85.7959878881716,83.68616938616938,40.74074074074074,83.27859576086006,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-69,28.0,15.0,50508.0,26.0,1.96,1.46,29.0,61.0,9.0,7.0,6.0,1.33,28859.0,219.0,70.0,46.22173922987942,71.52439782439782,70.37037037037037,49.02760873045779,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,LATAM,Medium
-99,79.0,52.0,242.0,5.0,0.72,0.49,61.0,93.0,5.0,4.0,4.0,2.8,101569.0,824.0,93.0,81.35630351805332,85.06891996891997,37.03703703703703,81.42470623131865,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-100,84.0,33.0,165.0,3.0,0.54,0.31,64.0,95.0,3.0,1.0,4.0,1.87,76033.0,680.0,80.0,86.05776346261449,83.37544677544678,18.51851851851852,84.32021721191506,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,AMERICAS,High
-97,78.0,51.0,200.0,6.0,0.88,0.48,64.0,88.0,5.0,3.0,5.0,3.31,101538.0,816.0,84.0,81.84002575039867,83.27824397824398,37.03703703703704,81.79400901263953,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-97,84.0,52.0,130.0,5.0,0.74,0.51,61.0,90.0,5.0,5.0,4.0,2.94,98083.0,782.0,88.0,83.84846642657446,84.19696969696969,40.74074074074074,81.59696324930106,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-84,51.0,96.0,25227.0,11.0,1.14,1.44,79.0,84.0,8.0,8.0,7.0,14.65,51659.0,1010.0,95.0,51.91251108057924,66.35027195027195,74.07407407407408,71.26937887820273,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-85,38.0,94.0,84260.0,11.0,1.06,1.52,78.0,79.0,8.0,8.0,6.0,12.72,55887.0,1184.0,88.0,49.606613724753856,69.99930069930069,70.37037037037037,70.51231480366384,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-99,80.0,48.0,252.0,5.0,0.81,0.51,64.0,91.0,4.0,4.0,5.0,2.78,100650.0,782.0,85.0,80.89363460895342,84.30777000777,37.03703703703704,82.1627721131337,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-94,68.0,96.0,153549.0,7.0,3.58,2.98,82.0,75.0,9.0,9.0,9.0,24.96,22070.0,5036.0,87.0,31.997760511670343,49.32307692307692,88.88888888888889,68.69921617908462,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",LATAM,High
-100,88.0,34.0,179.0,3.0,0.58,0.3,64.0,96.0,1.0,2.0,3.0,2.5,76742.0,674.0,78.0,85.74805349388679,82.35167055167057,11.11111111111111,84.21181872286037,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,ROW,High
-62,23.0,12.0,74533.0,26.0,1.96,1.38,32.0,60.0,7.0,8.0,6.0,1.5,30291.0,257.0,67.0,44.73258964198508,68.49417249417249,66.66666666666666,46.95640637469477,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,LATAM,Medium
-82,41.0,87.0,37036.0,12.0,1.06,1.54,72.0,83.0,7.0,7.0,6.0,12.72,57467.0,1176.0,96.0,49.44104401804007,67.69930069930071,62.96296296296296,67.60436540631402,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-93,50.0,92.0,31940.0,11.0,1.21,1.5,78.0,86.0,8.0,7.0,7.0,14.41,47587.0,975.0,89.0,53.47743453477133,68.71647241647241,70.37037037037037,74.66710208716997,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-81,36.0,92.0,62453.0,12.0,0.92,1.49,74.0,77.0,8.0,9.0,8.0,12.28,60352.0,1118.0,90.0,49.1590702282956,69.25400155400155,81.48148148148148,67.75567457990346,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,ROW,Medium
-100,82.0,50.0,154.0,5.0,0.76,0.53,59.0,91.0,4.0,4.0,4.0,2.98,103323.0,737.0,85.0,83.4822562720511,84.61926961926962,33.33333333333333,81.91878969521788,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-90,49.0,94.0,76964.0,10.0,1.06,1.44,83.0,90.0,7.0,7.0,7.0,14.65,49673.0,998.0,92.0,52.287462735434,67.75027195027195,66.66666666666666,74.70061195740189,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-96,70.0,98.0,90587.0,8.0,3.64,3.06,85.0,76.0,9.0,10.0,8.0,25.43,21272.0,4976.0,93.0,32.08438639228105,49.41010101010101,88.88888888888889,70.32953523729837,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",AMERICAS,High
-94,87.0,33.0,126.0,2.0,0.56,0.28,67.0,95.0,3.0,3.0,3.0,2.44,71008.0,634.0,84.0,86.23742132738177,80.46822066822065,22.22222222222222,83.18309746458361,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,APAC,High
-94,50.0,96.0,40050.0,11.0,1.15,1.52,82.0,90.0,7.0,7.0,7.0,15.25,50106.0,1088.0,96.0,53.20816088616811,68.18477078477079,66.66666666666666,76.12285631015882,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-99,73.0,98.0,157790.0,8.0,3.58,3.07,85.0,73.0,10.0,9.0,9.0,24.33,20573.0,4938.0,91.0,32.25786707619701,52.44685314685316,92.5925925925926,71.44025347666896,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",APAC,High
-87,41.0,89.0,68326.0,12.0,1.0,1.6,73.0,81.0,9.0,8.0,8.0,12.7,60528.0,1117.0,86.0,49.37106247281372,69.63815073815076,81.48148148148148,69.62987186548479,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-100,78.0,47.0,157.0,5.0,0.76,0.51,61.0,90.0,6.0,5.0,5.0,2.77,100871.0,847.0,90.0,83.64222815000346,84.42719502719503,48.14814814814815,82.57477985250121,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-85,50.0,97.0,41427.0,10.0,1.21,1.56,80.0,89.0,9.0,6.0,7.0,14.68,52156.0,989.0,97.0,49.92572982578076,66.79199689199689,70.37037037037037,71.22400543902326,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-87,49.0,95.0,28329.0,10.0,1.16,1.48,81.0,85.0,8.0,9.0,7.0,15.75,47124.0,1030.0,95.0,52.1111853182042,64.91351981351981,77.77777777777777,72.98891486137147,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-77,30.0,12.0,31602.0,25.0,2.05,1.49,30.0,56.0,8.0,8.0,8.0,1.42,31018.0,171.0,70.0,48.82653835934882,73.14957264957265,77.77777777777779,53.03928842577208,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,EU,Medium
-99,77.0,53.0,101.0,5.0,0.77,0.51,61.0,87.0,6.0,5.0,3.0,2.98,103099.0,886.0,86.0,86.06534815753186,84.91926961926963,40.74074074074075,83.07287185513614,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-81,40.0,92.0,60408.0,12.0,1.0,1.49,75.0,77.0,8.0,9.0,6.0,12.01,57077.0,1087.0,88.0,49.198972110815134,69.77847707847708,74.07407407407408,68.06964023878528,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-100,81.0,49.0,209.0,5.0,0.73,0.55,64.0,91.0,5.0,3.0,3.0,3.06,99778.0,745.0,86.0,81.57221202417055,84.26386946386947,29.629629629629623,82.75027420845969,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-99,92.0,32.0,152.0,3.0,0.53,0.3,64.0,93.0,2.0,3.0,4.0,2.54,72675.0,567.0,78.0,86.35448133057129,81.57397047397048,22.22222222222222,84.07406846569994,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,APAC,High
-95,72.0,99.0,75493.0,8.0,3.48,3.13,88.0,74.0,9.0,9.0,9.0,24.63,22295.0,5028.0,89.0,31.048768844620017,50.864102564102566,88.88888888888889,70.517069095617,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",EMEA,High
-100,79.0,53.0,168.0,5.0,0.85,0.51,60.0,94.0,5.0,4.0,5.0,3.37,97003.0,778.0,84.0,83.26465019201123,84.46169386169386,40.74074074074074,82.14262756720392,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-88,48.0,93.0,55740.0,11.0,1.14,1.41,78.0,90.0,7.0,8.0,6.0,14.93,52219.0,1018.0,97.0,52.473804973140695,66.4063714063714,66.66666666666666,72.56583174059924,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-86,72.0,97.0,113063.0,7.0,3.61,3.09,83.0,73.0,8.0,9.0,9.0,24.22,23853.0,5010.0,84.0,28.43721006313532,48.560528360528366,85.18518518518518,64.95302352209737,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",EU,High
-99,81.0,50.0,230.0,5.0,0.86,0.51,62.0,85.0,6.0,3.0,4.0,3.07,98791.0,732.0,83.0,81.33375689610665,84.14444444444443,37.03703703703704,81.71681491363731,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-98,91.0,30.0,165.0,3.0,0.54,0.3,67.0,95.0,3.0,3.0,3.0,2.4,72166.0,569.0,79.0,85.59244359729463,81.14592074592075,22.22222222222222,84.35735525905312,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,EU,High
-90,38.0,88.0,86202.0,12.0,1.06,1.42,75.0,81.0,8.0,7.0,7.0,12.02,60655.0,1239.0,94.0,52.42765843584962,71.65905205905206,70.37037037037037,72.34968045254737,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EU,Medium
-77,29.0,8.0,60573.0,26.0,2.02,1.57,32.0,60.0,8.0,9.0,7.0,1.26,30357.0,211.0,70.0,46.91825276332028,72.66037296037295,77.77777777777777,52.97138846716209,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,APAC,Medium
-95,50.0,96.0,22097.0,11.0,1.17,1.45,80.0,86.0,8.0,7.0,6.0,14.65,49673.0,995.0,86.0,55.2681857248843,69.65027195027193,66.66666666666666,76.59386500370951,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-100,87.0,31.0,141.0,3.0,0.51,0.28,68.0,91.0,1.0,2.0,3.0,1.6,73892.0,525.0,85.0,87.35988520425822,83.49992229992229,11.11111111111111,85.97595982149038,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,LATAM,High
-97,76.0,51.0,332.0,5.0,0.79,0.51,59.0,86.0,4.0,5.0,4.0,2.94,102220.0,740.0,84.0,79.04807725169208,83.99696969696969,37.03703703703703,79.31682703809221,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-96,77.0,47.0,152.0,5.0,0.79,0.5,60.0,86.0,6.0,5.0,3.0,3.06,99778.0,745.0,86.0,82.7608786369686,82.66386946386946,40.74074074074075,80.56630752293901,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-87,48.0,96.0,33525.0,10.0,1.21,1.4,81.0,87.0,9.0,7.0,6.0,15.74,52785.0,1053.0,97.0,52.95894494399547,65.13294483294483,70.37037037037037,73.28563073039841,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-99,81.0,52.0,242.0,5.0,0.8,0.52,63.0,93.0,6.0,3.0,5.0,3.14,103063.0,782.0,88.0,80.95226311401291,84.40846930846931,40.74074074074075,81.88329208990453,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-88,36.0,88.0,41490.0,12.0,0.9,1.48,74.0,84.0,7.0,7.0,7.0,12.7,60528.0,1117.0,86.0,51.90121251916069,69.73815073815074,66.66666666666666,71.16542438170625,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,AMERICAS,Medium
-92,48.0,93.0,42939.0,11.0,1.14,1.4,77.0,88.0,9.0,7.0,7.0,14.61,48925.0,1033.0,98.0,54.13456172417021,68.22797202797204,74.07407407407406,74.24709660345957,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-95,77.0,48.0,275.0,5.0,0.92,0.52,65.0,88.0,6.0,4.0,5.0,3.18,100778.0,819.0,92.0,79.15132338624025,82.33076923076922,44.44444444444444,80.45296318518409,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-94,71.0,97.0,99557.0,8.0,3.58,3.13,83.0,73.0,9.0,9.0,9.0,25.68,19707.0,5063.0,94.0,30.436900984879312,48.12447552447552,88.88888888888889,68.45291534470775,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",APAC,High
-78,30.0,8.0,64044.0,26.0,2.07,1.6,33.0,60.0,7.0,8.0,6.0,1.26,30357.0,211.0,70.0,46.74759798957092,72.96037296037296,66.66666666666666,53.561659296349816,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,APAC,Medium
-98,77.0,53.0,153.0,5.0,0.8,0.51,62.0,84.0,5.0,5.0,4.0,2.83,101569.0,765.0,86.0,83.18873837166952,84.9106449106449,40.74074074074074,82.01605843008433,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-89,50.0,96.0,28329.0,10.0,1.2,1.37,79.0,85.0,9.0,9.0,7.0,15.75,47124.0,1030.0,95.0,54.19266679968568,65.71351981351981,81.48148148148148,73.81743337988999,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-93,50.0,95.0,30911.0,10.0,1.07,1.48,81.0,86.0,7.0,7.0,6.0,14.68,52156.0,1010.0,95.0,53.79128721672421,68.79199689199689,62.96296296296296,75.67695052585347,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-85,36.0,94.0,40250.0,12.0,0.96,1.48,74.0,78.0,9.0,9.0,6.0,11.84,60648.0,1118.0,96.0,51.040422802811406,71.70870240870242,77.77777777777777,69.81414798098399,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-99,89.0,31.0,104.0,3.0,0.52,0.29,66.0,91.0,2.0,2.0,3.0,1.96,75069.0,637.0,79.0,88.8320974598513,82.5006216006216,14.814814814814811,85.54123411094794,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,APAC,High
-97,81.0,49.0,209.0,5.0,0.85,0.53,61.0,90.0,5.0,3.0,3.0,3.06,99778.0,745.0,86.0,80.94157229353083,83.36386946386945,29.629629629629623,80.57955030273578,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-90,48.0,93.0,33525.0,11.0,1.15,1.53,82.0,90.0,7.0,8.0,6.0,15.74,52785.0,1083.0,93.0,52.10810319315373,65.43294483294484,66.66666666666666,74.3378361176038,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-85,44.0,87.0,35850.0,13.0,1.08,1.48,79.0,83.0,9.0,8.0,8.0,11.55,59371.0,1147.0,89.0,51.19210696559566,70.87202797202798,81.48148148148148,71.36723743795848,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-94,72.0,99.0,103598.0,8.0,3.48,2.83,85.0,76.0,8.0,9.0,9.0,24.62,21703.0,5063.0,90.0,34.43368778780916,50.58352758352758,85.18518518518518,70.4517907257332,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",ROW,High
-95,49.0,94.0,76964.0,10.0,1.21,1.45,78.0,82.0,8.0,9.0,6.0,14.65,49673.0,998.0,92.0,53.65278260075386,69.25027195027194,74.07407407407408,75.42847391026383,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-91,50.0,96.0,40050.0,10.0,1.08,1.48,81.0,90.0,7.0,7.0,6.0,15.25,50106.0,1088.0,96.0,52.84688142488865,67.28477078477079,62.96296296296296,74.64640849871103,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-62,23.0,12.0,74533.0,25.0,1.95,1.52,28.0,59.0,8.0,7.0,7.0,1.5,30291.0,257.0,67.0,42.84706775646319,68.49417249417249,70.37037037037037,45.09647371476211,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,APAC,Medium
-98,77.0,48.0,252.0,5.0,0.88,0.54,64.0,91.0,6.0,4.0,4.0,2.78,100650.0,782.0,85.0,80.189594204913,84.00777000777,40.74074074074074,81.56635797171954,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-86,41.0,86.0,52150.0,13.0,1.07,1.46,79.0,83.0,8.0,9.0,6.0,12.72,59942.0,1268.0,90.0,51.28211523571873,68.69930069930071,74.07407407407408,71.74874033250155,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-88,73.0,98.0,157790.0,7.0,3.67,3.13,83.0,72.0,8.0,10.0,9.0,24.33,20573.0,4938.0,91.0,28.149786268116205,49.146853146853154,88.88888888888889,65.55242519384066,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",AMERICAS,High
-97,78.0,51.0,332.0,6.0,0.85,0.52,65.0,86.0,4.0,3.0,3.0,2.94,102220.0,740.0,84.0,78.91339711701195,83.99696969696969,25.925925925925924,81.06968899095419,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-100,88.0,34.0,179.0,3.0,0.56,0.3,69.0,96.0,2.0,3.0,4.0,2.5,76742.0,674.0,78.0,85.74805349388679,82.35167055167057,22.22222222222222,85.71181872286037,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,ROW,High
-94,47.0,93.0,33532.0,10.0,1.15,1.47,80.0,91.0,9.0,7.0,6.0,14.4,51174.0,959.0,97.0,54.115903864388535,69.23589743589743,70.37037037037037,75.84056635253597,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-96,84.0,47.0,355.0,5.0,0.72,0.47,59.0,90.0,5.0,3.0,3.0,3.05,102073.0,901.0,91.0,79.00162388620915,82.68329448329447,29.629629629629623,78.95056836017321,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-87,50.0,95.0,31940.0,11.0,1.15,1.57,80.0,86.0,9.0,8.0,7.0,14.41,47587.0,975.0,89.0,50.73467359201038,67.51647241647241,77.77777777777777,72.20713575720363,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-82,41.0,89.0,69350.0,12.0,1.01,1.52,78.0,83.0,8.0,8.0,7.0,11.28,62593.0,1284.0,90.0,48.9310376027556,70.8965034965035,74.07407407407408,69.22586316096445,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,AMERICAS,Medium
-99,80.0,51.0,230.0,5.0,0.73,0.5,62.0,85.0,4.0,4.0,4.0,3.07,98791.0,732.0,83.0,81.46843703078679,84.34444444444443,33.33333333333333,81.76395296077537,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-100,78.0,47.0,157.0,5.0,0.92,0.53,58.0,90.0,4.0,3.0,3.0,2.77,100871.0,847.0,90.0,83.3728678806432,84.42719502719503,25.925925925925924,81.58050375822512,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-94,51.0,96.0,40031.0,10.0,1.13,1.44,79.0,83.0,9.0,9.0,7.0,14.59,44696.0,1041.0,98.0,54.28621752608799,69.46682206682206,81.48148148148148,75.60017613413079,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-94,42.0,94.0,46640.0,12.0,1.06,1.46,75.0,75.0,8.0,8.0,8.0,11.69,54650.0,1189.0,88.0,53.82144272840582,74.7000777000777,77.77777777777779,74.23750495494203,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EU,Medium
-90,47.0,97.0,41427.0,10.0,1.18,1.45,82.0,87.0,9.0,7.0,6.0,15.76,48866.0,1053.0,97.0,52.90721130726224,66.1940947940948,70.37037037037037,74.61752395754179,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-68,30.0,12.0,65985.0,25.0,2.05,1.57,32.0,63.0,8.0,9.0,6.0,1.86,30397.0,298.0,69.0,44.11621957699848,69.5948717948718,74.07407407407408,48.84067685194946,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,ROW,Medium
-84,40.0,92.0,60408.0,12.0,1.06,1.43,76.0,77.0,9.0,8.0,7.0,12.01,57077.0,1087.0,88.0,50.90705291889594,70.67847707847709,77.77777777777777,70.01746852161358,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-97,70.0,98.0,90587.0,8.0,3.58,3.13,83.0,76.0,8.0,10.0,10.0,25.43,21272.0,4976.0,93.0,31.44162544952012,49.71010101010101,92.5925925925926,69.85456890733204,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",APAC,High
-90,52.0,99.0,25270.0,10.0,1.18,1.42,80.0,82.0,7.0,7.0,7.0,14.28,48512.0,1065.0,95.0,53.97945653268229,69.46899766899767,66.66666666666666,74.39280978643879,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-100,77.0,48.0,154.0,5.0,0.76,0.51,60.0,91.0,5.0,4.0,4.0,2.98,103323.0,737.0,85.0,83.75161654141137,84.21926961926961,37.03703703703703,82.31306578949398,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-100,85.0,32.0,104.0,2.0,0.47,0.3,64.0,95.0,3.0,2.0,3.0,1.83,78051.0,715.0,84.0,88.99741732517117,83.25314685314686,18.51851851851852,85.3490960638099,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,AMERICAS,High
-96,81.0,50.0,201.0,5.0,0.74,0.51,61.0,90.0,5.0,4.0,4.0,2.6,99953.0,717.0,85.0,81.11030054468213,84.15742035742035,37.03703703703703,80.28860519063873,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-84,42.0,89.0,50911.0,11.0,0.92,1.38,77.0,82.0,7.0,8.0,8.0,11.34,60692.0,1224.0,90.0,51.78931544075751,71.37995337995339,74.07407407407408,70.62626040426511,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-82,48.0,93.0,29304.0,11.0,1.18,1.52,79.0,83.0,7.0,9.0,7.0,15.11,51095.0,966.0,93.0,50.02571079114803,64.25672105672106,74.07407407407406,69.9089987769018,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-97,75.0,44.0,211.0,5.0,0.85,0.5,61.0,89.0,5.0,4.0,4.0,3.77,98647.0,753.0,93.0,81.29739643325253,80.98469308469308,37.03703703703703,80.7040887516384,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-93,50.0,97.0,32911.0,10.0,1.2,1.52,80.0,90.0,8.0,7.0,7.0,14.55,46054.0,1003.0,100.0,53.167630285574965,69.44452214452215,70.37037037037037,75.15867059995124,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-100,92.0,30.0,141.0,3.0,0.5,0.3,65.0,93.0,2.0,2.0,3.0,1.6,73892.0,525.0,85.0,87.09052493489796,83.29992229992229,14.814814814814811,84.98168372721429,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,LATAM,High
-95,50.0,96.0,25244.0,11.0,1.18,1.46,78.0,82.0,8.0,7.0,7.0,14.41,49673.0,995.0,86.0,54.94219552742803,70.1164724164724,70.37037037037037,75.87976843459981,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-99,78.0,50.0,197.0,5.0,0.77,0.48,59.0,83.0,5.0,4.0,4.0,3.87,96646.0,743.0,87.0,82.51814829024636,82.5904428904429,37.03703703703703,81.23135190158624,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-100,80.0,48.0,252.0,6.0,0.76,0.5,64.0,91.0,4.0,4.0,4.0,2.78,100650.0,782.0,85.0,81.32831474363356,84.60777000777001,33.33333333333333,82.66491016027173,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-95,42.0,87.0,37036.0,13.0,0.92,1.47,72.0,83.0,9.0,9.0,7.0,12.72,57467.0,1176.0,96.0,54.28380496080101,71.5993006993007,81.48148148148148,73.84933173628035,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EU,Medium
-100,91.0,33.0,122.0,2.0,0.5,0.29,68.0,91.0,1.0,2.0,3.0,2.02,77375.0,549.0,85.0,88.10276130513182,83.08407148407149,11.11111111111111,86.23596645679612,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,LATAM,High
-96,82.0,50.0,154.0,5.0,0.85,0.5,60.0,90.0,5.0,3.0,4.0,3.22,96860.0,862.0,86.0,82.6862966760915,82.95306915306915,33.33333333333333,80.540203836632,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-73,30.0,12.0,31602.0,26.0,1.96,1.4,30.0,56.0,9.0,7.0,6.0,1.42,31018.0,171.0,70.0,48.83865957147003,71.94957264957264,70.37037037037037,51.64353085001451,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,LATAM,Medium
-85,38.0,87.0,52407.0,12.0,0.92,1.47,75.0,81.0,9.0,9.0,7.0,12.45,56902.0,1222.0,97.0,50.84136711795362,69.12377622377623,81.48148148148148,70.04447849128377,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-99,83.0,49.0,275.0,6.0,0.81,0.5,65.0,89.0,5.0,3.0,5.0,3.18,100778.0,819.0,92.0,80.62068365560053,83.73076923076923,37.03703703703704,82.3672392794602,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-100,80.0,50.0,230.0,5.0,0.73,0.49,60.0,85.0,5.0,5.0,4.0,3.07,98791.0,732.0,83.0,81.90311716546692,84.44444444444444,40.74074074074074,81.66609100791342,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-90,48.0,99.0,42997.0,10.0,1.21,1.52,76.0,82.0,9.0,7.0,7.0,14.94,48860.0,978.0,86.0,51.9166721326713,68.18694638694639,74.07407407407406,72.47083524643494,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-88,71.0,97.0,99557.0,8.0,3.6,3.02,83.0,73.0,9.0,9.0,10.0,25.68,19707.0,5063.0,94.0,30.118382466360792,46.32447552447553,92.5925925925926,66.24143386322628,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",AMERICAS,High
-97,77.0,48.0,250.0,5.0,0.72,0.5,61.0,90.0,5.0,4.0,4.0,3.39,100328.0,741.0,87.0,80.46613481976257,82.52284382284381,37.03703703703703,80.4131471869169,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-100,88.0,29.0,133.0,3.0,0.52,0.29,66.0,98.0,2.0,2.0,3.0,1.76,75226.0,663.0,82.0,87.57327110078923,82.78912198912198,14.814814814814811,85.45064488527623,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,LATAM,High
-84,41.0,86.0,52150.0,13.0,1.06,1.48,77.0,78.0,7.0,9.0,8.0,12.72,59942.0,1268.0,90.0,50.412754966358456,68.0993006993007,77.77777777777777,70.14446423822545,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-62,23.0,12.0,74533.0,25.0,1.99,1.52,32.0,60.0,7.0,8.0,6.0,1.5,30291.0,257.0,67.0,42.84706775646319,68.49417249417249,66.66666666666666,46.29647371476211,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,APAC,Medium
-100,81.0,50.0,201.0,5.0,0.85,0.53,60.0,89.0,6.0,3.0,4.0,2.6,99953.0,717.0,85.0,82.04094027532187,85.35742035742035,37.03703703703704,81.71432909636265,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-86,50.0,96.0,25270.0,11.0,1.15,1.56,76.0,82.0,8.0,8.0,7.0,14.28,48512.0,1065.0,95.0,50.8939346471604,67.66899766899768,74.07407407407408,70.71287712650613,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-98,77.0,46.0,169.0,5.0,0.78,0.5,58.0,87.0,6.0,4.0,5.0,2.82,96624.0,825.0,90.0,82.76670427009624,83.53006993006991,44.44444444444444,80.66834649453367,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-99,81.0,52.0,242.0,5.0,0.79,0.53,60.0,90.0,5.0,4.0,4.0,3.14,103063.0,782.0,88.0,80.81758297933277,84.40846930846931,37.03703703703703,80.93615404276646,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-84,36.0,94.0,40250.0,13.0,0.92,1.52,79.0,78.0,9.0,9.0,6.0,11.84,60648.0,1118.0,96.0,50.20170226409086,71.40870240870241,77.77777777777777,70.6705957924318,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-86,50.0,95.0,31940.0,10.0,1.17,1.46,83.0,86.0,7.0,7.0,7.0,14.41,47587.0,975.0,89.0,51.91615507349188,67.21647241647241,66.66666666666666,73.17065427572216,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-90,48.0,93.0,33525.0,11.0,1.18,1.43,80.0,90.0,8.0,7.0,7.0,15.74,52785.0,1053.0,97.0,53.45490453995507,65.43294483294484,70.37037037037037,74.20921658898428,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-100,82.0,53.0,291.0,5.0,0.78,0.5,59.0,93.0,5.0,4.0,4.0,2.81,97201.0,880.0,85.0,80.66334857772384,85.54949494949494,37.03703703703703,80.93217200220334,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-97,76.0,51.0,332.0,6.0,0.79,0.53,60.0,86.0,5.0,3.0,4.0,2.94,102220.0,740.0,84.0,78.77871698233182,83.99696969696969,33.33333333333333,79.52255094381613,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-95,71.0,97.0,90587.0,8.0,3.58,3.15,83.0,76.0,8.0,9.0,8.0,25.43,21272.0,4976.0,93.0,30.572265180159835,48.91010101010101,81.48148148148148,68.85029281305593,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",AMERICAS,High
-94,87.0,36.0,171.0,2.0,0.47,0.29,67.0,91.0,3.0,3.0,3.0,1.23,76655.0,523.0,78.0,84.33052792003426,83.41864801864801,22.22222222222222,82.515684772012,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,APAC,High
-90,48.0,94.0,76964.0,10.0,1.15,1.52,75.0,82.0,9.0,7.0,6.0,14.65,49673.0,998.0,92.0,51.21002165799292,67.75027195027195,70.37037037037037,71.92350758029752,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-87,44.0,87.0,35850.0,13.0,1.06,1.41,74.0,83.0,9.0,8.0,8.0,11.55,59371.0,1147.0,89.0,52.7348679083566,71.47202797202797,81.48148148148148,71.10720376792482,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-73,30.0,12.0,31602.0,25.0,2.05,1.48,31.0,56.0,8.0,7.0,7.0,1.42,31018.0,171.0,70.0,47.76121849402896,71.94957264957264,70.37037037037037,51.56642647291013,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,EMEA,Medium
-94,50.0,96.0,40050.0,10.0,1.21,1.53,79.0,90.0,8.0,7.0,6.0,15.25,50106.0,1088.0,96.0,53.07348075148796,68.18477078477079,66.66666666666666,75.17571826302078,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-97,73.0,98.0,157790.0,8.0,3.48,2.8,85.0,73.0,9.0,10.0,10.0,24.33,20573.0,4938.0,91.0,35.29423071256065,51.84685314685316,96.29629629629628,71.80298074939621,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",APAC,High
-98,77.0,48.0,250.0,6.0,0.72,0.48,61.0,90.0,4.0,4.0,5.0,3.39,100328.0,741.0,87.0,81.03549508912285,82.82284382284382,37.03703703703704,80.96242328119298,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-100,88.0,29.0,133.0,2.0,0.5,0.3,66.0,98.0,1.0,3.0,2.0,1.76,75226.0,663.0,82.0,87.43859096610909,82.78912198912198,11.11111111111111,85.40350683813817,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,AMERICAS,High
-92,48.0,99.0,42997.0,10.0,1.15,1.38,80.0,82.0,8.0,8.0,7.0,14.94,48860.0,978.0,86.0,54.40219401819319,68.7869463869464,74.07407407407408,75.24076790636762,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-100,78.0,47.0,157.0,5.0,0.76,0.49,61.0,90.0,6.0,3.0,4.0,2.77,100871.0,847.0,90.0,83.91158841936372,84.42719502719503,37.03703703703704,82.66905594677729,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-88,47.0,97.0,33532.0,10.0,1.06,1.44,79.0,91.0,7.0,8.0,6.0,14.4,51174.0,959.0,97.0,52.71994426842894,68.23589743589744,66.66666666666666,72.95198049395013,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-87,36.0,92.0,10935.0,13.0,0.95,1.56,76.0,81.0,8.0,7.0,7.0,12.59,62098.0,1250.0,91.0,52.48837978742944,70.45182595182597,70.37037037037037,71.6209329256003,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,ROW,Medium
-97,76.0,51.0,332.0,6.0,0.73,0.5,60.0,86.0,5.0,4.0,4.0,2.94,102220.0,740.0,84.0,79.18275738637222,83.99696969696969,37.03703703703703,79.66396508523026,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-90,50.0,95.0,30911.0,10.0,1.21,1.5,81.0,85.0,9.0,7.0,6.0,14.68,52156.0,1010.0,95.0,52.62192694736394,67.8919968919969,70.37037037037037,74.21767443157738,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-99,89.0,31.0,104.0,2.0,0.52,0.31,66.0,91.0,2.0,3.0,2.0,1.96,75069.0,637.0,79.0,88.56273719049103,82.5006216006216,14.814814814814811,85.44695801667186,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,AMERICAS,High
-94,79.0,48.0,154.0,5.0,0.92,0.53,59.0,90.0,5.0,5.0,4.0,3.22,96860.0,862.0,86.0,81.6822562720511,81.95306915306915,40.74074074074074,79.18878969521788,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-76,30.0,8.0,64044.0,25.0,2.14,1.44,32.0,60.0,9.0,7.0,7.0,1.18,27055.0,315.0,72.0,48.30248014445308,72.5157731157731,74.07407407407406,53.10586805055857,Bubble Wrap (Minimal Use),"Low-Value Goods, Secondary Protection for Non-Fragile Items",Surface protection during transit; minimal void-fill,EU,Medium
-95,50.0,96.0,25244.0,11.0,1.14,1.42,80.0,82.0,8.0,7.0,7.0,14.41,49673.0,995.0,86.0,55.48091606614858,70.1164724164724,70.37037037037037,76.668320623152,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-100,81.0,52.0,242.0,5.0,0.79,0.53,63.0,93.0,6.0,3.0,5.0,3.14,103063.0,782.0,88.0,81.11758297933278,84.7084693084693,40.74074074074075,82.29115404276648,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-84,41.0,89.0,69350.0,13.0,1.06,1.46,72.0,83.0,7.0,9.0,8.0,11.28,62593.0,1284.0,90.0,50.33911841083641,71.49650349650351,77.77777777777777,68.61869144379274,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-100,92.0,30.0,141.0,3.0,0.5,0.3,65.0,93.0,3.0,3.0,3.0,1.6,73892.0,525.0,85.0,87.09052493489796,83.29992229992229,22.22222222222222,84.98168372721429,Protective Fillers (Paper/Biodegradable),"Fragile Items, Cosmetics, Pharmaceuticals, Internal Component Protection",Void-fill and cushioning for fragile products,EMEA,High
-94,79.0,48.0,154.0,5.0,0.92,0.51,60.0,90.0,6.0,3.0,4.0,3.22,96860.0,862.0,86.0,81.95161654141137,81.95306915306915,37.03703703703704,79.58306578949397,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-82,41.0,86.0,52150.0,13.0,0.92,1.42,76.0,78.0,9.0,8.0,8.0,12.72,59942.0,1268.0,90.0,50.62083577443926,67.4993006993007,81.48148148148148,69.21729252105374,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EMEA,Medium
-90,48.0,93.0,33525.0,10.0,1.21,1.52,79.0,90.0,8.0,7.0,7.0,15.74,52785.0,1053.0,97.0,52.242783327833855,65.43294483294484,70.37037037037037,73.48497416474184,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-97,72.0,99.0,103598.0,8.0,3.56,2.97,85.0,76.0,9.0,9.0,9.0,24.62,21703.0,5063.0,90.0,33.44816590228727,51.483527583527575,88.88888888888889,71.15685806580055,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",AMERICAS,High
-99,78.0,50.0,197.0,5.0,0.85,0.51,61.0,83.0,6.0,4.0,5.0,3.87,96646.0,743.0,87.0,82.11410788620594,82.5904428904429,44.44444444444444,81.68993776017209,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-95,42.0,94.0,46640.0,12.0,0.98,1.5,74.0,75.0,9.0,9.0,7.0,11.69,54650.0,1189.0,88.0,53.58272218968527,75.00007770007771,81.48148148148148,74.20395276638983,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,AMERICAS,Medium
-92,48.0,99.0,42997.0,10.0,1.15,1.52,78.0,82.0,7.0,7.0,6.0,14.94,48860.0,978.0,86.0,52.5166721326713,68.7869463869464,62.96296296296296,73.98083524643495,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-98,77.0,46.0,169.0,4.0,0.72,0.52,61.0,87.0,5.0,3.0,4.0,2.82,96624.0,825.0,90.0,82.49734400073596,83.53006993006991,33.33333333333333,81.47407040025757,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-100,77.0,53.0,153.0,5.0,0.85,0.5,60.0,84.0,5.0,4.0,4.0,2.83,101569.0,765.0,86.0,83.92341850634963,85.51064491064491,37.03703703703703,82.37319647722236,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-87,44.0,87.0,35850.0,13.0,1.06,1.48,79.0,83.0,8.0,8.0,7.0,11.55,59371.0,1147.0,89.0,51.792106965595664,71.47202797202797,74.07407407407408,72.27723743795849,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,ROW,Medium
-88,50.0,96.0,40050.0,10.0,1.18,1.52,79.0,90.0,7.0,8.0,7.0,15.25,50106.0,1088.0,96.0,51.408160886168105,66.38477078477078,70.37037037037037,72.49285631015884,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-100,81.0,50.0,209.0,5.0,0.73,0.51,64.0,91.0,5.0,4.0,4.0,3.06,99778.0,745.0,86.0,82.11093256289108,84.46386946386947,37.03703703703703,82.93882639701187,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-87,40.0,92.0,60408.0,12.0,1.06,1.55,75.0,77.0,8.0,7.0,7.0,12.01,57077.0,1087.0,88.0,50.19089130273433,71.57847707847709,70.37037037037037,70.51681195595701,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-94,50.0,96.0,25244.0,11.0,1.18,1.41,78.0,82.0,9.0,7.0,6.0,14.41,49673.0,995.0,86.0,55.31559620082871,69.81647241647242,70.37037037037037,75.66045867029004,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-96,73.0,98.0,157790.0,7.0,3.67,3.02,83.0,72.0,8.0,10.0,9.0,24.33,20573.0,4938.0,91.0,32.031267749597674,51.546853146853145,88.88888888888889,69.71094371235918,Steel Racks & Containers,"Heavy Industrial Components, High-Security Goods","Secure, high-load international shipping and long-term storage",LATAM,High
-96,78.0,50.0,197.0,6.0,0.85,0.5,59.0,83.0,4.0,4.0,5.0,3.87,96646.0,743.0,87.0,81.34878802088608,81.69044289044288,37.03703703703704,79.77207580731012,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-90,50.0,95.0,30911.0,10.0,1.2,1.55,81.0,85.0,7.0,7.0,6.0,14.68,52156.0,1010.0,95.0,51.94852627396327,67.8919968919969,62.96296296296296,73.98198419588714,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-99,82.0,53.0,291.0,5.0,0.73,0.51,60.0,93.0,6.0,4.0,4.0,2.81,97201.0,880.0,85.0,80.22866844304369,85.24949494949496,40.74074074074074,80.73003395506528,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-85,38.0,87.0,52407.0,12.0,0.92,1.52,78.0,81.0,8.0,9.0,8.0,12.45,56902.0,1222.0,97.0,50.16796644455294,69.12377622377623,81.48148148148148,70.70878825559352,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,AMERICAS,Medium
-98,79.0,48.0,154.0,5.0,0.85,0.53,59.0,90.0,5.0,3.0,3.0,3.22,96860.0,862.0,86.0,82.88225627205111,83.15306915306915,29.629629629629623,81.0087896952179,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-92,48.0,93.0,29304.0,10.0,1.12,1.52,79.0,83.0,8.0,7.0,7.0,15.11,51095.0,966.0,93.0,53.02571079114803,67.25672105672106,70.37037037037037,74.45899877690181,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-98,77.0,48.0,250.0,5.0,0.72,0.47,62.0,90.0,5.0,5.0,4.0,3.39,100328.0,741.0,87.0,81.17017522380297,82.82284382284382,40.74074074074074,81.30956132833103,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-88,41.0,89.0,69350.0,13.0,1.01,1.57,75.0,83.0,9.0,8.0,8.0,11.28,62593.0,1284.0,90.0,50.057636929354935,72.69650349650351,81.48148148148148,70.82017292527422,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,ROW,Medium
-100,78.0,47.0,157.0,5.0,0.92,0.52,61.0,90.0,4.0,3.0,3.0,2.77,100871.0,847.0,90.0,83.50754801532332,84.42719502719503,25.925925925925924,82.52764180536316,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-87,47.0,93.0,33532.0,11.0,1.15,1.5,82.0,91.0,7.0,8.0,6.0,14.4,51174.0,959.0,97.0,51.61186346034814,67.13589743589743,66.66666666666666,73.11415221112185,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-82,41.0,86.0,52150.0,12.0,1.07,1.48,76.0,78.0,7.0,9.0,8.0,12.72,59942.0,1268.0,90.0,49.812754966358455,67.4993006993007,77.77777777777777,68.93446423822546,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-100,81.0,50.0,201.0,6.0,0.73,0.53,60.0,89.0,5.0,3.0,3.0,2.6,99953.0,717.0,85.0,82.04094027532187,85.35742035742035,29.629629629629623,81.71432909636265,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-88,49.0,94.0,76964.0,10.0,1.19,1.4,75.0,82.0,8.0,7.0,6.0,14.65,49673.0,998.0,92.0,52.226183274154536,67.15027195027194,66.66666666666666,71.57916414595408,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-97,76.0,51.0,332.0,5.0,0.79,0.5,60.0,86.0,6.0,4.0,5.0,2.94,102220.0,740.0,84.0,79.18275738637222,83.99696969696969,44.44444444444444,79.66396508523026,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-87,44.0,87.0,35850.0,13.0,1.08,1.48,79.0,83.0,9.0,8.0,8.0,11.55,59371.0,1147.0,89.0,51.792106965595664,71.47202797202797,81.48148148148148,72.27723743795849,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,ROW,Medium
-85,48.0,93.0,29304.0,11.0,1.12,1.5,81.0,83.0,7.0,7.0,7.0,15.11,51095.0,966.0,93.0,51.19507106050831,65.15672105672105,66.66666666666666,71.96827487117791,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-99,82.0,53.0,291.0,5.0,0.73,0.53,60.0,93.0,4.0,4.0,4.0,2.81,97201.0,880.0,85.0,79.95930817368343,85.24949494949496,33.33333333333333,80.6357578607892,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-95,42.0,94.0,46640.0,12.0,0.92,1.5,74.0,75.0,8.0,8.0,8.0,11.69,54650.0,1189.0,88.0,53.58272218968527,75.00007770007771,77.77777777777779,74.20395276638983,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,LATAM,Medium
-85,50.0,96.0,40050.0,10.0,1.21,1.44,79.0,90.0,9.0,7.0,6.0,15.25,50106.0,1088.0,96.0,51.58560196360919,65.48477078477079,70.37037037037037,71.5049606872632,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-99,78.0,50.0,197.0,5.0,0.77,0.49,61.0,83.0,6.0,3.0,4.0,3.87,96646.0,743.0,87.0,82.3834681555662,82.5904428904429,37.03703703703704,81.78421385444817,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-85,38.0,87.0,52407.0,12.0,1.01,1.43,75.0,81.0,9.0,8.0,7.0,12.45,56902.0,1222.0,97.0,51.38008765667414,69.12377622377623,77.77777777777777,70.23303067983595,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,EMEA,Medium
-95,48.0,99.0,42997.0,11.0,1.22,1.52,80.0,82.0,7.0,8.0,6.0,14.94,48860.0,978.0,86.0,53.41667213267131,69.68694638694639,66.66666666666666,75.94583524643494,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-100,77.0,46.0,169.0,5.0,0.85,0.52,65.0,87.0,4.0,4.0,5.0,2.82,96624.0,825.0,90.0,83.09734400073596,84.13006993006992,37.03703703703704,83.58407040025759,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EMEA,High
-82,40.0,92.0,60408.0,12.0,1.0,1.53,74.0,77.0,9.0,8.0,8.0,12.01,57077.0,1087.0,88.0,48.96025157209459,70.07847707847709,81.48148148148148,68.0360880502331,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,AMERICAS,Medium
-90,50.0,95.0,30911.0,11.0,1.15,1.5,82.0,85.0,8.0,7.0,7.0,14.68,52156.0,1010.0,95.0,52.62192694736394,67.8919968919969,70.37037037037037,74.51767443157738,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-100,78.0,47.0,157.0,5.0,0.72,0.51,61.0,90.0,5.0,3.0,3.0,2.77,100871.0,847.0,90.0,83.64222815000346,84.42719502719503,29.629629629629623,82.57477985250121,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-88,36.0,94.0,40250.0,12.0,0.96,1.45,77.0,78.0,9.0,9.0,6.0,11.84,60648.0,1118.0,96.0,52.34446320685181,72.60870240870241,77.77777777777777,72.22056212239814,Foldable & Stackable Containers,"Electronics, Medium-Value Goods, Retail Logistics",Cross-docking and returnable packaging programs,APAC,Medium
-87,49.0,94.0,76964.0,10.0,1.19,1.48,75.0,82.0,8.0,9.0,7.0,14.65,49673.0,998.0,92.0,50.84874219671346,66.85027195027196,77.77777777777777,70.74705976884971,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-100,81.0,50.0,209.0,6.0,0.79,0.51,60.0,91.0,4.0,4.0,4.0,3.06,99778.0,745.0,86.0,82.11093256289108,84.46386946386947,33.33333333333333,81.73882639701186,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-90,47.0,97.0,33532.0,11.0,1.06,1.47,81.0,91.0,9.0,8.0,7.0,14.4,51174.0,959.0,97.0,52.91590386438854,68.83589743589744,77.77777777777777,74.32056635253599,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-99,79.0,48.0,154.0,5.0,0.85,0.51,60.0,90.0,6.0,3.0,5.0,3.22,96860.0,862.0,86.0,83.45161654141138,83.45306915306915,40.74074074074075,81.85806578949398,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-85,48.0,93.0,29304.0,11.0,1.18,1.36,81.0,83.0,9.0,8.0,6.0,15.11,51095.0,966.0,93.0,53.08059294603018,65.15672105672105,74.07407407407408,72.62820753111056,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-100,82.0,53.0,291.0,5.0,0.78,0.5,60.0,93.0,5.0,3.0,3.0,2.81,97201.0,880.0,85.0,80.66334857772384,85.54949494949494,29.629629629629623,81.23217200220334,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-95,48.0,96.0,25244.0,11.0,1.18,1.49,79.0,82.0,7.0,8.0,7.0,14.41,49673.0,995.0,86.0,54.538155123387625,70.1164724164724,70.37037037037037,76.03835429318566,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-97,76.0,51.0,332.0,6.0,0.73,0.52,62.0,86.0,5.0,5.0,4.0,2.94,102220.0,740.0,84.0,78.91339711701195,83.99696969696969,40.74074074074074,80.16968899095419,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-88,50.0,96.0,40050.0,11.0,1.21,1.47,80.0,90.0,8.0,7.0,6.0,15.25,50106.0,1088.0,96.0,52.081561559568776,66.38477078477078,66.66666666666666,73.02854654584907,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-99,81.0,52.0,242.0,5.0,0.79,0.5,60.0,90.0,5.0,3.0,4.0,3.14,103063.0,782.0,88.0,81.22162338337317,84.40846930846931,33.33333333333333,81.07756818418059,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-85,50.0,97.0,32911.0,10.0,1.2,1.55,81.0,90.0,9.0,8.0,7.0,14.55,46054.0,1003.0,100.0,50.363589881534566,67.04452214452215,77.77777777777777,71.6772564585371,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-98,77.0,46.0,169.0,4.0,0.78,0.51,60.0,87.0,6.0,3.0,3.0,2.82,96624.0,825.0,90.0,82.6320241354161,83.53006993006991,33.33333333333333,81.22120844739563,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-90,50.0,95.0,30911.0,10.0,1.15,1.46,79.0,85.0,8.0,8.0,7.0,14.68,52156.0,1010.0,95.0,53.16064748608448,67.8919968919969,74.07407407407408,73.80622662012956,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-96,78.0,50.0,197.0,5.0,0.85,0.49,60.0,83.0,5.0,4.0,4.0,3.87,96646.0,743.0,87.0,81.48346815556621,81.69044289044288,37.03703703703703,80.11921385444816,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-92,48.0,99.0,42997.0,11.0,1.15,1.46,78.0,82.0,8.0,8.0,7.0,14.94,48860.0,978.0,86.0,53.32475294075212,68.7869463869464,74.07407407407408,74.26366352926324,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-100,78.0,47.0,157.0,5.0,0.92,0.5,61.0,90.0,5.0,3.0,5.0,2.77,100871.0,847.0,90.0,83.7769082846836,84.42719502719503,37.03703703703704,82.62191789963926,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-88,47.0,93.0,33532.0,10.0,1.06,1.4,81.0,91.0,7.0,8.0,6.0,14.4,51174.0,959.0,97.0,53.25866480714949,67.43589743589745,66.66666666666666,73.74053268250232,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-99,81.0,50.0,209.0,6.0,0.79,0.53,60.0,91.0,5.0,4.0,4.0,3.06,99778.0,745.0,86.0,81.54157229353083,84.16386946386946,37.03703703703703,81.18955030273578,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-90,49.0,94.0,76964.0,10.0,1.21,1.52,75.0,82.0,7.0,8.0,7.0,14.65,49673.0,998.0,92.0,51.21002165799292,67.75027195027195,70.37037037037037,71.92350758029752,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EMEA,Medium
-94,79.0,48.0,154.0,5.0,0.92,0.5,59.0,90.0,6.0,3.0,4.0,3.22,96860.0,862.0,86.0,82.08629667609151,81.95306915306915,37.03703703703704,79.33020383663202,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,APAC,High
-85,48.0,93.0,29304.0,11.0,1.12,1.55,81.0,83.0,8.0,7.0,7.0,15.11,51095.0,966.0,93.0,50.52167038710762,65.15672105672105,70.37037037037037,71.73258463548765,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,LATAM,Medium
-97,76.0,51.0,332.0,6.0,0.79,0.51,62.0,86.0,5.0,3.0,4.0,2.94,102220.0,740.0,84.0,79.04807725169208,83.99696969696969,33.33333333333333,80.2168270380922,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-88,50.0,96.0,40050.0,11.0,1.15,1.53,80.0,90.0,8.0,7.0,7.0,15.25,50106.0,1088.0,96.0,51.27348075148797,66.38477078477078,70.37037037037037,72.74571826302079,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-99,82.0,53.0,291.0,5.0,0.73,0.5,60.0,93.0,5.0,4.0,4.0,2.81,97201.0,880.0,85.0,80.36334857772383,85.24949494949496,37.03703703703703,80.77717200220333,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-95,48.0,96.0,25244.0,11.0,1.21,1.5,78.0,82.0,7.0,8.0,6.0,14.41,49673.0,995.0,86.0,54.4034749887075,70.1164724164724,66.66666666666666,75.69121624604762,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,APAC,Medium
-98,77.0,46.0,169.0,4.0,0.72,0.53,60.0,87.0,6.0,3.0,5.0,2.82,96624.0,825.0,90.0,82.36266386605584,83.53006993006991,40.74074074074075,81.12693235311954,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,LATAM,High
-88,47.0,97.0,33532.0,10.0,1.15,1.48,82.0,91.0,9.0,7.0,6.0,14.4,51174.0,959.0,97.0,52.181223729708414,68.23589743589744,70.37037037037037,73.66342830539794,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-96,78.0,50.0,197.0,5.0,0.77,0.47,60.0,83.0,5.0,5.0,3.0,3.87,96646.0,743.0,87.0,81.75282842492648,81.69044289044288,37.03703703703704,80.21348994872426,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-90,50.0,95.0,30911.0,11.0,1.2,1.37,81.0,85.0,9.0,9.0,7.0,14.68,52156.0,1010.0,95.0,54.37276869820569,67.8919968919969,81.48148148148148,74.830469044372,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-100,78.0,47.0,157.0,5.0,0.76,0.5,60.0,90.0,5.0,3.0,4.0,2.77,100871.0,847.0,90.0,83.7769082846836,84.42719502719503,33.33333333333333,82.32191789963925,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-94,50.0,96.0,40050.0,11.0,1.18,1.42,79.0,90.0,7.0,7.0,7.0,15.25,50106.0,1088.0,96.0,54.55496223296945,68.18477078477079,66.66666666666666,75.6942367815393,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-94,79.0,48.0,154.0,5.0,0.85,0.53,59.0,90.0,5.0,3.0,3.0,3.22,96860.0,862.0,86.0,81.6822562720511,81.95306915306915,29.629629629629623,79.18878969521788,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-85,48.0,93.0,29304.0,11.0,1.18,1.52,81.0,83.0,7.0,9.0,6.0,15.11,51095.0,966.0,93.0,50.92571079114803,65.15672105672105,70.37037037037037,71.8739987769018,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-97,76.0,51.0,332.0,6.0,0.79,0.5,60.0,86.0,5.0,4.0,4.0,2.94,102220.0,740.0,84.0,79.18275738637222,83.99696969696969,37.03703703703703,79.66396508523026,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-92,48.0,99.0,42997.0,10.0,1.21,1.48,76.0,82.0,8.0,7.0,7.0,14.94,48860.0,978.0,86.0,53.05539267139186,68.7869463869464,70.37037037037037,73.56938743498715,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-99,82.0,53.0,291.0,5.0,0.78,0.51,60.0,93.0,5.0,4.0,4.0,2.81,97201.0,880.0,85.0,80.22866844304369,85.24949494949496,37.03703703703703,80.73003395506528,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-88,47.0,97.0,33532.0,10.0,1.15,1.5,82.0,91.0,9.0,7.0,6.0,14.4,51174.0,959.0,97.0,51.91186346034814,68.23589743589744,70.37037037037037,73.56915221112185,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-96,78.0,50.0,197.0,5.0,0.77,0.48,61.0,83.0,6.0,3.0,5.0,3.87,96646.0,743.0,87.0,81.61814829024637,81.69044289044288,40.74074074074075,80.46635190158622,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-90,49.0,94.0,76964.0,10.0,1.19,1.46,75.0,82.0,8.0,8.0,7.0,14.65,49673.0,998.0,92.0,52.018102466073735,67.75027195027195,74.07407407407408,72.2063358631258,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-100,77.0,46.0,169.0,4.0,0.72,0.51,62.0,87.0,5.0,3.0,3.0,2.82,96624.0,825.0,90.0,83.23202413541611,84.13006993006992,29.629629629629623,82.73120844739563,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-95,48.0,96.0,25244.0,11.0,1.14,1.43,80.0,82.0,8.0,8.0,7.0,14.41,49673.0,995.0,86.0,55.34623593146844,70.1164724164724,74.07407407407408,76.62118257601395,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-98,79.0,48.0,154.0,5.0,0.85,0.5,59.0,90.0,5.0,3.0,4.0,3.22,96860.0,862.0,86.0,83.28629667609151,83.15306915306915,33.33333333333333,81.15020383663203,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-90,50.0,95.0,30911.0,10.0,1.15,1.46,79.0,85.0,9.0,7.0,6.0,14.68,52156.0,1010.0,95.0,53.16064748608448,67.8919968919969,70.37037037037037,73.80622662012956,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-100,78.0,47.0,157.0,5.0,0.92,0.5,60.0,90.0,5.0,4.0,4.0,2.77,100871.0,847.0,90.0,83.7769082846836,84.42719502719503,37.03703703703703,82.32191789963925,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-88,50.0,96.0,40050.0,11.0,1.21,1.42,79.0,90.0,8.0,8.0,7.0,15.25,50106.0,1088.0,96.0,52.75496223296945,66.38477078477078,74.07407407407408,72.9642367815393,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-99,81.0,52.0,242.0,5.0,0.73,0.53,60.0,90.0,4.0,4.0,5.0,3.14,103063.0,782.0,88.0,80.81758297933277,84.40846930846931,37.03703703703704,80.93615404276646,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-85,48.0,93.0,29304.0,11.0,1.18,1.4,81.0,83.0,7.0,9.0,6.0,15.11,51095.0,966.0,93.0,52.54187240730964,65.15672105672105,70.37037037037037,72.43965534255837,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-100,82.0,53.0,291.0,5.0,0.73,0.52,59.0,93.0,5.0,4.0,4.0,2.81,97201.0,880.0,85.0,80.39398830836357,85.54949494949494,37.03703703703703,80.83789590792725,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-87,47.0,97.0,33532.0,10.0,1.06,1.47,81.0,91.0,9.0,7.0,7.0,14.4,51174.0,959.0,97.0,52.01590386438855,67.93589743589743,74.07407407407406,72.955566352536,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-97,76.0,51.0,332.0,6.0,0.72,0.5,60.0,86.0,5.0,3.0,3.0,2.94,102220.0,740.0,84.0,79.18275738637222,83.99696969696969,29.629629629629623,79.66396508523026,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-92,48.0,99.0,42997.0,11.0,1.22,1.52,78.0,82.0,7.0,7.0,7.0,14.94,48860.0,978.0,86.0,52.5166721326713,68.7869463869464,66.66666666666666,73.98083524643495,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-96,78.0,50.0,197.0,5.0,0.85,0.49,61.0,83.0,4.0,4.0,5.0,3.87,96646.0,743.0,87.0,81.48346815556621,81.69044289044288,37.03703703703704,80.41921385444817,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-90,49.0,94.0,76964.0,10.0,1.15,1.44,83.0,82.0,8.0,7.0,7.0,14.65,49673.0,998.0,92.0,52.287462735434,67.75027195027195,70.37037037037037,74.70061195740189,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-100,77.0,46.0,169.0,4.0,0.78,0.52,61.0,87.0,5.0,3.0,3.0,2.82,96624.0,825.0,90.0,83.09734400073596,84.13006993006992,29.629629629629623,82.3840704002576,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-95,48.0,96.0,25244.0,11.0,1.21,1.5,80.0,82.0,8.0,8.0,7.0,14.41,49673.0,995.0,86.0,54.4034749887075,70.1164724164724,74.07407407407408,76.29121624604763,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-98,79.0,48.0,154.0,5.0,0.92,0.51,60.0,90.0,6.0,3.0,4.0,3.22,96860.0,862.0,86.0,83.15161654141137,83.15306915306915,37.03703703703704,81.40306578949397,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-90,50.0,95.0,30911.0,10.0,1.2,1.54,79.0,85.0,9.0,7.0,6.0,14.68,52156.0,1010.0,95.0,52.08320640864339,67.8919968919969,70.37037037037037,73.42912224302518,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-100,78.0,47.0,157.0,5.0,0.76,0.53,60.0,90.0,5.0,4.0,4.0,2.77,100871.0,847.0,90.0,83.3728678806432,84.42719502719503,37.03703703703703,82.18050375822511,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-88,50.0,96.0,40050.0,11.0,1.13,1.45,79.0,90.0,7.0,7.0,6.0,15.25,50106.0,1088.0,96.0,52.35092182892905,66.38477078477078,62.96296296296296,72.82282264012517,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-99,81.0,52.0,242.0,5.0,0.8,0.51,63.0,90.0,6.0,3.0,5.0,3.14,103063.0,782.0,88.0,81.08694324869303,84.40846930846931,40.74074074074075,81.93043013704255,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-85,48.0,93.0,29304.0,11.0,1.12,1.46,81.0,83.0,7.0,9.0,7.0,15.11,51095.0,966.0,93.0,51.73379159922884,65.15672105672105,74.07407407407406,72.15682705973009,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-100,82.0,53.0,291.0,5.0,0.73,0.51,60.0,93.0,4.0,4.0,4.0,2.81,97201.0,880.0,85.0,80.5286684430437,85.54949494949494,33.33333333333333,81.1850339550653,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-87,47.0,97.0,33532.0,10.0,1.15,1.53,82.0,91.0,9.0,7.0,6.0,14.4,51174.0,959.0,97.0,51.20782305630773,67.93589743589743,70.37037037037037,72.9727380697077,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-97,76.0,51.0,332.0,6.0,0.79,0.52,60.0,86.0,5.0,4.0,4.0,2.94,102220.0,740.0,84.0,78.91339711701195,83.99696969696969,37.03703703703703,79.56968899095418,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-92,48.0,99.0,42997.0,11.0,1.15,1.49,78.0,82.0,8.0,8.0,7.0,14.94,48860.0,978.0,86.0,52.92071253671171,68.7869463869464,74.07407407407408,74.12224938784911,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-96,78.0,50.0,197.0,5.0,0.77,0.48,61.0,83.0,5.0,5.0,3.0,3.87,96646.0,743.0,87.0,81.61814829024637,81.69044289044288,37.03703703703704,80.46635190158622,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-90,49.0,94.0,76964.0,10.0,1.19,1.41,75.0,82.0,7.0,8.0,6.0,14.65,49673.0,998.0,92.0,52.691503139474406,67.75027195027195,66.66666666666666,72.44202609881604,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-98,77.0,46.0,169.0,4.0,0.72,0.53,60.0,87.0,6.0,3.0,5.0,2.82,96624.0,825.0,90.0,82.36266386605584,83.53006993006991,40.74074074074075,81.12693235311954,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-95,48.0,96.0,25244.0,11.0,1.21,1.5,80.0,82.0,8.0,7.0,7.0,14.41,49673.0,995.0,86.0,54.4034749887075,70.1164724164724,70.37037037037037,76.29121624604763,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-94,79.0,48.0,154.0,5.0,0.92,0.5,60.0,90.0,6.0,3.0,4.0,3.22,96860.0,862.0,86.0,82.08629667609151,81.95306915306915,37.03703703703704,79.63020383663202,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-90,50.0,95.0,30911.0,10.0,1.2,1.46,79.0,85.0,7.0,7.0,6.0,14.68,52156.0,1010.0,95.0,53.16064748608448,67.8919968919969,62.96296296296296,73.80622662012956,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-100,78.0,47.0,157.0,5.0,0.76,0.51,61.0,90.0,5.0,4.0,4.0,2.77,100871.0,847.0,90.0,83.64222815000346,84.42719502719503,37.03703703703703,82.57477985250121,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-88,50.0,96.0,40050.0,11.0,1.13,1.46,79.0,90.0,8.0,8.0,7.0,15.25,50106.0,1088.0,96.0,52.21624169424892,66.38477078477078,74.07407407407408,72.77568459298712,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-99,81.0,52.0,242.0,5.0,0.8,0.52,63.0,90.0,6.0,3.0,5.0,3.14,103063.0,782.0,88.0,80.95226311401291,84.40846930846931,40.74074074074075,81.88329208990453,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-85,48.0,93.0,29304.0,11.0,1.12,1.53,81.0,83.0,7.0,9.0,7.0,15.11,51095.0,966.0,93.0,50.791030656467896,65.15672105672105,74.07407407407406,71.82686072976377,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-100,82.0,53.0,291.0,5.0,0.73,0.52,60.0,93.0,4.0,4.0,4.0,2.81,97201.0,880.0,85.0,80.39398830836357,85.54949494949494,33.33333333333333,81.13789590792723,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-87,47.0,97.0,33532.0,10.0,1.06,1.48,81.0,91.0,9.0,7.0,6.0,14.4,51174.0,959.0,97.0,51.88122372970842,67.93589743589743,70.37037037037037,72.90842830539795,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-97,76.0,51.0,332.0,6.0,0.72,0.51,60.0,86.0,5.0,3.0,3.0,2.94,102220.0,740.0,84.0,79.04807725169208,83.99696969696969,29.629629629629623,79.61682703809221,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-92,48.0,99.0,42997.0,11.0,1.22,1.5,78.0,82.0,7.0,8.0,7.0,14.94,48860.0,978.0,86.0,52.78603240203158,68.7869463869464,70.37037037037037,74.07511134071105,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-96,78.0,50.0,197.0,5.0,0.85,0.48,61.0,83.0,5.0,5.0,4.0,3.87,96646.0,743.0,87.0,81.61814829024637,81.69044289044288,40.74074074074074,80.46635190158622,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-90,49.0,94.0,76964.0,10.0,1.15,1.45,83.0,82.0,7.0,7.0,6.0,14.65,49673.0,998.0,92.0,52.152782600753866,67.75027195027195,62.96296296296296,74.65347391026384,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-98,77.0,46.0,169.0,4.0,0.78,0.53,60.0,87.0,6.0,3.0,5.0,2.82,96624.0,825.0,90.0,82.36266386605584,83.53006993006991,40.74074074074075,81.12693235311954,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-95,48.0,96.0,25244.0,11.0,1.14,1.41,78.0,82.0,8.0,7.0,7.0,14.41,49673.0,995.0,86.0,55.61559620082871,70.1164724164724,70.37037037037037,76.11545867029004,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-94,79.0,48.0,154.0,5.0,0.92,0.51,60.0,90.0,5.0,3.0,3.0,3.22,96860.0,862.0,86.0,81.95161654141137,81.95306915306915,29.629629629629623,79.58306578949397,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-90,50.0,95.0,30911.0,10.0,1.2,1.52,81.0,85.0,9.0,7.0,6.0,14.68,52156.0,1010.0,95.0,52.35256667800366,67.8919968919969,70.37037037037037,74.12339833730128,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-100,78.0,47.0,157.0,5.0,0.76,0.51,61.0,90.0,5.0,4.0,4.0,2.77,100871.0,847.0,90.0,83.64222815000346,84.42719502719503,37.03703703703703,82.57477985250121,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-88,50.0,96.0,40050.0,11.0,1.13,1.53,80.0,90.0,7.0,8.0,7.0,15.25,50106.0,1088.0,96.0,51.27348075148797,66.38477078477078,70.37037037037037,72.74571826302079,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-99,81.0,52.0,242.0,5.0,0.79,0.51,60.0,90.0,5.0,4.0,4.0,3.14,103063.0,782.0,88.0,81.08694324869303,84.40846930846931,37.03703703703703,81.03043013704256,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-85,48.0,93.0,29304.0,11.0,1.18,1.38,81.0,83.0,9.0,7.0,6.0,15.11,51095.0,966.0,93.0,52.81123267666992,65.15672105672105,70.37037037037037,72.53393143683446,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-100,82.0,53.0,291.0,5.0,0.73,0.5,60.0,93.0,5.0,4.0,4.0,2.81,97201.0,880.0,85.0,80.66334857772384,85.54949494949494,37.03703703703703,81.23217200220334,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
-87,47.0,97.0,33532.0,10.0,1.15,1.52,82.0,91.0,7.0,8.0,7.0,14.4,51174.0,959.0,97.0,51.34250319098788,67.93589743589743,70.37037037037037,73.01987611684575,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,EU,Medium
-97,76.0,51.0,332.0,6.0,0.79,0.53,60.0,86.0,5.0,3.0,4.0,2.94,102220.0,740.0,84.0,78.77871698233182,83.99696969696969,33.33333333333333,79.52255094381613,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,ROW,High
-92,48.0,99.0,42997.0,11.0,1.15,1.48,78.0,82.0,7.0,7.0,6.0,14.94,48860.0,978.0,86.0,53.05539267139186,68.7869463869464,62.96296296296296,74.16938743498714,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,AMERICAS,Medium
-96,78.0,50.0,197.0,5.0,0.77,0.47,61.0,83.0,5.0,4.0,4.0,3.87,96646.0,743.0,87.0,81.75282842492648,81.69044289044288,37.03703703703703,80.51348994872427,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,EU,High
-90,49.0,94.0,76964.0,10.0,1.19,1.46,75.0,82.0,9.0,7.0,7.0,14.65,49673.0,998.0,92.0,52.018102466073735,67.75027195027195,74.07407407407406,72.2063358631258,Plastic Totes & Pallets,"Industrial Components, Heavy Machinery, Automotive Parts",Closed-loop logistics and bulk material handling,ROW,Medium
-98,77.0,46.0,169.0,4.0,0.72,0.5,62.0,87.0,5.0,3.0,3.0,2.82,96624.0,825.0,90.0,82.76670427009624,83.53006993006991,29.629629629629623,81.86834649453367,Cardboard Boxes,"E-commerce, Food & Beverage, Consumer Goods, Apparel",Last-mile delivery and primary e-commerce packaging,AMERICAS,High
+Material Type,Biodegradation Time (days),Recyclability Category
+Cardboard,188.0,High
+Paper/Bio-Based,65.0,High
+Steel,180208.0,High
+Paper/Bio-Based,65.0,High
+Paper/Bio-Based,122.0,High
+Plastic,52407.0,Medium
+Steel,147359.0,High
+Steel,161066.0,High
+Steel,115102.0,High
+Paper/Bio-Based,31.0,High
+Cardboard,196.0,High
+Steel,75709.0,High
+Plastic,70881.0,Medium
+Paper/Bio-Based,145.0,High
+Plastic,73043.0,Medium
+Cardboard,355.0,High
+Plastic,72362.0,Medium
+Plastic,38310.0,Medium
+Plastic,58200.0,Medium
+Cardboard,218.0,High
+Paper/Bio-Based,62.0,High
+Plastic,36417.0,Medium
+Cardboard,211.0,High
+Plastic,15440.0,Medium
+Plastic,53377.0,Medium
+Paper/Bio-Based,81.0,High
+Cardboard,96.0,High
+Plastic,42997.0,Medium
+Plastic,33532.0,Medium
+Steel,63481.0,High
+Steel,134415.0,High
+Plastic,40345.0,Medium
+Cardboard,265.0,High
+Cardboard,192.0,High
+Plastic,49088.0,Medium
+Plastic,93365.0,Medium
+Plastic,89889.0,Medium
+Steel,72041.0,High
+Cardboard,256.0,High
+Cardboard,352.0,High
+Plastic,13499.0,Medium
+Steel,65795.0,High
+Paper/Bio-Based,157.0,High
+Steel,169695.0,High
+Paper/Bio-Based,104.0,High
+Plastic,16331.0,Medium
+Plastic,98971.0,Medium
+Cardboard,90.0,High
+Plastic,64030.0,Medium
+Cardboard,298.0,High
+Plastic,64044.0,Medium
+Plastic,69350.0,Medium
+Plastic,70484.0,Medium
+Plastic,89963.0,Medium
+Plastic,53148.0,Medium
+Paper/Bio-Based,176.0,High
+Plastic,66060.0,Medium
+Cardboard,115.0,High
+Cardboard,148.0,High
+Cardboard,218.0,High
+Cardboard,287.0,High
+Paper/Bio-Based,44.0,High
+Steel,180125.0,High
+Plastic,17015.0,Medium
+Plastic,40031.0,Medium
+Cardboard,283.0,High
+Plastic,50911.0,Medium
+Cardboard,168.0,High
+Plastic,21746.0,Medium
+Plastic,52824.0,Medium
+Plastic,61190.0,Medium
+Plastic,70772.0,Medium
+Plastic,46640.0,Medium
+Cardboard,169.0,High
+Plastic,21938.0,Medium
+Paper/Bio-Based,171.0,High
+Plastic,84051.0,Medium
+Plastic,78380.0,Medium
+Cardboard,250.0,High
+Plastic,22417.0,Medium
+Plastic,86303.0,Medium
+Plastic,38391.0,Medium
+Cardboard,201.0,High
+Plastic,79705.0,Medium
+Plastic,65252.0,Medium
+Cardboard,312.0,High
+Plastic,32911.0,Medium
+Plastic,45188.0,Medium
+Paper/Bio-Based,66.0,High
+Paper/Bio-Based,133.0,High
+Plastic,89433.0,Medium
+Paper/Bio-Based,139.0,High
+Plastic,51800.0,Medium
+Plastic,81714.0,Medium
+Cardboard,90.0,High
+Cardboard,197.0,High
+Cardboard,291.0,High
+Paper/Bio-Based,119.0,High
+Plastic,19133.0,Medium
+Paper/Bio-Based,170.0,High
+Paper/Bio-Based,122.0,High
+Steel,161962.0,High
+Cardboard,242.0,High
+Cardboard,187.0,High
+Plastic,52150.0,Medium
+Plastic,71775.0,Medium
+Plastic,25270.0,Medium
+Plastic,61952.0,Medium
+Plastic,35850.0,Medium
+Plastic,42939.0,Medium
+Cardboard,152.0,High
+Steel,75493.0,High
+Plastic,66898.0,Medium
+Paper/Bio-Based,137.0,High
+Cardboard,154.0,High
+Cardboard,272.0,High
+Plastic,30911.0,Medium
+Plastic,68093.0,Medium
+Plastic,25244.0,Medium
+Paper/Bio-Based,177.0,High
+Cardboard,310.0,High
+Plastic,65985.0,Medium
+Cardboard,332.0,High
+Steel,103598.0,High
+Plastic,29304.0,Medium
+Plastic,10935.0,Medium
+Cardboard,153.0,High
+Steel,99557.0,High
+Paper/Bio-Based,176.0,High
+Cardboard,275.0,High
+Plastic,41427.0,Medium
+Cardboard,101.0,High
+Plastic,50508.0,Medium
+Cardboard,242.0,High
+Paper/Bio-Based,165.0,High
+Cardboard,200.0,High
+Cardboard,130.0,High
+Plastic,25227.0,Medium
+Plastic,84260.0,Medium
+Cardboard,252.0,High
+Steel,153549.0,High
+Paper/Bio-Based,179.0,High
+Plastic,74533.0,Medium
+Plastic,37036.0,Medium
+Plastic,31940.0,Medium
+Plastic,62453.0,Medium
+Cardboard,154.0,High
+Plastic,76964.0,Medium
+Steel,90587.0,High
+Paper/Bio-Based,126.0,High
+Plastic,40050.0,Medium
+Steel,157790.0,High
+Plastic,68326.0,Medium
+Cardboard,157.0,High
+Plastic,41427.0,Medium
+Plastic,28329.0,Medium
+Plastic,31602.0,Medium
+Cardboard,101.0,High
+Plastic,60408.0,Medium
+Cardboard,209.0,High
+Paper/Bio-Based,152.0,High
+Steel,75493.0,High
+Cardboard,168.0,High
+Plastic,55740.0,Medium
+Steel,113063.0,High
+Cardboard,230.0,High
+Paper/Bio-Based,165.0,High
+Plastic,86202.0,Medium
+Plastic,60573.0,Medium
+Plastic,22097.0,Medium
+Paper/Bio-Based,141.0,High
+Cardboard,332.0,High
+Cardboard,152.0,High
+Plastic,33525.0,Medium
+Cardboard,242.0,High
+Plastic,41490.0,Medium
+Plastic,42939.0,Medium
+Cardboard,275.0,High
+Steel,99557.0,High
+Plastic,64044.0,Medium
+Cardboard,153.0,High
+Plastic,28329.0,Medium
+Plastic,30911.0,Medium
+Plastic,40250.0,Medium
+Paper/Bio-Based,104.0,High
+Cardboard,209.0,High
+Plastic,33525.0,Medium
+Plastic,35850.0,Medium
+Steel,103598.0,High
+Plastic,76964.0,Medium
+Plastic,40050.0,Medium
+Plastic,74533.0,Medium
+Cardboard,252.0,High
+Plastic,52150.0,Medium
+Steel,157790.0,High
+Cardboard,332.0,High
+Paper/Bio-Based,179.0,High
+Plastic,33532.0,Medium
+Cardboard,355.0,High
+Plastic,31940.0,Medium
+Plastic,69350.0,Medium
+Cardboard,230.0,High
+Cardboard,157.0,High
+Plastic,40031.0,Medium
+Plastic,46640.0,Medium
+Plastic,41427.0,Medium
+Plastic,65985.0,Medium
+Plastic,60408.0,Medium
+Steel,90587.0,High
+Plastic,25270.0,Medium
+Cardboard,154.0,High
+Paper/Bio-Based,104.0,High
+Cardboard,201.0,High
+Plastic,50911.0,Medium
+Plastic,29304.0,Medium
+Cardboard,211.0,High
+Plastic,32911.0,Medium
+Paper/Bio-Based,141.0,High
+Plastic,25244.0,Medium
+Cardboard,197.0,High
+Cardboard,252.0,High
+Plastic,37036.0,Medium
+Paper/Bio-Based,122.0,High
+Cardboard,154.0,High
+Plastic,31602.0,Medium
+Plastic,52407.0,Medium
+Cardboard,275.0,High
+Cardboard,230.0,High
+Plastic,42997.0,Medium
+Steel,99557.0,High
+Cardboard,250.0,High
+Paper/Bio-Based,133.0,High
+Plastic,52150.0,Medium
+Plastic,74533.0,Medium
+Cardboard,201.0,High
+Plastic,25270.0,Medium
+Cardboard,169.0,High
+Cardboard,242.0,High
+Plastic,40250.0,Medium
+Plastic,31940.0,Medium
+Plastic,33525.0,Medium
+Cardboard,291.0,High
+Cardboard,332.0,High
+Steel,90587.0,High
+Paper/Bio-Based,171.0,High
+Plastic,76964.0,Medium
+Plastic,35850.0,Medium
+Plastic,31602.0,Medium
+Plastic,40050.0,Medium
+Steel,157790.0,High
+Cardboard,250.0,High
+Paper/Bio-Based,133.0,High
+Plastic,42997.0,Medium
+Cardboard,157.0,High
+Plastic,33532.0,Medium
+Plastic,10935.0,Medium
+Cardboard,332.0,High
+Plastic,30911.0,Medium
+Paper/Bio-Based,104.0,High
+Cardboard,154.0,High
+Plastic,64044.0,Medium
+Plastic,25244.0,Medium
+Cardboard,242.0,High
+Plastic,69350.0,Medium
+Paper/Bio-Based,141.0,High
+Cardboard,154.0,High
+Plastic,52150.0,Medium
+Plastic,33525.0,Medium
+Steel,103598.0,High
+Cardboard,197.0,High
+Plastic,46640.0,Medium
+Plastic,42997.0,Medium
+Cardboard,169.0,High
+Cardboard,153.0,High
+Plastic,35850.0,Medium
+Plastic,40050.0,Medium
+Cardboard,209.0,High
+Plastic,60408.0,Medium
+Plastic,25244.0,Medium
+Steel,157790.0,High
+Cardboard,197.0,High
+Plastic,30911.0,Medium
+Cardboard,291.0,High
+Plastic,52407.0,Medium
+Cardboard,154.0,High
+Plastic,29304.0,Medium
+Cardboard,250.0,High
+Plastic,69350.0,Medium
+Cardboard,157.0,High
+Plastic,33532.0,Medium
+Plastic,52150.0,Medium
+Cardboard,201.0,High
+Plastic,76964.0,Medium
+Cardboard,332.0,High
+Plastic,35850.0,Medium
+Plastic,29304.0,Medium
+Cardboard,291.0,High
+Plastic,46640.0,Medium
+Plastic,40050.0,Medium
+Cardboard,197.0,High
+Plastic,52407.0,Medium
+Plastic,42997.0,Medium
+Cardboard,169.0,High
+Plastic,60408.0,Medium
+Plastic,30911.0,Medium
+Cardboard,157.0,High
+Plastic,40250.0,Medium
+Plastic,76964.0,Medium
+Cardboard,209.0,High
+Plastic,33532.0,Medium
+Cardboard,154.0,High
+Plastic,29304.0,Medium
+Cardboard,291.0,High
+Plastic,25244.0,Medium
+Cardboard,332.0,High
+Plastic,40050.0,Medium
+Cardboard,242.0,High
+Plastic,32911.0,Medium
+Cardboard,169.0,High
+Plastic,30911.0,Medium
+Cardboard,197.0,High
+Plastic,42997.0,Medium
+Cardboard,157.0,High
+Plastic,33532.0,Medium
+Cardboard,209.0,High
+Plastic,76964.0,Medium
+Cardboard,154.0,High
+Plastic,29304.0,Medium
+Cardboard,332.0,High
+Plastic,40050.0,Medium
+Cardboard,291.0,High
+Plastic,25244.0,Medium
+Cardboard,169.0,High
+Plastic,33532.0,Medium
+Cardboard,197.0,High
+Plastic,30911.0,Medium
+Cardboard,157.0,High
+Plastic,40050.0,Medium
+Cardboard,154.0,High
+Plastic,29304.0,Medium
+Cardboard,332.0,High
+Plastic,42997.0,Medium
+Cardboard,291.0,High
+Plastic,33532.0,Medium
+Cardboard,197.0,High
+Plastic,76964.0,Medium
+Cardboard,169.0,High
+Plastic,25244.0,Medium
+Cardboard,154.0,High
+Plastic,30911.0,Medium
+Cardboard,157.0,High
+Plastic,40050.0,Medium
+Cardboard,242.0,High
+Plastic,29304.0,Medium
+Cardboard,291.0,High
+Plastic,33532.0,Medium
+Cardboard,332.0,High
+Plastic,42997.0,Medium
+Cardboard,197.0,High
+Plastic,76964.0,Medium
+Cardboard,169.0,High
+Plastic,25244.0,Medium
+Cardboard,154.0,High
+Plastic,30911.0,Medium
+Cardboard,157.0,High
+Plastic,40050.0,Medium
+Cardboard,242.0,High
+Plastic,29304.0,Medium
+Cardboard,291.0,High
+Plastic,33532.0,Medium
+Cardboard,332.0,High
+Plastic,42997.0,Medium
+Cardboard,197.0,High
+Plastic,76964.0,Medium
+Cardboard,169.0,High
+Plastic,25244.0,Medium
+Cardboard,154.0,High
+Plastic,30911.0,Medium
+Cardboard,157.0,High
+Plastic,40050.0,Medium
+Cardboard,242.0,High
+Plastic,29304.0,Medium
+Cardboard,291.0,High
+Plastic,33532.0,Medium
+Cardboard,332.0,High
+Plastic,42997.0,Medium
+Cardboard,197.0,High
+Plastic,76964.0,Medium
+Cardboard,169.0,High
+Plastic,25244.0,Medium
+Cardboard,154.0,High
+Plastic,30911.0,Medium
+Cardboard,157.0,High
+Plastic,40050.0,Medium
+Cardboard,242.0,High
+Plastic,29304.0,Medium
+Cardboard,291.0,High
+Plastic,33532.0,Medium
+Cardboard,332.0,High
+Plastic,42997.0,Medium
+Cardboard,197.0,High
+Plastic,76964.0,Medium
+Cardboard,169.0,High
+Plastic,,Medium
