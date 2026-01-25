@@ -1,0 +1,2 @@
+ecopackai-snehal/Data/** filter=lfs diff=lfs merge=lfs -text
+ecopackai-snehal/Dataset/** filter=lfs diff=lfs merge=lfs -text
