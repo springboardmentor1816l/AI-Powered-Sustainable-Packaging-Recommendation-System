@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPackAI - Sustainable Packaging Recommendations</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <style>
+        :root {
+            --primary-color: #28a745;
+            --secondary-color: #20c997;
+            --dark-color: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .navbar {
+            background: var(--primary-color) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .results-table {
+            margin-top: 30px;
+        }
+        
+        .rank-badge {
+            font-size: 1.2em;
+            padding: 8px 15px;
+            border-radius: 50%;
+        }
+        
+        .rank-1 { background: #ffd700; color: #333; }
+        .rank-2 { background: #c0c0c0; color: #333; }
+        .rank-3 { background: #cd7f32; color: white; }
+        
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .error-message {
+            display: none;
+            margin-top: 20px;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin-top: 30px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        #resultsSection {
+            display: none;
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <strong>🌱 EcoPackAI</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#predict">Predict</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Sustainable Packaging Recommendations</h1>
+            <p class="lead">AI-Powered insights for eco-friendly packaging materials</p>
+            <p class="mt-3">Reduce costs, minimize CO₂ emissions, and make sustainable choices</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" id="predict">
+        
+        <!-- Product Input Form -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h3 class="card-title mb-4">
+                            <i class="bi bi-box"></i> Enter Product Details
+                        </h3>
+                        
+                        <form id="productForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="productName" class="form-label">Product Name *</label>
+                                    <input type="text" class="form-control" id="productName" required
+                                           placeholder="e.g., Chocolate Box">
+                                    <div class="invalid-feedback">Please enter a product name</div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="productCategory" class="form-label">Category *</label>
+                                    <select class="form-select" id="productCategory" required>
+                                        <option value="">Select category...</option>
+                                        <option value="Food">Food</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Cosmetics">Cosmetics</option>
+                                        <option value="Pharmacy">Pharmacy</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a category</div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="productWeight" class="form-label">Weight (kg) *</label>
+                                    <input type="number" class="form-control" id="productWeight" 
+                                           min="0.01" step="0.01" required placeholder="0.5">
+                                    <div class="invalid-feedback">Weight must be positive</div>
+                                </div>
+                                
+                                <div class="col-md-4 mb-3">
+                                    <label for="fragilityIndex" class="form-label">Fragility (1-5) *</label>
+                                    <input type="number" class="form-control" id="fragilityIndex" 
+                                           min="1" max="5" required placeholder="2">
+                                    <small class="text-muted">1=Durable, 5=Very Fragile</small>
+                                    <div class="invalid-feedback">Must be between 1 and 5</div>
+                                </div>
+                                
+                                <div class="col-md-4 mb-3">
+                                    <label for="shippingType" class="form-label">Shipping *</label>
+                                    <select class="form-select" id="shippingType" required>
+                                        <option value="">Select...</option>
+                                        <option value="Air">Air</option>
+                                        <option value="Road">Road</option>
+                                        <option value="Sea">Sea</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select shipping type</div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <span id="btnText">🔍 Get Recommendations</span>
+                                    <span id="btnSpinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <!-- Loading Spinner -->
+                        <div class="loading-spinner" id="loadingSpinner">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <p class="mt-3">Analyzing packaging options...</p>
+                        </div>
+                        
+                        <!-- Error Message -->
+                        <div class="alert alert-danger error-message" id="errorMessage" role="alert">
+                            <strong>Error!</strong> <span id="errorText"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="row mt-5" id="resultsSection">
+            <div class="col-12">
+                <h3 class="mb-4">📊 Packaging Recommendations</h3>
+                
+                <!-- Statistics Cards -->
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-number" id="statCost">$0.00</div>
+                            <div class="stat-label">Estimated Cost</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-number" id="statCO2">0.00 kg</div>
+                            <div class="stat-label">CO₂ Emissions</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-number" id="statScore">0/100</div>
+                            <div class="stat-label">Suitability Score</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results Table -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="resultsTable">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Material</th>
+                                        <th>Cost (USD)</th>
+                                        <th>CO₂ (kg)</th>
+                                        <th>Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="resultsBody">
+                                    <!-- Results will be inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Charts -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Cost Comparison</h5>
+                                <div class="chart-container">
+                                    <canvas id="costChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CO₂ Impact</h5>
+                                <div class="chart-container">
+                                    <canvas id="co2Chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Export Buttons -->
+                <div class="text-center mt-4">
+                    <button class="btn btn-outline-primary me-2" onclick="exportCSV()">
+                        📄 Export CSV
+                    </button>
+                    <button class="btn btn-outline-success" onclick="exportPDF()">
+                        📑 Export PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container mt-5" id="about">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h3 class="card-title mb-4">About EcoPackAI</h3>
+                        <p>
+                            EcoPackAI uses advanced machine learning to recommend sustainable packaging 
+                            materials based on your product specifications. Our AI models analyze:
+                        </p>
+                        <ul>
+                            <li>Cost efficiency</li>
+                            <li>CO₂ emissions and carbon footprint</li>
+                            <li>Material sustainability and recyclability</li>
+                            <li>Product-material compatibility</li>
+                        </ul>
+                        <p>
+                            Make data-driven decisions for a greener future! 🌍
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 EcoPackAI. All rights reserved.</p>
+            <p class="text-muted">Powered by Random Forest & XGBoost ML Models</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="predict.js"></script>
+
+</body>
+</html>
