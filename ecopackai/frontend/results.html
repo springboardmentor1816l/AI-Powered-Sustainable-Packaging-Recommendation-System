@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <title>EcoPackAI | Prediction Results</title>
 
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./static/css/style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -24,6 +30,7 @@
 <div class="container mt-5">
     <h2 class="mb-4">Sustainability Prediction Results</h2>
 
+    <!-- Results Table -->
     <table class="table table-bordered">
         <thead class="table-success">
             <tr>
@@ -31,19 +38,40 @@
                 <th>Score</th>
             </tr>
         </thead>
-        <tbody id="resultBody">
-            <!-- Dynamic rows -->
-        </tbody>
+        <tbody id="resultBody"></tbody>
     </table>
 
-    <a href="product.html" class="btn btn-secondary mt-3">
+    <!-- Analytics Chart -->
+    <canvas id="analyticsChart" class="mt-4"></canvas>
+
+    <!-- Export Buttons -->
+    <div class="mt-4">
+        <button class="btn btn-outline-primary" onclick="exportExcel()">
+            Export Excel (.xlsx)
+        </button>
+        <button class="btn btn-outline-danger ms-2" onclick="exportPDF()">
+            Export PDF
+        </button>
+    </div>
+
+    <a href="product.html" class="btn btn-secondary mt-4">
         Try Another Product
     </a>
 </div>
 
 <script>
+    // ===============================
+    // LOAD RESULT
+    // ===============================
     const result = JSON.parse(localStorage.getItem("ecoResult"));
     const body = document.getElementById("resultBody");
+
+    function getCondition(score) {
+        if (score >= 0.75) return "Best";
+        if (score >= 0.6) return "Good";
+        if (score >= 0.45) return "Moderate";
+        return "Worst";
+    }
 
     if (!result) {
         body.innerHTML = `
@@ -52,20 +80,73 @@
             </tr>
         `;
     } else {
+        const condition = getCondition(result.final_sustainability_score);
+
         body.innerHTML = `
-            <tr>
-                <td>CO₂ Impact Score</td>
-                <td>${result.co2_impact_score}</td>
-            </tr>
-            <tr>
-                <td>Cost Impact Score</td>
-                <td>${result.cost_impact_score}</td>
-            </tr>
-            <tr>
-                <td>Final Sustainability Score</td>
-                <td><strong>${result.final_sustainability_score}</strong></td>
-            </tr>
+            <tr><td>Product Name</td><td><strong>${result.product_name || "N/A"}</strong></td></tr>
+            <tr><td>CO₂ Impact Score</td><td>${result.co2_impact_score}</td></tr>
+            <tr><td>Cost Impact Score</td><td>${result.cost_impact_score}</td></tr>
+            <tr><td>Final Sustainability Score</td><td><strong>${result.final_sustainability_score}</strong></td></tr>
+            <tr><td>Sustainability Condition</td><td><strong>${condition}</strong></td></tr>
         `;
+
+        new Chart(document.getElementById("analyticsChart"), {
+            type: "bar",
+            data: {
+                labels: ["CO₂ Impact", "Cost Impact", "Sustainability"],
+                datasets: [{
+                    label: "Scores",
+                    data: [
+                        result.co2_impact_score,
+                        result.cost_impact_score,
+                        result.final_sustainability_score
+                    ],
+                    backgroundColor: ["#dc3545", "#ffc107", "#28a745"]
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true, max: 1 }
+                }
+            }
+        });
+    }
+
+    // ===============================
+    // EXCEL EXPORT (FINAL – GUARANTEED)
+    // ===============================
+    function exportExcel() {
+        fetch("http://127.0.0.1:5000/export/xlsx", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(result)
+        })
+        .then(res => res.blob())
+        .then(blob => {
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "EcoPackAI_Report.xlsx";
+            a.click();
+        });
+    }
+
+    // ===============================
+    // PDF EXPORT
+    // ===============================
+    function exportPDF() {
+        fetch("http://127.0.0.1:5000/export/pdf", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(result)
+        })
+        .then(res => res.blob())
+        .then(blob => {
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "EcoPackAI_Sustainability_Report.pdf";
+            a.click();
+        });
     }
 </script>
 
